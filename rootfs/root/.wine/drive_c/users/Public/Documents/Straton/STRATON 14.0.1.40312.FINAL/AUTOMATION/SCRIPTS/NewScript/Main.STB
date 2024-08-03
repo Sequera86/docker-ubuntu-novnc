@@ -1,0 +1,10 @@
+@HEADERNAME:ID	USA	FRA	
+@HEADERSIZE:198	349	508	
+IDS_MODE	Select whether the script creates a or modify a project	Sélectionnez si le projet doit être créé ou modifié
+IDS_PARAMS	Does your script need parameters to be asked to the user ?	Est-ce que le script doit demander des paramètres à l'utilisateur ?
+IDS_CAPMAIN	Automation script	Script (automation)
+IDS_NAME	Name of the parameter variable	Nom de la variable associée au paramètre
+IDS_TYPE	Data type	Type de donnée
+IDS_INIT	Initial value	Valeur initiale
+IDS_DESC	Description	Description
+IDS_CAPPARAM	Add a parameter to your script	Ajouter un paramètre à votre script

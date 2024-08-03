@@ -1,0 +1,5 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-KIND=Kind of level 2 information
+V-TEXT=Line to be appened

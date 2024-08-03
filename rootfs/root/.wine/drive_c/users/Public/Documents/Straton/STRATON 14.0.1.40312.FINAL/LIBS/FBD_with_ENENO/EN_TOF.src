@@ -1,0 +1,7 @@
+ENO := EN;
+if EN then
+    tm (IN, PT);
+    Q := tm.Q;
+    ET := tm.ET;
+end_if;
+

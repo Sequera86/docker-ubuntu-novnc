@@ -1,0 +1,39 @@
+#info=WSED1EDT
+@BRK:5,Y=C32768,P=(0,12),S=(1,1),C=(0,0),X=Blink main command is always TRUE - Select fast or slow period for blinking (fast is 2 times faster)
+@BRK:6,Y=C32768,P=(0,6),S=(1,1),C=(0,0),X=Dont execute this program if bCommand is FALSE
+@BRK:8,Y=C32768,P=(0,24),S=(1,1),C=(0,0),X=The end
+@TXT:1,Y=C32768,P=(1,1),S=(39,4),C=(1,1),X={
+Blinker - STRATON Demonstration project\r\n(C) 2002 - Version
+ 1.00\r\nThis project demonstrates a simple use of the "BLINK
+" function block for generating a blinking output signal. The
+ "bFast" variable is used for changing the blinking period.
+}
+@VAR:2,Y=N,P=(21,16),S=(3,1),C=(1,1),X=TRUE
+@VAR:3,Y=N,P=(32,15),S=(8,3),C=(1,1),X=bOut
+@VAR:4,Y=N,P=(1,16),S=(8,2),C=(1,1),X=bFast
+@LPR:7,Y=N,P=(1,8),S=(1,3),C=(0,1)
+@BOX:9,Y=N,P=(9,20),S=(1,1),C=(1,1),X={\div}
+@TXT:10,Y=C32768,P=(19,21),S=(5,1),C=(1,1),X={
+Converts to TIME
+}
+@BOX:11,Y=N,P=(26,14),S=(5,4),C=(2,1),X=Inst_blink:blink
+@BOX:12,Y=N,P=(19,18),S=(5,2),C=(1,1),X=any_to_time
+@BOX:13,Y=N,P=(15,16),S=(3,4),C=(3,1),X=sel
+@VAR:14,Y=N,P=(8,22),S=(2,1),C=(1,1),X=2
+@BOX:15,Y=N,P=(11,20),S=(3,3),C=(2,1),X=/
+@VAR:16,Y=N,P=(1,19),S=(8,2),C=(1,1),X=tPerio
+@CTI:17,Y=N,P=(4,8),S=(2,2),C=(1,1),X=bCommand
+@RET:18,Y=N,P=(8,9),S=(5,1),C=(1,1)
+@ARC:1,Y=N,D=7,Z=(50,50),F=(2,0),T=(11,0)
+@ARC:2,Y=N,D=6,Z=(50,50),F=(11,0),T=(3,0)
+@ARC:3,Y=N,D=5,Z=(50,50),F=(4,0),T=(13,0)
+@ARC:4,Y=N,D=4,Z=(50,50),F=(7,0),T=(17,0)
+@ARC:5,Y=N,D=3,Z=(50,50),F=(9,0),T=(13,1)
+@ARC:6,Y=N,D=2,Z=(50,50),F=(9,0),T=(15,0)
+@ARC:7,Y=N,D=1,Z=(50,50),F=(16,0),T=(9,0)
+@ARC:8,Y=N,D=5,Z=(50,50),F=(12,0),T=(11,1)
+@ARC:9,Y=N,D=3,Z=(50,50),F=(13,0),T=(12,0)
+@ARC:10,Y=N,D=6,Z=(50,50),F=(15,0),T=(13,2)
+@ARC:11,Y=N,D=4,Z=(50,50),F=(14,0),T=(15,1)
+@ARC:12,Y=N,D=0,Z=(50,50),F=(17,0),T=(18,0)
+#endinfo

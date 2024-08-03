@@ -1,0 +1,4 @@
+[LONG]
+V-FID=File identifier
+V-SUFFIX=File suffix
+V-PREFIX=File prefix

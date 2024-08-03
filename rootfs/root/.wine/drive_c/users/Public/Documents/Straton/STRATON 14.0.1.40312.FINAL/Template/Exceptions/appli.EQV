@@ -1,0 +1,6 @@
+(* set exception handlers *)
+#OnStartup  OnStartup
+#OnShutdown Onshutdown
+#OnDivZero  OnDivZero
+
+(* enter your global definitions here *)

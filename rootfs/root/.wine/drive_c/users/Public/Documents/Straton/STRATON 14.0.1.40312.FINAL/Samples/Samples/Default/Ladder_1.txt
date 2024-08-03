@@ -1,0 +1,9 @@
+[SHORT]
+V-B1=var 1
+V-B2=var 2
+V-LD1=~
+V-B3=var 3
+V-B4=var 4
+[LONG]
+V-B1=
+V-LD1=~

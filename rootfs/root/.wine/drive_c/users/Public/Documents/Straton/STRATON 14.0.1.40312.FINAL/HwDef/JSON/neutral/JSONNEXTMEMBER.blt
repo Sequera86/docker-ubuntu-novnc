@@ -1,0 +1,11 @@
+JsonNextMember - function - Get the following member after a member object
+
+Inputs:
+
+hMember : DINT; handle of a member of the object
+
+Outputs:
+
+hNext : DINT; handle of the next member in the same object
+
+The function returns 0 if there is no more members in the object.

@@ -1,0 +1,11 @@
+[LONG]
+V-STYP=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-PIN=~
+V-NEGATE=~
+V-LABEL=output pin index on the block (1 based)
+[SHORT]
+V-STYP=~
+V-PIN=~
+V-NEGATE=~

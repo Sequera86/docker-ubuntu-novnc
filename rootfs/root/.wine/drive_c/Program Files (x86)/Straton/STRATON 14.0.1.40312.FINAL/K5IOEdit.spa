@@ -1,0 +1,34 @@
+﻿; K5 IOEDIT control - error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - don't change that line!
+
+[Messages]
+ErasePrompt=El dispositivo del IO y la descripción de su canal serán suprimidos ¿Seguir?
+OverwritePrompt=El dispositivo del IO y la descripción de su canal serán sobreescribirlos ¿Seguir?
+ErrWord=Valor inválido. Número entero corto (16 bits) esperado.
+ErrLong=Valor inválido. Número entero esperado.
+ErrString=Valor inválido. La cadena no puede exceder 15 caracteres
+ErrChar=Valor inválido. Solo carácter esperado
+ErrBool=Valor inválido. "TRUE" o "FALSE" esperado
+ErrFloat=Valor inválido. Número verdadero esperado.
+ErrHotEnabled=Esta operación está prohibida cuando Cambio en línea está activado
+
+Library=&Biblioteca:
+Device=&Dispositivo:
+all=(todas)
+Properties=Propiedades
+
+IOs=Cartas E/S
+Close=Cerrar
+Select=Seleccionar
+Delete=Borrar
+Properties=Propiedades
+Virtual=Virtual/Real
+Help=Ayuda
+Rename=Renombrar
+
+Up=Subir
+Down=Bajar
+
+; eof

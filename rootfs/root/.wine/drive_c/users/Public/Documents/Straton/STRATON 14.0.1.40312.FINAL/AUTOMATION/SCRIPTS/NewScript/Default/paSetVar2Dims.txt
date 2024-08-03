@@ -1,0 +1,5 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-DIMLOW=Lowest dimension
+V-DIMHIGH=Highest dimension

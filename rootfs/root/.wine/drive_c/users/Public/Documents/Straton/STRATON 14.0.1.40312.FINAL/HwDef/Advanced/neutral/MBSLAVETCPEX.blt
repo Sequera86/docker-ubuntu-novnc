@@ -1,0 +1,8 @@
+Instanciate a MODBUS TCP Server on a TCP port
+Inputs:
+   IN: open the port if TRUE
+   PORT: TCP port number
+   Slave: MODBUS slave number
+   SrvID: identifier of the MODBUS slave configuration
+Ouputs:
+   OK : TRUE if port currently open

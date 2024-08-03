@@ -1,0 +1,73 @@
+// Project automation script
+paSetTraceMode (FALSE, FALSE);
+
+// Create or open the target project
+if not paOpenProject (FALSE) then
+    return;
+end_if;
+
+// Prompt for parameters
+paSetParameterDesc ('PCalled', 'UDFB or sub-program to call');
+paSetParameterDesc ('PTest', 'Name of the test program (caller)');
+paEditParameterList (VLID('Parameters'), 'Parameters');
+
+// Check called program
+GetPrgDesc (pCalled);
+if not GetPrgDesc.OK
+   or (GetPrgDesc.Kind <> _POU_UDFB & GetPrgDesc.Kind <> _POU_SP)
+then
+    paTRACE0 ('ERROR: The name specified is not an existing UDFB or sub-program');
+    return;
+end_if;
+
+// Create caller
+
+if not paCreateProgram (PTest, _LG_FBD) then
+    paTRACE0 ('ERROR: Cannot create the test program - invalid name');
+    return;
+end_if;
+
+// if UDFB declare the instance
+if GetPrgDesc.Kind = _POU_UDFB then
+    sInst := 'Inst_' + pCalled;
+    paCreateVar (pTest + '.' + sInst, pCalled);
+end_if;
+
+// open FBD file for writing
+f := paFileOpenWriteProgramSrc (pTest);
+if f = 0 then
+    paTRACE0 ('ERROR: Cannot write the test program source code');
+    return;
+end_if;
+
+// FBD: call the block
+paFbdsBlock (f, pCalled, sInst);
+
+// Create test variables in the caller and link to FBD block
+iInput := 1;
+iOutput := 1;
+EnumVar (TRUE, FALSE, 0, pCalled + '.*');
+for i := 1 to EnumVar.NB do
+    EnumVar (FALSE, FALSE, i, '');
+    GetVarDesc (pCalled + '.' + EnumVar.Q);
+
+    sName := GetVarDesc.NAME;
+    index := Find (sName, '.');
+    if index > 0 then
+    sName := Delete (sName, index, 1);
+    end_if;
+
+    if GetVarDesc.OK & GetVarDesc.InParam then
+        paCreateVar (pTest + '.I_' + sName, GetVarDesc.DataType);
+        paFbdsInputVar (f, 'I_' + sName, iInput, FALSE);
+        iInput += 1;
+    end_if;
+    if GetVarDesc.OK & GetVarDesc.OutParam then
+        paCreateVar (pTest + '.O_' + sName, GetVarDesc.DataType);
+        paFbdsOutputVar (f, 'O_' + sName, iOutput, FALSE);
+        iOutput += 1;
+    end_if;
+end_for;
+
+// close the FBD program
+paFileClose (f);

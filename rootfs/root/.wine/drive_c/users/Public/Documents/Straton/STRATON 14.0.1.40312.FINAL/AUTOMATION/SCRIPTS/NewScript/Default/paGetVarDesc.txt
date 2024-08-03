@@ -1,0 +1,15 @@
+[LONG]
+V-PROPS=Profile properties
+V-DIMMEDIUM=2nd dimension or 0
+V-NAME=Variable name
+V-SYB=TRUE if variable symbol is embedded
+V-DIMLOW=1rst dimension or 0
+V-TAG=Tag (short description
+V-COMMENT=Description
+V-DATATYPE=Data type
+V-INPARAM=TRUE if the variable is an input parameter
+V-DIMTOTAL=Total dimension (number of items)
+V-OUTPARAM=TRUE if the variable is an output parameter
+V-DIMHIGH=3rd dimension or 0
+V-PROFILE=Profile name
+V-INIT=Initial value

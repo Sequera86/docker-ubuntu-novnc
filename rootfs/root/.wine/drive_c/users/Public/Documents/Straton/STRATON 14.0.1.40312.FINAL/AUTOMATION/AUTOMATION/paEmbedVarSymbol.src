@@ -1,0 +1,7 @@
+if Syb then
+    str := 'ON';
+else
+    str := 'OFF';
+end_if;
+OK := _PRP ('SybVar', Name, str, '', RET);
+

@@ -1,0 +1,4 @@
+sTyp := 'VT ' + any_to_string (ID) + ' ' + NAME;
+OK := _PRP ('FWRITE', any_to_string (FID),
+            'EXT', sTyp, RET);
+

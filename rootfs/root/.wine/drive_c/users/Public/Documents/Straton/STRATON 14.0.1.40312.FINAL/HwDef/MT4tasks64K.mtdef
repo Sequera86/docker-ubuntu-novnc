@@ -1,0 +1,5 @@
+[MT]
+NbTask=4
+ShMem=65536
+Desc=T5MT runtime / 4 tasks / 64K mem
+Port=1100

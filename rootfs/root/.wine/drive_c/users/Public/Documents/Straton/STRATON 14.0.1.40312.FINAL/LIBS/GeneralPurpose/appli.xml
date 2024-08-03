@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Appli Expand="YES">
+   <Program Name="Hi_DWORD"/>
+   <Program Name="LO_DWORD"/>
+   <Program Name="MAKE_LWORD"/>
+   <Program Name="PACK16"/>
+   <Program Name="PACK32"/>
+   <Program Name="ROUND_REAL"/>
+   <Program Name="UNPACK16"/>
+   <Program Name="UNPACK32"/>
+   <GlobalDef/>
+   <Types/>
+</Appli>

@@ -1,0 +1,45 @@
+ENU (TRUE, 1, 'GetVar', NAME, '', '');
+if ENU.ITEM = '' then
+    InParam := FALSE;
+    OutParam := FALSE;
+    DataType := '';
+    DimTotal := 0;
+    DimHigh := 0;
+    DimMedium := 0;
+    DimLow := 0;
+    Init := '';
+    Syb := FALSE;
+    Profile := '';
+    Props := '';
+    Comment := '';
+    Tag := '';
+    OK := FALSE;
+else
+    ENU (FALSE, 2, 'GetVar', NAME, '', '');
+    InParam := (ENU.ITEM = 'VAR_IN');
+    OutParam := (ENU.ITEM = 'VAR_OUT');
+    ENU (FALSE, 3, 'GetVar', NAME, '', '');
+    DataType := ENU.ITEM;
+    ENU (FALSE, 4, 'GetVar', NAME, '', '');
+    DimTotal := any_to_dint (ENU.ITEM);
+    ENU (FALSE, 5, 'GetVar', NAME, '', '');
+    DimHigh := any_to_dint (ENU.ITEM);
+    ENU (FALSE, 6, 'GetVar', NAME, '', '');
+    DimMedium := any_to_dint (ENU.ITEM);
+    ENU (FALSE, 7, 'GetVar', NAME, '', '');
+    DimLow := any_to_dint (ENU.ITEM);
+    ENU (FALSE, 8, 'GetVar', NAME, '', '');
+    Init := ENU.ITEM;
+    ENU (FALSE, 9, 'GetVar', NAME, '', '');
+    Syb := (ENU.ITEM = '<syb>');
+    ENU (FALSE, 10, 'GetVar', NAME, '', '');
+    Profile := ENU.ITEM;
+    ENU (TRUE, 1, 'GetVarProp', NAME, '', '');
+    Props := ENU.ITEM;
+    ENU (TRUE, 1, 'GetComm', 'V', NAME, '');
+    Comment := ENU.ITEM;
+    ENU (TRUE, 1, 'GetTag', 'V', NAME, '');
+    Tag := ENU.ITEM;
+    OK := TRUE;
+end_if;
+

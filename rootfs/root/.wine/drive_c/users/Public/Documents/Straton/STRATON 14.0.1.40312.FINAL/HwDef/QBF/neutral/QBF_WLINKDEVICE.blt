@@ -1,0 +1,49 @@
+<I>Writes data to the MELSECNET/H or CC-Link IE Controller Network module link device.</I>
+
+<B>IONO : DINT</B>
+Start I/O No. divided by 10H (0 to FFH)
+
+<B>DEVTYP : INT</B>
+<PRE>
+1(0001H)        QBFDev_LXBuf   Link input internal buffer(LX buffer)*2     Bit device
+2(0002H)        QBFDev_LYBuf   Link output internal buffer(LY buffer)*2    Bit device
+23(0017H)       QBFDev_LBBuf   Link relay internal buffer(LB buffer)*2     Bit device
+24(0018H)       QBFDev_LWBuf   Link register internal buffer(LW buffer)*2  Word device
+1000(03E8H)     QBFDev_LX      Direct link input (LX)                      Bit device
+2000(07D0H)     QBFDev_LY      Direct link output (LY)                     Bit device
+23000(59D8H)    QBFDev_LB      Direct link relay (LB)                      Bit device
+24000(5DC0H)    QBFDev_LW      Direct link register (LW)                   Word device
+25000(61A8H)    QBFDev_LSB     Direct link special relay (SB)              Bit device
+28000(6D60H)    QBFDev_LSW     Direct link special register (SW)           Word device
+</PRE>
+
+<B>DEVNO : DINT</B>
+Start device number
+
+<B>SIZE : INT</B>
+Write size in words
+
+<B>DATAOUT[] : INT</B>
+Write data
+
+<B>Q : INT</B>
+<PRE>
+0		Normal
+-202(0xFF36)	Path error			
+-205(0xFF33)	I/O No. error			
+-205(0xFF33)	I/O No. error			
+-209(0xFF2F)	Buffer memory size error
+-223(0xFF21)	Memory allocation error
+-227(0xFF1D)	Control code send error
+-253(0xFF03)	Device No. error	
+-254(0xFF02)	Device type error	
+-255(0xFF01)	Size error		
+-28158(0x9202)	WDT error		
+-28628(0x902C)	Pointer address error	
+-28632(0x9028)	I/O No. error		
+-28634(0x9026)	Intelligent function module down
+-28635(0x9025)	Intelligent function module error
+-28636(0x9024)	Control bus error	
+-28654(0x9012)	Non-controlled module write error
+77(0x004D)	Memory error		
+</PRE>

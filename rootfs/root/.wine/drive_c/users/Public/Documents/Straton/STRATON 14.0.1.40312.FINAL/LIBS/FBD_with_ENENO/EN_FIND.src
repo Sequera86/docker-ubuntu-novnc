@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    POS := find (IN, STR);
+end_if;
+

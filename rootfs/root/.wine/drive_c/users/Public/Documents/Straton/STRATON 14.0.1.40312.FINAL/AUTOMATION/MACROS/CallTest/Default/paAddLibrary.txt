@@ -1,0 +1,8 @@
+[LONG]
+V-PATH=Library folder pathname
+V-RET=~
+V-OK=TRUE if successful
+[SHORT]
+V-PATH=~
+V-RET=~
+V-OK=~

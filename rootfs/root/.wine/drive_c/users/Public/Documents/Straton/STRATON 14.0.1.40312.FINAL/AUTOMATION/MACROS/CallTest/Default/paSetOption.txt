@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-VALUE=Option value
+V-OPTION=Option name
+[SHORT]
+V-RET=~
+V-OK=~
+V-VALUE=~
+V-OPTION=~

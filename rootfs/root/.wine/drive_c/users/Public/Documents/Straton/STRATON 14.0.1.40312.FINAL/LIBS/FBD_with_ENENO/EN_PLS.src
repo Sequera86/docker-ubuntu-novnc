@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    pl (RUN, CYCLE);
+    Q := pl.Q;
+end_if;
+

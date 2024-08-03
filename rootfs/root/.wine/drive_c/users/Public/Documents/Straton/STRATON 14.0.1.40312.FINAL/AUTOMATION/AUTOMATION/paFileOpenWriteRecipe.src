@@ -1,0 +1,6 @@
+if _PRP ('FOPENW', NAME, '<RCP>', '', RET) then
+    FID := RET;
+else
+    FID := 0;
+end_if;
+

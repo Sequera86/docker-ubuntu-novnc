@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+
+<!-- K5DBOscript - V11 - 11022 - 22 Oct 2021
+
+    K5DBO
+        Group
+            Ref
+        Item
+            Help
+            Enum (only if Edit == "Enum")
+            Value (only if Edit == "Combo" | "Fixed")
+
+    Group:
+        Name = group name
+        Loc = localization entry
+
+    Ref:
+        ID = item ID
+        
+    Item:
+        ID = item ID
+        Name = item name
+        Loc = localization entry
+        Edit = YesNo | Enum | Combo | Fixed | EditInt | Edit
+        Min, Max = integer bounds
+        OLCdis = 0 | 1
+
+-->
+
+<K5DBO cfgs="1">
+
+    <!-- GROUPS -->
+
+	<Group Name="General" Loc="CapOptions">
+        <Ref ID="CAPCOMM"/>
+        <Ref ID="CYCTIME"/>
+        <Ref ID="DEBUG"/>
+        <Ref ID="CTSEG"/>
+        <Ref ID="OLCHANGE"/>
+        <Ref ID="VERS"/>
+        <Ref ID="LIBS"/>
+        <Ref ID="EXTOBJ"/>
+        <Ref ID="STANRULES"/>
+        <Ref ID="SC"/>
+    </Group>
+
+    <Group Name="Runtime" Loc="Runtime">
+        <Ref ID="ENDIAN"/>
+        <Ref ID="CYCTIME"/>
+        <Ref ID="DEBUG"/>
+        <Ref ID="IOSTEP"/>
+        <Ref ID="LOCK"/>
+        <Ref ID="CTSEG"/>
+        <Ref ID="OLCHANGE"/>
+        <Ref ID="HEAPENABLE"/>
+    </Group>
+
+    <Group Name="Compiler" Loc="Compiler">
+        <Ref ID="FBDFLOW"/>
+        <Ref ID="WARNING"/>
+        <Ref ID="WARNISERR"/>
+        <Ref ID="SFCSAFE"/>
+        <Ref ID="SAFEARRAY"/>
+        <Ref ID="NOREALEQ"/>
+        <Ref ID="VSI"/>
+        <Ref ID="EMBEDALLSYB"/>
+        <Ref ID="SYBCASE"/>
+        <Ref ID="CMPFBCHECK"/>
+        <Ref ID="CHECKPROFILE"/>
+        <Ref ID="ONLINECST"/>
+        <Ref ID="UPDEXT"/>
+        <Ref ID="EXTDEF"/>
+        <Ref ID="PASSWORD"/>
+        <Ref ID="CC"/>
+        <Ref ID="POSTBUILD"/>
+        <Ref ID="STAN"/>
+        <Ref ID="STANRULES"/>
+    </Group>
+
+    <Group Name="Debugging" Loc="CapDebug">
+        <Ref ID="CAPCOMM"/>
+        <Ref ID="LOADITEMS"/>
+        <Ref ID="SIMULCOLD"/>
+        <Ref ID="MWUS"/>
+        <Ref ID="MWPRECREAL"/>
+        <Ref ID="MWPRECLREAL"/>
+        <Ref ID="PRPSTOP"/>
+        <Ref ID="PRPLOAD"/>
+        <Ref ID="PRPCHANGE"/>
+        <Ref ID="STARTRETAIN"/>
+        <Ref ID="MWLOG"/>
+        <Ref ID="SHOWMWLOG"/>
+        <Ref ID="MWPLUS"/>
+    </Group>
+
+    <Group Name="Advanced" Loc="Advanced">
+        <Ref ID="CMPMAXERRCOUNT"/>
+        <Ref ID="CHECKSYBCONFLICTS"/>
+        <Ref ID="IECCHECK"/>
+        <Ref ID="FBDOPTIM"/>
+        <Ref ID="LDOPTIM"/>
+        <Ref ID="OUTPUTPOUSIZE"/>
+        <Ref ID="STSTRICT"/>
+        <Ref ID="NONIECSYB"/>
+        <Ref ID="RTRIGNO0"/>
+        <Ref ID="USHR"/>
+        <Ref ID="CHECKFBDINP"/>
+        <Ref ID="OPTBOOL"/>
+        <Ref ID="STRICTRETAINCRC"/>
+        <Ref ID="CMPOTHER"/>
+    </Group>
+
+    <Group Name="(All)" Loc="All">
+        <Ref ID="CAPCOMM"/>
+        <Ref ID="CYCTIME"/>
+        <Ref ID="DEBUG"/>
+        <Ref ID="CTSEG"/>
+        <Ref ID="OLCHANGE"/>
+        <Ref ID="VERS"/>
+        <Ref ID="LIBS"/>
+        <Ref ID="EXTOBJ"/>
+        <Ref ID="STANRULES"/>
+        <Ref ID="SC"/>
+        <Ref ID="ENDIAN"/>
+        <Ref ID="IOSTEP"/>
+        <Ref ID="LOCK"/>
+        <Ref ID="HEAPENABLE"/>
+        <Ref ID="FBDFLOW"/>
+        <Ref ID="WARNING"/>
+        <Ref ID="WARNISERR"/>
+        <Ref ID="SFCSAFE"/>
+        <Ref ID="SAFEARRAY"/>
+        <Ref ID="NOREALEQ"/>
+        <Ref ID="VSI"/>
+        <Ref ID="EMBEDALLSYB"/>
+        <Ref ID="SYBCASE"/>
+        <Ref ID="CMPFBCHECK"/>
+        <Ref ID="CHECKPROFILE"/>
+        <Ref ID="ONLINECST"/>
+        <Ref ID="UPDEXT"/>
+        <Ref ID="EXTDEF"/>
+        <Ref ID="PASSWORD"/>
+        <Ref ID="CC"/>
+        <Ref ID="POSTBUILD"/>
+        <Ref ID="STAN"/>
+        <Ref ID="LOADITEMS"/>
+        <Ref ID="SIMULCOLD"/>
+        <Ref ID="MWUS"/>
+        <Ref ID="MWPRECREAL"/>
+        <Ref ID="MWPRECLREAL"/>
+        <Ref ID="PRPSTOP"/>
+        <Ref ID="PRPLOAD"/>
+        <Ref ID="PRPCHANGE"/>
+        <Ref ID="STARTRETAIN"/>
+        <Ref ID="MWLOG"/>
+        <Ref ID="SHOWMWLOG"/>
+        <Ref ID="CMPMAXERRCOUNT"/>
+        <Ref ID="IECCHECK"/>
+        <Ref ID="FBDOPTIM"/>
+        <Ref ID="LDOPTIM"/>
+        <Ref ID="OUTPUTPOUSIZE"/>
+        <Ref ID="STSTRICT"/>
+        <Ref ID="NONIECSYB"/>
+        <Ref ID="RTRIGNO0"/>
+        <Ref ID="USHR"/>
+        <Ref ID="CHECKFBDINP"/>
+        <Ref ID="OPTBOOL"/>
+        <Ref ID="STRICTRETAINCRC"/>
+        <Ref ID="CMPOTHER"/>
+    </Group>
+
+    <!-- ALL ITEMS -->
+
+    <Item ID="DEBUG" Name="Code Generation" Edit="Enum" Loc="CodeGeneration">
+        <Enum Val="0" Text="Release"/>
+        <Enum Val="1" Text="Debug"/>
+        <Help>DEBUG mode enables breakpoints and step by step debugging. This option is time consuming.</Help>
+    </Item>
+
+    <Item ID="CTSEG" Name="Complex variables in a separate segment" Edit="YesNo" Loc="CTSeg" OLCdis="1">
+        <Help>Enables complex data such as arrays of structures. This option is time consuming.</Help>
+    </Item>
+
+    <Item ID="CYCTIME" Name="Cycle time" Edit="Fixed" Loc="CycleTime">
+        <Help>Duration of the PLC scan. Value 0 means as fast as possible (never wait).</Help>
+    </Item>
+
+    <Item ID="ENDIAN" Name="Runtime system" Edit="Enum" Loc="Target" OLCdis="1">
+        <Enum Val="0" Text="Little endian"/>
+        <Enum Val="1" Text="Big endian"/>
+        <Help>Endianness of the target system processor</Help>
+    </Item>
+
+    <Item ID="LIBS" Name="Libraries" Edit="Fixed" Loc="Libraries" OLCdis="1">
+        <Value Val="Edit..."/>
+        <Help>Double-click on "Edit..." to configure libraries linked to the project</Help>
+    </Item>
+
+    <Item ID="EXTOBJ" Name="Use external objects" Edit="Fixed" Loc="External" OLCdis="1">
+        <Value Val="Edit..."/>
+        <Help>Double-click on "Edit..." to configure extern POUs to use in the project.</Help>
+    </Item>
+
+    <Item ID="VERS" Name="Version" Edit="Fixed" Loc="Version">
+        <Help>Project compilation version number. Double-click to reset it.</Help>
+    </Item>
+
+    <Item ID="IOSTEP" Name="Exchange IOs while stepping" Edit="YesNo" Loc="IOStep">
+        <Help>If activated, IOs are exchanged when the program is stopped on a breakpoint or step.</Help>
+    </Item>
+
+    <Item ID="LOCK" Name="Support variables locking" Edit="YesNo" Loc="VLock" OLCdis="1">
+        <Help>Locked variables can be forced to a fixed value from the debugger. This option is time consuming.</Help>
+    </Item>
+
+    <Item ID="OLCHANGE" Name="On Line Change" Edit="Fixed" Loc="CapHot">
+        <Help>Double-click to disable or enable and configure On Line Change capabilities.</Help>
+    </Item>
+
+    <Item ID="FBDFLOW" Name="Color FBD lines during debug" Edit="YesNo" Loc="FBDFlow" OLCdis="1">
+        <Help>FBD lines values can be monitored during debug if this option is checked.</Help>
+    </Item>
+
+    <Item ID="WARNING" Name="Display warning messages" Edit="YesNo" Loc="Warning">
+        <Help>Reports dangerous or unclear operations at compiling time.</Help>
+    </Item>
+
+    <Item ID="WARNISERR" Name="Treat warnings as error" Edit="YesNo" Loc="WarnIsErr">
+        <Help>Produce an error if warnings are reported.</Help>
+    </Item>
+
+    <Item ID="SFCSAFE" Name="Check safety of SFC charts" Edit="YesNo" Loc="SFCSafe">
+        <Help>Check possibly unsafe or blocking strunctures in SFC charts compiling time.</Help>
+    </Item>
+
+    <Item ID="SAFEARRAY" Name="Check array bounds at runtime" Edit="YesNo" Loc="SafeArray">
+        <Help>At runtime, check indexes used for array read/write operations.</Help>
+    </Item>
+
+    <Item ID="NOREALEQ" Name="Forbid equality tests between reals" Edit="YesNo" Loc="NoRealEQ">
+        <Help>Errors will be output if equality tests are performed between REALs or LREALs.</Help>
+    </Item>
+
+    <Item ID="STAN" Name="Run Code Checker after build" Edit="YesNo" Loc="STAN">
+        <Help>If this option is checked, the Code Checker is run after any successful build of the project.</Help>
+    </Item>
+
+    <Item ID="VSI" Name="Allocate status flags for variables with embedded properties" Edit="YesNo" Loc="VSI" OLCdis="1">
+        <Help>If this option is checked status flags and time stamps are allocated at runtime for all variables having either a profile or their symbol embedded.</Help>
+    </Item>
+
+    <Item ID="EMBEDALLSYB" Name="Embed symbols of all variables" Edit="YesNo" Loc="EmbedAllSyb">
+        <Help>Individual settings are ignored if this option is checked. Warning: downloaded code can be much bigger.</Help>
+    </Item>
+
+    <Item ID="SYBCASE" Name="Keep case of embedded symbols" Edit="YesNo" Loc="SybCase">
+        <Help>Embedded symbols are turned uppercase if this option is not checked.</Help>
+    </Item>
+
+    <Item ID="CMPFBCHECK" Name="Check multiple calls to FB instances" Edit="YesNo" Loc="CmpFBCheck">
+        <Help>Report warnings if the same FB instance is called more than once in the programs.</Help>
+    </Item>
+
+    <Item ID="CHECKPROFILE" Name="Check duplicated profiles" Edit="YesNo" Loc="CheckProfile">
+        <Help>Report warnings if several variables have the same profile and settings.</Help>
+    </Item>
+
+    <Item ID="CHECKSYBCONFLICTS" Name="Check possible name conflicts" Edit="YesNo" Loc="CheckSybConflicts">
+        <Help>Report warnings if the same symbol is used for many purposes.</Help>
+    </Item>
+
+    <Item ID="IECCHECK" Name="Check IEC conformity" Edit="YesNo" Loc="IECCheck">
+        <Help>Report warnings if non IEC compliant features or blocks are used.</Help>
+    </Item>
+
+    <Item ID="FBDOPTIM" Name="Enable FBD optimizations" Edit="YesNo" Loc="FBDOptim" OLCdis="1">
+        <Help>FBD optimization may produce smaller and faster code.</Help>
+    </Item>
+
+    <Item ID="LDOPTIM" Name="Enable LD optimizations" Edit="YesNo" Loc="LDOptim" OLCdis="1">
+        <Help>LD optimization may produce smaller and faster code.</Help>
+    </Item>
+
+    <Item ID="ONLINECST" Name="Enable forcing of initial values during debug" Edit="YesNo" Loc="OnLineCst" OLCdis="1">
+        <Help>If this option is checked, initial values of variables can be changed during debugging.</Help>
+    </Item>
+
+    <Item ID="OUTPUTPOUSIZE" Name="Report code size of POUs" Edit="YesNo" Loc="OutputPouSize">
+        <Help>If this option is checked, POU code sizes are displayed after compiling. The code of a POU is limited to 64KB.</Help>
+    </Item>
+
+    <Item ID="STSTRICT" Name="Strict IEC confirmity for ST language" Edit="YesNo" Loc="StStrict">
+        <Help>If this option is not checked, equality comparison of TIME variables is forbidden.</Help>
+    </Item>
+
+    <Item ID="CMPMAXERRCOUNT" Name="Maximum number of error messages displayed" Edit="EditInt" Min="1" Max="1000" Loc="CmpMaxErrCount">
+        <Help>After this amount, compiling error messages are no more output.</Help>
+    </Item>
+
+    <Item ID="PASSWORD" Name="Runtime password" Edit="Fixed" Loc="Password">
+        <Help>If defined and not "0", this password will be asked at any connection to the runtime.</Help>
+    </Item>
+
+    <Item ID="CMPOTHER" Name="Other compiling options" Edit="Fixed" Min="1" Max="1000" Loc="CmpOther">
+        <Help>Reserved for technical support. Double-click to edit...</Help>
+    </Item>
+
+
+    <Item ID="POSTBUILD" Name="Post build actions" Edit="Fixed" Loc="PostBuild">
+        <Help>Commands to be run after a build. Double-click to edit...</Help>
+    </Item>
+
+    <Item ID="STANRULES" Name="Code Checker rules" Edit="Fixed" Loc="StanRules">
+        <Value Val="Edit..."/>
+        <Help>Double-click to configure the rules of the Code Checker...</Help>
+    </Item>
+
+    <Item ID="SC" Name="Version control" Edit="Fixed" Loc="SC">
+        <Value Val="Edit..."/>
+        <Help>Double-click to configure version control...</Help>
+    </Item>
+
+    <Item ID="RTRIGNO0" Name="R_TRIG: always FALSE on first call" Edit="YesNo" Loc="RTRIGNO0" OLCdis="1">
+        <Help>If activated, R_TRIG output is always FALSE on the first call to an instance.</Help>
+    </Item>
+
+    <Item ID="USHR" Name="SHR: do not duplicate most significant bit" Edit="YesNo" Loc="USHR" OLCdis="1">
+        <Help>If activated, the most significant bit of a word shifted to the right is set to FALSE.</Help>
+    </Item>
+
+    <Item ID="OPTBOOL" Name="ST: optimize AND/OR left to right evaluation" Edit="YesNo" Loc="OPTBOOL" OLCdis="0">
+        <Help>If activated, the evalutation of AND/OR expressions from left to right is stopped as soon as the result is known.</Help>
+    </Item>
+
+
+    <Item ID="STRICTRETAINCRC" Name="Strict signature for RETAIN variables" Edit="YesNo" Loc="STRICTRETAINCRC" OLCdis="0">
+        <Help>If activated, variable names are taken into account for checking the set of RETAIN variable at startup.</Help>
+    </Item>
+
+
+    <Item ID="CHECKFBDINP" Name="Deny unwired inputs in FBD" Edit="YesNo" Loc="CHECKFBDINP" OLCdis="0">
+        <Help>If activated, errors are generated when some block inputs are not wired in FBD diagrams.</Help>
+    </Item>
+    <Item ID="HEAPENABLE" Name="Enable dynamic memory allocation" Edit="Fixed" Loc="HeapEnable" OLCdis="1">
+        <Help>Dynamic memory is required for some libraries such as XML, Text Buffers and HMI menus. Double-click to configure...</Help>
+    </Item>
+
+    <Item ID="CAPCOMM" Name="Communication parameters" Edit="Fixed" Loc="CapComm">
+        <Help>Communication parameters for On Line connection to the runtime. Double-click to edit...</Help>
+    </Item>
+
+    <Item ID="SIMULCOLD" Name="Always start simulator in 'cold start' mode" Edit="YesNo" Loc="SimulCold">
+        <Help>If this option is not checked, you can select the starting mode when running the simulator.</Help>
+    </Item>
+
+    <Item ID="MWUS" Name="Cycle time in microseconds during debug" Edit="YesNo" Loc="MWus">
+        <Help>If this option is checked, cycle time is displayed and edited in microseconds during debug. For all projects!</Help>
+    </Item>
+
+
+    <Item ID="MWPRECREAL" Name="Precision for REAL variables" Edit="EditInt" Min="0" Max="9" Loc="MWPRECREAL">
+        <Help>Number of decimal digits displayed during debug for REAL variables. Use "0" for default format. For all projects!</Help>
+    </Item>
+    <Item ID="MWPRECLREAL" Name="Precision for LREAL variables" Edit="EditInt" Min="0" Max="21" Loc="MWPRECLREAL">
+        <Help>Number of decimal digits displayed during debug for LREAL variables. Use "0" for default format. For all projects!</Help>
+    </Item>
+
+    <Item ID="PRPSTOP" Name="Prompt before stopping the application" Edit="YesNo" Loc="PrpStop">
+        <Help>If activated, a confirmation window will be displayed before a stop operation. For all projects!</Help>
+    </Item>
+
+    <Item ID="PRPLOAD" Name="Prompt before downloading the application code" Edit="YesNo" Loc="PrpLoad">
+        <Help>If activated, a confirmation window will be displayed before a download. For all projects!</Help>
+    </Item>
+
+    <Item ID="PRPCHANGE" Name="Prompt before performing On Line Change" Edit="YesNo" Loc="PrpChange">
+        <Help>If activated, a confirmation window will be displayed before an On Line change. For all projects!</Help>
+    </Item>
+
+    <Item ID="STARTRETAIN" Name="Propose to start with RETAIN variables loaded" Edit="YesNo" Loc="StartRetain">
+        <Help>If activated, the default choice for starting the runtime is with RETAIN variables reloaded. For all projects!</Help>
+    </Item>
+
+    <Item ID="MWLOG" Name="Log user actions during test" Edit="YesNo" Loc="MWLog">
+        <Help>If activated, user operations are logged during simulation or On Line test.</Help>
+    </Item>
+
+    <Item ID="SHOWMWLOG" Name="Show log file..." Edit="Fixed" Loc="ShowMWLog">
+        <Value Val="Edit..."/>
+        <Help>Double-click to open the log file.</Help>
+    </Item>
+
+    <Item ID="MWPLUS" Name="Plus..." Edit="Fixed" Loc="MWPlus">
+        <Value Val="Edit..."/>
+    </Item>
+
+    <Item ID="LOADITEMS" Name="Download procedure" Edit="Fixed" Loc="Download">
+        <Value Val="Edit..."/>
+        <Help>Double-click to configure the items to be sent to the runtime during download.</Help>
+    </Item>
+
+    <Item ID="CC" Name="C post compiling" Edit="Fixed" Loc="CapCC" OLCdis="1">
+        <Help>Double-click to configure a "C" compiler to be used as a backend.</Help>
+    </Item>
+
+    <Item ID="NONIECSYB" Name="Accept non IEC compliant variable names" Edit="YesNo" Loc="NonIecSyb">
+        <Help>Not recommended! Some limitations may occur in the editors.</Help>
+    </Item>
+
+    <Item ID="UPDEXT" Name="Update extern POUs before build" Edit="YesNo" Loc="OptUpdExt" OLCdis="1">
+        <Help>If activated, all extern POUs from other projects are updated before build.</Help>
+    </Item>
+
+    <Item ID="EXTDEF" Name="Use global definition of extern POUs" Edit="YesNo" Loc="OptExtDef" OLCdis="1">
+        <Help>If activated, global definitions of the original projects of extern POUs are loaded.</Help>
+    </Item>
+
+</K5DBO>
+

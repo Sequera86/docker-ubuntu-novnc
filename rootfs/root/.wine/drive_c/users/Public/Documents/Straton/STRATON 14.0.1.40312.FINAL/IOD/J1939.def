@@ -1,0 +1,6 @@
+; J1939 definitions
+
+[J1939]
+Active=1
+DefRate=100
+HideRate=0

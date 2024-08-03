@@ -1,0 +1,4 @@
+[LONG]
+V-FOLDER=Folder name
+V-PROG=Program name
+V-OK=TRUE if successful

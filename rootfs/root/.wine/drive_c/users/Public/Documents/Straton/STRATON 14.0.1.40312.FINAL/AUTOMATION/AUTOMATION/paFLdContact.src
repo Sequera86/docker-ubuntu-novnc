@@ -1,0 +1,12 @@
+case TYP of
+'N', 'n', 'D', 'd', ' ' : sTyp := 'XIC';
+'I', 'i', '/' : sTyp := 'XIO';
+'P', 'p' : sTyp := 'XIP';
+'F', 'f' : sTyp := 'XIF';
+else
+    OK := FALSE;
+    return;
+end_case;
+
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, NAME, RET);
+

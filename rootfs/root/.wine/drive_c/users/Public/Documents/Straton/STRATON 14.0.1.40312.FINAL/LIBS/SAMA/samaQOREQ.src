@@ -1,0 +1,21 @@
+count := 0;
+
+if nbIn > 0 & IN1 then count += 1; end_if;
+if nbIn > 1 & IN2 then count += 1; end_if;
+if nbIn > 2 & IN3 then count += 1; end_if;
+if nbIn > 3 & IN4 then count += 1; end_if;
+if nbIn > 4 & IN5 then count += 1; end_if;
+if nbIn > 5 & IN6 then count += 1; end_if;
+if nbIn > 6 & IN7 then count += 1; end_if;
+if nbIn > 7 & IN8 then count += 1; end_if;
+if nbIn > 8 & IN9 then count += 1; end_if;
+if nbIn > 9 & IN10 then count += 1; end_if;
+if nbIn > 10 & IN11 then count += 1; end_if;
+if nbIn > 11 & IN12 then count += 1; end_if;
+if nbIn > 12 & IN13 then count += 1; end_if;
+if nbIn > 13 & IN14 then count += 1; end_if;
+if nbIn > 14 & IN15 then count += 1; end_if;
+if nbIn > 15 & IN16 then count += 1; end_if;
+
+Q := count = N;
+

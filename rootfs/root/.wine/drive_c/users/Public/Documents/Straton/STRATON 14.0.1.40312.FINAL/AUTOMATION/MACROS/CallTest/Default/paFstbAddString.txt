@@ -1,0 +1,16 @@
+[LONG]
+V-STYP=~
+V-RET=~
+V-COL=Column index (0 based)
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=String identifier
+V-VALUE=String contents
+[SHORT]
+V-STYP=~
+V-RET=~
+V-COL=~
+V-FID=~
+V-OK=~
+V-NAME=~
+V-VALUE=~

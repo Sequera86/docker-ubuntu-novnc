@@ -1,0 +1,5 @@
+OK := _PRP ('Comm', 'V', Name, Comm, RET);
+if OK then
+    OK := _PRP ('Tag', 'V', Name, Tag, RET);
+end_if;
+

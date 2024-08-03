@@ -1,0 +1,11 @@
+sBlock := any_to_string (FID) + ' FBL ';
+if INSTANCE <> '' then
+    sBlock := sBlock + INSTANCE;
+    sBlock := sBlock + ':';
+end_if;
+sBlock := sBlock + NAME;
+
+sOut := '| ' + OUTPUTS;
+
+OK := _PRP ('FWRITE', sBlock, INPUTS, sOut, RET);
+

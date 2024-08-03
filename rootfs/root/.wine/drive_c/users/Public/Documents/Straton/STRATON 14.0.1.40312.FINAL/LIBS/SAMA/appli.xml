@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Appli Expand="YES">
+   <Folder Name="Arithmetics">
+      <Program Name="samaDIFF"/>
+      <Program Name="samaDIV"/>
+      <Program Name="samaMULT"/>
+      <Program Name="samaPROP"/>
+      <Program Name="samaREVPROP"/>
+      <Program Name="samaSUM"/>
+   </Folder>
+   <Folder Name="Boolean">
+      <Program Name="samaAND"/>
+      <Program Name="samaNOT"/>
+      <Program Name="samaOR"/>
+      <Program Name="samaQOREQ"/>
+      <Program Name="samaQORGT"/>
+      <Program Name="samaQORLT"/>
+      <Program Name="samaRS"/>
+      <Program Name="samaSR"/>
+   </Folder>
+   <Folder Name="Maths">
+      <Program Name="samaAVERAGE"/>
+      <Program Name="samaEXPT"/>
+      <Program Name="samaHIGHLIMIT"/>
+      <Program Name="samaHIGHSELECT"/>
+      <Program Name="samaHILOWLIMIT"/>
+      <Program Name="samaLOWERLIMIT"/>
+      <Program Name="samaLOWLIMIT"/>
+      <Program Name="samaLOWSELECT"/>
+      <Program Name="samaNONLINEAR"/>
+      <Program Name="samaNONLINEAR2"/>
+      <Program Name="samaROOT"/>
+      <Program Name="samaUPLOLIMIT"/>
+      <Program Name="samaUPPERLIMIT"/>
+   </Folder>
+   <Folder Name="Process">
+      <Program Name="samaBIAS"/>
+      <Program Name="samaDERIVATE"/>
+      <Program Name="samaINTEGRAL"/>
+      <Program Name="samaLOGSIGGEN"/>
+      <Program Name="samaPI"/>
+      <Program Name="samaVARSIGGEN"/>
+   </Folder>
+   <Folder Name="Selectors">
+      <Program Name="samaMTRANSFER"/>
+      <Program Name="samaTRANSFER"/>
+   </Folder>
+   <Folder Name="Timers">
+      <Program Name="samaOFFDELAY"/>
+      <Program Name="samaONDELAY"/>
+      <Program Name="samaPULSE"/>
+      <Program Name="samaVELLIMIT"/>
+   </Folder>
+   <GlobalDef/>
+   <Vars/>
+   <Types/>
+</Appli>

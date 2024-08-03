@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-LABEL=Label name
+[SHORT]
+V-RET=~
+V-FID=~
+V-OK=~
+V-LABEL=~

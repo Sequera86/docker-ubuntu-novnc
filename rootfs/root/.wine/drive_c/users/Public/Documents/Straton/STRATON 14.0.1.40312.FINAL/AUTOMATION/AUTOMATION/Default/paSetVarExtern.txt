@@ -1,0 +1,8 @@
+[LONG]
+V-EXT="EXTERN" attribute flag
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-SYB=~
+[SHORT]
+V-EXT=
+V-SYB=~

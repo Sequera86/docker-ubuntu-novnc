@@ -1,0 +1,5 @@
+[MT]
+NbTask=4
+ShMem=65536
+Desc=Simulate 4 tasks (T5)
+Port=1100

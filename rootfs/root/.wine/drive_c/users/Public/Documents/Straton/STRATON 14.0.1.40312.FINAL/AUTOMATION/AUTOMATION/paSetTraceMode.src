@@ -1,0 +1,10 @@
+str := '';
+if bCommands then
+    str += '<COMMAND>';
+end_if;
+if bAnswers then
+    str += '<REPORT>';
+end_if;
+OK := _PRP ('TRACE', str, '', '', RET);
+
+

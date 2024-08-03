@@ -1,0 +1,11 @@
+[LONG]
+P-ONSHUTDOWN=Executed when application stops
+P-ONSTARTUP=Executed before application starts
+A-<PROJECT>=
+P-ONDIVZERO=Called when a division by zero occurs
+P-SANSTITREST=~
+[SHORT]
+P-ONSHUTDOWN=~
+P-ONSTARTUP=
+P-ONDIVZERO=~
+P-SANSTITREST=~

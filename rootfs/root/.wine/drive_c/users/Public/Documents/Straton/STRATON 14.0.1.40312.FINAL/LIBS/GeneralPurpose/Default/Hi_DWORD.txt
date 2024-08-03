@@ -1,0 +1,8 @@
+[SHORT]
+V-TMP=
+V-NEWVAR=~
+[LONG]
+V-TMP=
+V-NEWVAR=~
+V-IN=
+V-Q=

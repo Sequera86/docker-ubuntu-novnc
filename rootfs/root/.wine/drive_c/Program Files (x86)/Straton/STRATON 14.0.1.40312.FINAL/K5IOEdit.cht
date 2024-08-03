@@ -1,0 +1,25 @@
+[MESSAGES]
+ErasePrompt=I/O 設備和其通道說明將被刪除. 是否繼續?
+OverwritePrompt=I/O 設備和其通道說明將被覆寫. 是否繼續?
+ErrWord=無效的值. 必須是短整數 (16 bit).
+ErrLong=無效的值. 必須是整數.
+ErrString=無效的值. 該字串不可超過 15 個字元.
+ErrChar=無效的值. 必須是單一字元.
+ErrBool=無效的值. 必須是 "TRUE" 或 "FALSE".
+ErrFloat=無效的值. 必須是實數.
+ErrHotEnabled=啟用 On Line Change 後, 此操作將被禁止.
+Library=函式庫(&L):
+Device=設備(&D):
+all=(全部)
+Properties=屬性
+IOs=I/O 卡
+Close=關閉
+Select=選擇
+Delete=刪除
+Properties=屬性
+Virtual=虛擬/真實
+Help=說明
+Rename=更名
+Up=上移(&U)
+Down=下移(&w)
+

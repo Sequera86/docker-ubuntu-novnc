@@ -1,0 +1,12 @@
+[LONG]
+V-RET=~
+V-COMM=Long comment text
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-TAG=Short comment (tag) text
+[SHORT]
+V-RET=~
+V-COMM=~
+V-OK=~
+V-NAME=~
+V-TAG=~

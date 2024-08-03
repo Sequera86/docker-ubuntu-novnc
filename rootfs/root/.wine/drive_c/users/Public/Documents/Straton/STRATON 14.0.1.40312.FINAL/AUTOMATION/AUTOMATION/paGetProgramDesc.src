@@ -1,0 +1,21 @@
+ENU (TRUE, 1, 'GetProgram', NAME, '', '');
+if ENU.ITEM = '' then
+    Kind := '';
+    Language := '';
+    Parent := '';
+    Comment := '';
+    OK := FALSE;
+else
+    ENU (FALSE, 2, 'GetProgram', NAME, '', '');
+    Language := ENU.ITEM;
+    ENU (FALSE, 3, 'GetProgram', NAME, '', '');
+    Kind := ENU.ITEM;
+    ENU (FALSE, 4, 'GetProgram', NAME, '', '');
+    Parent := ENU.ITEM;
+
+    ENU (TRUE, 1, 'GetComm', 'P', NAME, '');
+    Comment := ENU.ITEM;
+
+    OK := TRUE;
+end_if;
+

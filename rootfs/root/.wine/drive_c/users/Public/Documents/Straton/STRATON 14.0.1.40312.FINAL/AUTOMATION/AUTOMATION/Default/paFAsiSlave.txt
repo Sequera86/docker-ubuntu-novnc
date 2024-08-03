@@ -1,0 +1,14 @@
+[LONG]
+V-NEWVAR=~
+V-STYP=
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Slave name
+V-PROFILE=AS-i profile (X.X.X.X)
+V-ADDRESS=AS-i slave address
+V-SETTINGS=~
+[SHORT]
+V-NEWVAR=~
+V-STYP=
+V-ADDRESS=
+V-SETTINGS=~

@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := hiword (IN);
+end_if;
+

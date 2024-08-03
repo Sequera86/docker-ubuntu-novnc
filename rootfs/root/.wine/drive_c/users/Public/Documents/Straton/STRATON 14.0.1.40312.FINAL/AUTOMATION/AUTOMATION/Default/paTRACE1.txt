@@ -1,0 +1,9 @@
+[LONG]
+V-DI2=~
+V-DI3=~
+V-DI4=~
+V-TEXT=Output text - use %d for arguments
+[SHORT]
+V-DI2=~
+V-DI3=~
+V-DI4=~

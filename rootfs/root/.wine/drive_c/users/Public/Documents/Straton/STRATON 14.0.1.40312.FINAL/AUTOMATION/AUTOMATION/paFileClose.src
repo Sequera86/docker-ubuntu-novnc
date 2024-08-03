@@ -1,0 +1,1 @@
+OK := _PRP ('FCLOSE', any_to_string (FID), '', '', RET);

@@ -1,0 +1,10 @@
+[LONG]
+V-COMMENT=Description
+V-OK=TRUE if successful
+V-NAME=Structure name
+V-ENU=~
+[SHORT]
+V-COMMENT=~
+V-OK=~
+V-NAME=~
+V-ENU=~

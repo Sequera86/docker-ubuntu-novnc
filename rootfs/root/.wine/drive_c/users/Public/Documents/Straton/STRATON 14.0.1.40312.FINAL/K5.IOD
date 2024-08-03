@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<k5iod>
+   <iod prefix="K5Bus870Slave" usa="IEC 60870 Slave" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5Bus870Slave" name="IEC870Slave" stampHi="0" stampLo="1710260898" wiz="0"/>
+   <iod prefix="K5BusAdam" usa="Advantech ADAM 5550" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusADAM" name="ADAM5550" stampHi="0" stampLo="1710273394" wiz="0"/>
+   <iod prefix="K5BusAnyCompactCom" usa="Anybus-CompactCom" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusCompactCom" name="Anybus-CompactCom" stampHi="0" stampLo="1710273400" wiz="0"/>
+   <iod prefix="K5BusApax" usa="Advantech APAX" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusAPAX" name="BusAPAX" stampHi="0" stampLo="1710273404" wiz="1"/>
+   <iod prefix="K5BusAppIO" usa="ApplicomIO configuration" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusAppIO" name="ApplicomIO" stampHi="0" stampLo="1710273408" wiz="0"/>
+   <iod prefix="K5BusAsi" usa="AS-interface" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="" name="AS-i" stampHi="0" stampLo="1710273412" wiz="0"/>
+   <iod prefix="K5BusBNMSTPS" usa="BACnet MSTP Server (Slave)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="BNMSTPS" name="BACnet-MSTP-Slave" stampHi="0" stampLo="1710273420" wiz="0"/>
+   <iod prefix="K5BusCAN" usa="CAN bus" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusCAN" name="CAN-bus" stampHi="0" stampLo="1710273424" wiz="0"/>
+   <iod prefix="K5BusCANOpen" usa="CAN Open" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExCANOpen" name="CANOpen" stampHi="0" stampLo="1710273428" wiz="0"/>
+   <iod prefix="K5BusDDK850s" usa="IEC 61850 Server incl. GOOSE From Templates" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusDDK850s" name="BusDDK850s" stampHi="0" stampLo="1710273434" wiz="0"/>
+   <iod prefix="K5BusDF1Half" usa="DF1 - SLC500 - SLC5/0X" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExDF1" name="DF1" stampHi="0" stampLo="1710273438" wiz="0"/>
+   <iod prefix="K5BusDNP3M" usa="DNP3 Master (TMW)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExDNP3M" name="BusDNP3M" stampHi="0" stampLo="1710273440" wiz="0"/>
+   <iod prefix="K5BusDNP3MCD" usa="DNP3 Master CD" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExDNP3MCD" name="BusDNP3MCD" stampHi="0" stampLo="1710273446" wiz="0"/>
+   <iod prefix="K5BusDNP3SCD" usa="DNP3 Outstation CD" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusDNP3SCD" name="DNP3SCD" stampHi="0" stampLo="1710273450" wiz="0"/>
+   <iod prefix="K5BusDNP3SL3V2" usa="DNP3 Slave - Level 3 (TMW)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusDNP3SL3" name="DNP3SL3V3" stampHi="0" stampLo="1710273454" wiz="0"/>
+   <iod prefix="K5BusEIPC" usa="Ethernet/IP I/O Scanner (Client)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5EIPC" name="EIPC" stampHi="0" stampLo="1710273464" wiz="0"/>
+   <iod prefix="K5BusEIPFIO" usa="FlexIO / PointIO" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5EIPFIO" name="EIPFIO" stampHi="0" stampLo="1710273468" wiz="0"/>
+   <iod prefix="K5BusEIPS" usa="Ethernet/IP Adapter (server)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5EIPS" name="EIPS" stampHi="0" stampLo="1710273472" wiz="0"/>
+   <iod prefix="K5BusEIPTag" usa="Ethernet/IP Tag Client" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5EIPTAG" name="EIPTAG" stampHi="0" stampLo="1710273476" wiz="0"/>
+   <iod prefix="K5BusEtherCAT" usa="EtherCAT" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="t5busethercat" name="EtherCAT" stampHi="0" stampLo="1710273480" wiz="0"/>
+   <iod prefix="K5BusExADC" usa="ADC/DAC Generic device" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExADC" name="BusExADC" stampHi="0" stampLo="1710273488" wiz="0"/>
+   <iod prefix="K5BusExOLS" usa="On Line Programming with scripts" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExOLS" name="OLS" stampHi="0" stampLo="1710273500" wiz="0"/>
+   <iod prefix="K5BusExPBCIFXSLV" usa="Hilscher CIFX Profibus Slave" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExPBCIFXSL" name="BusExPBCIFXSLV" stampHi="0" stampLo="1710261108" wiz="0"/>
+   <iod prefix="K5BusHMS" usa="Anybus configuration" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusHMS" name="Anybus" stampHi="0" stampLo="1710273512" wiz="0"/>
+   <iod prefix="K5BusIec850m" usa="IEC 61850 Client" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExIec850m" name="IEC 61850 Master" stampHi="0" stampLo="1710260900" wiz="0"/>
+   <iod prefix="K5BusIec850s" usa="IEC 61850 Server incl. GOOSE" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusIec850s" name="IEC 61850 Slave" stampHi="0" stampLo="1710260900" wiz="0"/>
+   <iod prefix="K5BusIec870m" usa="IEC 60870 Master" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExIec870m" name="IEC 60870 Master" stampHi="0" stampLo="1710260900" wiz="0"/>
+   <iod prefix="K5BusJ1939" usa="J1939" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusJ1939" name="J1939" stampHi="0" stampLo="1710273520" wiz="0"/>
+   <iod prefix="K5BusMailbox" usa="Link with embedded HTTP server" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusMailbox" name="Mailbox" stampHi="0" stampLo="1710273524" wiz="0"/>
+   <iod prefix="K5BusMBMaster" usa="MODBUS Master" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="" name="MODBUS-M" stampHi="0" stampLo="1710273528" wiz="0"/>
+   <iod prefix="K5BusMBSlave" usa="MODBUS Slave" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="" name="MODBUS-S" stampHi="0" stampLo="1710273534" wiz="0"/>
+   <iod prefix="K5BusMQTT" usa="MQTT Client" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExMQTT" name="MQTT" stampHi="0" stampLo="1710273542" wiz="0"/>
+   <iod prefix="K5BusMVBD" usa="MVB (DUAGON)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExMVBD" name="MVBD" stampHi="0" stampLo="1710273548" wiz="0"/>
+   <iod prefix="K5BusNetX" usa="Hilscher SYCON.net configuration (CifX)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusNetX" name="NetX" stampHi="0" stampLo="1710260900" wiz="0"/>
+   <iod prefix="K5BusOPC" usa="OPC Client DA" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusOPC" name="BusOPC" stampHi="0" stampLo="1710273552" wiz="0"/>
+   <iod prefix="K5BusOPCUA_client" usa="OPC UA Client" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExopcua_c" name="BusOPCUA_client" stampHi="0" stampLo="1710273560" wiz="0"/>
+   <iod prefix="K5BusOPCUA_s" usa="OPC UA Server" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExopcua_s" name="BusOPCUA_s" stampHi="0" stampLo="1710273566" wiz="0"/>
+   <iod prefix="K5BusOpenEPL" usa="Open PowerLink" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusExEPL" name="BusOpenEPL" stampHi="0" stampLo="1710273570" wiz="0"/>
+   <iod prefix="K5BusPNIODev" usa="PROFINET IO device (2021)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusPNIODev" name="PROFINET IO device" stampHi="0" stampLo="1710273574" wiz="0"/>
+   <iod prefix="K5BusProfNetIO" usa="PROFINET IO controller (2021)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusProfNetIO" name="PROFInet IO" stampHi="0" stampLo="1710273578" wiz="0"/>
+   <iod prefix="K5BusQBF" usa="Mitsubishi Controller" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusQBF" name="BusQBF" stampHi="0" stampLo="1710273582" wiz="1"/>
+   <iod prefix="K5BusShm" usa="Windows Shared memory" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusSHM" name="SharedMem" stampHi="0" stampLo="1710273590" wiz="0"/>
+   <iod prefix="K5BusShm2" usa="Shared Memory (Embedded Systems)" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusShm2" name="SharedMem2" stampHi="0" stampLo="1710273594" wiz="0"/>
+   <iod prefix="K5BusSoftNet" usa="SoftNet ProfibusDP" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusSoftNet" name="SoftNet" stampHi="0" stampLo="1710273598" wiz="0"/>
+   <iod prefix="K5BusSycon" usa="Hilscher SYCON configuration" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusSycon" name="SYCON" stampHi="0" stampLo="1710273602" wiz="0"/>
+   <iod prefix="K5BusWago" usa="Wago Linux Controller" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="BusRTWago" name="BusWago" stampHi="0" stampLo="1710273610" wiz="1"/>
+   <iod prefix="K5BusXFLOW" usa="XFlow" fra="" ger="" ita="" spa="" kor="" rus="" por="" cht="" chs="" drv="T5BusXFLOW" name="XFLOW" stampHi="0" stampLo="1710273614" wiz="0"/>
+</k5iod>

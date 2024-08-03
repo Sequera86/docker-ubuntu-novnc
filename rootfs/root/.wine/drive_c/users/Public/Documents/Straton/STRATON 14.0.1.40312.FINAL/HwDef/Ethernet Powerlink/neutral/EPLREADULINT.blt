@@ -1,0 +1,17 @@
+Reading a simple 64 bits parameter (SDO)
+The EplReadULINT user defined function block is used for sending a simple SDO message to read a 64 bits parameter from a slave.
+
+Inputs:
+
+- EN : the message is sent on a rising edge of this input
+- PORT : name of the port (not used)
+- SLV : powerlink slave number
+- Object : parameter index
+- Sub : parameter sub-index
+- TO : timeout for exchange
+
+Outputs:
+
+- Ready : TRUE when the block is ready - FALSE during an exchange
+- RC : powerlink return check
+- VAL : read parameter value answered by the slave

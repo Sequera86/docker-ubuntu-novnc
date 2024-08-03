@@ -1,0 +1,64 @@
+$K5LMEXPORT
+$DIR
+FB=JS_DeadTime,analog delay
+FB=JS_LeadLag,Signal lead / lag
+FB=JS_PID,PID regulator setpoint balance
+FB=JS_Ramp,Limit variation speed
+$END
+$DEF(FB=JS_DeadTime)
+VAR_INPUT
+   INPUT : REAL;
+   N : DINT;
+   DeadTime : TIME;
+END_VAR
+VAR_OUTPUT
+   OUT : REAL;
+END_VAR
+$END
+$DEF(FB=JS_LeadLag)
+VAR_INPUT
+   Input : REAL;
+   Lead : REAL;
+   Lag : REAL;
+   Ts : TIME;
+END_VAR
+VAR_OUTPUT
+   Out : REAL;
+END_VAR
+$END
+$DEF(FB=JS_PID)
+VAR_INPUT
+   LSL : REAL;
+   LSH : REAL;
+   AUTO : BOOL;
+   Pv : REAL;
+   Sp : REAL;
+   Ramp : REAL;
+   Balance : BOOL;
+   Action : BOOL;
+   Mixt : BOOL;
+   Deriv : BOOL;
+   Feedback : REAL;
+   X0 : REAL;
+   Kp : REAL;
+   Ti : REAL;
+   Td : REAL;
+   Ts : TIME;
+   XMIN : REAL;
+   XMAX : REAL;
+END_VAR
+VAR_OUTPUT
+   SPcur : REAL;
+   Xout : REAL;
+END_VAR
+$END
+$DEF(FB=JS_Ramp)
+VAR_INPUT
+   IN : REAL;
+   Rampe : REAL;
+   Cycle : DINT;
+END_VAR
+VAR_OUTPUT
+   OUT : REAL;
+END_VAR
+$END

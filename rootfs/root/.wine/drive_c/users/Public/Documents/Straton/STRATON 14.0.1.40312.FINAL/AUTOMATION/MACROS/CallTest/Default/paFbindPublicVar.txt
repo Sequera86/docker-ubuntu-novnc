@@ -1,0 +1,18 @@
+[LONG]
+V-STYP=~
+V-RET=~
+V-FID=File identifier
+V-ID=Identifier of the published variable
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-HYSTN=Negative hysteresis
+V-HYSTP=Positive hysteresis
+[SHORT]
+V-STYP=~
+V-RET=~
+V-FID=~
+V-ID=~
+V-OK=~
+V-NAME=~
+V-HYSTN=~
+V-HYSTP=~

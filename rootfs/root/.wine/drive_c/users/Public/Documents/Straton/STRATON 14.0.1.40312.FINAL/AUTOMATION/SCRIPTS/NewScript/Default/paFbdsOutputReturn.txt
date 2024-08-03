@@ -1,0 +1,5 @@
+[LONG]
+V-PIN=output pin index on the block (1 based)
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NEGATE=TRUE for a negated connection

@@ -1,0 +1,7 @@
+ENO := EN;
+if EN then
+    ctd1 (CD, LOAD, PV);
+    Q := ctd1.Q;
+    CV := ctd1.CV;
+end_if;
+

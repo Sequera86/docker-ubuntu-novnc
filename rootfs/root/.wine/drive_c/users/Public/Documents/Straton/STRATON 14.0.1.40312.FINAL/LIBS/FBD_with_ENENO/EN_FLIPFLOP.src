@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    ff (IN, RST);
+    Q := ff.Q;
+end_if;
+

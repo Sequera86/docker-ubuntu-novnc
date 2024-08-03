@@ -1,0 +1,8 @@
+f := paFileOpenWrite ('K5DBXS', '.INI');
+if f <> 0 then
+    paFTextLine (f, '[SETTINGS]');
+    paFTextLine (f, 'DRVONLINE=K5NETAS.DLL');
+    paFTextLine (f, 'DRVSIMUL=K5NETAS.DLL');
+    paFTextLine (f, 'SETONLINE=');
+    paFileClose (f);
+end_if;

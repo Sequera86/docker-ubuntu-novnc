@@ -1,0 +1,48 @@
+// STRATON AUTOMATION SAMPLE PROGRAM
+
+// Converts a set of individual date and time integers to a UNIX timestamp
+//  Mainly used for IEC61850 timetamp conversion
+
+TIMESTAMP := 0;
+
+//Number of seconds in previous years
+FOR Y := 1970 TO (YEAR - 1) DO
+    IF (MOD(Y,4) = 0 AND MOD(Y,100)<>0) OR MOD(Y,400) = 0 THEN
+        TIMESTAMP += LINT#366 * LINT#24 * LINT#3600 ;
+    ELSE
+        TIMESTAMP += LINT#365 * LINT#24 * LINT#3600;
+    END_IF;
+    
+END_FOR;
+
+//Load the right set of months for the current year (if it is a leap year)
+IF (MOD(YEAR,4) = 0 AND MOD(YEAR,100)<>0) OR MOD(YEAR,400) = 0  THEN
+    FOR i := 0 TO 12 DO
+    MONTHLENGTH[i] := MONTHL[i];
+    END_FOR;
+ELSE
+    FOR i := 0 TO 12 DO
+    MONTHLENGTH[i] := MONTHN[i];
+    END_FOR;
+END_IF;
+
+//Add the number of seconds in previous monthes    
+FOR M:= 1 TO MONTH - 1 DO
+    TIMESTAMP += MONTHLENGTH[M] * LINT#24 * LINT#3600;
+END_FOR;
+
+//Add the number of seconds in previous days
+TIMESTAMP += ANY_TO_LINT(DAY-1) * LINT#24 * LINT#3600;
+
+//Add the number of seconds in previous hours
+TIMESTAMP += ANY_TO_LINT(HOUR * 3600 + MINUTES * 60 + SECONDS);
+
+//If we are in DaySavingTime, we offset by 1 hour
+IF DST THEN 
+    TIMESTAMP -= LINT#3600;
+END_IF;
+
+//Adjustement with UTC
+TIMESTAMP -= LINT#3600 * ANY_TO_LINT(UTC);
+
+TIMESTAMP_LR := ANY_TO_LREAL(TIMESTAMP) + ANY_TO_LREAL(MILLISECONDS) / 1000;

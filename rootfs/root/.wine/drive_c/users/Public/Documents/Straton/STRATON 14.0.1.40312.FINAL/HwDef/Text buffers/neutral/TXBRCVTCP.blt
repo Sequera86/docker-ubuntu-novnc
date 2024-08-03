@@ -1,0 +1,7 @@
+Store characters received from a TCP socket to a text buffer
+Inputs:
+   sock : open socket
+   hTxb : handle of the text buffer
+Outputs:
+   nbrcv : number of characters received
+

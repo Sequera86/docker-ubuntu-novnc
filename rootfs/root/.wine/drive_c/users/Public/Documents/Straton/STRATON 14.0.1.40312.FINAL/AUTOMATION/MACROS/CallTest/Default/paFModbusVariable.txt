@@ -1,0 +1,20 @@
+[LONG]
+V-SYMBOL=Variable symbol
+V-STYP=~
+V-RET=~
+V-TWOWORDS=TRUE: store on two consecutive words
+V-FID=File identifier
+V-OK=TRUE if successful
+V-MASK=Mask
+V-OFFSET=Offset in the request data block
+V-MODE=Mode: DATA | STATUS | COMMAND | TRIAL
+[SHORT]
+V-STYP=~
+V-RET=~
+V-SYMBOL=~
+V-TWOWORDS=~
+V-FID=~
+V-OK=~
+V-MASK=~
+V-OFFSET=~
+V-MODE=~

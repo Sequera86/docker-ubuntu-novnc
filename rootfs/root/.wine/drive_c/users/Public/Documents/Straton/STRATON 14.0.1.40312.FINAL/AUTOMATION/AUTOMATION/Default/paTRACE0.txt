@@ -1,0 +1,11 @@
+[LONG]
+V-DI1=~
+V-DI2=~
+V-DI3=~
+V-DI4=~
+V-TEXT=Output text
+[SHORT]
+V-DI1=~
+V-DI2=~
+V-DI3=~
+V-DI4=~

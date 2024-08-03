@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    hys (XIN1, XIN2, EPS);
+    Q := hys.Q;
+end_if;
+

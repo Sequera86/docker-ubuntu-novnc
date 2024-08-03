@@ -1,0 +1,3 @@
+sTyp := 'VALUE ' + NAME + ' ' + any_to_string (COL);
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, VALUE, RET);
+

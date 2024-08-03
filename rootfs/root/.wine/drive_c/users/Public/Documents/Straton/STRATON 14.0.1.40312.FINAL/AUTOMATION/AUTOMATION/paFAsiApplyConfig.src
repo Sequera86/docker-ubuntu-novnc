@@ -1,0 +1,7 @@
+if APPLY then
+    sFlag := 'ON';
+else
+    sFlag := 'OFF';
+end_if;
+OK := _PRP ('FWRITE', any_to_string (FID), 'AUTOCONFIG', sFlag, RET);
+

@@ -1,0 +1,23 @@
+[desc]
+XMLGETSYBVALUE=Trouve la valeur d'une variable d'après son symbole
+XMLFIRSTCHILD=Commence l'énumération des balises filles
+XMLCHECKTAGNAME=Teste le nom d'une balise
+XMLSETSYBVALUE=Force la valeur d'une variable d'après son symbole
+XMLLASTERROR=Dernière erreur XML
+XMLGETTAGCONTT=Copie le contenu d'une balise dans un buffer de texte
+XMLSETTAGCONTT=Force le contenu d'une balise avec un buffer de texte
+XMLSETTAGCONT=Force le contenu d'une balise avec une variable STRING
+XMLMANAGER=Gestionnaire XML
+XMLWRITEDOCFILE=Copie un document XML dans un fichier
+XMLGETTAGNAME=Trouve le nom d'une balise
+XMLGETTAGATTRIB=Trouve la valeur d'un attribut
+XMLADDCHILD=Ajoute une balise fille
+XMLFREEDOC=Libère un document XML
+XMLNEXTCHILD=Enumère les balises filles
+XMLNEWDOC=Crée un nouveau document
+XMLGETTAGCONT=Copie le contenu d'une balise dans une variable STRING
+XMLPARSEDOCFILE=Charge un document XML depuis un fichier
+XMLPARSEDOCTXB=Charge un document XML depuis un buffer de texte
+XMLWRITEDOCTXB=Formatte un document XML dans un buffer de texte
+XMLSETTAGATTRIB=Force la valeur d'un attribut
+XMLGETPARENT=Trouve la balise mère

@@ -1,0 +1,51 @@
+#info=SFCCHART
+@I2:0,0=1;b1 is ON\n
+@T3:1,0=1;wait 1 second\n
+@S4:2,0=2;b2 is ON\n
+@T5:3,0=2;wait 1 second\n
+@S6:4,0=3;b3 is ON\n
+@T7:5,0=3;wait 1 second\n
+@S8:6,0=4;b4 is ON\n
+@T9:7,0=4;wait 1 second\n
+@J10:8,0=1;
+#endinfo
+_step _init GS1;
+#sfc=GS1(0,0)
+x1;
+#sfc=end
+_next GT1;
+_trans GT1;
+#sfc=GT1(0,1)
+GS1.T > t#1s
+#sfc=end
+_next GS2;
+_step GS2;
+#sfc=GS2(0,2)
+x2 (N);
+#sfc=end
+_next GT2;
+_trans GT2;
+#sfc=GT2(0,3)
+GS2.T > t#1s;
+#sfc=end
+_next GS3;
+_step GS3;
+#sfc=GS3(0,4)
+x3 (N);
+#sfc=end
+_next GT3;
+_trans GT3;
+#sfc=GT3(0,5)
+GS3.T > t#1s;
+#sfc=end
+_next GS4;
+_step GS4;
+#sfc=GS4(0,6)
+x4 (N);
+#sfc=end
+_next GT4;
+_trans GT4;
+#sfc=GT4(0,7)
+GS4.T > t#1s;
+#sfc=end
+_next GS1;

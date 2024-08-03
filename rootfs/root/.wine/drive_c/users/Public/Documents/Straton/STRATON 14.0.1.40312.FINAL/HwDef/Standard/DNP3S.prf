@@ -1,0 +1,54 @@
+constant Vers : dint := 3; (* Driver Version Number *)
+var Type : dint := 0; (* Slave Object Group                                                                           
+<< 1 = (1) Binary Inputs >>
+<< 3 = (3) Double Inputs >>
+<< 10 = (10) Binary Output Status >>
+<< 20 = (20) Running Counters (Input only) >>
+<< 21 = (21) Frozen Counters (Input only) >>
+<< 30 = (30) Analog Inputs >>
+<< 40 = (40) Analog Outputs Status >>
+<< 110 = (110) String Data >>
+<< 80 = (80) Internal Indication bits (IINBits) >>
+*)
+var PointNum : dint(0..65535):=0; (* Point Number - Max value 65535 *)
+var EventClass: dint := 65535; (* Event Class
+<< 65535 = Default >>
+<< 0 = NONE (no event) >>
+<< 1 = ONE >>
+<< 2 = TWO >>
+<< 4 = THREE >>
+*)
+var StaticVariation : dint := 0; (* Static Variation
+<< 0 = Default >>
+<< 1 = 1 >>
+<< 2 = 2 >>
+<< 3 = 3 >>
+<< 4 = 4 >>
+<< 5 = 5 >>
+<< 6 = 6 >>
+<< 7 = 7 >>
+<< 8 = 8 >>
+<< 9 = 9 >>
+<< 10 = 10 >>
+*)
+
+var EventVariation : dint := 0; (* Event Variation
+<< 0 = Default >>
+<< 1 = 1 >>
+<< 2 = 2 >>
+<< 3 = 3 >>
+<< 4 = 4 >>
+<< 5 = 5 >>
+<< 6 = 6 >>
+<< 7 = 7 >>
+<< 8 = 8 >>
+<< 9 = 9 >>
+<< 10 = 10 >>
+*)
+
+var EventMode : dint := 0; (* Event Mode
+<< 0 = Default >>
+<< 1 = ALL >>
+<< 2 = MOST RECENT >>
+*)
+

@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-SUFFIX=File suffix
+V-PREFIX=File prefix
+[SHORT]
+V-RET=~
+V-FID=~
+V-SUFFIX=~
+V-PREFIX=~

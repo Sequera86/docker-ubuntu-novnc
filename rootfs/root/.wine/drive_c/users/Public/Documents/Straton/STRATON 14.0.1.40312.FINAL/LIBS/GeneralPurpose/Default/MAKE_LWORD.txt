@@ -1,0 +1,8 @@
+[SHORT]
+V-HIPART=
+V-IN=~
+[LONG]
+V-LOPART=
+V-HIPART=
+V-IN=~
+V-Q=

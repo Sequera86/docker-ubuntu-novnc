@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<!--
+	+tag CUSTOMACT
+		+tag object
+			attribute type		: [Mandatory] the custom object type
+			attribute tagname	: [optional] the name of the tag the object will use in body (if not set, the tag will be 'div')
+			attribute doc		: [optional] the documentation page about the custom graphical object
+			
+			+tag property		: [0..n] this represents one property of the custom object
+				attribute name	: [Mandatory] the property name
+				attribute edit	: [optional] the type of edition in straton workbench for this property (by default, the edition is free edit)
+								  can be one of:
+									__X5T_COLOR for color properties
+									__X5T_FONTNAME font fontname properties
+									__X5T_PATH for path properties (beware the path properties for HTML5 generation are all relative to HTML5 WEB page)
+								  the edit type is not set if you use enum tag above
+				attribut maxlen	: [optional] the maximum property value lenght (for string) by default no maximum lenght
+				
+				+tag enum		: [0..n] this represents a list of possible values for the property (can not set the attribut 'edit' in this case)
+				+tag USA, FRA, GER, ITA, SPA, KOR, RUS, POR, CHT, CHS : [optional] for property translation if one language is not set, we will use english one
+-->
+
+<CUSTOMACT VERSION="1">
+	<!-- Add your custom object definitions here -->
+	<!-- See associated samples for use -->
+</CUSTOMACT>

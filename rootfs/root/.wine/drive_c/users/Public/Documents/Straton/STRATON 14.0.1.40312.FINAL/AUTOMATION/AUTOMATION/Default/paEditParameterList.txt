@@ -1,0 +1,9 @@
+[LONG]
+V-NEWVAR=~
+V-TITLE=Title of the input dialog box
+V-LISTID=ID of the list of variables (use VLID function)
+V-STR=~
+V-OK=TRUE if successful
+[SHORT]
+V-NEWVAR=~
+V-STR=~

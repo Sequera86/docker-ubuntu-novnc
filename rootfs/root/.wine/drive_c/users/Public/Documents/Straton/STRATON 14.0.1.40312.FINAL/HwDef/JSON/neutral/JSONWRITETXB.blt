@@ -1,0 +1,12 @@
+JsonWriteTxb - function - Write a JSON object to a text buffer
+
+Inputs:
+
+hRoot : DINT; handle of a valid JSON node
+hTxb : DINT; handle of a valid text buffer where to generate JSON text
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+The JSON text generated is compacted on a single line with no blank characters.

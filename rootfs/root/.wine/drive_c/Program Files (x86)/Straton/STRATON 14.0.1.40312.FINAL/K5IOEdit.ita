@@ -1,0 +1,34 @@
+﻿; K5 IOEDIT control - error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - don't change that line!
+
+[Messages]
+ErasePrompt=L' IO DEVICE e la descrizione dei canali verrà cancellata.Continuare ?
+OverwritePrompt=L' IO DEVICE e la descrizione dei canali verranno sovrascritte.Continuare ?
+ErrWord=Valore invalido. Atteso SINT(16 Bit).
+ErrLong=Valore invalido. Atteso numero INTEGER.
+ErrString=Valore invalido.La stringa non può superare i 15 caratteri.
+ErrChar=Valore invalido. Atteso singolo carattere.
+ErrBool=Valore invalido. Atteso valore "TRUE" o "FALSE".
+ErrFloat=Valore invalido. Atteso numero REAL.
+ErrHotEnabled=Questa operazione non è consentita se l'On Line Change è abilitato
+
+Library=&Libreria:
+Device=&Device:
+all=(tutti)
+Properties=Properties
+
+IOs=I/O Boards
+Close=Chiudi
+Select=Seleziona
+Delete=Elimina
+Properties=Properties
+Virtual=Virtuali/Reali
+Help=Guida
+Rename=Rinomina
+
+Up=&Sposta su
+Down=&Sposta giu
+
+; eof

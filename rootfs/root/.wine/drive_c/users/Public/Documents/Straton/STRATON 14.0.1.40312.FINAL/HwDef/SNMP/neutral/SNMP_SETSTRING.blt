@@ -1,0 +1,13 @@
+Write a SNMP string value.
+
+Inputs:
+
+- EN : the writing is done on a rising edge of this input
+- OID : the OID name to write (format is a.b.c.d ...)
+- LVALUE : the value to write
+- TRAP : if true the agent send a trap to manager when value changes
+
+Outputs:
+
+- Ready : TRUE when the block is ready - FALSE during a writing
+- RC : SNMP error (see SNMP documentation)

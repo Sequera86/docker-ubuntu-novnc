@@ -1,0 +1,6 @@
+An instance of this block must be declared for each CIF board.
+Instance must be called when the application starts
+ before any call to any other CIF functions.
+The function block takes care of closing the board
+ when the application stops.
+The board number argument is used on the FIRST CALL ONLY.

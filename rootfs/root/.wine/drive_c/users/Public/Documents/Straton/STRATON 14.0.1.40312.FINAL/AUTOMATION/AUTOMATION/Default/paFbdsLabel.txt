@@ -1,0 +1,8 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-TEXT=~
+V-LABEL=Label name
+[SHORT]
+V-TEXT=~
+V-LABEL=

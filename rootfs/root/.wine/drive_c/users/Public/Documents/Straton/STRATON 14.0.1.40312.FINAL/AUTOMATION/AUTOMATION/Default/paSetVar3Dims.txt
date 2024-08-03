@@ -1,0 +1,11 @@
+[LONG]
+V-NEWVAR=~
+V-DIMMEDIUM=Second dimension
+V-STR=
+V-DIMLOW=Lowest dimension
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-DIMHIGH=Highest dimension
+[SHORT]
+V-NEWVAR=~
+V-STR=

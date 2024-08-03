@@ -1,0 +1,5 @@
+[LONG]
+V-COMMENT=
+V-OK=
+V-NAME=
+V-ARG=

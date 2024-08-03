@@ -1,0 +1,34 @@
+﻿; K5 IOEDIT control - error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - don't change that line!
+
+[Messages]
+ErasePrompt=L'équipement d'E/S et la description de ses voies vont être supprimés. Continuer ?
+OverwritePrompt=L'équipement d'E/S et la description de ses voies vont être écrasés. Continuer ?
+ErrWord=Valeur incorrecte. Entier court (16 bit) attendu.
+ErrLong=Valeur incorrecte. Entier attendu.
+ErrString=Valeur incorrecte. La chaine ne doit pas dépasser 15 caractères
+ErrChar=Valeur incorrecte. Caractère attendu
+ErrBool=Valeur incorrecte. "TRUE" ou "FALSE" attendu
+ErrFloat=Valeur incorrecte. Valeur réelle attendue.
+ErrHotEnabled=Cette opération est interdite quand la modification en ligne est activée
+
+Library=&Librairie :
+Device=&Equipement :
+all=(toutes)
+Properties=Propriétés
+
+IOs=Cartes d'E/S
+Close=Fermer
+Select=Sélection
+Delete=Supprimer
+Properties=Propriétés
+Virtual=Virtuel/Réel
+Help=Aide
+Rename=Renommer
+
+Up=&Monter
+Down=&Descendre
+
+; eof

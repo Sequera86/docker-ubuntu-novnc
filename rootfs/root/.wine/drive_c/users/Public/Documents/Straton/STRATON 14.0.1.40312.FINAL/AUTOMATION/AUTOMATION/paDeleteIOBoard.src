@@ -1,0 +1,2 @@
+OK := _PRP ('DeleteIO', any_to_string (SLOT), '', '', RET);
+

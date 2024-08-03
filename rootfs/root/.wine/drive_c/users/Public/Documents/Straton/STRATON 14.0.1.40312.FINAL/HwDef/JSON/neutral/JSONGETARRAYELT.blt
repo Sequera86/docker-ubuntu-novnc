@@ -1,0 +1,12 @@
+JsonGetArrayElt - function - Get a JSON element in an array
+
+Inputs:
+
+hArray : DINT; handle of a valid JSON node representing an array
+index : 0-based index of the wished element
+
+Outputs:
+
+hNode : DINT; handle of a specified child JSON node
+
+The return value is 0 if the index is not in range [ 0 .. array_count - 1 ]

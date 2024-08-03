@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := atan2l (Y, X);
+end_if;
+

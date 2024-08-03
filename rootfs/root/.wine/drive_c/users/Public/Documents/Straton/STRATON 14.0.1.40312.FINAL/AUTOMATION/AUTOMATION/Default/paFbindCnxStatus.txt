@@ -1,0 +1,9 @@
+[LONG]
+V-STYP=~
+V-FID=File identifier
+V-ID=~
+V-OK=TRUE if successful
+V-NAME=Variable name
+[SHORT]
+V-STYP=~
+V-ID=~

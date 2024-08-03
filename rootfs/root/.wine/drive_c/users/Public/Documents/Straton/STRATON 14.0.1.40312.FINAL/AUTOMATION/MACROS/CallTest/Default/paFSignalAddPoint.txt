@@ -1,0 +1,16 @@
+[LONG]
+V-STYP=~
+V-RET=~
+V-COL=~
+V-TM=~
+V-FID=~
+V-OK=~
+V-VALUE=~
+[SHORT]
+V-STYP=~
+V-RET=~
+V-COL=~
+V-TM=~
+V-FID=~
+V-OK=~
+V-VALUE=~

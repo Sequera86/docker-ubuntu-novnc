@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Root desc="1x Stepper motor module 3A, 4 DI - Ramp">
+   <dataTypeList>
+      <struct name="Index2100_Sub20" uniqueID="UID_DT_Index2100_Sub20">
+         <varDeclaration name="AbsPos01" uniqueID="UID_Index2100_Sub20_AbsPos01">
+            <label lang="de">Absolute Position 01</label>
+            <label lang="en">Absolute position 01</label>
+            <label lang="fr">Absolute position 01</label>
+            <DINT/>
+         </varDeclaration>
+         <varDeclaration name="MpGenControl01" uniqueID="UID_Index2100_Sub20_MpGenControl01">
+            <label lang="de">MpGen Control 01</label>
+            <label lang="en">MpGen control 01</label>
+            <label lang="fr">MpGen control 01</label>
+            <UINT/>
+         </varDeclaration>
+         <varDeclaration name="MpGenMode01" uniqueID="UID_Index2100_Sub20_MpGenMode01">
+            <label lang="de">MpGen Mode 01</label>
+            <label lang="en">MpGen mode 01</label>
+            <label lang="fr">MpGen mode 01</label>
+            <SINT/>
+         </varDeclaration>
+      </struct>
+      <struct name="Index2100_Sub1E" uniqueID="UID_DT_Index2100_Sub1E">
+         <varDeclaration name="NetworkStatus" uniqueID="Index2100_Sub1E_OK">
+            <label lang="en">Network status from module</label>
+            <label lang="de">Netzwerkstatus vom Modul</label>
+            <USINT/>
+         </varDeclaration>
+         <varDeclaration name="AbsPos01ActVal" uniqueID="UID_Index2100_Sub1E_AbsPos01ActVal">
+            <label lang="de">Absolute Position 01 Istwert</label>
+            <label lang="en">Absolute position 01 actual value</label>
+            <label lang="fr">Absolute position 01 actual value</label>
+            <DINT/>
+         </varDeclaration>
+         <varDeclaration name="MpGenStatus01" uniqueID="UID_Index2100_Sub1E_MpGenStatus01">
+            <label lang="de">MpGen Status 01</label>
+            <label lang="en">MpGen status 01</label>
+            <label lang="fr">MpGen status 01</label>
+            <UINT/>
+         </varDeclaration>
+         <varDeclaration name="InputStatus" uniqueID="UID_Index2100_Sub1E_InputStatus">
+            <label lang="de">Input Status</label>
+            <label lang="en">Input status</label>
+            <label lang="fr">Input status</label>
+            <USINT/>
+         </varDeclaration>
+      </struct>
+   </dataTypeList>
+   <parameterList>
+      <parameter uniqueID="UID_DOM_Index2100_Sub20" access="readWrite">
+         <label lang="en">MOD_OutputImage_DOM</label>
+         <label lang="de">MOD_OutputImage_DOM</label>
+         <dataTypeIDRef uniqueIDRef="UID_DT_Index2100_Sub20"/>
+      </parameter>
+      <parameter uniqueID="UID_DOM_Index2100_Sub1E" access="read">
+         <label lang="en">MOD_InputImage_DOM</label>
+         <label lang="de">MOD_InputImage_DOM</label>
+         <dataTypeIDRef uniqueIDRef="UID_DT_Index2100_Sub1E"/>
+      </parameter>
+   </parameterList>
+   <Object index="2100" name="X20SM1436" objectType="9">
+      <SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="const" defaultValue="54"/>
+      <SubObject subIndex="01" name="MOD_ChildCfgIndex_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="0" lowLimit="0" highLimit="0x21FE"/>
+      <SubObject subIndex="02" name="MOD_ChildCfgCount_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0"/>
+      <SubObject subIndex="03" name="MOD_ChildActCount_U8" objectType="7" dataType="0005" accessType="ro" defaultValue="0"/>
+      <SubObject subIndex="04" name="MOD_CfgMode_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="1" lowLimit="0" highLimit="3"/>
+      <SubObject subIndex="05" name="MOD_RequestedHardwareId_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="0" actualValue="9858"/>
+      <SubObject subIndex="06" name="MOD_RequestedVendorId_U16" objectType="7" dataType="0006" accessType="rw"/>
+      <SubObject subIndex="07" name="MOD_HardwareId_U16" objectType="7" dataType="0006" accessType="ro"/>
+      <SubObject subIndex="08" name="MOD_VendorId_U16" objectType="7" dataType="0006" accessType="ro"/>
+      <SubObject subIndex="0A" name="MOD_Status_U16" objectType="7" dataType="0006" accessType="ro"/>
+      <SubObject subIndex="0B" name="MOD_NetworkStatus_U8" objectType="7" dataType="0005" accessType="ro"/>
+      <SubObject subIndex="0C" name="MOD_BlockMask_U8" objectType="7" dataType="0005" accessType="ro"/>
+      <SubObject subIndex="0D" name="MOD_BootCount_U8" objectType="7" dataType="0005" accessType="ro"/>
+      <SubObject subIndex="0E" name="MOD_LastError_U8" objectType="7" dataType="0005" accessType="rw"/>
+      <SubObject subIndex="11" name="MOD_FirmwareVersion_U16" objectType="7" dataType="0006" accessType="ro"/>
+      <SubObject subIndex="12" name="MOD_HardwareVariant_U16" objectType="7" dataType="0006" accessType="ro"/>
+      <SubObject subIndex="13" name="MOD_SerialNo_U32" objectType="7" dataType="0007" accessType="ro"/>
+      <SubObject subIndex="14" name="MOD_PhysicalSlotNumber_U8" objectType="7" dataType="0005" accessType="ro"/>
+      <SubObject subIndex="15" name="MOD_NodeSwitch_U8" objectType="7" dataType="0005" accessType="ro"/>
+      <SubObject subIndex="16" name="MOD_RequestedSerialNo_U32" objectType="7" dataType="0007" accessType="rw" defaultValue="0"/>
+      <SubObject subIndex="17" name="MOD_ModuleErrorReaction_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0"/>
+      <SubObject subIndex="1F" name="MOD_InputImage2_DOM" objectType="7" dataType="000F" accessType="ro" defaultValue="0" PDOmapping="TPDO"/>
+      <SubObject subIndex="23" name="MOD_Firmware_DOM" objectType="7" dataType="000F" accessType="wo"/>
+      <SubObject subIndex="32" name="MOD_FirmwareChannel_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="2"/>
+      <SubObject subIndex="1E" name="MOD_InputImage_DOM" objectType="7" PDOmapping="TPDO" uniqueIDRef="UID_DOM_Index2100_Sub1E"/>
+      <SubObject subIndex="20" name="MOD_OutputImage_DOM" objectType="7" PDOmapping="RPDO" uniqueIDRef="UID_DOM_Index2100_Sub20"/>
+      <SubObject subIndex="21" name="MOD_AsyncRead_U64" objectType="7" dataType="001B" accessType="rw"/>
+      <SubObject subIndex="22" name="MOD_AsyncWrite_U64" objectType="7" dataType="001B" accessType="wo"/>
+      <SubObject subIndex="5A" name="MOD_CfgFunctionMode_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="3"/>
+      <SubObject subIndex="5B" name="MOD_CfgEntryCount_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="25"/>
+      <SubObject subIndex="64" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000000040000"/>
+      <SubObject subIndex="65" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000001040000"/>
+      <SubObject subIndex="66" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000001020004"/>
+      <SubObject subIndex="67" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000000020004"/>
+      <SubObject subIndex="68" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000001010006"/>
+      <SubObject subIndex="69" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000000010006"/>
+      <SubObject subIndex="6A" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005010030"/>
+      <SubObject subIndex="6B" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005010031"/>
+      <SubObject subIndex="6C" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005010032"/>
+      <SubObject subIndex="6D" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000FFFF05020048"/>
+      <SubObject subIndex="6E" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005020034"/>
+      <SubObject subIndex="6F" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005020036"/>
+      <SubObject subIndex="70" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005020038"/>
+      <SubObject subIndex="71" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x000000000502003A"/>
+      <SubObject subIndex="72" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x000000000504003C"/>
+      <SubObject subIndex="73" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005040040"/>
+      <SubObject subIndex="74" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005020044"/>
+      <SubObject subIndex="75" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x000000080501004A"/>
+      <SubObject subIndex="76" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x000000000501004B"/>
+      <SubObject subIndex="77" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000008305010046"/>
+      <SubObject subIndex="78" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000F05010033"/>
+      <SubObject subIndex="79" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005010132"/>
+      <SubObject subIndex="7A" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005010134"/>
+      <SubObject subIndex="7B" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000005040158"/>
+      <SubObject subIndex="7C" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x000000000504015C"/>
+   </Object>
+   <Object index="1600" name="PDO_RxMappParam_00h_AU64" objectType="8">
+      <SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="1" PDOmapping="no"/>
+      <SubObject subIndex="01" name="ObjectMapping" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0038000000202100" PDOmapping="no"/>
+   </Object>
+   <Object index="1A00" name="PDO_TxMappParam_00h_AU64" objectType="8">
+      <SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="1" PDOmapping="no"/>
+      <SubObject subIndex="01" name="ObjectMapping" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x00400000001E2100" PDOmapping="no"/>
+   </Object>
+</Root>

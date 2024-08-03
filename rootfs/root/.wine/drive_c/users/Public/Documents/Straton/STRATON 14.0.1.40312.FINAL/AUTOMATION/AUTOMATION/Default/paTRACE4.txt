@@ -1,0 +1,7 @@
+[LONG]
+V-NEWVAR=~
+V-TEXT=Output text - use %d for arguments
+V-DI=~
+[SHORT]
+V-NEWVAR=~
+V-DI=~

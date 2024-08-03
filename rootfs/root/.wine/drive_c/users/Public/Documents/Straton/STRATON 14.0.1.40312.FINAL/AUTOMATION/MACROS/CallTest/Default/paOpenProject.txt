@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-CREATE=if TRUE, try to create the project if it does not exist
+[SHORT]
+V-RET=~
+V-OK=~
+V-CREATE=~

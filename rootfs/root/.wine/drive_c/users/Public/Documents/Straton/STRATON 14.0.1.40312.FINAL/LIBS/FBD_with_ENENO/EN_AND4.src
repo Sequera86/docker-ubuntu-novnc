@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := I1 and I2 and I3 and I4;
+end_if;
+

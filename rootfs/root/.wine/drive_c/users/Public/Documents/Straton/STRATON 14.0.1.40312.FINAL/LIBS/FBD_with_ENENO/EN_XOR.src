@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := I1 xor I2;
+end_if;
+

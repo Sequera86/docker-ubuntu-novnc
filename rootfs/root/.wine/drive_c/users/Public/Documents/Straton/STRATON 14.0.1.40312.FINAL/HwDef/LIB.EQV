@@ -1,0 +1,44 @@
+(* IEC61850 Server AddCause identifies the reason of failure in a negative control service specific response *)
+#define IEC61850S_AddCause_not_supported                                 1 //  1
+#define IEC61850S_AddCause_blocked_by_switching_hierarchy                2 //  2
+#define IEC61850S_AddCause_select_failed                                 3 //  3
+#define IEC61850S_AddCause_invalid_position                              4 //  4
+#define IEC61850S_AddCause_position_reached                              5 //  5
+#define IEC61850S_AddCause_parameter_change_in_execution                 6 //  6
+#define IEC61850S_AddCause_step_limit                                    7 //  7
+#define IEC61850S_AddCause_blocked_by_mode                               8 //  8
+#define IEC61850S_AddCause_blocked_by_process                            9 //  9
+#define IEC61850S_AddCause_blocked_by_interlocking                      10 // 10
+#define IEC61850S_AddCause_blocked_by_synchrocheck                      11 // 11
+#define IEC61850S_AddCause_command_already_in_execution                 12 // 12
+#define IEC61850S_AddCause_blocked_by_health                            13 // 13
+#define IEC61850S_AddCause_1_of_n_control                               14 // 14
+#define IEC61850S_AddCause_abortion_by_cancel                           15 // 15
+#define IEC61850S_AddCause_time_limit_over                              16 // 16
+#define IEC61850S_AddCause_abortion_by_trip                             17 // 17
+#define IEC61850S_AddCause_object_not_selected                          18 // 18
+(* Additional causes for IEC61850 Ed.2 *)
+#define IEC61850S_AddCause_object_already_selected                      19 // 19
+#define IEC61850S_AddCause_no_access_authority                          20 // 20
+#define IEC61850S_AddCause_ended_with_overshoot                         21 // 21
+#define IEC61850S_AddCause_abortion_due_to_deviation                    22 // 22
+#define IEC61850S_AddCause_abortion_by_communication_loss               23 // 23
+#define IEC61850S_AddCause_blocked_by_command                           24 // 24
+#define IEC61850S_AddCause_none                                         25 // 25
+#define IEC61850S_AddCause_inconsistent_parameters                      26 // 26
+#define IEC61850S_AddCause_locked_by_other_client                       27 // 27
+
+(* IEC61850 Server ServiceError code for negative service responses *)
+#define IEC61850S_ServiceError_no_error                                  0 //  0
+#define IEC61850S_ServiceError_instance_not_available                    1 //  1
+#define IEC61850S_ServiceError_instance_in_use                           2 //  2
+#define IEC61850S_ServiceError_access_violation                          3 //  3
+#define IEC61850S_ServiceError_access_not_allowed_in_current_state       4 //  4
+#define IEC61850S_ServiceError_parameter_value_inappropriate             5 //  5
+#define IEC61850S_ServiceError_parameter_value_inconsistent              6 //  6
+#define IEC61850S_ServiceError_class_not_supported                       7 //  7
+#define IEC61850S_ServiceError_instance_locked_by_other_client           8 //  8
+#define IEC61850S_ServiceError_control_must_be_selected                  9 //  9
+#define IEC61850S_ServiceError_type_conflict                            10 // 10
+#define IEC61850S_ServiceError_failed_due_to_communications_constraint  11 // 11
+#define IEC61850S_ServiceError_failed_due_to_server_constraint          12 // 12

@@ -1,0 +1,6 @@
+[LONG]
+V-RET=~
+V-LANGUAGE=0=English / 1=German / 2=French / 3=Italian / 4=Spanish / 5=Korean
+[SHORT]
+V-RET=~
+V-LANGUAGE=~

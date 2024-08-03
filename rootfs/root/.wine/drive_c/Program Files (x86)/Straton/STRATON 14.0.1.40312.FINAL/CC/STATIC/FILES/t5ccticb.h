@@ -1,0 +1,108 @@
+/* t5ccticb.h - required for "C" generated POUs */
+
+/* BEGIN*/
+
+    T5PTR_DBSTATUS pStatus;
+    T5_WORD wIndex=0;
+    T5_DWORD dwVal=0L;
+    T5PTR_DBFBINST pI=NULL;
+    T5PTR_DBFCLASS pF=NULL;
+    T5_BOOL bSkip=FALSE;
+    T5_PTWORD pPrgStatus;
+    T5PTR_DBPROG pProg;
+#ifdef T5DEF_TICSAFE
+    T5_DWORD dwCount=0L;
+#endif /*T5DEF_TICSAFE*/
+    T5_LOCK_REGISTER T5_PTBYTE pLock;
+    T5_RD8_REGISTER T5_PTBYTE pData8;
+#ifdef T5DEF_SINTSUPPORTED
+    T5_RD8_REGISTER T5_PTCHAR pSint;
+#endif /*T5DEF_SINTSUPPORTED*/
+#ifdef T5DEF_DATA16SUPPORTED
+    T5_PTSHORT pData16;
+#endif /*T5DEF_DATA16SUPPORTED*/
+    T5_RDINT_REGISTER T5_PTLONG pDint;
+#ifdef T5DEF_REALSUPPORTED
+    T5_REAL_REGISTER T5_PTREAL pReal;
+#endif /*T5DEF_REALSUPPORTED*/
+#ifdef T5DEF_LREALSUPPORTED
+    T5_PTLREAL pLReal;
+#endif /*T5DEF_LREALSUPPORTED*/
+#ifdef T5DEF_LINTSUPPORTED
+    T5_PTLINT pLInt;
+#endif /*T5DEF_LINTSUPPORTED*/
+#ifdef T5DEF_DATA64SUPPORTED
+    T5_PTDATA64 p64;
+#endif /*T5DEF_DATA64SUPPORTED*/
+    T5_RTIME_REGISTER T5_PTDWORD pTime;
+    T5PTR_DBFBINST pInst;
+    T5PTR_DBFCLASS pFC;
+#ifdef T5DEF_SFC
+    T5PTR_DBSTEP pStep;
+    T5PTR_DBTRANS pTrans;
+#endif /*T5DEF_SFC*/
+#ifdef T5DEF_XV
+    T5_PTBYTE *pXV=NULL, *pXS=NULL;
+#endif /*T5DEF_XV*/
+    T5_DWORD dwCTOffset;
+#ifdef T5DEF_CTSEG
+    T5_PTBYTE pCTSeg;
+#endif /*T5DEF_CTSEG*/
+    T5_WORD wParams[68]; /* for F/FB calls */
+#ifdef T5DEF_STRINGSUPPORTED
+    T5_PTBYTE *pStr;
+#endif /*T5DEF_STRINGSUPPORTED*/
+    T5HND_STF pfStf;
+#ifdef T5DEF_WSTRINGSUPPORTED
+    T5_PTDWORD pWString;
+#endif /*T5DEF_WSTRINGSUPPORTED*/
+
+    pfStf = T5GET_DBPRIVATE(pDB)->pfStf;
+    wParams[0] = wParams[1] = 0;
+    /* prepare fast access pointers */
+    pStatus = T5GET_DBSTATUS(pDB);
+    pLock = T5GET_DBLOCK(pDB);
+    pData8 = T5GET_DBDATA8(pDB);
+#ifdef T5DEF_SINTSUPPORTED
+    pSint = (T5_PTCHAR)T5GET_DBDATA8(pDB);
+#endif /*T5DEF_SINTSUPPORTED*/
+#ifdef T5DEF_DATA16SUPPORTED
+    pData16 = (T5_PTSHORT)T5GET_DBDATA16(pDB);
+#endif /*T5DEF_DATA16SUPPORTED*/
+    pDint = (T5_PTLONG)T5GET_DBDATA32(pDB);
+#ifdef T5DEF_REALSUPPORTED
+    pReal = (T5_PTREAL)T5GET_DBDATA32(pDB);
+#endif /*T5DEF_REALSUPPORTED*/
+#ifdef T5DEF_LREALSUPPORTED
+    pLReal = (T5_PTLREAL)T5GET_DBDATA64(pDB);
+#endif /*T5DEF_LREALSUPPORTED*/
+#ifdef T5DEF_LINTSUPPORTED
+    pLInt = (T5_PTLINT)T5GET_DBDATA64(pDB);
+#endif /*T5DEF_LINTSUPPORTED*/
+#ifdef T5DEF_DATA64SUPPORTED
+    p64 = (T5_PTDATA64)T5GET_DBDATA64(pDB);
+#endif /*T5DEF_DATA64SUPPORTED*/
+    pTime = T5GET_DBTIME(pDB);
+    pInst = T5GET_DBFBINST(pDB);
+    pFC = T5GET_DBFCLASS(pDB);
+#ifdef T5DEF_SFC
+    pStep = T5GET_DBSTEP(pDB);
+    pTrans = T5GET_DBTRANS(pDB);
+#endif /*T5DEF_SFC*/
+#ifdef T5DEF_XV
+    pXV = T5GET_DBXV(pDB);
+#endif /*T5DEF_XV*/
+    dwCTOffset = 0xffffffffL;
+    pProg = T5GET_DBPROG(pDB);
+#ifdef T5DEF_CTSEG
+    pCTSeg = (T5_PTBYTE)(pDB[T5TB_CTSEG].pData);
+#endif /*T5DEF_CTSEG*/
+    pPrgStatus = &(pProg[wPrgNo].wFlags);
+#ifdef T5DEF_STRINGSUPPORTED
+    pStr = T5GET_DBSTRING(pDB);
+#endif /*T5DEF_STRINGSUPPORTED*/
+#ifdef T5DEF_WSTRINGSUPPORTED
+    pWString = T5GET_DBWSTRING(pDB);
+#endif /*T5DEF_WSTRINGSUPPORTED*/
+
+/* END */

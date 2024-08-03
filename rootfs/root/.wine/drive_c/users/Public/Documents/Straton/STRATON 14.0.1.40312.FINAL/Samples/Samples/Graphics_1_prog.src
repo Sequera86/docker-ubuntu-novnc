@@ -1,0 +1,10 @@
+if valveIN & iLevel < 998 then
+   iLevel += 2;
+end_if;
+
+if valveOUT & iLevel > 0 then
+   iLevel -= 1;
+end_if;
+
+iLevelPLUS := iLevel + 10;
+

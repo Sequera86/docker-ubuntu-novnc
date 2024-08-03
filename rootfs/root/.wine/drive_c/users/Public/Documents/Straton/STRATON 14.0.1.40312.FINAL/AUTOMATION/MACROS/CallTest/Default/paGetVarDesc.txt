@@ -1,0 +1,34 @@
+[LONG]
+V-DIMMEDIUM=2nd dimension or 0
+V-COMMENT=Description
+V-OUTPARAM=TRUE if the variable is an output parameter
+V-DIMLOW=1rst dimension or 0
+V-NAME=Variable name
+V-OK=~
+V-INPARAM=TRUE if the variable is an input parameter
+V-PROFILE=Profile name
+V-INIT=Initial value
+V-PROPS=Profile properties
+V-DATATYPE=Data type
+V-TAG=Tag (short description
+V-DIMTOTAL=Total dimension (number of items)
+V-DIMHIGH=3rd dimension or 0
+V-ENU=~
+V-SYB=TRUE if variable symbol is embedded
+[SHORT]
+V-DIMMEDIUM=~
+V-COMMENT=~
+V-OUTPARAM=~
+V-DIMLOW=~
+V-OK=~
+V-NAME=~
+V-INPARAM=~
+V-PROFILE=~
+V-INIT=~
+V-PROPS=~
+V-DATATYPE=~
+V-TAG=~
+V-DIMTOTAL=~
+V-DIMHIGH=~
+V-ENU=~
+V-SYB=~

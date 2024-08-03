@@ -1,0 +1,14 @@
+/V,L,BOOL(0)[0],8,EN
+/V,=TRUE
+/V,L,STRING(255)[0],8,FMT
+/V,L,DINT(0)[0],8,ARG1
+/V,=0
+/V,L,DINT(0)[0],8,ARG2
+/V,=0
+/V,L,DINT(0)[0],8,ARG3
+/V,=0
+/V,L,DINT(0)[0],8,ARG4
+/V,=0
+/V,L,BOOL(0)[0],16,ENO
+/V,L,BOOL(0)[0],16,Q
+

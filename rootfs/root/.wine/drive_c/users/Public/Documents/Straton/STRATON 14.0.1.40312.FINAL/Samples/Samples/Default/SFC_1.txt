@@ -1,0 +1,26 @@
+[SHORT]
+V-X2=~
+V-X3=~
+V-ICOUNT=~
+V-X1=~
+V-NEWVAR=~
+V-X11=~
+V-B1=~
+V-B2=~
+V-X4=~
+V-BRUN=~
+V-B3=~
+V-B4=~
+[LONG]
+V-X2=~
+V-X3=~
+V-ICOUNT=counting when active
+V-X1=~
+V-NEWVAR=~
+V-X11=~
+V-B1=~
+V-B2=~
+V-X4=~
+V-BRUN=activation command
+V-B3=~
+V-B4=~

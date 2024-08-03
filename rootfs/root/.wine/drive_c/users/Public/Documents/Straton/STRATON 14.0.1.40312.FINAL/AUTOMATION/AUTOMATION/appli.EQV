@@ -1,0 +1,95 @@
+// target project pathname
+
+#define _TARGETPATH        (_PRPPATH())
+
+// workbench languages
+
+#define _WB_USA            0  // Workbench in English
+#define _WB_GER            1  // Workbench in German
+#define _WB_FRA            2  // Workbench in French
+#define _WB_ITA            3  // Workbench in Italian
+#define _WB_SPA            4  // Workbench in Spanish
+#define _WB_KOR            5  // Workbench in Korean
+
+// languages
+
+#define _LG_SFC            'SFC'   // Sequential Function Chart Language - Grid Editor
+#define _LG_FFSFC          'FFSFC' // Sequential Function Chart Language - Free Form Editor
+#define _LG_FBD            'FBD'   // Function Block Diagram language
+#define _LG_LD             'LD'    // Ladder Diagram language
+#define _LG_ST             'ST'    // Structured Text language
+#define _LG_IL             'IL'    // Instructio List language
+
+// Kinds of programs
+
+#define _POU_MAIN          'MAIN'      // Main program 
+#define _POU_SP            'SP'        // Sub-program
+#define _POU_UDFB          'UDFB'      // User Defined Function Block
+#define _POU_CHILDOF       'CHILDOF'   // SFC child program
+
+// contats and coils
+
+#define _LD_DIR            'D'   // Direct contact or coil
+#define _LD_INV            'I'   // Negated context or coil
+#define _LD_SET            'S'   // 'S' contact or coil
+#define _LD_RESET          'R'   // 'R' contact or coil
+#define _LD_P              'P'   // 'P' contact or coil
+#define _LD_N              'N'   // 'N' contact or coil
+
+// SFC level 2 information
+
+#define _LV2_NOTE          'NOTE'   // SFC level 2: description note
+#define _LV2_ACTION        'DEF'    // SFC level 2: step basic actions
+#define _LV2_COND          'DEF'    // SFC level 2: transition condition
+#define _LV2_P1            'P1'     // SFC level 2: step P1 actions
+#define _LV2_N             'N'      // SFC level 2: step N actions
+#define _LV2_P0            'P0'     // SFC level 2: step P0 actions
+
+// MODBUS addressing
+
+#define _MB_I_REG          'RIW' // MODBUS: Input Registers
+#define _MB_H_REG          'RHW' // MODBUS: Holding Registers
+#define _MB_I_BIT          'RIB' // MODBUS: Input Bits
+#define _MB_C_BIT          'RCB' // MODBUS: Coil Bits
+#define _MB_READ_I_REG     'RIW' // MODBUS: Read Input Registers 
+#define _MB_READ_H_REG     'RHW' // MODBUS: Read Holding Registers
+#define _MB_WRITE_H_REG    'WHW' // MODBUS: Write Holding Registers
+#define _MB_READ_I_BIT     'RIB' // MODBUS: Read Input Bits
+#define _MB_READ_C_BIT     'RCB' // MODBUS: Read Coil Bits
+#define _MB_WRITE_C_BIT    'WCB' // MODBUS: Write Coil Bits
+
+#define _MB_REAG_H_REG     'RHW' // obsolete - for compatibility
+
+// MODBUS requests
+
+#define _MB_PERIODIC       'PERIODIC'  // MODBUS: Periodic request
+#define _MB_ONCALL         'ONCALL'    // MODBUS: Request activated by a variable
+#define _MB_ONCHANGE       'ONCHANGE'  // MODBUS: Request activated on a change of value
+
+// MODBUS variables
+
+#define _MB_DATA           'DATA'      // MODBUS: Data exchange
+#define _MB_STATUS         'STATUS'    // MODBUS: Connection status
+#define _MB_COMMAND        'COMMAND'   // MODBUS: Activation command
+#define _MB_TRIAL          'TRIAL'     // MODBUS: Current exchange trial
+#define _MB_SHOT           'SHOT'      // MODBUS: One shot activation command
+#define _MB_ONGOING        'GOING'     // MODBUS: On going request
+
+// AS-i
+
+#define _ASI_M_CONFOK      1           // ASi Master Diagnostic: Configuration OK
+#define _ASI_M_SLV0        2           // ASi Master Diagnostic: Slave 0 detected
+#define _ASI_M_AUTOACT     3           // ASi Master Diagnostic: Auto-addressing active
+#define _ASI_M_AUTOAV      4           // ASi Master Diagnostic: Auto-addressing available
+#define _ASI_M_CNFACT      5           // ASi Master Diagnostic: Configuration active
+#define _ASI_M_NORMAL      6           // ASi Master Diagnostic: Normal mode
+#define _ASI_M_PWFAIL      7           // ASi Master Diagnostic: Power fail
+#define _ASI_M_OFFLINE     8           // ASi Master Diagnostic: Off Line mode
+#define _ASI_M_PERIPHOK    9           // ASi Master Diagnostic: Periphery OK
+
+#define _ASI_S_ACT         1           // ASi Slave diagnostic: Active
+#define _ASI_S_DET         2           // ASi Slave diagnostic: Detected
+#define _ASI_S_PRJ         3           // ASi Slave diagnostic: Projected
+#define _ASI_S_COR         4           // ASi Slave diagnostic: Corrupted
+#define _ASI_S_FLT         5           // ASi Slave diagnostic: Periphery fault
+

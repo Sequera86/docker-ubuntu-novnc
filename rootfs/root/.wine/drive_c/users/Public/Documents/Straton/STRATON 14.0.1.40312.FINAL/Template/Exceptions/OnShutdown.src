@@ -1,0 +1,6 @@
+(*
+OnShutdown
+This program will be executed after the last cycle
+when the application is stopped cleanly.
+*)
+

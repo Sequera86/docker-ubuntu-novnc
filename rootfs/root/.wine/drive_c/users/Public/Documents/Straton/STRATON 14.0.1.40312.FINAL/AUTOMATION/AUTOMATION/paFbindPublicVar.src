@@ -1,0 +1,5 @@
+sTyp := any_to_string (ID) + ' ' + NAME + ' '
+        + HystP + ' ' + HystN;
+OK := _PRP ('FWRITE', any_to_string (FID),
+            'PUB', sTyp, RET);
+

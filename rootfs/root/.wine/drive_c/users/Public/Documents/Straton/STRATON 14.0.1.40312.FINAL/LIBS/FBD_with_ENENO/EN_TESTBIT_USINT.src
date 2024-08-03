@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := testbit (IN, BIT);
+end_if;
+

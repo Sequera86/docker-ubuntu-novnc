@@ -1,0 +1,8 @@
+if check then
+    ENU (TRUE, 0, 'CheckListBox', Filter, '', '');
+else
+    ENU (Load, Item, 'EnumProgram', Filter, '', '');
+end_if;
+NB := ENU.NB;
+Q := ENU.ITEM;
+

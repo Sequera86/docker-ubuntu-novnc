@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-CHANNEL=Channel name (%)
+V-ALIAS=Readable name
+[SHORT]
+V-RET=~
+V-OK=~
+V-CHANNEL=~
+V-ALIAS=~

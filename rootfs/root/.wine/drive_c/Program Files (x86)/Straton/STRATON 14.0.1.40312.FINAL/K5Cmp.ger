@@ -1,0 +1,906 @@
+﻿; K5 compiler error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - do not change that line!
+
+[Messages]
+
+WarnIsErr=Warnung(en) wurde(n) ausgegeben
+CTTypeOver=Warnung: Dieses Projekt verwendet sehr viele Nutzdatentypen mit erweitertem Format. Vergewissern Sie sich, ob Ihre Ziel-Laufzeitumgebung dies unterstützt.
+
+; LIMITS
+ErrMaxT5Code=Der Anwendungscode ist für den Speicher des Zielsystems zu groß. Erlaubtes Maximum: %u Bytes
+ErrMaxT5Retain=Für das Zielsystem werden zu viele RETAIN Variablen. Erlaubtes Maximum: %u Bytes
+ErrNoStringRetain=STRING Variablen mit der Deklaration als RETAIN werden nicht unterstützt.
+
+; STAN
+
+stan_skipped=Regeln nicht überprüft
+stan_violations=Verletzungen
+stan_metrics=Metriken
+stan_comments=Kommentare
+stan_lines=ST Linien
+stan_rungs=LD Stufen
+stan_blocks=LD/FBD Blöcke
+stan_steps=SFC Schritte
+stan_checked=Regeln überprüft
+stan_title=Code Checker
+stan_rule=Regel
+stan_level=Ebene
+stan_filter=Filter
+stan_min=Min.
+stan_max=Max.
+stan_data=Daten
+stan_reference=Referenz
+stan_X=Nicht überprüft
+stan_I=Information
+stan_W=Warnung
+stan_E=Fehler
+stan_F=Schwerwiegend
+stan_GrpNaming=Benennung
+stan_GrpComments=Kommentare
+stan_GrpLanguages=Sprachen
+stan_GrpCode=Code
+stan_GrpStructure=Struktur
+stan_GrpCompiling=Kompilierung
+stan_Caption=Codeüberprüfung...
+stan_Fatal=Schwerwiegende(r) Fehler
+stan_Error=Fehler
+stan_Warning=Warnung(en)
+stan_IOAliasRequired=1.1- I/O Kanäle (%...) müssen ein Alias haben. In Programmen dürfen nur Aliase benutzt werden.
+stan_IOAliasCorrect=1.2- Aliase der I/O Kanäle (%...) dürfen nicht den Standort der Hardware widerspiegeln.
+stan_NameLength=1.3- Namen müssen eine minimale und eine maximale Länge einhalten
+stan_ForbiddenNames=1.4- Namen dürfen während des Debuggens nicht im Projekt enthalten sein.
+stan_IECNames=1.5- Alle vergebenen Namen müssen dem IEC Standard entsprechen.
+stan_ReservedNames=1.6- Namen, die bereits für Schlüsselwörter reserviert sind, dürfen nicht verwendet werden.
+stan_POUinf=1.7- POU-Information müssen eingegeben werden.
+stan_VarCase=1.8- Groß- und Kleinschreibung der Variablennamen muss beachtet werden.
+stan_CommentAll=2.1 - Alle deklarierten Objekte müssen über einen Kommentar verfügen.
+stan_CommentLength=2.2- Kommentare müssen eine minimale Textlänge einhalten.
+stan_CommentAscii=2.4- Kommentare dürfen keine Sonderzeichen beinhalten.
+stan_CommentPct=2.3- Der Prozentanteil der Kommentare sollte ausreichend sein.
+stan_PNoIL=3.1- Die IL-Programmiersprache darf nicht für Hauptprogramme verwendet werden.
+stan_PNoLD=3.2- Die LD-Programmiersprache darf nicht für Hauptprogramme verwendet werden.
+stan_PNoFBD=3.3- Die FBD-Programmiersprache darf nicht für Hauptprogramme verwendet werden.
+stan_PNoST=3.4- Die ST-Programmiersprache darf nicht für Hauptprogramme verwendet werden.
+stan_PNoSFC=3.5- Die SFC-Programmiersprache darf nicht für Hauptprogramme verwendet werden.
+stan_FBNoIL=3.6- Die IL-Programmiersprache darf nicht für UDFBs verwendet werden.
+stan_FBNoLD=3.7- Die LD-Programmiersprache darf nicht für UDFBs verwendet werden.
+stan_FBNoFBD=3.8- Die FBD-Programmiersprache darf nicht für UDFBs verwendet werden.
+stan_FBNoST=3.9- Die ST-Programmiersprache darf nicht für UDFBs verwendet werden.
+stan_FBNoSFC=3.10- Die SFC-Programmiersprache darf nicht für UDFBs verwendet werden.
+stan_SPNoIL=3.11- Die IL-Programmiersprache darf nicht für Unterprogramme verwendet werden.
+stan_SPNoLD=3.12- Die LD-Programmiersprache darf nicht für Unterprogramme verwendet werden.
+stan_SPNoFBD=3.13- Die FBD-Programmiersprache darf nicht für Unterprogramme verwendet werden.
+stan_SPNoST=3.14- Die ST-Programmiersprache darf nicht für Unterprogramme verwendet werden.
+stan_INaccess=4.1- Alle Eingabeparameter müssen ausgelesen werden.
+stan_OUTaccess=4.2- Alle Ausgabeparameter müssen zuerst geschrieben werden, bevor sie ausgelesen werden
+stan_INOUTaccess=4.3- Alle INOUT-Parameter müssen geschrieben und ausgelesen werden.
+stan_Jumps=4.4- Vorwärts- und Rückwärtssprünge dürfen nicht verwendet werden.
+stan_STinFBDLD=4.5- ST-Ausdrücke (Expressions) dürfen nicht in den LD- und FDB-Programmiersprachen verwendet werden.
+stan_AlignCoil=4.6- LD-Spulen sollten rechts angeordnet werden.
+stan_IFnoELSE=4.7- IF-Strukturen sollten einen ELSE-Abschnitt enthalten
+stan_DeadCode=4.8- Redundanter Code sollte vermieden werden (nicht aufgerufene UDFB oder Unterprogramme).
+stan_CompareReal=4.9- REAL und LREAL dürfen nicht für Gleichheitstests verwendet werden
+stan_NestingST=4.10- Die Verschachtelung einer ST-Struktur darf eine gewisse Komplexitätsstufe nicht überschreiten.
+stan_STWait=4.11- Die WAIT-Anweisungen der ST-Programmiersprache darf nicht verwendet werden.
+stan_STLoop=4.12- Die Schleifenanweisungen der ST-Programmiersprache dürfen nicht verwendet werden.
+stan_FBDinputs=4.13- Alle Blockeingänge sollten in FBD-Diagrammen verbunden sein.
+stan_MaxLine=4.14- POUs in der Programmiersprache ST dürfen eine gewisse Anzahl an Linien nicht überschreiten
+stan_MaxRung=4.15- POUs der LD-Programmiersprache dürfen eine gewisse Anzahl an Stufen nicht überschreiten.
+stan_MaxBlock=4.16- POUs in den Programmiersprache LD oder FBD dürfen eine gewisse Anzahl an Blöcken nicht überschreiten
+stan_MaxStep=4.17- POUs der SFC-Programmiersprache dürfen eine gewisse Anzahl an Schritten nicht überschreiten.
+stan_SFCCond=4.18- SFC-Übergänge müssen eine Bedingung enthalten
+stan_NoUnusedVar=5.1- Alle deklarierten Variablen müssen in Programmen verwendet werden.
+stan_NoStructArray=5.2- Strukturarrays dürfen nicht verwendet werden.
+stan_WBeforeR=5.3- Alle Variablen müssen zuerst geschrieben werden, bevor sie ausgelesen werden
+stan_MultInstCall=5.4- Alle Instanzen eines FB dürfen nur einmal aufgerufen werden.
+stan_MultGloVarSet=5.5- Eine globale Variable darf nur in eine POU geschrieben werden.
+stan_MultAssign=5.6- Eine Variable darf nur einmal zwischen Programmen geschrieben werden
+stan_Array=5.7- Arrays dürfen nicht verwendet werden.
+stan_SFCAnd=5.8- Parallelzweige dürfen nicht in der SFC-Programmiersprache verwendet werden.
+stan_SFCSafe=5.9- SFC-Diagramme sollten überprüft werden.
+stan_InitValue=5.10- Alle deklarierten Single-Datentyp-Variablen müssen einen Initialwert haben.
+stan_union=5.11 - Union data types should not be used
+stan_NoDebug=6.1- Der Code darf nicht mit aktivierten Debugging-Optionen erstellt werden.
+stan_ArrayBound=6.2- Arrayindizes sollten während der Ausführung überprüft werden.
+stan_Malloc=6.3- Die dynamische Arbeitsspeicherbelegung sollte mit einer limitierten Größe konfiguriert sein.
+
+; SAMA
+SamaBadVar=Ungültige Variable oder Konstante definiert.
+SamaDupVarIn=Eine Variable kann nur einen Eingang haben.
+SamaMissIn=Parameter oder Eingang sind weder definiert noch verbunden.
+SamaVarAlone=Warnung: Block hat keine Verbindungen.
+
+; common
+
+StUdfbInRO=Warnung: Eingangsparameter werden nicht als IN/OUT betrachtet. Die Zuweisung eines Eingangsparameters hat keine Auswirkungen außerhalb des UDFB.
+
+; ST import
+
+IstBadHeader=PROGRAM, FUNCTION oder FUNCTION_BLOCK erwartet
+IstPouName=POU-Name erwartet
+IstCreatePou=POU kann nicht erstellt werden. Mögliche Ursache: POU ist bereits vorhanden.
+IstFnColon=":" vor Funktionstyp erwartet
+IstStrLen=STRING-Länge erwartet
+IstVarIO=VAR_IN_OUT wird nicht unterstützt; wird als Input deklariert
+IstVarAcc=VAR_ACCESS wird nicht unterstützt; wird als Global deklariert
+IstEof=Dateiende erreicht
+IstVarAt=VAR_AT wird nicht unterstützt
+IstRetain=Lokale Variablen dürfen nicht RETAIN sein.
+IstDimNoZero=Warnung: kleinster Array-Index wurde auf 0 geändert.
+IstBadDims=Ungültige Array-Dimensionen
+IstCreateVar=Variable kann nicht erstellt werden
+IstTypeColon=":" nach Typnamen erwartet
+IstTypeSColon=";" nach Typdeklaration erwartet
+IstCreateStruct=Struktur kann nicht erstellt werden
+IstArrTypeDef=ARRAY Typ-Deklaration wird nicht unterstützt
+
+; SFC UDFBs
+
+ISfcGTDeclared=Ex ist bereits ein Objekt mit diesem Transition-Namen deklariert
+ISfcGSNotDeclared=Schritt-Objekt ist in der lokalen Variablenliste nicht deklariert
+
+; CAN compiler
+
+CanBadID=Ungültige CAN-Kennung
+CanUnknownSyb=Ungültiges Variablensymbol
+CanBadVar=Ungültiger Variablentyp
+CanBadDiag=Ungültige Diagnose-/Steuerungsinformation
+CanBadMsgLen=Ungültige Nachrichtenlänge
+CanBadFormat=Ungültiges Datenformat
+CanBadBitNo=Ungültige Bitnummer
+CanBadIntFormat=Ungültiges Integer Datenformat
+CanBadUIntFormat=Ungültiges Unsigned Integer Datenformat
+CanBadReal=Ungültiges Gleitkomma-Datenformat
+CanBadSizeOffset=Ungültige Datengröße oder Offset
+CanBadPeriod=Ungültige Dauer
+CanRcvDupID=Neudefinition CAN-Kennung
+CanRtrIgnored=Warnung: RTR für eine erhaltene Nachricht ignoriert
+CanDataIgnored=Warnung: Initialdaten für eine erhaltene Nachricht ignoriert
+CanBadData=Ungültige Initialdaten
+CanBadRate=Ungültige Baudrate
+CanBadRange=Ungültiger Bereich/Signal
+CanMapOverflow=Zu viele Objekte an PDOs verknüpft
+CanBadObject=Variable mit ungültigem PDO Objekt verknüpft.
+CanWarnCanFD=Warnung: CAN-FD wird von einigen Zielsystemen nicht unterstützt
+
+; signals resources
+
+SglSkipNoTime=Leer Zeilen werden in der Signal-Ressource ignoriert (keine Zeitdefinition)
+SglBadTime=Ungültige Zeit in Signal-Ressource spezifiziert
+SglBadPoint=Ungültiger Wert in Signal-Ressource spezifiziert
+
+; configurations
+
+CmpRTCBlock=Warnung: Funktion oder Funktionsblock wird von der ausgewählten Konfiguration nicht unterstützt.
+CmpRTCType=Warnung: Der Datentyp wird von der ausgewählten Konfiguration nicht unterstützt.
+CmpRTCIEC=Warnung: Funktion oder Block entspricht nicht dem IEC Standard
+CmpRTCCompliant=Warnung: Nicht IEC-konform
+CmpRTCDDK=Warnung: Der Treiber wird von der ausgewählten Konfiguration nicht unterstützt.
+
+; formal parameters
+
+CmpFormalAssign=':=' nach formalen Parametername erwartet
+StExpFormal=Formaler Parametername erwartet
+StUnexpFormal=Unerwarteter formaler Parametername
+
+; recipe compiler
+
+RcpCantOpenFile=Rezept-Datei kann nicht geöffnet werden
+RcpBadVar=Unbekannte oder ungültiges Variablensymbol im Rezept
+RcpDupVarWarning=Warnung: Variable wird ignoriert, da diese mehr als einmal im Rezept verwendet wird
+RcpInvVar=Ungültige Variable im Rezept (Typ wird nicht unterstützt)
+RcpBadValue=Ungültiger Variablenwert im Rezept
+RcpEmpty=Leeres Rezept
+RcpBadFile=Ungültige Rezept-Datei (Format nicht unterstützt)
+VLstBadFile=Ungültige Listen-Datei (Format nicht unterstützt)
+VLstCantOpenFile=Listen-Datei kann nicht geöffnet werden
+VLstBadVar=Liste enthält unbekanntes oder ungültiges Variablensymbol
+VLstDupVarWarning=Warnung: Variable wird ignoriert, da diese mehr als einmal in der Liste verwendet wird
+VLstInvVar=Liste enthält ungültige Variable (Typ nicht unterstützt).
+VLstEmpty=Leere Liste
+
+; symbol clash
+
+CmpSymbolClash=Symbol bereits in Verwendung
+CmpClashDecAs=von
+CmpClashIO=der I/O Kanal
+CmpClashVar=die Variable oder der Parameter
+CmpClashPou=das Programm
+CmpClashSfc=der SFC Schritt oder die Transition
+CmpClashLab=das Label
+CmpClashFbi=die FB-Instanz
+CmpClashFbl=der FB
+CmpClashFunc=die Funktion
+CmpClashWhat=das Symbol
+CmpClashIn=in
+CmpClashNote=Hinweis: Der gleiche Name darf nicht für eine globale und eine lokale Variable verwendet werden.
+
+; C code generator
+
+CCReadFile=Die Input-Datei kann nicht gelesen werden.
+CCWriteFile=Die Output-Datei kann nicht geschrieben werden.
+CCBadInFile=Input Datei fehlerhaft
+CCWaitNS=WAIT-Anweisung wird nicht unterstützt
+CCUnsupCode=Interner Fehler: Anweisung wird nicht unterstützt
+CmpCGen="C" Source Code wird erstellt
+CCHotChange="C" Code-Erstellung ist nicht möglich wenn Online Change aktiviert ist
+CCBad3PTool=Für die Erstellung des "C" Codes ist ein ungültiges Drittanbieter-Tool spezifiziert
+CCCompiling="C" Compiler läuft. Bitte warten...
+GenCfbHugeArray=Ein großes Array kann nicht als Parameter an einen Systemfunktionsblock übergeben werden
+
+; Main compiler
+
+CmpNoError=Kein Fehler erkannt
+CmpErrors=Fehler wurde(n) erkannt
+CmpCantReadFile=Datei kann nicht geöffnet werden
+CmpCantCreateFile=Datei kann nicht erstellt werden
+CmpMakingConf=Applikationsdaten werden erstellt...
+CmpCantCreateConf=Codedatei kann nicht erstellt werden
+CmpRelocating=Code wird verschoben ...
+CmpBadFbClass=Unbekannter Funktionsblock-Typ
+CmpLoadingSymbols=Anwendungssymbole werden geladen...
+CmpUnwiredIO=Warnung: I/O Variable ist nicht verbunden: als intern implementiert.
+CmpUDFBNotCompiled=UDFB nicht kompiliert: UDFBs müssen kompiliert werden, bevor diese in einer Anwendung genutzt werden können.
+CmpBadInitValue=Variable hat einen ungültigen Initialwert
+CmpCantOpenProject=Projekt-Datenbank kann nicht geöffnet werden
+CmpTooManyIOs=Zu viele I/O-Variablen
+CmpUnknownProfile=Variabel hat ein unbekanntes Profil
+CmpBadProfile=Variabel hat ein ungültiges Profil
+CmpBadVarProps=Variabel hat ungültige Eigenschaften
+CmpBadVarDims=Ungültige Variablendimension(en)
+CmpRedefine=Warnung: Makro-Neudefinition
+CmpCantFBIOcpx=Ungültige Parameterdeklaration: Komplexe Datentypen werden nicht unterstützt
+CmpNeedCTSeg=Opt: Die Option 'Komplexe Variablen in getrennten Segmenten' ist erforderlich.
+
+; added for Cmp2005
+
+CmpTargetNotSupported=Ungültiger Ziel-Codestil ausgewählt
+CmpBadVarType=Variable hat einen ungültigen Datentyp
+CtrDupType=Der Datentyp existiert bereits
+CtrBadInit=Ungültiger Initialwert für Strukturelement
+CtrBadType=Ungültiger Typ für Strukturelement
+CmpUnsupPreCompiled=Vorkompilierte UDFBs werden nicht unterstützt, wenn komplexe Datentypen aktiviert sind
+CmpCTSegWarning1=>> Komplexe Variablen werden in einem eigenem Bereich abgelegt
+CtrStringInUnion=Unions dürfen keine STRING-Members enthalten
+CtrUnionInitValue=Warning: initial values defined in union type may be unsafe
+
+; Internal
+
+StNotImplemented=Interner Fehler: Syntax wird nicht unterstützt
+
+; Configurator
+
+CfgMbClash=Dieselbe Modbus-Adresse wird für mehrere Variablen verwendet
+CfgVarOverflow=Es sind zu viele Variablen deklariert.
+CfgRecurse=Rekursiver Aufruf eines Unterprogramms
+CfgOEM=Für OEM-spezifisches Laufzeitsystem kompiliert
+CfgSPOptim=Warnung: Nicht verwendete Programm: Code entfernt.
+CfgProfDup=Warnung: Gleiche(s) Profil/Eigenschaften wurde(n) mehreren Variablen zugewiesen.
+CfgHotDisable=Online Change ist deaktiviert
+CfgHotCannot=Warnung: Online Change ist nicht möglich - zu viele Variablen
+CfgHotEnable=Online Change ist aktiviert.
+CfgWaitInSfc=Unzulässige WAIT Anweisung in einem durch SFC aufgerufenem Unterprogramm.
+CfgWaitMultCall=Warnung: Unsichere WAIT Anweisung in Unterprogramm (mögliche Eintrittsinvarianz).
+CfgWaitOnEvent=Sie können die WAIT Anweisung nicht innerhalb eines Ereignishandlers verwenden.
+CfgCalledEvent=Ein Ereignishandler kann nicht als Unterprogramm aufgerufen werden.
+CfgNoERC=hmiManager kann nicht verwendet werden, wenn kein embedded HMI definiert ist.
+CfgLongPrjName=Warnung: Wenn der Projektname mehr als 15 Zeichen enthält, ist ein Zielsystem der Version 12 oder aktueller notwendig.
+CfgMbWarnTLS=Warnung: Die TLS-Konfiguration wurde ignoriert. Diese Konfiguration ist nur für Open MODBUS Verbindungen gültig
+
+; Code generator
+
+GenNoUdfbCode=UDFB nicht kompiliert: UDFBs müssen kompiliert werden, bevor diese in einer Anwendung genutzt werden können.
+GenBadUdfbCode=Ungültiger UDFB-Code: UDFBs müssen kompiliert werden, bevor diese in einer Anwendung genutzt werden können.
+GenDupFbiCall=Warnung: Mehrfache Aufrufe derselben FB-Instanz.
+GenTxbMem=Kein Speicher für TXB Funktionen konfiguriert. Überprüfen Sie Ihre Projekteinstellungen.
+GenXmlMem=Kein Speicher für XML Funktionen konfiguriert. Überprüfen Sie Ihre Projekteinstellungen.
+GenJsonMem=No memory configured for JSON functions - check project settings
+GenHmiMem=Kein Speicher für Menü-Funktionen konfiguriert. Überprüfen Sie Ihre Projekteinstellungen.
+GenBadPrintf=Warnung: Ungültiges printf-Format: unterstützt werden nur %ld %lu %lx.
+GenRealEQ=Gleichheitsprüfung zwischen REALS sind verboten
+
+; Code generator (instructions)
+
+ErrGenAssign=Zuweisung: Der Typ wird nicht vom Ziel unterstützt.
+ErrGenNeg=Negierung: Typ vom Ziel nicht unterstützt
+ErrGenMul=Multiplikation: Der Typ wird nicht vom Ziel unterstützt.
+ErrGenDiv=Division: Der Typ wird nicht vom Ziel unterstützt.
+ErrGenAdd=Zusatz: Typ vom Ziel nicht unterstützt.
+ErrGenSub=Subtraktion: Der Typ wird nicht vom Ziel unterstützt.
+ErrGenComp=Vergleich: Der Typ wird nicht vom Ziel unterstützt
+ErrGenGAction=SFC Überwachung: Der Typ wird nicht vom Ziel unterstützt
+ErrGenTAction=Zeitüberwachung: Der Typ wird nicht vom Ziel unterstützt
+ErrGenFCall=Funktionsaufruf: Der Typ wird nicht vom Ziel unterstützt
+ErrGenParam=Funktionsargument: Der Typ wird nicht vom Ziel unterstützt
+ErrGenConv=Typumwandlungs-Funktion: Der Typ wird nicht vom Ziel unterstützt
+ErrGenArray=Array-Befehl: Der Typ wird nicht vom Ziel unterstützt
+ErrGenEdge=Kantenerkennung: Der Typ wird nicht vom Ziel unterstützt
+ErrGenFbOut=FB Ausgabe-Zugriff: Der Typ wird nicht vom Ziel unterstützt
+ErrXVGet=Der Typ wird nicht vom Ziel unterstützt
+ErrXVSet=Der Typ wird nicht vom Ziel unterstützt
+ErrGenRecipeFile=Rezeptdatei nicht gefunden
+ErrGenSpyFile=Listen-Datei nicht gefunden
+ErrGenStringTable=String Tabelle (oder Spalte) nicht gefunden.
+ErrGenSignal=Signal-Ressource nicht gefunden
+
+; Code relocator
+
+RelUnresolvedJump=Sprung zu undefiniertem Label
+RelTooLongJump=Sprung zu lang oder ST-Anweisung zu lang oder SFC-Schritt Aktionsblock zu lang.
+RelCantOpen=Code-Datei kann nicht gelesen werden
+RelCantWrite=Zielcodedatei kann nicht erstellt werden.
+RelFileFormat=Ungültige oder fehlerhafte Code-Datei.
+RelBadSize=Ungültige Programmcode-Größe: ein Programm darf nicht größer als 64 KB sein.
+
+; Lexical
+
+LexUnknownChar=Unbekanntes oder ungültiges Zeichen
+LexNestedCom=Kommentare können nicht verschachtelt werden.
+LexEofInCom=Dateiende innerhalb des Kommentarblocks erreicht
+LexEofInString=Dateiende innerhalb eines konstanten Stringausdruck erreicht
+LexEolInString=Zeilenende innerhalb eines konstanten Stringausdrucks erreicht
+LexLongString=Konstanter Stringausdruck zu lang
+LexLongIdent=Kennung zu lange
+LexLongConst=Konstanter Ausdruck zu lang
+LexBadPragma=Ungültiges oder unbekanntes Pragma
+LexBadConstant=Ungültiger konstanter Ausdruck
+LexUnknownIdent=Unbekannte Kennung
+LexBadDefine=Ungültiger Name für #define
+LexBadBitAccess=Ungültiger Bit-Zugriff
+
+; SFC Compiler
+
+SfcUnknownItem=Ungültige Datei: unbekannter Schritt oder Transition in Quelldatei
+SfcUnknownNext=Ungültige Datei: unbekannte Schritt- oder Transitions-Folge
+SfcBadNext=Ein Schritt kann nicht einem Schritt folgen - eine Transition kann nicht einer Transition folgen.
+SfcBadSfcStrange=Ungültige Datei: Schritte oder Transitionen müssen Transitionen oder Schritten folgen.
+SfcTransExp=Bedingung einer Transition muss ein boolescher Ausdruck sein
+SfcNoInitStep=Tablle enthält keinen Initialschritt
+SfcStepNoPrev=Einem Schritt muss eine Transition vorausgehen
+SfcTransNoPrev=Einem Schritt muss eine Transition vorausgehen
+SfcSemiColonTrans=";" nach der Transitions-Bedingung erwartet
+SfcExtraCodeTrans=Unerwarteter Code nach Transitions-Bedingung
+SfcDupStep=Dieselbe Nummer kann nicht für mehrere Schritte verwendet werden
+SfcDupTrans=Dieselbe Nummer kann nicht für mehrere Transitionen verwendet werden
+SfcBadStatement=Ungültige Anweisung in SFC-Aktion
+SfcBooReadOnly=Eine boolesche Aktion kann nicht auf eine schreibgeschützte Variable angewendet werden
+SfcOParQualif="(" vor Aktions-Qualifier erwartet
+SfcQualif=Aktions-Qualifier erwartet.
+SfcCparQualif=")" nach Aktions-Qualifier erwartet
+SfcBadBooQualif=Ungültiger Qualifier für eine boolesch Aktion
+SfcBadSfcQualif=Ungültiger Qualifier für eine SFC-Aktion
+SfcBadActQualif=Ungültiger Qualifier für einen Aktionsblock
+SfcBadBooInvert="/" Inversion kann mit diesem Aktions-Qualifier nicht verwendet werden
+SfcSfcInvert="/" Inversion kann mit diesen SFC Aktionen nicht verwendet werden
+SfcBooActSemiColon=";" nach boolescher Aktion erwartet
+SfcSfcActSemiColon=";" nach SFC Aktion erwartet
+SfcActSemiColon=";" nach Aktionsblock erwartet
+SfcActColon=":" nach Aktions-Qualifier erwartet
+SfcEndAction="END_ACTION" nach Aktionsblock erwartet
+SfcUnsafeDivAfter=Warnung: Mögliche unsichere Situation nach einer Abweichung
+SfcUnsafeConvBefore=Warnung: Mögliche Blockierung nach einer Abweichung
+SfcUnsafeEndStep=Warnung: Schritte ohne nachfolgender Transition stoppen die Sequenz.
+SfcUnsafeEndTrans=Warnung: Transitionen ohne nachfolgender Schritte stoppen die Sequenz.
+SfcUnknownJump=Sprung zu einem unbekannten Schritt
+SfcUnsafeManiInit=Warnung: Mehr als ein initialer Schritt
+
+; FBD Compiler
+
+FbdUnknownBlock=Unbekannte Funktion oder unbekannter Block
+FbdDupId=Dateifehler: dieselbe ID wird für mehrere Objekte verwendet.
+FbdUnknownVarCst=Variable oder Konstante bei Variablen-Box erwartet.
+FbdLabelDump=Label mehrfach definiert
+FbdBackJump=Warnung: Sprung zurück könnte den Zielzyklus blockieren
+FbdUndefLabel=Sprung zu undefiniertem Label
+FbdContactBool=Boolesche Variable am Kontakt erwartet.
+FbdCoilBool=Boolesche Variable an Spule erwartet. Diese Variable darf nicht schreibgeschützt sein.
+FbdLinkFromNil=Dateifehler: Verknüpfung von einem unbekannten Objekt.
+FbdLinkToNil=Dateifehler: Verknüpfung zu einem unbekannten Objekt.
+FbdLinkFromBadPin=Dateifehler: Verknüpfung von einem ungültigen Pin.
+FbdLinkToBadPin=Dateifehler: Verknüpfung zu einem ungültigen Pin.
+FbdCantInvLink=Interner Fehler: kann die Negierung einer Verknüpfung nicht verarbeiten
+FbdNegateToRail=Verknüpfung zu einer rechten Stromschiene kann nicht invertiert werden
+FbdVarNotLinked=Keine Verbindung der Variablen-Box
+FbdROVarAssigned=Eine Schreibgeschützte Variable oder Konstante kann nicht erzwungen werden.
+FbdInNotLinked=Eingangs-Pin nicht verbunden
+FbdCollision=Viele Verbindungen sind mit demselben Eingangs-Pin verbunden.
+FbdOutNotLinked=Ausgangs-Pin nicht verbunden
+FbdCantFindType=Diagramm zu komplex. Datentypen können nicht zugewiesen werden: füge Übergangs-Variablen ein.
+FbdBoolInJump=Der Eingang eines JUMP muss boolesch sein.
+FbdBoolInOr=Der Eingänge einer OR-Schiene müssen boolesch sein.
+FbdBoolInContact=Der Eingang von einem Kontakt muss boolesch sein.
+FbdBoolInCoil=Der Eingang einer Spule muss boolesch sein.
+FbdDintExpect=DINT am Eingang erwartet
+FbdRealExpect=REAL am Eingang erwartet
+FbdByteExpect=SINT am Eingang erwartet
+FbdTimeExpect=TIME am Eingang erwartet
+FbdStringExpect=STRING am Eingang erwartet
+FbdBoolExpect=BOOL am Eingang erwartet
+FbdNumExpect=Numerische Eingabe erwartet
+FbdTypeMismatch=Alle Eingänge müssen von demselben Typ sein
+FbdTimeEqComp=Gleichheits-Vergleich ist für den Datentyp TIME nicht erlaubt
+FbdDintTimeExpect=Integer oder Zeit-Eingabe als zweiter Eingang für SYSTEM erwartet.
+FbdOperateIO=Die erste Eingang von OPERATE muss mit einer I/O Variable verbunden sein.
+FbdBadNbInFunc=Ungültige Anzahl von Eingängen für die Funktion des Funktionsblocks
+FbdNullVar=Interner Fehler: Symbol nicht zugeordnet
+FbdBadInstance=Ungültige Funktionsblock-Instanz für einen Block definiert.
+FbdBadClass=Die für diesen Block konfiguriert Funktionsblock Instanz passt nicht zum spezifizierten FB Typ
+FbdHotPulse=Impuls-Kontakte und Spulen können nicht bei aktiviertem Online Change verwendet werden.
+FbdUnexpInput=Unerwartete Verbindung am Eingang.
+FbdDirectInput=Eingang muss direkt mit einer Variable verbunden sein
+FbdArrayInput=Am Eingang wird ein Array erwartet
+FbdBadInputType=Falscher Typ am Eingang
+FbdWordExpect=INT am Eingang erwartet.
+FbdLintExpect=LINT am Eingang erwartet
+FbdLrealExpect=LREAL am Eingang erwartet
+FbdUsintExpect=USINT am Eingang erwartet.
+FbdUintExpect=UINT am Eingang erwartet.
+FbdUdintExpect=UDINT am Eingang erwartet.
+FbdInpType=Eingang hat falschen Typ
+FbdHotLoop=Warnung: Implizite Schleifen sind nicht sicher
+FbdBlockChanged=Warnung: Die Definition des Blocks hat sich geändert. Wählen Sie den Blocktyp im Diagramm neu aus.
+FbdStBadStat=Ungültige ST-Anweisung
+FbdStEndWhile=Nach einer WHILE- oder einer REPEAT-Anweisung wird eine END-Anweisung erwartet.
+FbdStEndIf=Nach einer IF-Anweisung wird eine END-Anweisung erwartet.
+FbdStatExp=Für eine ST-Anweisung wird ein boolescher Ausdruck erwartet.
+
+; IL Compiler
+
+IlLabelDup=Label mehrfach definiert
+IlBackJump=Warnung: Sprung zurück könnte den Zielzyklus blockieren
+IlUndefLabel=Sprung zu undefiniertem Label
+IlBadStatement=Falsche oder unerwartete Anweisung
+IlLabelColon=":" nach Label erwartet
+IlBoolJmpC=Um JMPC zu verwenden muss das aktuelle Ergebnis boolesch sein.
+IlJmpLabel=Label nach Sprung-Anweisung erwartet
+IlBoolRetC=Um RETC zu verwenden, muss das aktuelle Ergebnis boolesch sein.
+IlMissOperand=Operand nach Anweisung erwartet.
+IlCParExpetcted=")" erwartet
+IlBoolNeg=Boolescher Ausdruck nach einer mit "N" modifizierten Anweisung erwartet
+IlBoolResExpect=Aktuelles Ergebnis muss für diese Anweisung boolesch sein.
+IlBoolOpExpect=Boolescher Operand erwartet
+IlActExpected=Nach Laden eines Ausdrucks wird eine Aktion (ST, S, R, JMPC, CALC...) erwartet.
+IlVarExpect=Nach einer ST-, STN-, S oder R-Anweisung wird eine Variable erwartet.
+IlNoReadOnly=Schreibgeschützte Variable kann nicht erzwungen werden.
+IlTypeMismatch=Die erzwungene Variable und das aktuelle Ergebnis müssen von demselben Typ sein
+IlBoolVarExpect=Boolesche Variable nach S, R erwartet
+IlNumOpExpect=Numerischer Operand erwarted.
+IlTimeEqComp=EQ/NE Vergleiche sind für den Datentyp TIME nicht erlaubt.
+IlFuncResPar=Funktion kann nicht aufgerufen werden. Das aktuelle Ergebnis hat einen falschen Typ.
+IlFuncPar=Der Funktions-Parameter ist vom falschen Typ.
+IlFuncParComa="," zwischen Funktions-Parametern erwartet
+IlBoolCalC=Um CALC zu verwenden, muss das aktuelle Ergebnis boolesch sein.
+IlCalInstance=Funktionsblock Instanz nach CAL Anweisung erwartet.
+IlCalOPar="(" vor FB Argumenten-Liste erwartet
+IlCalCPar=")" nach FB Argumenten-Liste erwartet
+IlCalParComa="," zwischen FB-Argumenten erwartet
+IlCalPar=Der Funktionsblock-Parameter hat einen falschen Typ.
+IlArrayOBra="[" vor Array-Index erwartet
+IlArrayIndex=Ungültiger Array-Index: Integer Variable oder Wert erwartet.
+IlArrayCBra="]" nach Array-Index erwartet
+
+; LD Compiler
+
+LdBadFile=Falsches Dateiformat. Mögliche Ursache: Die Datei ist defekt.
+LdContactVar=Am Kontakt wird eine Variable oder Konstante erwartet.
+LdContactBool=Für einen Kontakt müssen die Variable oder die Konstante boolesch sein.
+LdCoilVar=An der Spule wird eine Variable erwartet.
+LdCoilBool=Für eine Spule muss die Variable boolesch sein.
+LdCoilReadOnly=Spulen-Variable dürfen nicht schreibgeschützt sein.
+LdLabelDup=Label mehrfach definiert
+LdBackJump=Warnung: Sprung zurück könnte den Zielzyklus blockieren
+LdUndefLabel=Sprung zu einem unbekannten Label
+LdJumpDest=Sprungziel nicht vorhanden.
+LdFbInput=Variable oder Konstante am Eingang des Blocks erwartet.
+LdFbOutput=Variable am Ausgang des Blocks erwartet.
+LdFbOutReadOnly=Ausgang des Blocks darf nicht schreibgeschützt sein.
+LdFbUnknown=Unbekannter Block
+LdBadNbInput=Ungültiger Block: ungültige Anzahl von Eingängen
+LdBadNbOutput=Ungültiger Block: ungültige Anzahl von Ausgängen
+LdBoolInput=Boolescher Eingang am Block erwartet
+LdDintInput=Integer Eingang am Block erwartet.
+LdRealInput=Real Eingang am Block erwartet.
+LdByteInput=Byte Eingang am Block erwartet.
+LdTimeInput=Time Eingang am Block erwartet.
+LdStringInput=String Eingang am Block erwartet.
+LdNumInput=Numerischer Eingang am Block erwartet
+LdIoInput=IO Variable am ersten Eingang von OPERATE erwartet.
+LdBoolOutput=Boolescher Ausgang am Block erwartet
+LdDintOutput=Integer Ausgang am Block erwartet.
+LdRealOutput=Real Ausgang am Block erwartet.
+LdByteOutput=Byte Ausgang am Block erwartet.
+LdTimeOutput=Time Ausgang am Block erwartet.
+LdStringOutput=String Ausgang am Block erwartet.
+LdNumOuput=Numerischer Ausgang am Block erwartet
+LdFbTypeMismatch=Falscher Datentyp für Block Parameter
+LdNoTimeEqComp=Gleichheits-Vergleich ist für den Datentyp TIME nicht erlaubt
+LdHotPulse=Puls-Kontakte und -Spulen können bei aktiviertem Online Change nicht verwendet werden.
+LdBadFbInst=Ungültige Funktionsblock-Instanz für einen Block definiert.
+LdPNCoilTrue=P/N Spulen können nicht an die Stromschiene angeschlossen werden.
+LdFbiRef=Für die Blockeingabe wird eine Variable erwartet.
+LdFbiArray=Für die Blockeingabe wird ein Array erwartet.
+LdWantCoil=Achtung: Die Spule sollte einer Variablen zugewiesen werden
+
+; ST Compiler
+
+StLoopWarning=Warnung: Schleifen können den Zielzyklus blockieren
+StBadStatement=Neue Anweisung erwartet.
+StReturnSemiColon=";" nach RETURN Anweisung erwartet
+StAssignSemiColon=";" nach Zuweisung erwartet
+StAssignExpected=":=" nach zugewiesener Variable erwartet
+StPrimaryExpected=Variable, Konstante oder Funktionsaufruf erwartet
+StCParExpected=")" nach Argumentenliste erwartet
+StAssignTypMismatch=Zugewiesene Variable und Ausdruck müssen denselben Typ haben
+StMinusInteger=Integer Ausdruck nach "-" erwartet
+StNotBoolean=Boolescher Ausdruck nach NOT erwartet
+StPowRealExpected="**" kann nur mit REAL Werten verwendet werden
+StTermBadType=Operanden für "*" oder "/" müssen Zahlen mit demselben Datentyp sein.
+StAddBadType=Operanden von "+" oder "-" müssen Zahlen, Time- oder String-Ausdrücke sein und müssen denselben Datentyp haben.
+StCompBadType=Operanden eines Vergleichs müssen Zahlen, Time- oder String-Ausdrücke sein.
+StNoCompEqTime=Gleichheits-Vergleich ist für den Datentyp TIME nicht erlaubt
+StAndNotBool=Operanden von AND müssen boolesch sein
+StOrNotBool=Operanden von OR müssen boolesch sein
+StXOrNotBool=Operanden von XOR müssen boolesch sein
+StOParGStatus="(" nach GSTATUS erwartet
+StCParGStatus=")" nach GSTATUS Argument erwartet
+StArgGStatus=SFC Unterprogramm als Argument von GSTATUS erwartet
+StOParGAction="(" nach SFC Unterprogramm Steuerungsanweisung erwartet
+StCParGAction=")" nach dem Namen des SFC Unterprogramms erwartet
+StArgGAction=SFC Unterprogramm als Argument erwartet
+StGActionSemiColon=";" nach SFC Unterprogramm Steuerungsanweisung erwartet
+StOParTAction="(" nach TSATRAT oder TSTOP erwartet
+StCParTAction=")" nach TSTART oder TSTOP Argument erwartet
+StArgTAction=Zeitvariable als Argument von TSTART oder TSTOP erwartet.
+StTActionSemiColon=";" nach TSTART oder TSTOP Anweisung erwartet
+StOParFunc=Argumentenliste erwartet
+StComaFunc="," zwischen Argumenten erwartet
+StParFunc=Argument erwartet
+StParTypeFunc=Argument hat den falschen Typ
+StCParFunc=")" nach Argumentenliste erwartet
+StWhileBooExp=Boolescher Ausdruck nach WHILE erwartet
+StWhileDo=DO nach WHILE-Bedingung erwartet.
+StWhileEnd=END_WHILE erwartet
+StWhileSemiColon=";" nach END_WHILE erwartet
+StUntil="UNTIL" nach Anweisungsliste erwartet
+StRepeatBoolExp=Boolescher Ausdruck nach UNTIL erwartet
+StRepeatEnd="END_REPEAT" erwartet
+StRepeatSemiColon=";" nach END_REPEAT erwartet
+StIfBoolExp=Boolescher Ausdruck nach IF erwartet
+StIfThen=THEN nach IF-Bedingung erwartet
+StElsifBoolExp=Boolescher Ausdruck nach ELSIF erwartet
+StElsifThen="THEN" nach ELSIF-Bedingung erwartet
+StIfEnd="END_IF" erwartet
+StIfSemiColon=";" nach END_IF erwartet
+StExitSemiColon=";" nach EXIT erwartet
+StExitBadContext=Unzulässige Verwendung von EXIT: muss innerhalb einer Schleife verwendet werden.
+StConvArg=Ungültiges Argument bei der Funktion für die Typumrechnung
+StForVariable=DINT Variable als FOR Index erwartet.
+StForMin=Ungültiger FOR Minimum Ausdruck
+StForMax=Ungültiger FOR Maximum Ausdruck
+StForAssign=":=" nach FOR Index erwartet
+StForTo="TO" zwischen FOR Grenzen erwartet
+StForBy=DINT Ausdruck nach "BY" erwartet.
+StForDo="DO" vor Anweisungsliste erwartet
+StForEnd="END_FOR" erwartet
+StForSemiColon=";" nach END_FOR erwartet
+StArrayOBra="[" vor Array-Index erwartet
+StArrayIndex=Array-Index erwartet; dieser muss ein DINT Ausdruck sein
+StArrayCBra="]" nach Array-Index erwartet
+StParOperate=I/O Variable als erstes Argument von OPERATE erwartet.
+StParEdge=Interne boolesch Variable als zweites Argument von REDGE oder FEDGE erwartet.
+StFbSemiColon=";" nach Funktionsblock-Aufruf erwartet
+StCaseSemiColon=";" nach END_CASE erwartet
+StCaseEnd="END_CASE" erwartet
+StCaseDintExp=DINT Integer Ausdruck nach CASE erwartet
+StCaseOf="OF" nach CASE Wert erwartet
+StCaseDintVal=INTEGER Konstante zur Identifizierung eines CASE Elements erwartet.
+StCaseColon=":" nach konstantem Ausdruck erwartet
+StCaseInterval=Ungültiger Intervall von Werten für CASE
+StCaseValClash=Wert wird mehr als einmal in CASE Aufzählung verwendet
+StNoReadOnly=Schreibgeschützte Variable kann nicht erzwungen werden.
+StStructMemberExp=Strukturelement nach "." erwartet
+StComplexUnexp=Ausdruck enthält unerwartete komplexe Daten.
+StAssignVarExp=Zuzuweisende Variable erwartet
+StExpSemicolon=";" nach Anweisung erwartet
+StExpLabel=Labelname erwartet
+StWaitTime=Time Ausdruck nach "wait" erwartet
+StWaitBool=Boolescher Ausdruck nach "wait" erwartet
+StDoEnd="END_DO" erwartet
+StUdfbBadStat=Ungültige Anweisung: kann nicht innerhalb eines UDFB verwendet werden.
+StDoSemiColon=";" nach END_DO erwartet
+StMissLrealPrefix=Warnung: Um Genauigkeitsverluste zu vermeiden ist ein LREAL# Präfix erforderlich.
+StILDeprecated=Warnung: Die Programmiersprache IL ist laut aktuellem IEC-Standard veraltet.
+StDupHandler=Programm für Exception bereits definiert
+StTstart=Warnung: TSTART/TSTOP-Anweisungen können unsicher sein. Verwenden sie alternativ einen TMU-Funktionsblock.
+
+; FFL compiler
+
+FflEof=Ungültiges Dateiformat: Dateiende erreicht.
+FflNwExp=Ungültiges Dateiformat: Netzwerk erwartet
+FflEndNwExp=Ungültiges Dateiformat: end_netowrk erwartet
+FflEndNwUnexp=Ungültiges Dateiformat: unerwartetes "end_network"
+FflBadPos=Ungültiges Dateiformat: ungültige Koordinaten
+FflBadPragma=Ungültiges Dateiformat: unerwartetes Pragma
+FflBadFile=Ungültiges Dateiformat: ungültige Anweisung
+FflBadCellType=Ungültige Datei: ungültiger Zellentyp
+FflBadCellArgs=Ungültige Datei: ungültiges Zellenargument
+FflBadLabel=Ungültiger Labelname
+FflDupLabel=Labelname bereits verwendet
+FflBadJump=Sprung zu einem unbekannten Label
+FflBackJump=Warnung: Rücksprünge können den Zyklus blockieren
+FflOverlap=Grafische Objekte überlappen sich
+FflNoLeft=Objekt ist an der linken Seite nicht verbunden
+FflOrNoLeft=Vertikale Linie ist an der linken Seite nicht verbunden
+FflOrNotBool=Vertikale Linie mit nicht-booleschen Elementen verbunden
+FflBoolExp=Boolesches Element an der linken Seite erwartet
+FflContact=Kontakt mit ungültiger Variable
+FflCoil=Spule (Coil) mit ungültiger Variable
+FflVarIn=Ungültige Variable am Block-Eingang
+FflVarInBool=Ungültige Variable am negierten Block Eingang
+FflVarOut=Ungültige Variable am Block-Ausgang
+FflClass=Ungültiger Block oder ungültige Instanz
+FflNoInst=Block Instanz fehlt oder ist ungültig
+FflBoxHeight=Ungültige Block Höhe
+FflFbInType=Ungültiger Typ am Block Eingang
+FflInvBox=Ungültiger oder unbekannter Block
+FflInvBoxOut=Ungültiger Block Ausgangs-Stift
+FflSurface=Netzwerk zu groß
+
+
+; XML TAG parser
+
+XmlTagExpected=XML Tag ("<") erwartet
+XmlTagName=XML TAG-Name erwartet
+XmlTagEnd=">" am Ende des XML TAGs erwartet
+XmlEqExpect="=" vor dem Wert des XML TAG-Attributs erwartet
+XmlValExpect=Wert des XML TAG-Attributs erwartet
+
+; variable declaration parser
+
+VarExp=VAR, VAR_EXTERNAL, VAR_INPUT oder VAR_OUTPUT erwartet
+VarEndVar=END_VAR erwartet
+VarName=Variablenname erwartet
+VarBadName=Ungültiger Variablenname
+VarColon=":" nach Variablenname erwartet
+VarFBIODim=FB-Instanzen und I/Os dürfen nicht als Array definiert werden
+VarArrayMin=Untere Grenze eines Arrays muss 0 sein
+VarArrayMax=Ungültige Array Obergrenze: darf nicht größer als 65535 sein
+VarArrayDots=".." zwischen Arraygrenzen erwartet
+VarArrayOpen="[" vor Arraygrenze erwartet
+VarArrayClose="]" nach Arraygrenze erwartet
+VarArrayComa="," zwischen Arraydimensionen erwartet
+VarArrayOf="OF" nach Arraygrenzen erwartet
+VarArrayDef=Ungültige Arraydefinition. Es sind Maximal drei Dimensionen erlaubt. Die Gesamtgröße darf nicht größer als 65535 sein.
+VarType=Datentyp erwartet
+VarTypeUnknown=Unbekannter Datentyp
+VarArrayInst=Sie können keine Arrays von FB-Instanzen deklarieren
+VarStrLenOpen="(" vor String-Länge erwartet
+VarStrLenClose=")" nach String-Länge erwartet
+VarStrLen=Ungültige String-Länge. Darf 255 Zeichen nicht überschreiten
+VarSemiColon=";" nach Veriablendeklaration erwartet
+VarCantInit=Diese Variable darf keinen Initialwert haben
+VarValueExp=Initialwert erwartet nach ":="
+VarValType=Ungültiger Initialwert
+VarWarningDir=Warnung: falsche Anweisung; wird ignoriert.
+VarDupName=Name wird bereits für eine andere Variable verwendet
+VarUdfbExtern=UDFB-Variablen können nicht extern verwendet werden
+VarUDFBIO=Eingangs- und Ausgangsvariablen können nur für UDFBs definiert werden.
+VarOrder=Sie müssen folgende Reihenfolge der Definition einhalten: VAR_IN, anschließend VAR_OUT, anschließend die anderen
+VarXmlPrjBegin=<k5project> TAG erwartet
+VarXmlPrjEnd=</k5project> TAG erwartet
+VarXmlGrpBegin=<vargroup> TAG erwartet
+VarXmlGrpEnd=</vargroup> TAG erwartet
+VarXmlVarEnd=</var> TAG erwartet
+VarXmlWhat=Unbekanntes XML TAG-Attribut
+VarXmlStrLen=Ungültige oder unerwartete String-Länge.
+VarXmlAttr=Ungültige Variablen Attribute
+VarCsvHeaderExp=Die erste Zeil der CSV-Definition sollte die Spaltennamen enthalten
+VarCsvHeaderName=Spalte für "Name" fehlt in der ersten Zeile
+VarCsvHeaderType=Spalte "Type' fehlt im Header
+VarCsvHeaderWhat=Unbekannte Spalte im Header
+VarCsvHeaderBad=Ungültige Header-Zeile
+VarCsvTooMuch=Zu viele Elemente in der Zeile
+VarCsvName=Variablenname fehlt
+VarCsvType=Variablentyp fehlt
+VarCsvStrLen=Unerwartete oder ungültige String-Länge.
+VarCsvInit=Ungültiger Initialwert
+VarCreate=Variable kann nicht erstellt werden
+
+; MODBUS configurator
+
+MbCantWriteFile=MODBUS Konfigurationsdaten können nicht geschrieben werden
+MbUnknownNodeID=Anfrage bezieht sich auf einen nicht definierten Knoten
+MbBadRequestMode=Ungültiger Anfragemodus
+MbBadRequestFuncMode=Ungültiger Modus der Anforderungsfunktion
+MbBadRequestFuncData=Ungültige Daten der Anforderungsfunktion
+MbBadRequestFuncAccess=Ungültiger Zugriffsmodus der Anforderungsfunktion
+MbUnknownVarRequest=Variable bezieht sich auf eine undefinierte Anfrage
+MbBadVarOffset=Ungültiger Variablen-Offset
+MbUnknownVarSymbol=Ungültiges Variablensymbol
+MbBadVarOperation=Ungültige Variablen-Operation
+MbBadRange=Ungültiger Bereich/Signal
+MbBadVarString=STRING Variablen sind für diese Anfrage nicht erlaubt
+
+; AS-i configurator
+
+AsiDupSlave=Slave wurde mehr als einmal definiert
+AsiBadProfile=ungültiges Slave-Profil
+AsiBadBitNo=Ungültige Bit Nummer oder ungültiges Status-Flag
+AsiBadSymbol=Ungültiges Variablensymbol
+
+; Binding
+
+EvtBadPort=Ungültige Portnummer
+EvtDupPort=Portnummer wird bereits verwendet
+EvtBadAddr=Ungültige IP-Adresse
+EvtVarOpe=Ungültige Operation
+EvtEventNo=Ungültige ID
+EvtWhatSyb=Unbekanntes Symbol
+EvtInvSyb=Ungültige Variable
+EvtDupVar=Variable bereits mehrfach verknüpft
+EvtDupEvent=ID wird bereits verwendet
+EvtBadHyst=Ungültige Hysterese
+EvtString200=Veröffentlichter Text darf maximal 200 Zeichen enthalten.
+
+; DIFF utility
+
+[Diff]
+
+Cycle=Zyklus und Eigenschaften
+Programs=Programme:
+UDFBs=UDFBs:
+DefineList=Definitionen
+GlobalDefine=Global
+device=Gerät
+virtual=virtuell
+GroupList=Variablen, I/Os und Strukturen
+ProgramList=Programme
+Step=Schritt
+InitStep=Initialschritt
+MacroBeginStep=Makro Initialschritt
+MacroEndStep=Makro Endeschritt
+Transition=Übergang
+JumpTo=Sprung zu
+MacroSymbol=Makro (Symbol)
+CornerOr=Ecke (-)
+CornerAnd=Ecke (=)
+ConvOr=Konvergenz (-)
+ConAnd=Konvergenz (=)
+DivOr=Divergenz (-)
+DivAnd=Divergenz (=)
+Note=Bemerkung
+From=Von
+To=Bis
+Notes=Bemerkungen
+Condition=Bedingung
+Action=Aktionen
+P1=P1 Aktionen
+N=N Aktionen
+P0=P0 Aktionen
+Var=Variable
+Comment=Kommentar
+Block=Block
+Line=Linie
+NegLine=Linie mit Negierung
+Contact=Kontakt
+Coil=Spule
+LeftRail=Linke Schiene
+RightRail=Rechte Schiene
+ORRail=OR-Schiene
+Label=Label
+Jump=Sprung
+Corner=Ecke
+Break=Pausieren
+CmpOpt=Kompilier-Optionen
+Modbus=MODBUS
+Asi=AS-i
+Binding=Binding
+
+; Cross references
+
+[XRef]
+
+ReplaceInFiles=In Dateien ersetzen
+FindWhat=Suche nach:
+ReplaceWith=Ersetzen mit:
+OK=OK
+Cancel=Abbrechen
+InFiles=In Dateien ersetzen:
+SearchIn=In Projekte suchen:
+Where=In Projekt:
+CaseInsensitive=Groß-/Kleinschreibung nicht berücksichtigt
+WholeWord=Ganzes Wort
+List=Liste
+Recipe=Rezept
+Graphic=Grafik
+All=Alle
+None=Keine
+
+; embedded HMI
+
+[ERC]
+DB0=OK
+DB1=Ungültiger Client-Handle
+DB2=Ungültiger Client-Handle
+DB3=Ungültiger Befehl oder Syntax-Fehler
+DB4=Projekt kann nicht geöffnet werden
+DB5=Ungültiger Projekt-Handle
+DB6=Ungültiger Device-Handle: kein Gerät ausgewählt.
+DB7=Ungültiger Dev Paletten-Handle
+DB8=Ungültiger Dev Font-Handle
+DB9=Ungültiger Bibliothek Objekt-Handle
+DB10=Ungültiger String Objekt-Handle
+DB11=Die Ressource Benutzer-ID wird bereits verwendet.
+DB12=String kann nicht erstellt werden
+DB13=Ungültiger Bitmap Objekt-Handle
+DB14=Bitmap kann nicht erstellt werden
+DB15=Ungültiger Font Objekt-Handle
+DB16=Font kann nicht erstellt werden
+DB17=Ungültiger Font Objekt-Handle
+DB18=Font kann nicht erstellt werden
+DB19=Ungültiger Farbeintragindex
+DB20=Ungültiger Grafik Objekt-Handle
+DB21=Der Objektname wird bereits verwendet
+DB22=Das Objekt kann nicht erstellt werden.
+DB23=Ungültiger Eigenschaften-Handle
+DB24=Ungültiges Eigenschaftenformat
+DB25=Ungültiger Eigenschaftenwert
+DB26=Ungültiger Ressource-Handle
+DB27=Compiler Fehler
+DB28=Ungültige Größe
+DB29=Bild kann nicht gesperrt/entsperrt werden
+DB30=Objekt ist gesperrt
+DB31=Projekt kann nicht zerstört werden: das Objekt ist noch geöffnet.
+DB32=Ungültiger Name oder ungültige Kennung
+LOADING=Embedded HMI wird erzeugt...
+CHECKSCRIPT=Skript wird überprüft...
+RELOCIDS=Neuanordnung der Ressource IDs...
+CHECKSYB=IEC Symbole werden überprüft...
+GENRES=Ressource-Dateien werden generiert...
+OK=OK
+BADSCRIPT=Das Input-Skript wurde nicht gefunden oder ist ungültig
+INVDEV=In der Konfiguration ist ein ungültiges HMI Gerät konfiguriert.
+MISSDEV=In der Konfiguration ist kein HMI Gerät konfiguriert.
+BADSYSFONT=Referenz zu einer nicht unterstützten Systemschrift
+BADSYSPAL=Referenz zu einer nicht unterstützten Systempalette
+NOAPPLISYB=Applikationssymbole kann nicht gefunden werden.
+UNKNOWNSYB=Unbekannte Variable im Objekt referenziert
+ERROR=Fehler:
+BMPDEF=Ungültige Bitmap-Definition
+BMPPAL=Bitmap-Palette fehlt oder ist ungültig
+BMPDUP=Bitmap Neu-Definition
+BMPSIZE=Ungültige Bitmap-Größe
+BMPFILE=Bitmap-Datei nicht gefunden oder ungültig
+FNTDEF=Ungültige Font-Definition
+FNTDUP=Neu-Definition Schriftart
+FNTSYS=Unbekannte referenzierte Systemschrift
+FNTFILE=Font-Datei nicht gefunden oder korrupt
+OBJSCREEN=Ungültiges Bild im Objekt referenziert
+OBJTPL=Ungültige Vorlage im Objekt referenziert
+OBJPROP=Ungültige Eigenschaft im Objekt referenziert
+OBJSTRID=Ungültige String-ID im Objekt referenziert
+OBJBMPID=Ungültige Bitmap-ID im Objekt referenziert
+OBJFNTID=Ungültige Font-ID im Objekt referenziert
+TPLDEF=Ungültiges Objektvorlagen-Definition
+TPLDUP=Neu-Definition von Objektvorlagen
+TPLPROP=Die Objektvorlage bezieht sich auf eine unbekannte Eigenschaft.
+TPPDEF=Ungültige Eigenschaften-Vorlagendefinition
+TPPDUP=Neu-Definition von Eigenschaftenvorlage
+TPPFMT=Ungültiges Format in Eigenschaftenvorlage
+SCRDEF=Ungültige Bild-Definition
+SCRPAL=Bild-Palette fehlt oder ist ungültig
+SCRDUP=Neu-Definition Bild
+STRDUP=Duplizierte String-ID
+SYSFNTDEF=Ungültige Systemschrift-Definition
+SYSFNTDUP=Neu-Definition Systemschrift
+SYSHMIDEF=Ungültige System HMI Definition
+SYSHMIDUP=Neu-Definition System HMI
+SYSHMIPAL=Unbekannte referenzierte Systempalette
+SYSHMIFNT=Unbekannte referenzierte Systemschrift
+SYSPALDEF=Ungültige Systempaletten-Definition
+SYSPALDUP=Neu-Definition Systempalette
+SYSPALID=Systempaletten-ID fehlt
+
+; eof

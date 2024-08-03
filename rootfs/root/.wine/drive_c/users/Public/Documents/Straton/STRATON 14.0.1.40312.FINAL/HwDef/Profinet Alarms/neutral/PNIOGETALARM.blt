@@ -1,0 +1,23 @@
+Get information about the first alarm in the FIFO.
+
+Inputs:
+- EN : Enable FB to retrieve info about alarm. TRUE to retrieve info about alarm. 
+- DATA[] : BYTE array containing additional data about the alarm. Use DATALEN parameter to know the size (in BYTES) of the data
+- Q : TRUE if there is an alarm and info are valid, FALSE if no alarm
+
+Outputs:
+- FRAME_ID : Profinet Frame ID
+- SRC_ENDPOINT : Source End Point
+- DST_ENDPOINT : Destination End Point
+- SEND_SEQ_NUMBER : Send Sequence Number of the alarm
+- ACK_SEQ_NUMBER : Acknowledge Sequence Number of the alarm
+- ALARM_HIGH : TRUE if alarm is High, FALSE if alarm is Low
+- ALARM_TYPE : Alarm Type
+- API : API of the submodule associated with alarm (most of the time 0)
+- SLOT_NUMBER : Physical or logical slot which issues the alarm
+- SUBSLOT_NUMBER : Physical or logical subslot which issues the alarm
+- MODULE_IDENT_NUMBER : Module Ident Number
+- SUBMODULE_IDENT_NUMBER : Submodule Ident Number
+- ALARM_SPECIFIER : Alarm specifier
+- DATALEN : Size of the additional data (DATA[]) (in BYTE). 0 if there is no additional data 
+

@@ -1,0 +1,33 @@
+if GiveTea and GlassLevelTea < 100 and GlassLevelCoffee < 100
+then
+   GlassLevelTea := GlassLevelTea + 1;
+end_if;
+
+
+if GiveExpresso and GlassLevelTea < 100 and GlassLevelCoffee < 100
+then
+   GlassLevelCoffee := GlassLevelCoffee + 1;
+end_if;
+
+
+if GiveLong and GlassLevelTea < 100 and GlassLevelCoffee < 100
+then
+   GlassLevelCoffee := GlassLevelCoffee + 1;
+end_if;
+
+
+if ResetGlass then
+   GlassLevelTea := 0;
+   GlassLevelCoffee := 0;
+   GlassHere := FALSE;
+   ResetGlass := FALSE;
+   PosGlass := 0;
+end_if;
+
+if AskForGlass and not ResetGlass and PosGlass < 50 then
+   PosGlass := PosGlass + 1;
+   GlassHere := (PosGlass >= 50);
+end_if;
+
+
+

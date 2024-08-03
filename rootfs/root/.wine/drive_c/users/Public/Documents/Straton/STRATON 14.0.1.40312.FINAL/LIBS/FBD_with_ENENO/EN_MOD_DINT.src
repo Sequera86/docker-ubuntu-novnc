@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := mod (IN, BASE);;
+end_if;
+

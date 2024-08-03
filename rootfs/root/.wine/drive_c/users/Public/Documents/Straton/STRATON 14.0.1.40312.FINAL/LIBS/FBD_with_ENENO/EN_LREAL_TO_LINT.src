@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := any_to_lint (IN);
+end_if;
+

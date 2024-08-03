@@ -1,0 +1,9 @@
+[LONG]
+V-FID=File identifier
+V-REF=~
+V-OK=TRUE if successful
+V-TEXT=Text to be appened
+V-KIND=Kind of level 2 information
+[SHORT]
+V-REF=~
+V-KIND=

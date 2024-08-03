@@ -1,0 +1,17 @@
+Reading an array parameter (SDO)
+The EplReadArray user defined function block is used for sending a simple SDO message to read an array parameter from a slave.
+
+Inputs:
+
+- EN : the message is sent on a rising edge of this input
+- PORT : name of the port (not used)
+- SLV : powerlink slave number
+- Object : parameter index
+- Sub : parameter sub-index
+- VAL : read array parameter value answered by the slave
+- TO : timeout for exchange
+
+Outputs:
+
+- Ready : TRUE when the block is ready - FALSE during an exchange
+- RC : powerlink return check

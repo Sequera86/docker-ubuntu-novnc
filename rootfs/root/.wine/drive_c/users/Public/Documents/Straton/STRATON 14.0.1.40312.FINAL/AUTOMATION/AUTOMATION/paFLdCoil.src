@@ -1,0 +1,14 @@
+case TYP of
+'N', 'n', 'D', 'd', ' ' : sTyp := 'OTE';
+'I', 'i', '/' : sTyp := 'OTO';
+'P', 'p' : sTyp := 'OTP';
+'F', 'f' : sTyp := 'OTF';
+'S', 's' : sTyp := 'OTS';
+'R', 'r' : sTyp := 'OTR';
+else
+    OK := FALSE;
+    return;
+end_case;
+
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, NAME, RET);
+

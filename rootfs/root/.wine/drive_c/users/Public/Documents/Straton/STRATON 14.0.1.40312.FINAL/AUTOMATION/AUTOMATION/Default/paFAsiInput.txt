@@ -1,0 +1,9 @@
+[LONG]
+V-DIAG=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Variable symbol
+V-OFFSET=Input (1..4) or 0 for all together
+[SHORT]
+V-DIAG=~
+V-OFFSET=

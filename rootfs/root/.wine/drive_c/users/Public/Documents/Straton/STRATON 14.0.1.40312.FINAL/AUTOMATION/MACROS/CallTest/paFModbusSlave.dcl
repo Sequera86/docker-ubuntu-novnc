@@ -1,0 +1,5 @@
+/V,L,DINT(0)[0],8,FID
+/V,L,DINT(0)[0],8,SLAVENO
+/V,L,BOOL(0)[0],16,OK
+/V,L,DINT(0)[0],0,RET
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<850Client COL0="350" COL1="200" COL2="75" COL3="120" COL4="85" COL5="140">
+   <SERVER NAME="Local Server" ADDRESS="127.0.0.1" PORT="102" POLLING="1000" TIMEOUT="5000" SPLIT_DO="YES" SPLIT_STRUCT="YES"/>
+</850Client>

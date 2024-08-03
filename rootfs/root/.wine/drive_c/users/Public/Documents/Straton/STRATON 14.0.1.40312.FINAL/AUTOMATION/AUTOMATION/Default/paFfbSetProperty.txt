@@ -1,0 +1,14 @@
+[LONG]
+V-SLAVE=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-VARIABLE=~
+V-VALUE=Value of the property
+V-MASTER=~
+V-PROP=Property internal name
+[SHORT]
+V-SLAVE=~
+V-VARIABLE=~
+V-VALUE=
+V-MASTER=~
+V-PROP=

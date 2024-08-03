@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Appli Expand="YES">
+   <Folder Expand="YES" Name="FBD">
+      <Program Name="FBD_1"/>
+   </Folder>
+   <Folder Name="Graphics">
+      <Folder Expand="YES" Name="Graph_1">
+         <Program Name="Graphics_1_prog"/>
+         <File Name="Graphics_1.gra"/>
+      </Folder>
+      <Folder Expand="YES" Name="Graph_2">
+         <Program Name="Graphics_2_prog"/>
+         <File Name="Graphics_2.gra"/>
+      </Folder>
+   </Folder>
+   <Folder Name="Ladder">
+      <Program Name="Ladder_1"/>
+   </Folder>
+   <Folder Name="SFC">
+      <Program Expand="YES" Name="SFC_1">
+         <Program Name="SFC_1_child"/>
+      </Program>
+   </Folder>
+   <Folder Expand="YES" Name="ST">
+      <Program Name="ST_1"/>
+   </Folder>
+   <Vars/>
+   <Types/>
+</Appli>

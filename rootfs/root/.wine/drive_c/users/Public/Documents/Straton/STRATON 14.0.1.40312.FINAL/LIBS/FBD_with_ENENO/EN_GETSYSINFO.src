@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := getsysinfo (INFO);
+end_if;
+

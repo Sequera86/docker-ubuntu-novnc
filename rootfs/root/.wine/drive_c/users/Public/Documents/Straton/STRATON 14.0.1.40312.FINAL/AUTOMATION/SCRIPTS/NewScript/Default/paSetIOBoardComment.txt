@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-SLOT=Slot number
+V-COMM=Comment text

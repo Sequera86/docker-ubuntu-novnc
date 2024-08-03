@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-REF=Reference number of the destination step
+V-OK=TRUE if successful
+[SHORT]
+V-RET=~
+V-FID=~
+V-REF=~
+V-OK=~

@@ -1,0 +1,6 @@
+if _PRP ('FOPENW', '<ASI>', '<CFG>', '', RET) then
+    FID := RET;
+else
+    FID := 0;
+end_if;
+

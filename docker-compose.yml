@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  ubuntu-novnc:
+    image: ubuntu-novnc
+    environment:
+      - USERNAME=root
+      - USERID=root
+      - BasketUrl=http://basket-api
+    ports:
+      - "6080:80"
+    volumes:
+      - /home/sequera/Desktop/Straton:/SHF
+      - /home/sequera/docker-ubuntu_22-04-novnc/:/workspace:rw

@@ -1,0 +1,4 @@
+[LONG]
+V-PARENT=Parent program name
+V-OK=TRUE if successful
+V-NAME=Child program name

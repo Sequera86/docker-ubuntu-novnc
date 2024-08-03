@@ -1,0 +1,5 @@
+[LONG]
+V-BASETYPE=Base integer data type
+V-OK=TRUE if successful
+V-NAME=Type name
+V-BITS=Bit names, separated by comas

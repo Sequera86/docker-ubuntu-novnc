@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-PROG=Program name
+V-OK=TRUE if successful
+V-FOLDER=Folder name
+[SHORT]
+V-RET=~
+V-PROG=~
+V-OK=~
+V-FOLDER=~

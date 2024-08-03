@@ -1,0 +1,7 @@
+tm (true, false, t#23h59m59s999ms);
+if not initDone or (IN <> INPrev & tm.ET >= any_to_time (1000.0 / PRATE)) then
+    tm (false, true, t#0s);
+    INPrev := IN;
+    initDone := true;
+end_if;
+OUT := INprev;

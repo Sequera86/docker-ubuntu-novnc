@@ -1,0 +1,4 @@
+#info=SFCCHART
+@I:0,0=1;
+#endinfo
+_step _init GS1;

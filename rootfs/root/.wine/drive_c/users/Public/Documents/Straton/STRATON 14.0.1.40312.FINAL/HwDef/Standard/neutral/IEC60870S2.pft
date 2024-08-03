@@ -1,0 +1,5 @@
+Use this profile to map a variable
+to an IEC 60870 slave connection
+with a configurable transfer condition.
+Use the Fieldbus Configurator to
+configurate the stack parameters.

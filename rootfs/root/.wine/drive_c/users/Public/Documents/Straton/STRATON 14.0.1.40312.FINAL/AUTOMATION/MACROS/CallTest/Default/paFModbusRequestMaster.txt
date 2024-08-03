@@ -1,0 +1,28 @@
+[LONG]
+V-NBITEM=Number of items (words or bits)
+V-STYP=~
+V-RET=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Optional request name (description)
+V-TRIALS=Number of trials
+V-SLAVENO=Slave number
+V-ADDRESS=MODBUS address
+V-PERIOD=Activation period
+V-MODE=Activation mode: PERIODIC / ONCALL / ONCHANGE
+V-TIMEOUT=Timeout
+V-REQUEST=Request type: RIW / RHW / RIB / RCB / WHW / WCB
+[SHORT]
+V-NBITEM=~
+V-STYP=~
+V-RET=~
+V-FID=~
+V-OK=~
+V-NAME=~
+V-TRIALS=~
+V-SLAVENO=~
+V-ADDRESS=~
+V-PERIOD=~
+V-MODE=~
+V-TIMEOUT=~
+V-REQUEST=~

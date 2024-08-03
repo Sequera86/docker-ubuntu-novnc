@@ -1,0 +1,27 @@
+paSetParameterDesc ('Name', LoadString (IDS_NAME));
+paSetParameterDesc ('DataType', LoadString (IDS_TYPE));
+paSetParameterDesc ('Init', LoadString (IDS_INIT));
+paSetParameterDesc ('Desc', LoadString (IDS_DESC));
+
+paFTextLine (fST, '// Prompt for parameters');
+
+while AskFor1parameter () do
+    // add to spy list
+    paFspyAddVariable (fSPY, Name);
+    // create variable
+    paCreateVar (Name, DataType);
+    if init <> '' then
+        paSetVarInitValue (Name, Init);
+    end_if;
+    // declare description in script
+    paFTextString (fST, 'paSetParameterDesc ($'');
+    paFTextString (fST, Name);
+    paFTextString (fST, '$', $'');
+    paFTextString (fST, Desc);
+    paFTextLine (fST, '$');');
+end_while;
+
+paFTextLine (fST, 'paEditParameterList (VLID($'Parameters$'), $'Parameters$');');
+paFTextEol (fST);
+
+

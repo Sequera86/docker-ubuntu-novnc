@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-SLOT=Slot number
+[SHORT]
+V-RET=~
+V-OK=~
+V-SLOT=~

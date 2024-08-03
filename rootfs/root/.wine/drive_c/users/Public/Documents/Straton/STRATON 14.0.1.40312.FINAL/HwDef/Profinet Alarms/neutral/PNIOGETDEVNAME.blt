@@ -1,0 +1,8 @@
+Get device name from ID
+
+Inputs:
+- ID : ID of the device. This ID is returned by the Dest_Endpoint output of the FB PNIOGETALARM. This ID represents the order of the device in the Controller's configuration (starting at 0).   
+
+Outputs:
+- NAME : Name of the device. Empty if ID not found or if the device is not connected
+

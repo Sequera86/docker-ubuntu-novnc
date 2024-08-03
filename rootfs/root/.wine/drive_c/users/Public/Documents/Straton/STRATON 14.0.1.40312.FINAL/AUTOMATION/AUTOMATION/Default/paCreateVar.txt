@@ -1,0 +1,11 @@
+[LONG]
+V-TYPE=~
+V-OK=TRUE if successful
+V-NAME=~
+V-STYPE=Data type
+V-SNAME=Variable name
+[SHORT]
+V-TYPE=~
+V-NAME=~
+V-STYPE=
+V-SNAME=

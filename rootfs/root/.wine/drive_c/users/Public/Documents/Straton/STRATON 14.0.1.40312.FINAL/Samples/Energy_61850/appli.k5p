@@ -1,0 +1,121 @@
+;K5 project
+
+/A,<31>1667
+/A,<11>1710255171
+/A,<28>1664
+/A,<25>1662
+/A,<2>D8=0,D16=0,D32=0,D64=0,TMR=0,ACTMR=0,STR=0,STRBUF=0,FBI=0,FBIBUF=0,PUB=0,CT=0,POU=0
+/A,<33>UTF8
+/A,<30>1666
+/A,<1>10000
+/A,<15>9000
+/A,<29>1665
+/A,<128>@Libs\DNP3SCD_CMD
+/A,<26>1663
+/A,<20>56
+</A,end>
+/T,ENUM:IEC61850_Beh=INVALID,ON,BLOCKED,TEST,TEST_BLOCKED,OFF
+</T,end>
+/P,iecDT2UNIX,T,B
+/P,<2>OnCall
+/P,iecUNIX2DT,T,B
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,XCBR1,F,E
+/P,<5>#TRUE#
+/P,LLN0,F,E
+/P,<5>#TRUE#
+/P,MMXU1,F,E
+/P,<5>#TRUE#
+/P,TimeQuality,T,E
+/P,<5>#TRUE#
+/P,XCBR1_Simu,T,E
+/P,<5>#TRUE#
+/P,IEC61850_SPC,T,U
+/P,IEC61850_DPC,T,U
+/P,DBPOS_Simulation,F,U
+/P,DNP3S_BINCMD_CL,T,U
+/P,<11>HIDDEN
+/P,<42>/
+/P,<9>@Libs\DNP3SCD_CMD
+/P,DNP3S_ANACMD,T,U
+/P,<11>HIDDEN
+/P,<42>/
+/P,<9>@Libs\DNP3SCD_CMD
+/P,DNP3S_BINCMD_CTO,T,U
+/P,<11>HIDDEN
+/P,<42>/
+/P,<9>@Libs\DNP3SCD_CMD
+</P,end>
+/G,GLOBAL
+/G,RETAIN
+</G,end>
+/V,G,IEC61850_Beh(0)[0],0,STRATONLDevice1_XCBR1_Beh_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Beh'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_Loc_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Loc'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_Pos_Oper_ctlVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Pos'	DataAttribute='Oper.ctlVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CO'	GOOSECB=''	GOOSECBLD='')
+/V,G,UDINT(0)[0],0,STRATONLDevice1_XCBR1_Pos_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Pos'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,SINT(0)[0],0,STRATONLDevice1_XCBR1_Pos_ctlModel
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Pos'	DataAttribute='ctlModel'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CF'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_BlkOpn_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkOpn'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_BlkCls_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkCls'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,IEC61850_Beh(0)[0],0,STRATONLDevice1_LLN0_Beh_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='LLN0'	DataObject='Beh'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,SINT(0)[0],0,STRATONLDevice1_LLN0_Mod_stVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='LLN0'	DataObject='Mod'	DataAttribute='stVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,INT(0)[0],0,STRATONLDevice1_XCBR1_Pos_Control
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Pos'	DataAttribute=''	ControlObject=TRUE	GOOSEreception=FALSE	FunctionalConstraint=''	GOOSECB='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_Pos_SBOw_ctlVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='Pos'	DataAttribute='SBOw.ctlVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CO'	GOOSECB=''	GOOSECBLD='')
+/V,G,UINT(0)[0],0,STRATONLDevice1_XCBR1_BlkOpn_Control
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkOpn'	DataAttribute=''	ControlObject=TRUE	GOOSEreception=FALSE	FunctionalConstraint=''	GOOSECB='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_BlkOpn_Oper_ctlVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkOpn'	DataAttribute='Oper.ctlVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CO'	GOOSECB=''	GOOSECBLD='')
+/V,G,SINT(0)[0],0,STRATONLDevice1_XCBR1_BlkOpn_ctlModel
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkOpn'	DataAttribute='ctlModel'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CF'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,STRATONLDevice1_XCBR1_BlkCls_Oper_ctlVal
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkCls'	DataAttribute='Oper.ctlVal'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CO'	GOOSECB=''	GOOSECBLD='')
+/V,G,SINT(0)[0],0,STRATONLDevice1_XCBR1_BlkCls_ctlModel
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkCls'	DataAttribute='ctlModel'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='CF'	GOOSECB=''	GOOSECBLD='')
+/V,G,UINT(0)[0],0,STRATONLDevice1_XCBR1_BlkCls_Control
+/V,<2>IEC61850S2
+/V,<1>(LogicalDevice='STRATONLDevice1'	LogicalNode='XCBR1'	DataObject='BlkCls'	DataAttribute=''	ControlObject=TRUE	GOOSEreception=FALSE	FunctionalConstraint=''	GOOSECB='')
+/V,G,REAL(0)[0],0,STRATONLDevice1_MMXU1_TotW_mag_f
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='MMXU1'	DataObject='TotW'	DataAttribute='mag.f'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='MX'	GOOSECB=''	GOOSECBLD='')
+/V,G,SINT(0)[0],0,STRATONLDevice1_TimeQuality_t
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode=''	DataObject=''	DataAttribute='TimeQuality'	ControlObject=TRUE	GOOSEreception=FALSE	FunctionalConstraint=''	GOOSECB='')
+/V,G,UDINT(0)[0],0,STRATONLDevice1_MMXU1_TotW_q
+/V,<1><syb>
+/V,G,LREAL(0)[0],0,STRATONLDevice1_MMXU1_TotW_t
+/V,<1><syb>
+/V,G,LREAL(0)[0],0,STRATONLDevice1_LLN0_Beh_t
+/V,<2>IEC61850S2
+/V,<1><syb>(LogicalDevice='STRATONLDevice1'	LogicalNode='LLN0'	DataObject='Beh'	DataAttribute='t'	ControlObject=FALSE	GOOSEreception=FALSE	FunctionalConstraint='ST'	GOOSECB=''	GOOSECBLD='')
+/V,G,BOOL(0)[0],0,XCBR1_Pos_ON
+/V,G,BOOL(0)[0],0,XCBR1_Pos_OFF
+/V,G,BOOL(0)[0],0,XCBR1_Pos_INTERMEDIATE
+/V,G,DINT(0)[0],0,XCBR1_Pos_InProgress
+

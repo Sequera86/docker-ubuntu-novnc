@@ -1,0 +1,3 @@
+[LONG]
+V-FID=File identifier
+V-NAME=Name of the spy list

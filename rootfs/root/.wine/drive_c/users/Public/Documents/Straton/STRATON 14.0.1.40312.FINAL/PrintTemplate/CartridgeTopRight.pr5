@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Print>
+   <Item Type="HEADER" ID="1" ExtendCoord="YES" X="0" Y="0" Cx="200" Cy="200" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="12" FontColor="0" BackColor="16777215" Style="0" Align="4" DateFormat="%b %d, %Y (%H:%M:%S)" NbHeaders="8" XThickness="4" YThickness="6"/>
+   <Item Type="AREA" ID="2" ExtendCoord="YES" X="4" Y="30" Cx="192" Cy="164" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="10" FontColor="0" BackColor="16777215" Style="0" Align="-3" DateFormat="%b %d, %Y (%H:%M:%S)" NbHeaders="8"/>
+   <Item Type="TEXT" ID="3" ExtendCoord="YES" X="148" Y="6" Cx="48" Cy="6" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="9" FontColor="0" BackColor="16777215" Style="0" Align="2" DateFormat="%b %d, %Y (%H:%M:%S)">straton</Item>
+   <Item Type="DOCUMENT" ID="4" ExtendCoord="YES" X="148" Y="12" Cx="48" Cy="6" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="-3" DateFormat="%b %d, %Y (%H:%M:%S)"/>
+   <Item Type="BUILD" ID="5" ExtendCoord="YES" X="148" Y="18" Cx="24" Cy="6" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="-3" DateFormat="%b %d, %Y (%H:%M:%S)"/>
+   <Item Type="PAGE" ID="6" ExtendCoord="YES" X="172" Y="18" Cx="24" Cy="6" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2" DateFormat="%b %d, %Y (%H:%M:%S)"/>
+   <Item Type="DATE" ID="7" ExtendCoord="YES" X="148" Y="24" Cx="48" Cy="6" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2" DateFormat="%b %d, %Y (%H:%M:%S)"/>
+</Print>

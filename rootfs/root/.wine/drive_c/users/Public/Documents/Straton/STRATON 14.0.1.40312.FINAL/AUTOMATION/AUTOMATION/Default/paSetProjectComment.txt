@@ -1,0 +1,3 @@
+[LONG]
+V-COMM=Comment text
+V-OK=TRUE if successful

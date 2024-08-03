@@ -1,0 +1,13 @@
+JSONNEWNUMBER - function - Create a new number node
+
+Inputs:
+
+value : ANY; any numerical or string value
+
+Outputs:
+
+hNode : DINT; handle of the new node or 0 if failed
+
+This function creates a new JSON node which represent a numerical value.
+The function allocates the node in the memory. The application is responsible for releasing the memory.
+If the value is TIME, then the node will represent an integer number of milliseconds.

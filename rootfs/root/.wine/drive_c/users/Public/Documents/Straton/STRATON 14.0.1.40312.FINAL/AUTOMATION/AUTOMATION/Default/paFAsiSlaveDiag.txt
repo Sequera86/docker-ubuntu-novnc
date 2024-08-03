@@ -1,0 +1,5 @@
+[LONG]
+V-DIAG=Diagnostic info requested
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Variable symbol

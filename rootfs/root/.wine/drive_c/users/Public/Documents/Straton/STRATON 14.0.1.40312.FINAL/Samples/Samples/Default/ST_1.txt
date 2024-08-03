@@ -1,0 +1,13 @@
+[SHORT]
+V-COUNTER=Count
+V-NEWVAR=~
+V-Q0=
+V-Q=~
+[LONG]
+V-BLINKER=Generates blinking signal
+V-COUNTER=Main growing counter
+V-NEWVAR=~
+V-BCOMMAND=Main activation command
+V-Q0=
+V-Q=~
+V-IVALUE=Main interger result

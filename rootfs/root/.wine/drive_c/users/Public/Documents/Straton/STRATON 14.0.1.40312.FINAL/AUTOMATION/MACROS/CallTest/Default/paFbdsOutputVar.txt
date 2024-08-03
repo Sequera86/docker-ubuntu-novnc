@@ -1,0 +1,16 @@
+[LONG]
+V-STYP=~
+V-RET=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-PIN=output pin index on the block (1 based)
+V-NEGATE=TRUE for a negated connection
+[SHORT]
+V-STYP=~
+V-RET=~
+V-FID=~
+V-OK=~
+V-NAME=~
+V-PIN=~
+V-NEGATE=~

@@ -1,0 +1,16 @@
+OUT := max (IN1, IN2);
+if nbIn > 2 & IN3 > OUT then OUT := IN3; end_if;
+if nbIn > 3 & IN4 > OUT then OUT := IN4; end_if;
+if nbIn > 4 & IN5 > OUT then OUT := IN5; end_if;
+if nbIn > 5 & IN6 > OUT then OUT := IN6; end_if;
+if nbIn > 6 & IN7 > OUT then OUT := IN7; end_if;
+if nbIn > 7 & IN8 > OUT then OUT := IN8; end_if;
+if nbIn > 8 & IN9 > OUT then OUT := IN9; end_if;
+if nbIn > 9 & IN10 > OUT then OUT := IN10; end_if;
+if nbIn > 10 & IN11 > OUT then OUT := IN11; end_if;
+if nbIn > 11 & IN12 > OUT then OUT := IN12; end_if;
+if nbIn > 12 & IN13 > OUT then OUT := IN13; end_if;
+if nbIn > 13 & IN14 > OUT then OUT := IN14; end_if;
+if nbIn > 14 & IN15 > OUT then OUT := IN15; end_if;
+if nbIn > 15 & IN16 > OUT then OUT := IN16; end_if;
+

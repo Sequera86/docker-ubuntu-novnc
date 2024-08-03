@@ -1,0 +1,2 @@
+return the error code of the last call to CIF functions
+0 is OK

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Root>
+	<FuncModel model="0x03" Name-en="Ramp">
+		<Group ID="CurrentConfiguration01" Name-en="Current configuration 01">
+			<Parameter ID="HoldingCurrent01" Register="48" Name-en="Holding current [%]" Description-en="Current in % (0-117) of module rated current (3A)" Type="USINT" Value="0" Range="0-117"/>
+			<Parameter ID="RatedCurrent01" Register="49" Name-en="Rated current [%]" Description-en="Current in % (0-117) of module rated current (3A)" Type="USINT" Value="0" Range="0-117"/>
+			<Parameter ID="MaximumCurrent01" Register="50" Name-en="Maximum current [%]" Description-en="Current in % (0-117) of module rated current (3A)" Type="USINT" Value="0" Range="0-117"/>
+		</Group>
+		<Group ID="Referencing Configuration" Name-en="Referencing configuration">
+			<Parameter ID="StallRecognitionDelay01_conf" Register="74" Name-en="Stall recognition delay 01 [25 ms]" Description-en="At homing procedure of motor 01, stall is only detected after this time" Type="USINT" Value="8" Range="0-255"/>
+			<Parameter ID="RefConfig01_selector" Register="70" Name-en="Referencing configuration 01" Value="pos. edge" Description-en="Homing configuration motor 01">
+				<ComboBox>
+					<Item ID="unconditional" Value="0x80" Name-en="unconditional"/>
+					<Item ID="stall" Value="0x81" Name-en="stall"/>
+					<Item ID="neg. edge" Value="0x82" Name-en="neg. edge of digital input 03"/>
+					<Item ID="pos. edge" Value="0x83" Name-en="pos. edge of digital input 03"/>
+					<Item ID="neg. edge DI4" Value="0x86" Name-en="neg. edge of digital input 04"/>
+					<Item ID="pos. edge DI4" Value="0x87" Name-en="pos. edge of digital input 04"/>
+				</ComboBox>
+			</Parameter>
+		</Group>
+		<Group ID="MPGenConfiguration" Name-en="MPGen configuration">
+			<Parameter ID="MaxSpeed01pos_conf" Register="52" Name-en="Maximum speed 01 [Microsteps/25 ms]" Description-en="Velocity normally attained at the end of the acceleration ramp motor 01 (only for positioning modes)" Type="UINT" Value="0" Range="0-65535"/>
+			<Parameter ID="MaxAcc01_conf" Register="54" Name-en="Maximum acceleration 01 [Microsteps/25 ms^2]" Description-en="Acceleration of motion profile motor 01" Type="UINT" Value="0" Range="0-65535"/>
+			<Parameter ID="MaxDec01_conf" Register="56" Name-en="Maximum deceleration 01 [Microsteps/25 ms^2]" Description-en="Deceleration of motion profile motor 01" Type="UINT" Value="0" Range="0-65535"/>
+			<Parameter ID="RevLoop01_conf" Register="58" Name-en="Reverse loop 01" Description-en="Turn-around loop motor 01" Type="INT" Value="0" Range="-32768-32767"/>
+			<Parameter ID="FixedPos01a_conf" Register="60" Name-en="Fixed position A 01" Description-en="Position to move to in defined modes of motor 01" type="DINT" Value="0" Range="-2147483648-2147483647"/>
+			<Parameter ID="FixedPos01b_conf" Register="64" Name-en="Fixed position B 01" Description-en="Position to move to in defined modes of motor 01" Type="DINT" Value="0" Range="-2147483648-2147483647"/>
+			<Parameter ID="RefSpeed01_conf" Register="68" Name-en="Referencing speed 01 [Microsteps/25 ms]" Description-en="Homing speed motor 01" Type="UINT" Value="0" Range="0-65535"/>
+			<Parameter ID="JoltTime01_conf" Register="75" Name-en="Jolt time 01 [25 ms]" Description-en="Configuration of jolt limitation motor 01" Type="USINT" Value="0" Range="0-16"/>
+		</Group>
+	</FuncModel>
+</Root>
+
+
+

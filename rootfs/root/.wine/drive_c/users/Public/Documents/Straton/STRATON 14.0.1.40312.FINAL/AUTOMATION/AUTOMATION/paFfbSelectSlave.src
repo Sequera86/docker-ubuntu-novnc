@@ -1,0 +1,5 @@
+OK := _PRP ('FWRITE', any_to_string (FID), 'NEW',
+            any_to_string (MASTER) + ' '
+            + any_to_string (SLAVE),
+            RET);
+

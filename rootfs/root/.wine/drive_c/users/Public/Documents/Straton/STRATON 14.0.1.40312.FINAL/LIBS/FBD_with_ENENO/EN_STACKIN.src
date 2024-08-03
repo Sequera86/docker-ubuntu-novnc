@@ -1,0 +1,8 @@
+ENO := EN;
+if EN then
+    stk (PUSH, POP, R1, IN, N);
+    EMPTY := stk.EMPTY;
+    OFLO := stk.OFLO;
+    OUT := stk.OUT;
+end_if;
+

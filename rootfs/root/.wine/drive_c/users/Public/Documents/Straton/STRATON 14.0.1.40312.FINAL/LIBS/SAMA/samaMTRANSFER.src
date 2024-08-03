@@ -1,0 +1,14 @@
+Trigger (S);
+
+if Trigger.Q then
+    Selector := not Selector;
+end_if;
+
+LimiterStat (any_to_real (Selector), PRATE);
+STATUS := (LimiterStat.OUT <> 0);
+
+Limiter (sel (Selector, IN1, IN2), PRATE);
+OUT := Limiter.OUT;
+
+
+

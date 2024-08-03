@@ -1,0 +1,9 @@
+ENU (TRUE, 1, 'GetComm', 'S', NAME, '');
+if ENU.ITEM = '' then
+    Comment := '';
+    OK := FALSE;
+else
+    Comment := ENU.ITEM;
+    OK := TRUE;
+end_if;
+

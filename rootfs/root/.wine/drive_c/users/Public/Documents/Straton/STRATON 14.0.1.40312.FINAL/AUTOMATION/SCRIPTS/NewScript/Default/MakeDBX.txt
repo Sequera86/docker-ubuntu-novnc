@@ -1,0 +1,6 @@
+[LONG]
+V-NEWVAR=~
+V-F=
+[SHORT]
+V-NEWVAR=~
+V-F=

@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-CONFIG=Configuration
+[SHORT]
+V-RET=~
+V-FID=~
+V-CONFIG=~

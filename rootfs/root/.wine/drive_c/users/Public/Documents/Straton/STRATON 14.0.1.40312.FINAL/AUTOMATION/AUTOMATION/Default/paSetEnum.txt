@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Type name
+V-VALUES=New list of values, separated by comas

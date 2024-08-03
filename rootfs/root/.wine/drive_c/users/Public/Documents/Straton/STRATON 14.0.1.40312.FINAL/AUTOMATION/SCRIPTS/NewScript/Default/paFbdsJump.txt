@@ -1,0 +1,4 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-LABEL=output pin index on the block (1 based)

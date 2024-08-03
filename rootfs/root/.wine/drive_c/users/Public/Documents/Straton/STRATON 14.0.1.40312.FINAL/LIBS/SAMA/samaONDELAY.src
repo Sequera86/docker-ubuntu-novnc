@@ -1,0 +1,6 @@
+if RST then
+    tm (false, t#0s);
+else
+    tm (IN, T);
+end_if;
+Q := tm.Q;

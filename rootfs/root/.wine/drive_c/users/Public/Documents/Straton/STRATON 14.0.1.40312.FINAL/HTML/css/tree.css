@@ -1,0 +1,229 @@
+/* Tree CSS */
+/* https://makina-corpus.com/blog/metier/2014/construire-un-tree-view-en-css-pur */
+/* https://fontawesome.com/v4.7.0/icons/ */
+
+		
+	.x5i_tree {
+		width: 100%;
+		color:black;					/* text color : black */
+	}
+	
+	.x5i_tree ul.x5i_treeList{
+		list-style-type: none;			/* Remove list bullets */
+	}		
+		
+	.x5i_tree li.x5i_treeFolder {
+		margin-left: -1.5rem;			/* Move icon folder to left for checkbox */
+		-webkit-touch-callout: none; 	/* Disable selection : iOS Safari */
+		-webkit-user-select: none; 		/* Disable selection :Safari */
+		-moz-user-select: none; 		/* Disable selection :Old versions of Firefox */
+		-ms-user-select: none; 			/* Disable selection :Internet Explorer/Edge */
+        user-select: none; 				/* Disable selection : Non-prefixed version, currently
+											supported by Chrome, Edge, Opera and Firefox */	
+		white-space:nowrap;				/* Never wrap to next line : text continues on the same line  */
+		margin-top: 0.5rem;
+		margin-bottom: 0.2rem;
+	}		
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"] {
+		display: none;					/* Hide the checkbox button */  
+		font-family: 'FontAwesome';		/* Use third party icons */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"] ~ ul {					
+		display: none;					/* if unchecked hide all childs */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"]:checked ~ ul { 		
+		display: block;					/* if hecked display all childs */
+		list-style-type: none;			/* Remove list bullets */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"] ~ .fa-folder-open{
+		display: none;					/* if unchecked hide icon fa-folder-open */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"]:checked ~ .fa-folder{
+		display: none;					/* if checked hide icon fa-folder */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"]:checked ~ .fa-folder-open{
+		display: inline;				/* if checked show icon fa-folder-open */
+	}		
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"] ~ .fa-caret-down{
+		display: none;					/* if unchecked hide icon fa-folder-open */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"]:checked ~ .fa-caret-right{
+		display: none;					/* if checked hide icon fa-folder */
+	}
+	.x5i_tree li.x5i_treeFolder input[type="checkbox"]:checked ~ .fa-caret-down{
+		display: inline;				/* if checked show icon fa-folder-open */
+	}		
+	
+	.x5i_tree li.x5i_treeFolder label:hover {
+		cursor: pointer;
+		color:black;
+		border-radius: 4px;				/* Display rounded corners */
+		background-color: lightgrey;	/* with grayed background */		
+	}		
+
+	.x5i_tree li.x5i_treeItem {
+		list-style-position: outside;	/* List bullets is outside */
+		-webkit-touch-callout: none;	/* Disable selection : iOS Safari */
+		-webkit-user-select: none;		/* Disable selection :Safari */
+		-moz-user-select: none;			/* Disable selection :Old versions of Firefox */
+		-ms-user-select: none;			/* Disable selection :Internet Explorer/Edge */
+		user-select: none;				/* Disable selection : Non-prefixed version, currently
+										supported by Chrome, Edge, Opera and Firefox */
+		white-space: nowrap;			/* Never wrap to next line : text continues on the same line  */
+	}
+	.x5i_tree li.x5i_treeItem a{
+		text-decoration: none; 			/* Not underline */
+		cursor: pointer;
+		color:black;
+	}
+	.x5i_tree li.x5i_treeItem a:hover{
+		text-decoration: none; 			/* Not underline */
+		cursor: pointer;
+		color:black;
+		border-radius: 4px;
+		background-color: lightgrey;		
+	}
+
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemDDK {
+		display: list-item;							/* Force balise <a> as a list item (bullet is displayed) */
+		list-style-image: url("../res/treeitem_ddk.png"); /* Display custom icon instead of bullet */
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemVarGroup {
+		display: list-item;
+		list-style-image: url("../res/treeitem_vargroup.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgFBD {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgfbd.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgLD {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgld.png");
+	}		
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgST {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgst.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgSFC {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgsfc.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgFFSFC {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgffsfc.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgFFLD {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgffld.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrgSAMA {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prgsama.png");
+	}
+    .x5i_tree li.x5i_treeItem a.x5i_treeItemPrgIL {
+        display: list-item;
+        list-style-image: url("../res/treeitem_prgil.png");
+    }
+    .x5i_tree li.x5i_treeItem a.x5i_treeItemSPY {
+    display: list-item;
+    list-style-image: url("../res/treeitem_spy.png");
+}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemGRA {
+		display: list-item;
+		list-style-image: url("../res/treeitem_gra.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemRCP {
+		display: list-item;
+		list-style-image: url("../res/treeitem_rcp.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSS5 {
+		display: list-item;
+		list-style-image: url("../res/treeitem_ss5.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSTB {
+		display: list-item;
+		list-style-image: url("../res/treeitem_stb.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSGL {
+		display: list-item;
+		list-style-image: url("../res/treeitem_sgl.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemIEC61850 {
+		display: list-item;
+		list-style-image: url("../res/treeitem_iec61850.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSEQ {
+		display: list-item;
+		list-style-image: url("../res/treeitem_seq.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSectionDDK {
+		display: list-item;
+		list-style-image: url("../res/treeitem_sectionddk.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemSectionVars {
+		display: list-item;
+		list-style-image: url("../res/treeitem_sectionvars.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemProfile {
+		display: list-item;
+		list-style-image: url("../res/treeitem_profile.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemExtern {
+		display: list-item;
+		list-style-image: url("../res/treeitem_extern.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemStatus {
+		display: list-item;
+		list-style-image: url("../res/treeitem_status.png");
+	}
+	.x5i_tree li.x5i_treeItem a.x5i_treeItemPrg {
+		display: list-item;
+		list-style-image: url("../res/treeitem_prg.png");
+	}
+	
+	.x5ti_treeContextMenu {
+		width: 200px;
+		box-shadow: 3px 3px 5px #888888;
+		border-style: solid;
+		border-width: 1px;
+		border-color: grey;
+		border-radius: 2px;
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-top: 3px;
+		padding-bottom: 3px;
+		position: fixed;
+		display: none;
+		background-color: white;
+		height: 56px;
+	}
+
+	.x5ti_treeContextMenu ul {
+		list-style-type: none; /* Remove list bullets */
+	}
+
+	.x5ti_treeContextMenu .x5ti_treeContextMenuItem {
+		list-style-position: outside; /* List bullets is outside */
+		margin-left: -40px; /* Move text to left */
+	}
+
+	.x5ti_treeContextMenu .x5ti_treeContextMenuItem a {
+		text-decoration: none; /* Not underline */
+		color: black;
+	}
+
+	.x5ti_treeContextMenu .x5ti_treeContextMenuItem:hover {
+		cursor: pointer;
+		background-color: lightgrey;
+	}
+
+
+	.search-pane-header {
+		border-bottom: solid 1px grey;
+		margin-bottom: 1em;
+	}
+
+	.x5i_tree li span {
+		position: relative;
+		left: 8px;
+	  }

@@ -1,0 +1,4 @@
+sTyp := ADDR + ' ' + any_to_string (PORT) + ' ' + NAME;
+OK := _PRP ('FWRITE', any_to_string (FID),
+            'PORT', sTyp, RET);
+

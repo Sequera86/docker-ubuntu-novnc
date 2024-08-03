@@ -1,0 +1,7 @@
+/V,L,DINT(0)[0],8,FID
+/V,L,DINT(0)[0],8,PIN
+/V,L,BOOL(0)[0],8,NEGATE
+/V,L,BOOL(0)[0],16,OK
+/V,L,DINT(0)[0],0,RET
+/V,L,STRING(255)[0],0,sTyp
+

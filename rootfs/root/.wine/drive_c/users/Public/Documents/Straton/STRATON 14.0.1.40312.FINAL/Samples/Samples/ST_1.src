@@ -1,0 +1,24 @@
+#define ThePeriod t#1s
+
+Blinker (TRUE, ThePeriod);
+Trigger (Blinker.Q);
+
+bSig := Trigger.Q;
+
+Counter (
+    bSig,            (* blinking input *)
+    not bCommand,    (* reset the counter if command *)
+    255
+    );
+iValue := Counter.CV;
+
+q0 := ANY_TO_BOOL (AND_MASK (iValue, 16#01));
+q1 := ANY_TO_BOOL (AND_MASK (iValue, 16#02));
+q2 := ANY_TO_BOOL (AND_MASK (iValue, 16#04));
+q3 := ANY_TO_BOOL (AND_MASK (iValue, 16#08));
+q4 := ANY_TO_BOOL (AND_MASK (iValue, 16#10));
+q5 := ANY_TO_BOOL (AND_MASK (iValue, 16#20));
+q6 := ANY_TO_BOOL (AND_MASK (iValue, 16#40));
+q7 := ANY_TO_BOOL (AND_MASK (iValue, 16#80));
+
+

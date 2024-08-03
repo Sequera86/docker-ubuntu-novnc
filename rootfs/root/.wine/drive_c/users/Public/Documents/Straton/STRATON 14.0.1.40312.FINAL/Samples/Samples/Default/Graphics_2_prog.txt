@@ -1,0 +1,7 @@
+[SHORT]
+V-I=~
+[LONG]
+V-BRESET=RESET action
+V-LIGHT=the 5 lights
+V-BWIN=TRUE when you win!
+V-I=~

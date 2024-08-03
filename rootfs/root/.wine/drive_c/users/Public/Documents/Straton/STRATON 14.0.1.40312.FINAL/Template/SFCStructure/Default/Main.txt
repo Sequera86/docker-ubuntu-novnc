@@ -1,0 +1,10 @@
+[LONG]
+V-NEWVAR=~
+V-BCHILD1=Start/Stop Child SFC
+V-BCHILD2=Start/Stop Child SFC
+V-BCHILD3=Start/Stop Child SFC
+[SHORT]
+V-NEWVAR=~
+V-BCHILD1=
+V-BCHILD2=~
+V-BCHILD3=~

@@ -1,0 +1,11 @@
+JsonMemberName - function - Get the name of an object member
+
+Inputs:
+
+hMember : DINT; handle of a member of the object
+
+Outputs:
+
+name : STRING; name of the data member
+
+The function returns an empty string if the input is not a member of a structured object.

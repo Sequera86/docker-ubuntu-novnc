@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ISO15745Profile xmlns="http://www.profibus.com/GSDML/2003/11/DeviceProfile" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.profibus.com/GSDML/2003/11/DeviceProfile ..\xsd\GSDML-DeviceProfile-V2.2.xsd">
+	<ProfileHeader>
+		<ProfileIdentification>PROFINET Device Profile</ProfileIdentification>
+		<ProfileRevision>1.00</ProfileRevision>
+		<ProfileName>Device Profile for PROFINET Devices</ProfileName>
+		<ProfileSource>PROFIBUS Nutzerorganisation e. V. (PNO)</ProfileSource>
+		<ProfileClassID>Device</ProfileClassID>
+		<ISO15745Reference>
+			<ISO15745Part>4</ISO15745Part>
+			<ISO15745Edition>1</ISO15745Edition>
+			<ProfileTechnology>GSDML</ProfileTechnology>
+		</ISO15745Reference>
+	</ProfileHeader>
+	<ProfileBody>
+		<DeviceIdentity VendorID="0x0147" DeviceID="0x0002">
+			<InfoText TextId="stratonPNIOdriverDescription"/>
+			<VendorName Value="COPA-DATA GmbH"/>
+		</DeviceIdentity>
+		<DeviceFunction>
+			<Family MainFamily="I/O" ProductFamily="straton PROFINET IO"/>
+		</DeviceFunction>
+		<ApplicationProcess>
+			<DeviceAccessPointList>
+				<DeviceAccessPointItem ID="DIM 1" PhysicalSlots="0..127" ModuleIdentNumber="0x10000000" MinDeviceInterval="64" ImplementationType="straton PROFINET IO device" DNS_CompatibleName="straton-profinetio-device" FixedInSlots="0" ObjectUUID_LocalIndex="1">
+					<ModuleInfo>
+						<Name TextId="stratonPNIOdriver"/>
+						<InfoText TextId="stratonPNIOdriverDescription"/>
+						<VendorName Value="COPA-DATA GmbH"/>
+						<OrderNumber Value="0000"/>
+						<HardwareRelease Value="0"/>
+						<SoftwareRelease Value="1"/>
+					</ModuleInfo>
+					<IOConfigData MaxInputLength="1440" MaxOutputLength="1440"/>
+					<UseableModules>
+          	<ModuleItemRef ModuleItemTarget="1" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="2" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="3" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="4" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="5" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="6" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="7" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="8" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="9" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="10" AllowedInSlots="1..127"/>						
+						<ModuleItemRef ModuleItemTarget="11" AllowedInSlots="1..127"/>												
+          	<ModuleItemRef ModuleItemTarget="1001" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1002" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1003" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1004" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1005" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1006" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1007" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1008" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1009" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1010" AllowedInSlots="1..127"/>
+						<ModuleItemRef ModuleItemTarget="1011" AllowedInSlots="1..127"/>
+						<!--Die Referenzen zeigen auf die Module der ModuleList -->
+					</UseableModules>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="DIM 1" SubmoduleIdentNumber="0x00000001">
+							<IOData/>
+<ModuleInfo>
+	<Name TextId="stratonPNIOdriver"/>
+	<InfoText TextId="stratonPNIOdriverDescription"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+					<Graphics>
+                    <GraphicItemRef Type="DeviceSymbol" GraphicItemTarget="1"/>
+          </Graphics>
+				</DeviceAccessPointItem>
+			</DeviceAccessPointList>
+			<ModuleList>
+			
+        <!-- Eingangsmodule -->
+				<ModuleItem ID="1" ModuleIdentNumber="0x00000001">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="USINT Eingangsmodul"/>
+						<InfoText TextId="Unsigned 8 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="USINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="USINT Eingangsmodul"/>
+	<InfoText TextId="Unsigned 8 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="2" ModuleIdentNumber="0x00000002">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="SINT Eingangsmodul"/>
+						<InfoText TextId="Signed 8 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="2" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Integer8" UseAsBits="false" TextId="SINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="SINT Eingangsmodul"/>
+	<InfoText TextId="Signed 8 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="3" ModuleIdentNumber="0x00000003">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="UINT Eingangsmodul"/>
+						<InfoText TextId="Unsigned 16 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="3" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="UINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="UINT Eingangsmodul"/>
+	<InfoText TextId="Unsigned 16 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+		    <ModuleItem ID="4" ModuleIdentNumber="0x00000004">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="INT Eingangsmodul"/>
+						<InfoText TextId="Signed 16 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="4" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="INT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="INT Eingangsmodul"/>
+	<InfoText TextId="Signed 16 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="5" ModuleIdentNumber="0x00000005">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="UDINT Eingangsmodul"/>
+						<InfoText TextId="Unsigned 32 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="5" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="UDINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="UDINT Eingangsmodul"/>
+	<InfoText TextId="Unsigned 32 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="6" ModuleIdentNumber="0x00000006">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="DINT Eingangsmodul"/>
+						<InfoText TextId="Signed 32 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="6" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Integer32" UseAsBits="false" TextId="DINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="DINT Eingangsmodul"/>
+	<InfoText TextId="Signed 32 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="7" ModuleIdentNumber="0x00000007">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="LINT Eingangsmodul"/>
+						<InfoText TextId="Signed 64 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="7" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Integer64" UseAsBits="false" TextId="LINT Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="LINT Eingangsmodul"/>
+	<InfoText TextId="Signed 64 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="8" ModuleIdentNumber="0x00000008">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="REAL Eingangsmodul"/>
+						<InfoText TextId="Float 32 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="8" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Float32" UseAsBits="false" TextId="REAL Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="REAL Eingangsmodul"/>
+	<InfoText TextId="Float 32 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+				<ModuleItem ID="9" ModuleIdentNumber="0x00000009">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="LREAL Eingangsmodul"/>
+						<InfoText TextId="Float 64 bit Eingangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="9" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="Float64" UseAsBits="false" TextId="LREAL Eingang"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="LREAL Eingangsmodul"/>
+	<InfoText TextId="Float 64 bit Eingangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>			
+				<ModuleItem ID="10" ModuleIdentNumber="0x0000000a">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="String Eingangsmodul 64"/>
+						<InfoText TextId="String Eingangsmodul 64 Zeichen"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="10" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="VisibleString" UseAsBits="false" Length="64" TextId="String Eingang mit 64 Zeichen"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="String Eingangsmodul 64"/>
+	<InfoText TextId="String Eingangsmodul 64 Zeichen"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>			
+				<ModuleItem ID="11" ModuleIdentNumber="0x0000000b">
+					<ModuleInfo CategoryRef="Input Module">
+						<Name TextId="String Eingangsmodul 255"/>
+						<InfoText TextId="String Eingangsmodul 255 Zeichen"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="11" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Input>
+									<DataItem DataType="VisibleString" UseAsBits="false" Length="255" TextId="String Eingang mit 255 Zeichen"/>
+								</Input>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="String Eingangsmodul 255"/>
+	<InfoText TextId="String Eingangsmodul 255 Zeichen"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>			
+				
+				
+      <!-- Ausgangsmodule -->
+				<ModuleItem ID="1001" ModuleIdentNumber="0x00001001">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="USINT Ausgangsmodul"/>
+						<InfoText TextId="Unsigned 8 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1001" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Unsigned8" UseAsBits="true" TextId="USINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="USINT Ausgangsmodul"/>
+	<InfoText TextId="Unsigned 8 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1002" ModuleIdentNumber="0x00001002">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="SINT Ausgangsmodul"/>
+						<InfoText TextId="Signed 8 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1002" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Integer8" UseAsBits="false" TextId="SINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="SINT Ausgangsmodul"/>
+	<InfoText TextId="Signed 8 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1003" ModuleIdentNumber="0x00001003">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="UINT Ausgangsmodul"/>
+						<InfoText TextId="Unsigned 16 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1003" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Unsigned16" UseAsBits="true" TextId="UINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="UINT Ausgangsmodul"/>
+	<InfoText TextId="Unsigned 16 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+		    <ModuleItem ID="1004" ModuleIdentNumber="0x00001004">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="INT Ausgangsmodul"/>
+						<InfoText TextId="Signed 16 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1004" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Integer16" UseAsBits="false" TextId="INT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="INT Ausgangsmodul"/>
+	<InfoText TextId="Signed 16 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1005" ModuleIdentNumber="0x00001005">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="UDINT Ausgangsmodul"/>
+						<InfoText TextId="Unsigned 32 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1005" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Unsigned32" UseAsBits="true" TextId="UDINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="UDINT Ausgangsmodul"/>
+	<InfoText TextId="Unsigned 32 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1006" ModuleIdentNumber="0x00001006">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="DINT Ausgangsmodul"/>
+						<InfoText TextId="Signed 32 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1006" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Integer32" UseAsBits="false" TextId="DINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="DINT Ausgangsmodul"/>
+	<InfoText TextId="Signed 32 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1007" ModuleIdentNumber="0x00001007">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="LINT Ausgangsmodul"/>
+						<InfoText TextId="Signed 64 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1007" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Integer64" UseAsBits="false" TextId="LINT Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="LINT Ausgangsmodul"/>
+	<InfoText TextId="Signed 64 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>
+				<ModuleItem ID="1008" ModuleIdentNumber="0x00001008">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="REAL Ausgangsmodul"/>
+						<InfoText TextId="Float 32 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1008" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Float32" UseAsBits="false" TextId="REAL Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="REAL Ausgangsmodul"/>
+	<InfoText TextId="Float 32 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>				
+				<ModuleItem ID="1009" ModuleIdentNumber="0x00001009">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="LREAL Ausgangsmodul"/>
+						<InfoText TextId="Float 64 bit Ausgangsmodul"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1009" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="Float64" UseAsBits="false" TextId="LREAL Ausgang"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="LREAL Ausgangsmodul"/>
+	<InfoText TextId="Float 64 bit Ausgangsmodul"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>						
+        <ModuleItem ID="1010" ModuleIdentNumber="0x0000100a">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="String Ausgangsmodul 64"/>
+						<InfoText TextId="String Ausgangsmodul 64 Zeichen"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1010" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="VisibleString" UseAsBits="false" Length="64" TextId="String Ausgang mit 64 Zeichen"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="String Ausgangsmodul 64"/>
+	<InfoText TextId="String Ausgangsmodul 64 Zeichen"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>		
+           <ModuleItem ID="1011" ModuleIdentNumber="0x0000100b">
+					<ModuleInfo CategoryRef="Output Module">
+						<Name TextId="String Ausgangsmodul 255"/>
+						<InfoText TextId="String Ausgangsmodul 255 Zeichen"/>
+					</ModuleInfo>
+					<VirtualSubmoduleList>
+						<VirtualSubmoduleItem ID="1011" SubmoduleIdentNumber="0x00000001">
+							<IOData>
+								<Output>
+									<DataItem DataType="VisibleString" UseAsBits="false" Length="255" TextId="String Ausgang mit 255 Zeichen"/>
+								</Output>
+							</IOData>
+<ModuleInfo>
+	<Name TextId="String Ausgangsmodul 255"/>
+	<InfoText TextId="String Ausgangsmodul 255 Zeichen"/>
+</ModuleInfo>
+						</VirtualSubmoduleItem>
+					</VirtualSubmoduleList>
+				</ModuleItem>		
+			</ModuleList>
+			<GraphicsList>
+        <GraphicItem ID="1" GraphicFile="GSDML-0147-0002-COPA-DATA-STRATON-DEVICE"/>
+      </GraphicsList>
+
+			<CategoryList>
+				<CategoryItem ID="Input Module" TextId="Eingangsmodul"/>
+				<CategoryItem ID="Output Module" TextId="Ausgangsmodul"/>
+			</CategoryList>
+			<ExternalTextList>
+				<PrimaryLanguage>
+					<Text TextId="stratonPNIOdriver" Value="straton PN-IO device"/>
+					<Text TextId="stratonPNIOdriverDescription" Value="straton PLC with PROFINET IO device bus driver"/>
+          <Text TextId="Eingangsmodul" Value="Input modules"/>
+          <Text TextId="Ausgangsmodul" Value="Output modules"/>
+          
+					<Text TextId="USINT Eingangsmodul" Value="Input  8 bit - USINT"/>
+          <Text TextId="SINT Eingangsmodul" Value="Input  8 bit - SINT"/>
+ 					<Text TextId="UINT Eingangsmodul" Value="Input 16 bit - UINT"/>
+  				<Text TextId="INT Eingangsmodul" Value="Input 16 bit - INT"/>
+  				<Text TextId="UDINT Eingangsmodul" Value="Input 32 bit - UDINT"/>
+          <Text TextId="DINT Eingangsmodul" Value="Input 32 bit - DINT"/>
+ 					<Text TextId="LINT Eingangsmodul" Value="Input 64 bit - LINT"/>
+  				<Text TextId="REAL Eingangsmodul" Value="Input 32 bit - REAL"/>
+  				<Text TextId="LREAL Eingangsmodul" Value="Input 64 bit - LREAL"/>
+  				<Text TextId="String Eingangsmodul 64" Value="Input STRING - 64 byte"/>
+  				<Text TextId="String Eingangsmodul 255" Value="Input STRING - 255 byte"/>
+  				
+					<Text TextId="USINT Ausgangsmodul" Value="Output  8 bit - USINT"/>
+          <Text TextId="SINT Ausgangsmodul" Value="Output  8 bit - SINT"/>
+ 					<Text TextId="UINT Ausgangsmodul" Value="Output 16 bit - UINT"/>
+  				<Text TextId="INT Ausgangsmodul" Value="Output 16 bit - INT"/>
+  				<Text TextId="UDINT Ausgangsmodul" Value="Output 32 bit - UDINT"/>
+          <Text TextId="DINT Ausgangsmodul" Value="Output 32 bit - DINT"/>
+ 					<Text TextId="LINT Ausgangsmodul" Value="Output 64 bit - LINT"/>
+  				<Text TextId="REAL Ausgangsmodul" Value="Output 32 bit - REAL"/>
+  				<Text TextId="LREAL Ausgangsmodul" Value="Output 64 bit - LREAL"/>
+  				<Text TextId="String Ausgangsmodul 64" Value="Output STRING - 64 byte"/>  				
+  				<Text TextId="String Ausgangsmodul 255" Value="Output STRING - 255 byte"/>  				
+
+  				
+					<Text TextId="Unsigned 8 bit Eingangsmodul" Value="Unsigned 8 bit integer input module (0 to 255)"/>
+          <Text TextId="Signed 8 bit Eingangsmodul" Value="Signed 8 bit integer input module (-128 to 127)"/>
+ 					<Text TextId="Unsigned 16 bit Eingangsmodul" Value="Unsigned 16 bit integer input module (0 to 65535)"/>
+  				<Text TextId="Signed 16 bit Eingangsmodul" Value="Signed 16 bit integer input module (-32768 to 32767)"/>
+  				<Text TextId="Unsigned 32 bit Eingangsmodul" Value="Unsigned 32 bit integer input module (0 to 4294967295)"/>
+          <Text TextId="Signed 32 bit Eingangsmodul" Value="Signed 32 bit integer input module (-2147483648 to 2147483647)"/>
+ 					<Text TextId="Signed 64 bit Eingangsmodul" Value="Signed 64 bit integer input module"/>
+  				<Text TextId="Float 32 bit Eingangsmodul" Value="32 bit floating-point input module"/>
+  				<Text TextId="Float 64 bit Eingangsmodul" Value="64 bit floating-point input module"/>
+  				<Text TextId="String Eingangsmodul 64 Zeichen" Value="64 byte visible string input module"/>
+  				<Text TextId="String Eingangsmodul 255 Zeichen" Value="255 byte visible string input module"/>
+  				
+					<Text TextId="Unsigned 8 bit Ausgangsmodul" Value="Unsigned 8 bit output module (0 to 255)"/>
+          <Text TextId="Signed 8 bit Ausgangsmodul" Value="Signed 8 bit integer output module (-128 to 127)"/>
+ 					<Text TextId="Unsigned 16 bit Ausgangsmodul" Value="Unsigned 16 bit integer output module (0 to 65535)"/>
+  				<Text TextId="Signed 16 bit Ausgangsmodul" Value="Signed 16 bit integer output module (-32768 to 32767)"/>
+  				<Text TextId="Unsigned 32 bit Ausgangsmodul" Value="Unsigned 32 bit integer output module (0 to 4294967295)"/>
+          <Text TextId="Signed 32 bit Ausgangsmodul" Value="Signed 32 bit integer output module (-2147483648 to 2147483647)"/>
+ 					<Text TextId="Signed 64 bit Ausgangsmodul" Value="Signed 64 bit integer output module"/>
+  				<Text TextId="Float 32 bit Ausgangsmodul" Value="32 bit floating-point output module"/>
+  				<Text TextId="Float 64 bit Ausgangsmodul" Value="64 bit floating-point output module"/>
+  				<Text TextId="String Ausgangsmodul 64 Zeichen" Value="64 byte visible string input module"/>  				
+  				<Text TextId="String Ausgangsmodul 255 Zeichen" Value="255 byte visible string input module"/>  				
+  				
+          <Text TextId="USINT Eingang" Value="USINT input"/>
+          <Text TextId="SINT Eingang" Value="SINT input"/>
+ 					<Text TextId="UINT Eingang" Value="UINT input"/>
+  				<Text TextId="INT Eingang" Value="INT input"/>
+  				<Text TextId="UDINT Eingang" Value="UDINT input"/>
+          <Text TextId="DINT Eingang" Value="DINT input"/>
+ 					<Text TextId="LINT Eingang" Value="LINT input"/>
+  				<Text TextId="REAL Eingang" Value="REAL input"/>
+  				<Text TextId="LREAL Eingang" Value="LREAL input"/>
+  				<Text TextId="String Eingang mit 64 Zeichen" Value="STRING input"/>
+  				<Text TextId="String Eingang mit 255 Zeichen" Value="STRING input"/>
+  				
+					<Text TextId="USINT Ausgang" Value="USINT output"/>
+          <Text TextId="SINT Ausgang" Value="SINT output"/>
+ 					<Text TextId="UINT Ausgang" Value="UINT output"/>
+  				<Text TextId="INT Ausgang" Value="INT output"/>
+  				<Text TextId="UDINT Ausgang" Value="UDINT output"/>
+          <Text TextId="DINT Ausgang" Value="DINT output"/>
+ 					<Text TextId="LINT Ausgang" Value="LINT output"/>
+  				<Text TextId="REAL Ausgang" Value="REAL output"/>
+  				<Text TextId="LREAL Ausgang" Value="LREAL output"/>
+  				<Text TextId="String Ausgang mit 64 Zeichen" Value="STRING output"/>  				
+  				<Text TextId="String Ausgang mit 255 Zeichen" Value="STRING output"/>  				
+				</PrimaryLanguage>
+				<Language xml:lang="de">
+					<Text TextId="stratonPNIOdriver" Value="straton PN-IO Device"/>
+					<Text TextId="stratonPNIOdriverDescription" Value="straton SPS mit PROFINET IO Device Bustreiber"/>					
+          <Text TextId="Eingangsmodul" Value="Eingangsmodule"/>
+          <Text TextId="Ausgangsmodul" Value="Ausgangsmodule"/>					
+          
+					<Text TextId="USINT Eingangsmodul" Value="Eingang  8 Bit - USINT"/>
+          <Text TextId="SINT Eingangsmodul" Value="Eingang  8 Bit - SINT"/>
+ 					<Text TextId="UINT Eingangsmodul" Value="Eingang 16 Bit - UINT"/>
+  				<Text TextId="INT Eingangsmodul" Value="Eingang 16 Bit - INT"/>
+  				<Text TextId="UDINT Eingangsmodul" Value="Eingang 32 Bit - UDINT"/>
+          <Text TextId="DINT Eingangsmodul" Value="Eingang 32 Bit - DINT"/>
+ 					<Text TextId="LINT Eingangsmodul" Value="Eingang 64 Bit - LINT"/>
+  				<Text TextId="REAL Eingangsmodul" Value="Eingang 32 Bit - REAL"/>
+  				<Text TextId="LREAL Eingangsmodul" Value="Eingang 64 Bit - LREAL"/>
+   				<Text TextId="String Eingangsmodul 64" Value="Eingang STRING - 64 Byte"/> 
+   				<Text TextId="String Eingangsmodul 255" Value="Eingang STRING - 255 Byte"/> 
+  				
+					<Text TextId="USINT Ausgangsmodul" Value="Ausgang  8 Bit - USINT"/>
+          <Text TextId="SINT Ausgangsmodul" Value="Ausgang  8 Bit - SINT"/>
+ 					<Text TextId="UINT Ausgangsmodul" Value="Ausgang 16 Bit - UINT"/>
+  				<Text TextId="INT Ausgangsmodul" Value="Ausgang 16 Bit - INT"/>
+  				<Text TextId="UDINT Ausgangsmodul" Value="Ausgang 32 Bit - UDINT"/>
+          <Text TextId="DINT Ausgangsmodul" Value="Ausgang 32 Bit - DINT"/>
+ 					<Text TextId="LINT Ausgangsmodul" Value="Ausgang 64 Bit - LINT"/>
+  				<Text TextId="REAL Ausgangsmodul" Value="Ausgang 32 Bit - REAL"/>
+  				<Text TextId="LREAL Ausgangsmodul" Value="Ausgang 64 Bit - LREAL"/>
+  				<Text TextId="String Ausgangsmodul 64" Value="Ausgang STRING - 64 Byte"/>  				
+  				<Text TextId="String Ausgangsmodul 255" Value="Ausgang STRING - 255 Byte"/>
+  				
+					<Text TextId="Unsigned 8 bit Eingangsmodul" Value="8 Bit Eingangsmodul, Ganzzahl ohne Vorzeichen (0 bis 255)"/>
+          <Text TextId="Signed 8 bit Eingangsmodul" Value="8 Bit Eingangsmodul, Ganzzahl mit Vorzeichen (-128 bis 127)"/>
+ 					<Text TextId="Unsigned 16 bit Eingangsmodul" Value="16 Bit Eingangsmodul, Ganzzahl ohne Vorzeichen (0 bis 65535)"/>
+  				<Text TextId="Signed 16 bit Eingangsmodul" Value="16 Bit Eingangsmodul, Ganzzahl mit Vorzeichen (-32768 bis 32767)"/>
+  				<Text TextId="Unsigned 32 bit Eingangsmodul" Value="32 Bit Eingangsmodul, Ganzzahl ohne Vorzeichen (0 bis 4294967295)"/>
+          <Text TextId="Signed 32 bit Eingangsmodul" Value="32 Bit Eingangsmodul, Ganzzahl mit Vorzeichen (-2147483648 bis 2147483647)"/>
+ 					<Text TextId="Signed 64 bit Eingangsmodul" Value="64 Bit Eingangsmodul, Ganzzahl mit Vorzeichen"/>
+  				<Text TextId="Float 32 bit Eingangsmodul" Value="32 Bit Eingangsmodul, Gleitkommazahl"/>
+  				<Text TextId="Float 64 bit Eingangsmodul" Value="64 Bit Eingangsmodul, Gleitkommazahl"/>
+  				<Text TextId="String Eingangsmodul 64 Zeichen" Value="64 Byte Eingangsmodul, sichtbare Zeichenkette"/>
+  				<Text TextId="String Eingangsmodul 255 Zeichen" Value="255 Byte Eingangsmodul, sichtbare Zeichenkette"/>
+  				
+					<Text TextId="Unsigned 8 bit Ausgangsmodul" Value="8 Bit Ausgangsmodul, Ganzzahl ohne Vorzeichen (0 bis 255)"/>
+          <Text TextId="Signed 8 bit Ausgangsmodul" Value="8 Bit Ausgangsmodul, Ganzzahl mit Vorzeichen (-128 bis 127)"/>
+ 					<Text TextId="Unsigned 16 bit Ausgangsmodul" Value="16 Bit Ausgangsmodul, Ganzzahl ohne Vorzeichen (0 bis 65535)"/>
+  				<Text TextId="Signed 16 bit Ausgangsmodul" Value="16 Bit Ausgangsmodul, Ganzzahl mit Vorzeichen (-32768 bis 32767)"/>
+  				<Text TextId="Unsigned 32 bit Ausgangsmodul" Value="32 Bit Ausgangsmodul, Ganzzahl ohne Vorzeichen (0 bis 4294967295)"/>
+          <Text TextId="Signed 32 bit Ausgangsmodul" Value="32 Bit Ausgangsmodul, Ganzzahl mit Vorzeichen (-2147483648 bis 2147483647)"/>
+ 					<Text TextId="Signed 64 bit Ausgangsmodul" Value="64 Bit Ausgangsmodul, Ganzzahl mit Vorzeichen"/>
+  				<Text TextId="Float 32 bit Ausgangsmodul" Value="32 Bit Ausgangsmodul, Gleitkommazahl"/>
+  				<Text TextId="Float 64 bit Ausgangsmodul" Value="64 Bit Ausgangsmodul, Gleitkommazahl"/>
+  				<Text TextId="String Ausgangsmodul 64 Zeichen" Value="64 Byte Ausgangmodul, sichtbare Zeichenkette"/> 
+  				<Text TextId="String Ausgangsmodul 255 Zeichen" Value="255 Byte Ausgangmodul, sichtbare Zeichenkette"/> 
+  				
+          <Text TextId="USINT Eingang" Value="USINT Eingang"/>
+          <Text TextId="SINT Eingang" Value="SINT Eingang"/>
+ 					<Text TextId="UINT Eingang" Value="UINT Eingang"/>
+  				<Text TextId="INT Eingang" Value="INT Eingang"/>
+  				<Text TextId="UDINT Eingang" Value="UDINT Eingang"/>
+          <Text TextId="DINT Eingang" Value="DINT Eingang"/>
+ 					<Text TextId="LINT Eingang" Value="LINT Eingang"/>
+  				<Text TextId="REAL Eingang" Value="REAL Eingang"/>
+  				<Text TextId="LREAL Eingang" Value="LREAL Eingang"/>
+  				<Text TextId="String Eingang mit 64 Zeichen" Value="STRING Eingang"/>
+  				<Text TextId="String Eingang mit 255 Zeichen" Value="STRING Eingang"/>
+  				
+					<Text TextId="USINT Ausgang" Value="USINT Ausgang"/>
+          <Text TextId="SINT Ausgang" Value="SINT Ausgang"/>
+ 					<Text TextId="UINT Ausgang" Value="UINT Ausgang"/>
+  				<Text TextId="INT Ausgang" Value="INT Ausgang"/>
+  				<Text TextId="UDINT Ausgang" Value="UDINT Ausgang"/>
+          <Text TextId="DINT Ausgang" Value="DINT Ausgang"/>
+ 					<Text TextId="LINT Ausgang" Value="LINT Ausgang"/>
+  				<Text TextId="REAL Ausgang" Value="REAL Ausgang"/>
+  				<Text TextId="LREAL Ausgang" Value="LREAL Ausgang"/>
+  				<Text TextId="String Ausgang mit 64 Zeichen" Value="STRING Ausgang"/>
+  				<Text TextId="String Ausgang mit 255 Zeichen" Value="STRING Ausgang"/> 
+				</Language>
+			</ExternalTextList>
+		</ApplicationProcess>
+	</ProfileBody>
+</ISO15745Profile>

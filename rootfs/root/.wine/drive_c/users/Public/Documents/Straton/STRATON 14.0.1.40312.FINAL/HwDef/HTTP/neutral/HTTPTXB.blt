@@ -1,0 +1,19 @@
+Send HTTP or HTTPS requests. 
+URL, Body and Results will be TEXT BUFFERS (no limitation)
+
+Inputs:
+
+EN : BOOL : The FB will send the HTTP request at the rising edge of EN
+URLTXB : DINT : Handle of a Text Buffer containing the URL of the request
+VERB : USINT : HTTP verb
+BODYTXB : DINT : Handle of a Text Buffer containing the body of the request
+CONTENTTYPE : STRING : he content-type of the request
+RESTXB : DINT : Handle of a text buffer containing the result text of the query
+
+Outputs:
+
+DONE : BOOL : At TRUE if the request is done, FALSE otherwise
+ERR : DINT : Error code
+ERRSTR : STRING : Error Text
+CURLERR : DINT : Error code returned by libCurl
+CURLERRSTR : STRING : Error text returned by libCurl

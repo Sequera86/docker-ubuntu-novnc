@@ -1,0 +1,4 @@
+[LONG]
+V-TEXT=Output text
+[SHORT]
+V-TEXT=~

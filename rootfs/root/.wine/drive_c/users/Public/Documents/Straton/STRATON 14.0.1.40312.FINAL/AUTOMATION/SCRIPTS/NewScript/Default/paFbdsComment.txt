@@ -1,0 +1,5 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-HEIGHT=Height of the block (cells)
+V-TEXT=Comment text (may contain '$N' characters)

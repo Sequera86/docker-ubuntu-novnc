@@ -1,0 +1,35 @@
+tX[0] := X1; tY[0] := Y1;
+tX[1] := X2; tY[1] := Y2;
+if nbIn > 2 then
+    tX[2] := X3; tY[2] := Y3;
+else
+    tX[2] := tX[1] + 1.0; tY[2] := tY[1];
+end_if;
+if nbIn > 3 then
+    tX[3] := X4; tY[3] := Y4;
+else
+    tX[3] := tX[2] + 1.0; tY[3] := tY[2];
+end_if;
+if nbIn > 4 then
+    tX[4] := X5; tY[4] := Y5;
+else
+    tX[4] := tX[3] + 1.0; tY[4] := tY[3];
+end_if;
+if nbIn > 5 then
+    tX[5] := X6; tY[5] := Y6;
+else
+    tX[5] := tX[4] + 1.0; tY[5] := tY[4];
+end_if;
+if nbIn > 6 then
+    tX[6] := X7; tY[6] := Y7;
+else
+    tX[6] := tX[5] + 1.0; tY[6] := tY[5];
+end_if;
+if nbIn > 7 then
+    tX[7] := X8; tY[7] := Y8;
+else
+    tX[7] := tX[6] + 1.0; tY[7] := tY[6];
+end_if;
+cv (IN, tX, tY);
+OUT := cv.Y;
+

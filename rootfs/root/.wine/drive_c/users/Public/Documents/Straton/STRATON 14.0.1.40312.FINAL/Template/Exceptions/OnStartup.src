@@ -1,0 +1,6 @@
+(*
+OnStartup
+This program will be executed before the first cycle
+when the application starts.
+*)
+

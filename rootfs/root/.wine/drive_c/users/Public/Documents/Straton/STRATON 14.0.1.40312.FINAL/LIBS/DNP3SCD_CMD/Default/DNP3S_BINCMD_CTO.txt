@@ -1,0 +1,2 @@
+[LONG]
+V-STATE_MACHINE=TRUE if state machine terminated

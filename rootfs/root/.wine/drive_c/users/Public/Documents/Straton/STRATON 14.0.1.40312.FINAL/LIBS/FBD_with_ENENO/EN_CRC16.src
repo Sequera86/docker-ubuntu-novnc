@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := crc16 (IN);
+end_if;
+

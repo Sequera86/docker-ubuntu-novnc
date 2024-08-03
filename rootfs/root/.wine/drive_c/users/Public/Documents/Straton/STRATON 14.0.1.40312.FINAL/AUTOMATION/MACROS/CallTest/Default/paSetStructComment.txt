@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-COMM=Comment text
+V-OK=TRUE if successful
+V-NAME=Structure name
+[SHORT]
+V-RET=~
+V-COMM=~
+V-OK=~
+V-NAME=~

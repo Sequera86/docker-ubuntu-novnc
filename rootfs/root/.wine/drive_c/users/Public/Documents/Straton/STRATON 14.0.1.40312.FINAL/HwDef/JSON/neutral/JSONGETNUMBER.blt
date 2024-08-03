@@ -1,0 +1,12 @@
+JsonGetNumber - function - Get the value of a number node
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+default : ANY; value to be returned if the function fails
+
+Outputs:
+
+value : ANY; value assigned to the node.
+
+Although the value is set when the node is created, this function enables to change it.

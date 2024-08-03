@@ -1,0 +1,9 @@
+[LONG]
+V-NEWVAR=~
+V-STR=
+V-OK=TRUE if successful
+V-BANSWERS=Trace received answers
+V-BCOMMANDS=Trace sent commands
+[SHORT]
+V-NEWVAR=~
+V-STR=

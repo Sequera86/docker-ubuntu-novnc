@@ -1,0 +1,29 @@
+tm := any_to_time (1000.0 / PRATE);
+TrigUP (UP);
+PlsUP (UP, tm);
+TrigDN (DN);
+PlsDN (DN, tm);
+
+if not TrigUP.Q & not TrigDN.Q & not PlsUP.Q & not PlsDN.Q then
+    return;
+end_if;
+
+STATUS := 0;
+if UP & Value <= PMAX then
+    STATUS := 16#01;
+    Value := Value + 1;
+elsif DN & Value >= PMIN then
+    STATUS := 16#02;
+    Value := Value - 1;
+end_if;
+
+if value < PMIN then
+    OUT := PMIN;
+    STATUS := STATUS or 16#04;
+elsif value > PMAX then
+    OUT := PMAX;
+    STATUS := STATUS or 16#04;
+else
+    OUT := value;
+end_if;
+

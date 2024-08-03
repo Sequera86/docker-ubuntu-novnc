@@ -1,0 +1,11 @@
+JsonAddMember - function - Add a member to an object node
+
+Inputs:
+
+hObj : DINT; handle of a valid JSON node representing a structured value (object)
+hNode : DINT; handle of a valid JSON node to be added as a member of the object
+name : STRING; name of the new data member
+
+Outputs:
+
+OK : BOOL; TRUE if successful

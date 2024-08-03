@@ -1,0 +1,5 @@
+[LONG]
+V-OK=TRUE if successful
+V-SLOT=~
+[SHORT]
+V-SLOT=~

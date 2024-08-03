@@ -1,0 +1,49 @@
+#info=SFCCHART
+@I7:0,0=1;inactive:\nnothing done\n
+@T8:1,0=1;activate with bRun\n
+@S9:2,0=2;Active:\n- run child program\n- increase counter\n
+@T10:3,0=2;deactivate\n
+@J11:4,0=1;
+#endinfo
+_step _init GS1;
+_next GT1;
+_trans GT1;
+#sfc=GT1(0,1)
+#info=LDEDIT
+BOF
+SOR [0,0] (**) (**)
+XIC [1,0] (*BRun*) (**)
+OTE [2,0] (**) (**)
+EOR [0,0] 
+EOF
+#endinfo
+#sfc=end
+_next GS2;
+_step GS2;
+#sfc=GS2(0,2)
+SFC_1_child (N);
+__BEGIN_N
+#info=WSED1EDT
+@BOX:2,Y=N,P=(10,1),S=(4,3),C=(2,1),X=+
+@VAR:3,Y=N,P=(1,2),S=(8,1),C=(1,1),X=iCount
+@VAR:4,Y=N,P=(1,3),S=(8,1),C=(1,1),X=1
+@VAR:5,Y=N,P=(15,2),S=(8,1),C=(1,1),X=iCount
+@ARC:1,Y=N,D=1,Z=(50,50),F=(3,0),T=(2,0)
+@ARC:2,Y=N,D=2,Z=(50,50),F=(4,0),T=(2,1)
+@ARC:3,Y=N,D=3,Z=(50,50),F=(2,0),T=(5,0)
+#endinfo
+__END_ACTION
+#sfc=end
+_next GT2;
+_trans GT2;
+#sfc=GT2(0,3)
+#info=LDEDIT
+BOF
+SOR [0,0] (**) (**)
+XIO [1,0] (*BRun*) (**)
+OTE [2,0] (**) (**)
+EOR [0,0] 
+EOF
+#endinfo
+#sfc=end
+_next GS1;

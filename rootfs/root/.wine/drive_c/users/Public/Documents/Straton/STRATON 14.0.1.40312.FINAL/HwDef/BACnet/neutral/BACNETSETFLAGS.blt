@@ -1,0 +1,21 @@
+Set BACnet object status flags
+This block is deprecated and should not be used
+
+Inputs:
+
+- Object : STRING;
+
+Configured BACnet object (without name formatting)
+
+- InAlarm : BOOL;         IGNORED (deprecated)
+- Fault : BOOL;           IGNORED (deprecated)
+- Overriden : BOOL;
+- OutOfService : BOOL;    IGNORED (deprecated)
+
+New values of status flags
+
+Outputs:
+
+- OK : BOOL;
+
+TRUE if successful

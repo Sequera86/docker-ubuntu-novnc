@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Appli Expand="YES">
+   <Folder Name="Data structures">
+      <Program Name="paCreateStruct"/>
+      <Program Name="paDeleteStruct"/>
+      <Program Name="paGetStructDesc"/>
+      <Program Name="paSetStructComment"/>
+   </Folder>
+   <Folder Name="Data types">
+      <Program Name="paCreateBitfield"/>
+      <Program Name="paCreateEnum"/>
+      <Program Name="paDeleteBitfield"/>
+      <Program Name="paDeleteEnum"/>
+      <Program Name="paSetBitfield"/>
+      <Program Name="paSetEnum"/>
+   </Folder>
+   <Folder Name="Enumeration">
+      <Program Name="paEnumIOBoards"/>
+      <Program Name="paEnumProgram"/>
+      <Program Name="paEnumProgramFolder"/>
+      <Program Name="paEnumStruct"/>
+      <Program Name="paEnumVar"/>
+   </Folder>
+   <Folder Name="Files">
+      <Folder Name="Common">
+         <Program Name="paFileClose"/>
+         <Program Name="paFileOpenWrite"/>
+         <Program Name="paFileOpenWriteProgramDef"/>
+         <Program Name="paFileOpenWriteProgramSrc"/>
+      </Folder>
+      <Folder Name="IEC files">
+         <Folder Name="FBD files">
+            <Program Name="paFbdsBlock"/>
+            <Program Name="paFbdsBreak"/>
+            <Program Name="paFbdsComment"/>
+            <Program Name="paFbdsInputVar"/>
+            <Program Name="paFbdsJump"/>
+            <Program Name="paFbdsLabel"/>
+            <Program Name="paFbdsOutputJump"/>
+            <Program Name="paFbdsOutputReturn"/>
+            <Program Name="paFbdsOutputVar"/>
+            <Program Name="paFbdsReturn"/>
+         </Folder>
+         <Folder Name="LD files">
+            <Program Name="paFLdBlock"/>
+            <Program Name="paFLdCoil"/>
+            <Program Name="paFLdCommentLine"/>
+            <Program Name="paFLdContact"/>
+            <Program Name="paFLdConvergence"/>
+            <Program Name="paFLdDivergence"/>
+            <Program Name="paFLdEndRung"/>
+            <Program Name="paFLdHorzSegment"/>
+            <Program Name="paFLdJump"/>
+            <Program Name="paFLdNextBranch"/>
+            <Program Name="paFLdReturn"/>
+            <Program Name="paFLdStartRung"/>
+         </Folder>
+         <Folder Name="SFC files">
+            <Program Name="paSfcAddLv2Eol"/>
+            <Program Name="paSfcAddLv2Line"/>
+            <Program Name="paSfcAddLv2String"/>
+            <Program Name="paSfcBranch"/>
+            <Program Name="paSfcCnv"/>
+            <Program Name="paSfcDiv"/>
+            <Program Name="paSfcIStep"/>
+            <Program Name="paSfcJump"/>
+            <Program Name="paSfcStep"/>
+            <Program Name="paSfcTrans"/>
+         </Folder>
+      </Folder>
+      <Folder Name="Network and Fieldbuses">
+         <Folder Name="ASi">
+            <Program Name="paFAsiApplyConfig"/>
+            <Program Name="paFAsiInput"/>
+            <Program Name="paFAsiMaster"/>
+            <Program Name="paFAsiMasterDiag"/>
+            <Program Name="paFAsiOutput"/>
+            <Program Name="paFAsiSlave"/>
+            <Program Name="paFAsiSlaveDiag"/>
+            <Program Name="paFileOpenWriteASi"/>
+         </Folder>
+         <Folder Name="Binding">
+            <Program Name="paFbindCnxStatus"/>
+            <Program Name="paFbindExternPort"/>
+            <Program Name="paFbindExternVar"/>
+            <Program Name="paFbindPublicVar"/>
+            <Program Name="paFbindVarDateStamp"/>
+            <Program Name="paFbindVarStatus"/>
+            <Program Name="paFbindVarTimeStamp"/>
+            <Program Name="paFileOpenWriteBinding"/>
+         </Folder>
+         <Folder Name="MODBUS">
+            <Program Name="paFileOpenWriteModbus"/>
+            <Program Name="paFModbusMaster"/>
+            <Program Name="paFModbusRequestMaster"/>
+            <Program Name="paFModbusRequestSlave"/>
+            <Program Name="paFModbusSlave"/>
+            <Program Name="paFModbusVariable"/>
+         </Folder>
+         <Folder Name="Other fieldbus">
+            <Program Name="paFfbCreateMaster"/>
+            <Program Name="paFfbCreateSlave"/>
+            <Program Name="paFfbCreateVar"/>
+            <Program Name="paFfbSelectMaster"/>
+            <Program Name="paFfbSelectRoot"/>
+            <Program Name="paFfbSelectSlave"/>
+            <Program Name="paFfbSelectVar"/>
+            <Program Name="paFfbSetProperty"/>
+            <Program Name="paFileOpenWriteFieldbus"/>
+         </Folder>
+      </Folder>
+      <Folder Name="Resources">
+         <Folder Name="Analog signals">
+            <Program Name="paFileOpenWriteSignal"/>
+            <Program Name="paFSignalAddColumn"/>
+            <Program Name="paFSignalAddPoint"/>
+         </Folder>
+         <Folder Name="String tables">
+            <Program Name="paFileOpenWriteStringTable"/>
+            <Program Name="paFstbAddColumn"/>
+            <Program Name="paFstbAddString"/>
+         </Folder>
+      </Folder>
+      <Folder Name="Text files">
+         <Program Name="paFTextEol"/>
+         <Program Name="paFTextLine"/>
+         <Program Name="paFTextString"/>
+      </Folder>
+      <Folder Name="Watch window files">
+         <Folder Name="Recipes">
+            <Program Name="paFileOpenWriteRecipe"/>
+            <Program Name="paFrcpAddColumn"/>
+            <Program Name="paFrcpAddValue"/>
+            <Program Name="paFrcpAddVariable"/>
+         </Folder>
+         <Folder Name="Spy lists">
+            <Program Name="paFileOpenWriteSpyList"/>
+            <Program Name="paFspyAddVariable"/>
+         </Folder>
+      </Folder>
+   </Folder>
+   <Folder Name="IO Boards">
+      <Program Name="paCreateIOBoard"/>
+      <Program Name="paDeleteAllIOBoards"/>
+      <Program Name="paDeleteIOBoard"/>
+      <Program Name="paGetIOBoardDesc"/>
+      <Program Name="paSetIOAlias"/>
+      <Program Name="paSetIOBoardComment"/>
+      <Program Name="paSetIOBoardParam"/>
+   </Folder>
+   <Folder Name="Miscellaneous">
+      <Program Name="paAskPassword"/>
+      <Program Name="paEditParameterList"/>
+      <Program Name="paGetLanguage"/>
+      <Program Name="paMessageBox"/>
+      <Program Name="paSetParameterDesc"/>
+      <Program Name="paSetTraceMode"/>
+      <Program Name="paTRACE0"/>
+      <Program Name="paTRACE1"/>
+      <Program Name="paTRACE2"/>
+      <Program Name="paTRACE3"/>
+      <Program Name="paTRACE4"/>
+   </Folder>
+   <Folder Name="Programs">
+      <Folder Name="Folders (deprecated)">
+         <Program Name="paCreateProgramFolder"/>
+         <Program Name="paDeleteProgramFolder"/>
+         <Program Name="paSendProgramToFolder"/>
+      </Folder>
+      <Program Name="paCopyProgram"/>
+      <Program Name="paCreateProgram"/>
+      <Program Name="paCreateSfcChildProgram"/>
+      <Program Name="paCreateSubProgram"/>
+      <Program Name="paCreateUDFB"/>
+      <Program Name="paDeleteProgram"/>
+      <Program Name="paGetProgramDesc"/>
+      <Program Name="paSetProgramComment"/>
+   </Folder>
+   <Folder Name="Project level">
+      <Program Name="paAddLibrary"/>
+      <Program Name="paCreateProject"/>
+      <Program Name="paCreateProjectFromTemplate"/>
+      <Program Name="paOpenProject"/>
+      <Program Name="paSetOption"/>
+      <Program Name="paSetProjectComment"/>
+   </Folder>
+   <Folder Name="Templates">
+      <Program Name="paTplCopyAll"/>
+      <Program Name="paTplCopyDefinitions"/>
+      <Program Name="paTplCopySource"/>
+      <Program Name="paTplCopyVars"/>
+      <Program Name="paTplRemoveKeys"/>
+      <Program Name="paTplSetKey"/>
+   </Folder>
+   <Folder Name="Variables">
+      <Program Name="paCreateInputParam"/>
+      <Program Name="paCreateOutputParam"/>
+      <Program Name="paCreateVar"/>
+      <Program Name="paDeleteVar"/>
+      <Program Name="paEmbedVarSymbol"/>
+      <Program Name="paGetVarDesc"/>
+      <Program Name="paProfileVar"/>
+      <Program Name="paSetVar1Dim"/>
+      <Program Name="paSetVar2Dims"/>
+      <Program Name="paSetVar3Dims"/>
+      <Program Name="paSetVarComment"/>
+      <Program Name="paSetVarExtern"/>
+      <Program Name="paSetVarInitValue"/>
+      <Program Name="paSetVarReadOnly"/>
+   </Folder>
+   <GlobalDef/>
+   <Types/>
+</Appli>

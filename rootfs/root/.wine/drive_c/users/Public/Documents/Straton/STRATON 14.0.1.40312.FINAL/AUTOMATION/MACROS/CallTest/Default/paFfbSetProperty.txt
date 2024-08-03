@@ -1,0 +1,12 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-VALUE=Value of the property
+V-PROP=Property internal name
+[SHORT]
+V-RET=~
+V-FID=~
+V-OK=~
+V-VALUE=~
+V-PROP=~

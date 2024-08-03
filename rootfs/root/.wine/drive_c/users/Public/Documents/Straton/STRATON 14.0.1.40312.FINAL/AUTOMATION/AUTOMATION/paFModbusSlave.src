@@ -1,0 +1,3 @@
+OK := _PRP ('FWRITE', any_to_string (FID),
+            'SRV', any_to_string (SLAVENO), RET);
+

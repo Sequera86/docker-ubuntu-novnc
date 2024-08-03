@@ -1,0 +1,14 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-INSTANCE=Name of the instance (if function block)
+V-OK=TRUE if successful
+V-NAME=Block type name
+V-SARG=~
+[SHORT]
+V-RET=~
+V-FID=~
+V-INSTANCE=~
+V-OK=~
+V-NAME=~
+V-SARG=~

@@ -1,0 +1,5 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-SETTINGS=Settings
+V-NAME=Master controller name

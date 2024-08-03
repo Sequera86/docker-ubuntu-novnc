@@ -1,0 +1,16 @@
+- Main
+   - paGetVarDesc
+   - paTRACE0
+   - paEditParameterList
+   - paSetParameterDesc
+   - paFileOpenWriteProgramSrc
+   - paGetProgramDesc
+   - paFileClose
+   - paSetTraceMode
+   - paFbdsInputVar
+   - paCreateProgram
+   - paOpenProject
+   - paCreateVar
+   - paEnumVar
+   - paFbdsOutputVar
+   - paFbdsBlock

@@ -1,0 +1,7 @@
+integral1 (true, false, KP * (SP-PV) / 1000.0, 0.0, TN);
+OUT := integral1.XOUT + FF;
+OUT := limit (PMIN, OUT, PMAX);
+
+
+
+

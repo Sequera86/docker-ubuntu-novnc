@@ -1,0 +1,15 @@
+[LONG]
+V-DEVNAME=Device type
+V-LANGUAGE=~
+V-PARENT=~
+V-OK=TRUE if successful
+V-NAME=Name of the IO board
+V-NBCHANNEL=Number of channels
+V-DEVGROUP=Name of the group in case of a complex device
+V-KIND=~
+[SHORT]
+V-DEVNAME=
+V-LANGUAGE=~
+V-PARENT=~
+V-NBCHANNEL=
+V-KIND=~

@@ -1,0 +1,25 @@
+[MESSAGES]
+ErasePrompt=IO 장치와 채널들 설명서는 삭제 될 것입니다. 계속하시겠습니까 ?
+OverwritePrompt=IO 장치와 채널들 설명서는 덮어 씌워 질 것입니다. 계속하시겠습니까 ?
+ErrWord=불명확한 값. 16비트 정수가 요구됩니다.
+ErrLong=불명확한 값. 정수가 요구됩니다.
+ErrString=불명확한 값. 스트링은 15문자를 초과할 수 없습니다.
+ErrChar=불명확한 값. 한 문자가 요구됩니다.
+ErrBool=불명확한 값. "TRUE" 혹은 "FALSE"가 요구됩니다.
+ErrFloat=불명확한 값. 실수 값이 요구됩니다.
+ErrHotEnabled=이 조작은 "On Line Change"가 동작될 때는 금지됩니다.
+Library=라이브러리
+Device=장치
+all=(all)
+Properties=Properties
+IOs=I/O 보드들
+Close=끝
+Select=선택
+Delete=삭제
+Properties=Properties
+Virtual=가상/실제
+Help=도움말
+Rename=새이름
+Up=Move &Up
+Down=Move Do&wn
+

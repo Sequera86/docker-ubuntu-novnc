@@ -1,0 +1,3 @@
+Create UNIX timestamp from date.
+DST: when set to TRUE, add one hour for Day Saving Time
+UTC is the time zone (For example 1 for Paris, 0 for UTC)

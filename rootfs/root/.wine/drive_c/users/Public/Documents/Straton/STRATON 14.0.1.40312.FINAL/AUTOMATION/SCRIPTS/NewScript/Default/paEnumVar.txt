@@ -1,0 +1,7 @@
+[LONG]
+V-ITEM=Index of the item to output on 'Q' (1 based)
+V-FILTER=Group name - can be followed by '.' and a filter with wildchars
+V-LOAD=TRUE: load the selected variables
+V-NB=Number of loaded items
+V-Q=Name of the item selected by the 'Item' input
+V-CHECK=TRUE: Prompt the user for checking items

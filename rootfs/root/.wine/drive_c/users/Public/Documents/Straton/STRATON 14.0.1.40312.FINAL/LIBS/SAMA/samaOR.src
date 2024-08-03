@@ -1,0 +1,18 @@
+Q := IN1 or IN2;
+if nbIn > 2 then Q := Q or IN3; end_if;
+if nbIn > 3 then Q := Q or IN4; end_if;
+if nbIn > 4 then Q := Q or IN5; end_if;
+if nbIn > 5 then Q := Q or IN6; end_if;
+if nbIn > 6 then Q := Q or IN7; end_if;
+if nbIn > 7 then Q := Q or IN8; end_if;
+if nbIn > 8 then Q := Q or IN9; end_if;
+if nbIn > 9 then Q := Q or IN10; end_if;
+if nbIn > 10 then Q := Q or IN11; end_if;
+if nbIn > 11 then Q := Q or IN12; end_if;
+if nbIn > 12 then Q := Q or IN13; end_if;
+if nbIn > 13 then Q := Q or IN14; end_if;
+if nbIn > 14 then Q := Q or IN15; end_if;
+if nbIn > 15 then Q := Q or IN16; end_if;
+
+
+

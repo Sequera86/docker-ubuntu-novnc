@@ -1,0 +1,269 @@
+
+
+.stratonfabs {
+    bottom: 0;
+    position: fixed;
+    margin: 1em;
+    right: 0;
+    z-index: 998;
+  }
+  
+  
+  .stratonFab {
+    position: fixed;
+    right: 10px;
+    top: 110px;
+    width: 400px;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    background: #183850;
+    opacity: 1;
+    box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    -webkit-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+  }
+  
+  
+  .stratonfab_header {
+      font-size: 13px;
+      color: #f3f3f3;
+      height: 95px;
+      background: #183850;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding-top: 8px;
+      border-bottom: solid #32a1ce;
+  }
+  
+  .stratonFabBtnRight {
+    float: right;
+    cursor: pointer;
+    margin: -45px 15px 10px 20px;
+  }
+
+  .stratonfab_header_title {
+    display:block;
+    font-size: 13px;
+     font-weight: 700;
+    color: #f3f3f3;
+    height: 5px;
+    background: #183850;
+    text-align: center;
+  }
+
+
+  .stratonfab_header_info {
+    font-weight: 500;
+    font-size: 13px;
+    color: #f3f3f3;
+    height: 5px;
+    background: #183850;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .stratonfab_rt_info {
+    font-weight: 700;
+    font-size: 13px;
+    color: #f3f3f3;
+    height: 5px;
+    background: #183850;
+    text-align: left;
+  }
+
+  .stratonFab.is-visible {
+    opacity: 1;
+    -webkit-animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+    animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+  }
+  .is-hide{
+    opacity: 0
+  }
+  
+  .stratonfab_body {
+    color: #fff;
+    width: 90%;
+    display: inline-block;
+    text-align: left;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  
+  /*Element state*/
+  
+  .is-active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+  
+  .is-float {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+  }
+  
+  .is-loading {
+    display: block;
+    -webkit-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+    animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+  }
+  /*Animation*/
+  
+  @-webkit-keyframes zoomIn {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes load {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes load {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+      opacity: 0.0;
+    }
+    50% {
+      -webkit-transform: scale(1.5);
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  /* SMARTPHONES PORTRAIT */
+  
+  @media only screen and (min-width: 300px) {
+    .stratonFab {
+      width: 250px;
+    }
+  }
+  /* SMARTPHONES LANDSCAPE */
+  
+  @media only screen and (min-width: 480px) {
+    .stratonFab {
+      width: 300px;
+    }
+  }
+  /* TABLETS PORTRAIT */
+  
+  @media only screen and (min-width: 768px) {
+    .stratonFab {
+      width: 300px;
+    }
+  }
+  /* TABLET LANDSCAPE / DESKTOP */
+  
+  @media only screen and (min-width: 1024px) {
+    .stratonFab {
+      width: 300px;
+    }
+  }
+  
+  
+  /* Ripple */
+  
+  .ink {
+    display: block;
+    position: absolute;
+    background: rgba(38, 50, 56, 0.4);
+    border-radius: 100%;
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    webkit-transform: scale(0);
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  /*animation effect*/
+  
+  .ink.animate {
+    -webkit-animation: ripple 0.5s ease-in-out;
+            animation: ripple 0.5s ease-in-out;
+  }
+  
+  @-webkit-keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    
+    100% {
+      opacity: 0;
+      -moz-transform: scale(5);
+      -ms-transform: scale(5);
+      webkit-transform: scale(5);
+      -webkit-transform: scale(5);
+              transform: scale(5);
+    }
+  }
+  
+  @keyframes ripple {
+    /*scale the element to 250% to safely cover the entire link and fade it out*/
+    
+    100% {
+      opacity: 0;
+      -moz-transform: scale(5);
+      -ms-transform: scale(5);
+      webkit-transform: scale(5);
+      -webkit-transform: scale(5);
+              transform: scale(5);
+    }
+  }
+  ::-webkit-input-placeholder { /* Chrome */
+    color: #bbb;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #bbb;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #bbb;
+  }
+  :-moz-placeholder { /* Firefox 4 - 18 */
+    color: #bbb;
+  }

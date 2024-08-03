@@ -1,0 +1,2 @@
+OK := _PRP ('DeleteEnum', Name, '', '', RET);
+

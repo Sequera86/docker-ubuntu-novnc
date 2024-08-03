@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    Trig (CLK);
+    Q := Trig.Q;
+end_if;
+

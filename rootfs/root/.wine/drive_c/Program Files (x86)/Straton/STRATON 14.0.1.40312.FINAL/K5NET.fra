@@ -1,0 +1,516 @@
+﻿; K5 middleware communication error messages
+; The text before "=" is an identifier and should never be changed
+
+; middleware API error messages -------------------------------------
+
+[Loader]
+Scripts=Scripts de téléchargement
+Edit=Editer
+New=Nouveau
+Remove=Supprimer
+Rename=Renommer
+Copy=Copier
+Close=Fermer
+Name=Nom
+OK=OK
+Cancel=Annuler
+NewScript=Nouveau script
+Add=Ajouter
+Change=Changer
+Up=Monter
+Down=Descendre
+Item=Elément à télécharger
+Project=Projet
+Target=Cible
+SavePrompt=Voulez-vous enregistrer les modifications ?
+ErrScriptUsed=Nom de script déjà utilisé
+ErrScriptCreate=Création de fichier script impossible
+ErrScriptRemove=Suppression de fichier script impossible
+ErrScriptRename=Impossible de renommer le fichier script
+ErrScriptCopy=Impossible de copier le fichier script
+File=Fichier
+To=Destination
+
+
+[Dialup]
+Caption=Numérotation
+Dialup=Appeler
+Cancel=Annuler
+Number=Numéro :
+Init=Init :
+Timeout=Timeout :
+Closing=Fermeture de la connexion. Veuillez patienter...
+Connecting=Connexion en cours. Veuillez patienter...
+ModemError=Erreur Modem ou timeout en attente de réponse du modem.
+DialupError=Erreur de numérotation ou timeout en attente de connexion.
+DcdError=Erreur de numérotation: signal DCD non présent.
+
+[AS]
+ASCantLoad=Erreur : impossible de charger le script
+CantStart=Erreur : impossible de lancer le script
+CantRun=Erreur : programme script non trouvé
+Complete=Script terminé.
+Script=Script
+Target=Cible
+Param=Paramètre
+Value=Valeur
+Desc=Description
+BadValue=Valeur incorrecte !
+ASCaption=Exécuter le script
+ASTargetPath=Projet cible
+Go=Démarrer !
+Close=Fermer
+OK=OK
+Cancel=Annuler
+
+[Panel]
+
+App=App
+BadVers=Mauvaise version !
+Local=Application locale
+Target=Cible
+
+Stop=Arrêter l'application
+Start=Relancer application
+Load=Télécharger
+LoadChange=Télécharger (modifications)
+PanelChange=Modification en ligne
+Pause=Cycle à cycle
+Resume=Annule le mode cycle à cycle
+CycleStep=Exécute un cycle
+StepIn=Exécuter un pas (entrer)
+StepOver=Exécuter un pas
+StepOut=Exécuter un pas (sortir)
+RunCC=Exécuter le code compilé (pas de debug)
+RunPC=Utiliser la machine virtuelle (debug autorisé)
+NoApp=Pas d'application
+Idle=Idle
+StopAndLoad=Arrêter et charger la nouvelle version
+Nothing=Ne rien faire
+LoadNow=Voulez-vous télécharger l'application maintenant ?
+Prompt=Continuer ?
+UncompleteList=Liste incomplète
+
+CantLoad=Téléchargement impossible
+CantLoadWhy=La cible connectée n'a pas le même type que celui sélectionné dans les options de compilation.
+CT=Temps de cycle
+CTCur=Dernier
+CTAllowed=Autorisé
+CTMax=Maximum
+CTOver=Dépassements
+CTChange=Changer le temps de cycle
+Redundancy=Redondance
+
+[Time]
+
+Allowed=Autorisé
+Maximum=Maximum
+Overflow=Dépassement
+TimeChange=Changer le temps de cycle
+
+[Middleware]
+
+; check remaining breakpoints
+
+BkpPrompt=Des points d'arrêt sont installés. Voulez-vous les supprimer ?
+BkpCantDel=Impossible de supprimer les points d'arrêt !
+LkvPrompt=Certaines variables sont verrouillées. Voulez-vous les déverrouiller ?
+LkvCantDel=Impossible de déverrouiller les variables !
+DlgLockList=Variables verrouillées
+DlgUnlockAll=Déverrouiller tout
+
+; prompt
+
+PrpBadSyntax=Commande invalide
+PrpBusy=La communication est occupée
+
+; status: connection
+
+StaCnxOK=OK
+StaCnxInvalid=Non connecté
+StaCnxLogon=Connexion...
+StaCnxLogoff=Déconnexion...
+StaCnxNoApp=Pas d'appli.
+StaCnxIdle=Idle
+StaCnxOtherApp=Autre appli.
+StaCnxCommError=Erreur de comm.
+StaMissingRsc=Logiciel embarqué manquant
+StaApp=App
+StaBadVers=Mauvaise version !
+
+; status: application
+
+StaAplRun=RUN
+StaAplStop=STOP
+StaAplSfcBreak=Pt. Arrêt SFC
+StaAplError=Erreur
+StaAplInvalid=Inconnu
+StaAplStepping=Pas à pas
+
+; status: program
+
+StaPrgInactive=Inactif
+StaPrgActive=Actif
+StaPrgFrozen=Suspendu
+
+; dialog buttons
+
+ButForce=&Forcer
+ButTrue=&TRUE
+ButFalse=&FALSE
+ButLock=&Verrouiller
+ButUnlock=&Déverrouiller
+ButStartTimer=Dé&marrer
+ButStopTimer=&Arrêter
+ButBreakStep=&Installer pt. d'arrêt
+ButRemBreakStep=&Enlever pt. d'arrêt
+ButForceTrans=&Forcer
+ButBreakTrans=&Installer pt. d'arrêt
+ButRemBreakTrans=&Enlever pt. d'arrêt
+ButStartProg=&Start
+ButStopProg=&Arrêter
+ButSuspendProg=S&uspendre
+ButRestartProg=&Redémarrer
+
+; passwords dialog
+
+PswPassword=Mot de passe
+PswRemember=Mémoriser le mot de passe
+PswOk=OK
+PswCancel=Annuler
+PswOld=Ancien mot de passe :
+PswNew=Nouveau mot de passe :
+
+; watch window
+
+WWName=Nom
+WWValue=Valeur
+WWDesc=Description
+
+; upload
+
+MWUPCantStore=Ecriture du fichier impossible
+MWUPCaption=Chargement des symboles
+MWUPNoCnx=Connexion impossible
+MWUPCantUpload=Chargement non supporté par la cible
+MWUPProgress=Chargement en cours...
+MWUPErrors=Erreur(s) pendant le chargement
+MWUPCancel=Annuler
+MWUPClose=Fermer
+MWUPComplete=Chargement complet
+
+; misc.
+
+Ok=OK
+ErrInternal=Erreur interne
+ErrUnknownClient=Client inconnu ou invalide
+ErrUnknownProject=Projet inconnu ou invalide
+ErrUnknownSymbol=Variable inconnue - ne peut pas être espionnée
+ErrLoopIdUsed=ID de monitoring déjà utilisé
+ErrUnknownLoop=ID de monitoring inconnu
+ErrNoCommOK=Commande impossible - erreur de communication ou mauvaise version de l'application
+
+; value check
+
+ErrBadDintValue=Valeur entière invalide
+ErrBadRealValue=Valeur REAL invalide
+ErrBadTimeValue=Valeur TIME invalide
+ErrBadStringValue=Valeur STRING invalide ou chaîne trop longue
+
+; file transfer
+
+FTBusy=Erreur interne : FT interface busy
+FTOpenReadLocal=Impossible d'ouvrir le fichier en lecture
+FTRetCode=Erreur interne : Bad code in return frame
+FTFrame=Erreur interne : Frame error
+FTOpenWriteLocal=Impossible d'ouvrir le fichier en écriture
+FTWriteLocal=Impossible d'écrire dans le fichier
+FTCrc=Mauvais CRC de fichier
+FTConnection=Erreur de communication pendant le transfert
+FTRegisterClass=Erreur interne : cannot register callback window
+FTCreateCallback=Erreur interne : cannot create callback window
+FTMWConnect=Erreur interne : cannot connect to MW server
+FTMWOpen=Impossible d'établir la communication avec la cible
+FTMWObj=Erreur interne: cannot create communication object
+FTTimeout=Timeout de communication pendant le transfert
+FTT5_Unknown=Requête non supportée par la cible
+FTT5_OpenWrite=La cible ne peut pas ouvrir le fichier en écriture
+FTT5_Write=La cible ne peut pas écrire dans le fichier
+FTT5_Close=La cible ne peut pas fermer le fichier
+FTT5_OpenRead=La cible ne peut pas ouvrir le fichier en lecture
+FTT5_Read=La cible ne peut pas lire le fichier
+FTT5_Delete=La cible ne peut pas détruire le fichier
+FTT5_OpenDir=La cible ne peut pas parcourir le répertoire
+FTT5_CloseDir=La cible ne peut pas lire le répertoire
+FTT5_GetDir=La cible ne peut pas fermer le répertoire
+FTAbort=Transfert abandonné
+FTLoad=Transfert
+FTFrom=De :
+FTTo=Vers :
+
+; starting mode selection box ---------------------------------------
+
+[StartDlg]
+
+Startmode=Mode de démarrage
+Start=Relancer application
+ColdNoRetain=A &froid - Ne pas charger les variables RETAIN
+ColdWithRetain=A froid - Charger les variables &RETAIN
+Hot=Démarrage à &chaud
+Pause=Cycle à cycle
+
+; redundancy box ---------------------------------------
+
+[RedDlg]
+
+Redundancy=Redondance
+Disabled=La cible ne gère pas la redondance
+Active=Cible en mode actif
+PassiveAlive=Cible passive détectée
+Passive=Cible en mode passif
+BePassive=Passif!
+Refresh=Rafraîchir
+Close=Fermer
+
+; comm API error messages -------------------------------------------
+
+[CommApi]
+
+; misc.
+
+Ok=OK
+ErrInternal=Erreur interne
+ErrBusy=Communication occupée
+ErrNotSupported=Requête non supportée par ce protocole
+NoData=Aucune donnée disponible
+
+; standard settings dialog box
+
+DlgSettings=Paramètres de communication
+DlgETHERNET=&Ethernet TCP/IP
+DlgSERIAL=Liaison &série
+DlgSettings=Paramètres de communication
+DlgAddr=Adresse &IP :
+DlgEthp=Por&t :
+DlgPort=Port P&C :
+DlgRate=&Débit :
+DlgParity=&Parité :
+DlgStops=Bits de st&op :
+DlgHelp=&Aide
+DlgOK=OK
+DlgCancel=Annuler
+DlgParityNone=Aucun
+DlgParrityEven=Even
+DlgParityOdd=Odd
+DlgPassword=Mot de passe
+DlgOverProj=Les paramètres du projet vont être mis à jour. Continuer ?
+DlgUnit=Numéro d'unité :
+DlgTimeout=Timeout (secondes) :
+DlgTrials=Nombre d'essais :
+DlgPackets=Taille des paquets :
+DlgDialup=Composer le numéro :
+DlgDialupTimeout=Timeout de numérotation (secondes) :
+DlgInit=Initialisation :
+DlgDefault=Par défaut
+BadUnit=Numéro d'unité incorrect (valeur entre 1 et 32767 attendue)
+BadTimeout=Timeout incorrect (valeur entre 1 et 3600 attendue)
+BadTrials=Nombre d'essais incorrect (valeur entre 1 et 255 attendue)
+BadNum=Vous devez spécifier un numéro d'appel
+DlgBrowseNet=Recherche sur le réseau
+DlgRefresh=Rafraichir
+DlgWait=Veuillez patienter...
+DlgNoNode=Aucun matériel trouvé.
+DlgBrowse=Parcourir
+
+; communication
+
+ErrDriverNotFound=Librairie du Driver non trouvée
+ErrDriverInvalid=Driver invalide
+ErrCantInstallComm=Communication impossible
+ErrBadPortAddr=Connexion impossible - vérifiez les paramètres
+ErrNoCommAvailable=Communication non établie
+ErrBadTargetIDReceived=ID de cible invalide - réponse incorrecte
+ErrOpenLocalFile=Fichier local non trouver pour le transfert
+ErrDownload=Téléchargement refusé par la cible
+ErrAnswerAny=Requête refusée par la cible
+ErrAnswerAppControl=Statut de l'application non disponible sur la cible
+ErrAnswerAppStart=Démarrage de l'application impossible - peut-être déjà démarrée
+ErrAnswerAppStop=Arrêt de l'application impossible - peut-être déjà arrêtée
+ErrAnswerRead=Requête de lecture invalide - refusée par la cible
+ErrAnswerPause=Passage en mode cycle à cycle impossible
+ErrAnswerResume=Passage en mode d'exécution normal impossible
+ErrAnswerCycleStep=Exécution d'un cycle impossible
+ErrAnswerChange=Modification en ligne impossible - pas de changement valide
+ErrAnswerWrite=Forçage ou verrouillage de variable impossible
+ErrAnswerSetCycleTime=Impossible de changer le temps de cycle
+ErrAnswerControlPrg=Impossible de contrôler le programme
+ErrAnswerControlTimer=Impossible de lancer ou d'arrêter la temporisation
+
+; target error messages ---------------------------------------------
+
+[log]
+
+Err1=pas assez de mémoire
+Err2=application incorrecte
+Err3=pas assez de mémoire
+Err4=erreur interne
+Err5=time out
+Err6=time out
+Err7=communication invalide
+Err8=pas assez de mémoire
+Err9=application arrêtée
+Err10=dépassement de capacité SFC
+Err11=dépassement de capacité SFC
+Err12=dépassement de capacité SFC
+Err13=instruction inconnue
+Err16=erreur interne
+Err17=erreur interne
+Err18=erreur interne
+Err19=erreur interne
+Err20=erreur interne
+Err21=erreur interne
+Err22=dépassement de pile
+Err23=erreur interne
+Err24=erreur ethernet
+Err25=erreur de communication
+Err28=pas assez de mémoire
+Err29=pas assez de mémoire
+Err30=code OEM inconnu
+Err31=erreur E/S
+Err32=erreur E/S
+Err33=erreur E/S
+Err34=erreur E/S
+Err35=erreur E/S
+Err36=erreur E/S
+Err37=erreur E/S
+Err38=erreur E/S
+Err39=erreur E/S
+Err40=erreur E/S
+Err41=erreur E/S
+Err42=erreur E/S
+Err43=erreur E/S
+Err44=erreur E/S
+Err45=erreur E/S
+Err46=erreur E/S
+Err47=erreur E/S
+Err50=SFC : conflit d'accès
+Err51=SFC : conflit d'accès
+Err52=SFC : conflit d'accès
+Err53=Contrôle de programme SFC impossible
+Err54=Contrôle de programme SFC impossible
+Err55=Contrôle de programme SFC impossible
+Err56=Contrôle de programme SFC impossible
+Err61=erreur fonction SYSTEM
+Err62=temps de cycle trop long
+Err63=fonction utilisateur non implémentée
+Err64=division par 0
+Err65=fonction de conversion non implémentée
+Err66=bloc fonctionnel non implémenté
+Err67=fonction standard non supportée
+Err68=division par 0
+Err69=erreur fonction OPERATE
+Err70=modification en ligne impossible
+Err71=modification en ligne impossible
+Err72=modification en ligne impossible
+Err73=modification en ligne impossible
+Err74=modification en ligne impossible
+Err75=modification en ligne impossible
+Err76=modification en ligne impossible
+Err77=modification en ligne impossible
+Err97=modification en ligne impossible
+Err98=erreur interne
+Err99=erreur interne
+
+; all RT errors are offsetted with 1000
+
+Err1001=Erreur cible (aucun détail disponible)
+Err1002=Code d'application invalide - peut-être une confusion de format Intel/Motorola
+Err1003=Code d'application invalide - mauvaise identification de la cible
+Err1004=Code d'application invalide - mauvaise version de la cible
+Err1005=La requête ne peut pas être exécutée (dépassement de capacité)
+Err1006=Requête invalide - ne peut pas être exécutée
+Err1007=Requête de lecture impossible
+Err1008=Instruction inconnue
+Err1009=Trop de variables BOOL/SINT
+Err1010=Trop de variables INT
+Err1011=Trop de variables DINT/REAL
+Err1012=Variable DINT ou REAL divisée par 0
+Err1013=Trop de variables TIME
+Err1014=Les temporisations actives ne sont pas supportées par la cible
+Err1015=Le cycle est bloqué dans une boucle infinie
+Err1016=Le pointeur d'instruction TIC est invalide
+Err1017=Fonction standard non supportée par la cible
+Err1018=Variable LINT ou LREAL divisée par 0
+Err1019=Trop de variables LINT/LREAL
+Err1020=Trop de variables STRING
+Err1021=Variable SINT divisée par 0
+Err1022=Variable INT divisée par 0
+Err1023=Lancement impossible: des ressources système sont utilisées
+Err1024=Lancement impossible: changements invalide dans la définition des variables
+Err1025=Lancement impossible: changements invalide dans la définition des variables
+Err1026=Lancement impossible: l'application a changé
+Err1027=Lancement impossible: les graphes SFC ont changé
+Err1028=Lancement impossible : la définition des variables RETAIN a changé
+Err1029=Lancement impossible : base de données invalide
+Err1030=Dépassement du temps de cycle
+Err1031=Impossible de sauvegarder les variables RETAIN
+Err1032=Index de tableau hors bornes
+Err1033=Appel récursif de sous-programme
+Err1034=Trop de variables externes
+Err1035=Analyseur logique non supporté
+Err1036=Trop de tâches définies
+Err1037=Lancement impossible : pile de sous-programme insuffisante
+Err1038=Dépassement de pile
+Err1039=Configuration AS-i impossible
+Err1040=Cible en mode Démo limitée dans le temps - Arrêt de l'application
+Err1041=Cible en mode Démo - limitée dans le temps
+Err1042=Modification en ligne non supportée par la cible
+Err1043=Modification en ligne : nouveau code invalide
+Err1044=Modification en ligne : ne s'adresse pas à la même application
+Err1045=Modification en ligne : refusée par des drivers d'E/S
+Err1046=Modification en ligne : la taille du segment de variables complexes a changé
+Err1047=Modification en ligne : refusée par des drivers de bus de terrain
+Err1048=Modification en ligne : pas assez de mémoire pour les propriétés de variables
+Err1049=Modification en ligne : changement des tâches
+Err1050=Modification en ligne : refusée par le driver MODBUS
+Err1051=Modification en ligne : refusée par le driver CANbus
+Err1052=Modification en ligne : pas assez de mémoire pour les évènements produits (liens)
+Err1053=Modification en ligne : pas assez de mémoire pour les variables BOOL/SINT
+Err1054=Modification en ligne : pas assez de mémoire pour les variables INT
+Err1055=Modification en ligne : pas assez de mémoire pour les variables DINT/REAL
+Err1056=Modification en ligne : pas assez de mémoire pour les variables LINT/LREAL
+Err1057=Modification en ligne : pas assez de mémoire pour les variables TIME
+Err1058=Modification en ligne : pas assez de mémoire pour les variables STRING
+Err1059=Modification en ligne : pas assez de mémoire pour les instances de FB
+Err1060=Modification en ligne : pas assez de mémoire pour les fonctions "C"
+Err1061=Modification en ligne : pas assez de mémoire pour les variables externes
+Err1153=Modification en ligne : le nombre de variables BOOL/SINT a changé
+Err1154=Modification en ligne : le nombre de variables INT a changé
+Err1155=Modification en ligne : le nombre de variables DINT/REAL a changé
+Err1156=Modification en ligne : le nombre de variables LINT/LREAL a changé
+Err1157=Modification en ligne : le nombre de variables TIME a changé
+Err1158=Modification en ligne : le nombre de variables STRING a changé
+Err1159=Modification en ligne : le nombre d'instances de FB a changé
+Err1160=Modification en ligne : le nombre de conditions "C" a changé
+Err1161=Modification en ligne : le nombre de variables externes a changé
+Err1062=Modification en ligne : pas assez de mémoire pour les buffers de STRING
+Err1063=Modification en ligne : la longueur de certaines variables STRING a changé
+Err1064=Modification en ligne : pas assez de mémoire pour les données d'instances de FB
+Err1065=Modification en ligne : une instance de FB a changé
+Err1066=Modification en ligne : les attributs d'POU ont changé
+Err1067=Modification en ligne : pas le même nombre de POUs
+Err1068=TracePoint
+Err1069=Aucune application en cours
+Err1070=CRC de code incorrect
+Err1071=Relogement de la mémoire impossible - démarrage à chaud refusé
+Err1072=La modification en ligne n'est pas autorisée si des points d'arrêt sont installés ou si un programme est stoppé en pas à pas
+Err1073=La modification en ligne n'est pas autorisée si un programme est bloqué sur une instruction WAIT
+Err1074=Pas assez de mémoire pour les données de l'application. Démarrage impossible
+Err1075=Impossible de charger le code de l'application. Démarrage impossible
+Err1076=Modification en ligne : changement de version du compilateur !
+Err1077=Modification en ligne impossible : des variables temporaires sont verrouillées
+Err1078=Trop de variables WSTRING
+Err1079=Modification en ligne : pas assez de mémoire pour les variables WSTRING
+Err1080=Modification en ligne : le nombre de variables WSTRING a changé
+
+; eof

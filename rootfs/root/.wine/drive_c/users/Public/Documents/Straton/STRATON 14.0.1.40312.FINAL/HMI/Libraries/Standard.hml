@@ -1,0 +1,834 @@
+;--------------------------------------------------------------------
+; mandatory file header
+
+[RCScript]
+Version=K5ERC.1
+
+;--------------------------------------------------------------------
+; property templates
+; Formats: INT UINT REAL PAIR COLOR STRING FONT BMP [ , VAR ]
+
+[PropTemplate]
+Name=POS
+ByteCode=10
+Format=PAIR
+Default=0,0
+
+[PropTemplate]
+Name=SIZE
+ByteCode=11
+Format=PAIR
+Default=0,0
+
+[PropTemplate]
+Name=TEXT
+ByteCode=12
+Format=STRING,VAR
+Default=
+
+[PropTemplate]
+Name=BITMAP
+ByteCode=13
+Format=BMP,VAR
+Default=
+
+[PropTemplate]
+Name=FONT
+ByteCode=14
+Format=FONT,VAR
+Default=
+
+[PropTemplate]
+Name=DIRECTION
+ByteCode=15
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=LINE_DIRECTION
+ByteCode=15
+Format=UINT
+Default=0
+
+[PropTemplate]
+Name=BORDER_COLOR
+ByteCode=16
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=BORDER_SIZE
+ByteCode=17
+Format=UINT,VAR
+Default=
+
+[PropTemplate]
+Name=BACK_COLOR
+ByteCode=18
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=FILL_COLOR
+ByteCode=19
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=TEXT_COLOR
+ByteCode=20
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=FILL_VALUE
+ByteCode=21
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=ALIGN
+ByteCode=22
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=SEL_BACK_COLOR
+ByteCode=23
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=SEL_FILL_COLOR
+ByteCode=24
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=LINE_HEIGHT
+ByteCode=25
+Format=UINT,VAR
+Default=
+
+[PropTemplate]
+Name=SEL
+ByteCode=26
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=SEL_FONT
+ByteCode=27
+Format=FONT,VAR
+Default=
+
+[PropTemplate]
+Name=FIRST_VALUE
+ByteCode=28
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=LAST_VALUE
+ByteCode=29
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=AFILL_VALUE
+ByteCode=30
+Format=ARRAY
+Default=
+
+[PropTemplate]
+Name=DRAW_STYLE
+ByteCode=31
+Format=UINT,VAR
+Default=
+
+[PropTemplate]
+Name=VISIBLE
+ByteCode=32
+Format=UINT,VAR
+Default=1
+
+[PropTemplate]
+Name=THICKNESS
+ByteCode=33
+Format=UINT,VAR
+Default=1
+
+[PropTemplate]
+Name=ROUND_CORNER
+ByteCode=34
+Format=UINT
+Default=1
+
+[PropTemplate]
+Name=COLOR_FALSE
+ByteCode=35
+Format=COLOR
+Default=1
+
+[PropTemplate]
+Name=LOWLIMIT
+ByteCode=37
+Format=UINT,VAR
+Default=1
+
+[PropTemplate]
+Name=HIGHLIMIT
+ByteCode=38
+Format=UINT,VAR
+Default=100
+
+[PropTemplate]
+Name=LOWCOLOR
+ByteCode=39
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=HIGHCOLOR
+ByteCode=40
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=BITMAP_TRUE
+ByteCode=13
+Format=BMP
+Default=
+
+[PropTemplate]
+Name=BITMAP_FALSE
+ByteCode=41
+Format=BMP
+Default=
+
+[PropTemplate]
+Name=NBSUBTICK
+ByteCode=42
+Format=UINT,VAR
+Default=4
+
+[PropTemplate]
+Name=TYPE
+ByteCode=43
+Format=STRING
+Default=
+
+[PropTemplate]
+Name=ID
+ByteCode=44
+Format=STRING
+Default=
+
+[PropTemplate]
+Name=FLAGS
+ByteCode=45
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM1
+ByteCode=46
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM2
+ByteCode=47
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM3
+ByteCode=48
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM4
+ByteCode=49
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM5
+ByteCode=50
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM6
+ByteCode=51
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM7
+ByteCode=52
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=NUM8
+ByteCode=53
+Format=INT,VAR
+Default=0
+
+[PropTemplate]
+Name=TEXT1
+ByteCode=54
+Format=STRING,VAR
+Default=
+
+[PropTemplate]
+Name=TEXT2
+ByteCode=55
+Format=STRING,VAR
+Default=
+
+[PropTemplate]
+Name=TEXT3
+ByteCode=56
+Format=STRING,VAR
+Default=
+
+[PropTemplate]
+Name=TEXT4
+ByteCode=57
+Format=STRING,VAR
+Default=
+
+[PropTemplate]
+Name=COL1
+ByteCode=58
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=COL2
+ByteCode=59
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=COL3
+ByteCode=60
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=COL4
+ByteCode=61
+Format=COLOR,VAR
+Default=
+
+[PropTemplate]
+Name=INPUT_ID
+ByteCode=62
+Format=UINT,VAR
+Default=0
+
+[PropTemplate]
+Name=OEM
+ByteCode=63
+Format=UINT,VAR
+Default=0
+
+;--------------------------------------------------------------------
+; object templates
+
+[ObjTemplate]
+Name=RECT
+ByteCode=10
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=ALIGN:-1
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:1
+Prop=BACK_COLOR:1
+Prop=TEXT_COLOR:0
+Prop=TEXT:
+Prop=FONT:
+USA=(this):Rectangle
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=ALIGN:Align
+USA=BORDER_COLOR:Border Color
+USA=BORDER_SIZE:Border Size
+USA=BACK_COLOR:Back Color
+USA=TEXT_COLOR:Text Color
+USA=TEXT:Text
+USA=FONT:Character font
+FRA=(this):Rectangle
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=ALIGN:Alignement
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=BACK_COLOR:Couleur de fond
+FRA=TEXT_COLOR:Couleur du texte
+FRA=TEXT:Texte
+FRA=FONT:Police
+
+[ObjTemplate]
+Name=BARGRAPH
+ByteCode=11
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=DIRECTION:0
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:0
+Prop=BACK_COLOR:1
+Prop=FILL_COLOR:0
+Prop=FILL_VALUE:0
+USA=(this):Bargraph
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=DIRECTION:Direction
+USA=BORDER_COLOR:Border Color
+USA=BORDER_SIZE:Border Size
+USA=BACK_COLOR:Back Color
+USA=FILL_COLOR:Fill Color
+USA=FILL_VALUE:Fill Value
+FRA=(this):Histogramme
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=DIRECTION:Direction
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=BACK_COLOR:Couleur de fond
+FRA=FILL_COLOR:Couleur de remplissage
+FRA=FILL_VALUE:Valeur de remplissage
+
+[ObjTemplate]
+Name=PICTURE
+ByteCode=12
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=BACK_COLOR:0
+Prop=BITMAP:
+USA=(this):Picture
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=BACK_COLOR:Background color
+USA=BITMAP:Bitmap
+FRA=(this):Image
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=BACK_COLOR:Couleur de fond
+FRA=BITMAP:Bitmap
+
+[ObjTemplate]
+Name=MENU
+ByteCode=15
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=ALIGN:-1
+Prop=FONT:
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:0
+Prop=TEXT:Choice1|Choice2
+Prop=BACK_COLOR:1
+Prop=FILL_COLOR:0
+Prop=SEL_FONT:
+Prop=SEL_BACK_COLOR:0
+Prop=SEL_FILL_COLOR:1
+Prop=LINE_HEIGHT:10
+Prop=SEL:0
+USA=(this):Menu
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=ALIGN:Alignment
+USA=FONT:Character font
+USA=BORDER_COLOR:Border color
+USA=BORDER_SIZE:Border size
+USA=TEXT:Text (sep='|')
+USA=BACK_COLOR:Background color
+USA=FILL_COLOR:Text color
+USA=SEL_FONT:Selection character font
+USA=SEL_BACK_COLOR:Selection back color
+USA=SEL_FILL_COLOR:Selection text color
+USA=LINE_HEIGHT:Line height
+USA=SEL:Selection
+FRA=(this):Menu
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=ALIGN:Alignement
+FRA=FONT:Police
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=TEXT:Texte (sep='|')
+FRA=BACK_COLOR:Couleur de fond
+FRA=FILL_COLOR:Couleur du texte
+FRA=SEL_FONT:Sélection: police
+FRA=SEL_BACK_COLOR:Sélection: couleur de fond
+FRA=SEL_FILL_COLOR:Sélection: couleur du texte
+FRA=LINE_HEIGHT:Hauteur des lignes
+FRA=SEL:Sélection
+
+[ObjTemplate]
+Name=TREND
+ByteCode=16
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=DRAW_STYLE:1
+Prop=BORDER_SIZE:0
+Prop=BORDER_COLOR:0
+Prop=BACK_COLOR:1
+Prop=FILL_COLOR:0
+Prop=LINE_HEIGHT:1
+Prop=FIRST_VALUE:0
+Prop=LAST_VALUE:0
+Prop=AFILL_VALUE:
+USA=(this):Trend
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=DRAW_STYLE:Drawing style
+USA=BORDER_COLOR:Border color
+USA=BORDER_SIZE:Border size
+USA=BACK_COLOR:Back Color
+USA=FILL_COLOR:Fill Color
+USA=LINE_HEIGHT:Item width
+USA=FIRST_VALUE:Fisrt array item 
+USA=LAST_VALUE:Last array item
+USA=AFILL_VALUE:Array of values
+FRA=(this):Courbes
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=DRAW_STYLE:Aspect du graphique
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=BACK_COLOR:Couleur de fond
+FRA=FILL_COLOR:Couleur du graphique
+FRA=LINE_HEIGHT:Largeur de l'élément
+FRA=FIRST_VALUE:Première valeur dans le tableau 
+FRA=LAST_VALUE:Dernière valeur dans le tableau
+FRA=AFILL_VALUE:Tableau de valeurs
+
+[ObjTemplate]
+Name=LINE
+ByteCode=17
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=LINE_DIRECTION:0
+Prop=THICKNESS:1
+Prop=DRAW_STYLE:0
+Prop=FILL_COLOR:0
+Prop=COLOR_FALSE:1
+Prop=VISIBLE:1
+USA=(this):Line
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=LINE_DIRECTION:Direction
+USA=THICKNESS:Line width
+USA=DRAW_STYLE:Style
+USA=FILL_COLOR:Color for status=TRUE
+USA=COLOR_FALSE:Color for status=FALSE
+USA=VISIBLE:Status
+FRA=(this):Ligne
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=LINE_DIRECTION:Direction
+FRA=THICKNESS:Epaisseur
+FRA=DRAW_STYLE:Style
+FRA=FILL_COLOR:Couleur quand état=TRUE
+FRA=COLOR_FALSE:Couleur quand état=FALSE
+FRA=VISIBLE:Etat
+
+[ObjTemplate]
+Name=ELLIPSE
+ByteCode=18
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=THICKNESS:1
+Prop=FILL_COLOR:1
+Prop=BORDER_COLOR:0
+Prop=TEXT_COLOR:0
+Prop=TEXT:
+Prop=FONT:
+USA=(this):Ellipse
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=THICKNESS:Border size
+USA=FILL_COLOR:Fill Color
+USA=BORDER_COLOR:Border Color
+USA=TEXT_COLOR:Text Color
+USA=TEXT:Text
+USA=FONT:Character font
+FRA=(this):Ellipse
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=THICKNESS:Epaisseur du trait
+FRA=FILL_COLOR:Couleur de remplissage
+FRA=BORDER_COLOR:Couleur de trait
+FRA=TEXT_COLOR:Couleur du texte
+FRA=TEXT:Texte
+FRA=FONT:Police
+
+[ObjTemplate]
+Name=ROUNDRECT
+ByteCode=19
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=THICKNESS:1
+Prop=FILL_COLOR:1
+Prop=BORDER_COLOR:0
+Prop=ROUND_CORNER:1
+Prop=TEXT_COLOR:0
+Prop=TEXT:
+Prop=ALIGN:-1
+Prop=FONT:
+USA=(this):Round Rectangle
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=THICKNESS:Border size
+USA=FILL_COLOR:Fill Color
+USA=BORDER_COLOR:Border Color
+USA=ROUND_CORNER:Round Corner (pixels)
+USA=TEXT_COLOR:Text Color
+USA=TEXT:Text
+USA=ALIGN:Align
+USA=FONT:Character font
+FRA=(this):Rectangle à coins arrondis
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=THICKNESS:Epaisseur du trait
+FRA=FILL_COLOR:Couleur de remplissage
+FRA=BORDER_COLOR:Couleur de trait
+FRA=ROUND_CORNER:Coins (pixels)
+FRA=TEXT_COLOR:Couleur du texte
+FRA=TEXT:Texte
+FRA=ALIGN:Alignement
+FRA=FONT:Police
+
+[en-chantier-ObjTemplate]
+Name=TANK
+ByteCode=20
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:0
+Prop=ROUND_CORNER:1
+Prop=BACK_COLOR:1
+Prop=FILL_VALUE:0
+Prop=FILL_COLOR:0
+Prop=LOWLIMIT:0
+Prop=LOWCOLOR:0
+Prop=HIGHLIMIT:100
+Prop=HIGHCOLOR:0
+USA=(this):Tank
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=BORDER_COLOR:Border color
+USA=BORDER_SIZE:Border size
+USA=ROUND_CORNER:Round Corner (pixels)
+USA=BACK_COLOR:Background color
+USA=FILL_VALUE:Fill Value
+USA=FILL_COLOR:Fill Color
+USA=LOWLIMIT:Low Limit
+USA=LOWCOLOR:Low Color
+USA=HIGHLIMIT:High Limit
+USA=HIGHCOLOR:High Color
+FRA=(this):Cuve
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=ROUND_CORNER:Coins (pixels)
+FRA=BACK_COLOR:Couleur de fond
+FRA=FILL_VALUE:Valeur de remplissage
+FRA=FILL_COLOR:Couleur de remplissage
+FRA=LOWLIMIT:Limite basse
+FRA=LOWCOLOR:Couleur basse
+FRA=HIGHLIMIT:Limite haute
+FRA=HIGHCOLOR:Couleur haute
+
+[en-chantier-ObjTemplate]
+Name=METER
+ByteCode=21
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:0
+Prop=BACK_COLOR:1
+Prop=TEXT:
+Prop=NBSUBTICK:4
+Prop=FONT:
+Prop=TEXT_COLOR:0
+Prop=FILL_VALUE:0
+Prop=FILL_COLOR:0
+Prop=LOWLIMIT:0
+Prop=LOWCOLOR:0
+Prop=HIGHLIMIT:100
+Prop=HIGHCOLOR:0
+USA=(this):Meter
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=BORDER_COLOR:Border color
+USA=BORDER_SIZE:Border size
+USA=BACK_COLOR:Background color
+USA=TEXT:Main ticks (sep='|')
+USA=NBSUBTICK:Number of Sub Ticks
+USA=FONT:Character font
+USA=TEXT_COLOR:Text Color
+USA=FILL_VALUE:Fill Value
+USA=FILL_COLOR:Fill Color
+USA=LOWLIMIT:Low Limit
+USA=LOWCOLOR:Low Color
+USA=HIGHLIMIT:High Limit
+USA=HIGHCOLOR:High Color
+FRA=(this):Vu-mètre
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=BACK_COLOR:Couleur de fond
+FRA=TEXT:Graduations principales (sep='|')
+FRA=NBSUBTICK:Nombre de sous-graduations
+FRA=FONT:Police
+FRA=TEXT_COLOR:Couleur du texte
+FRA=FILL_VALUE:Valeur de remplissage
+FRA=FILL_COLOR:Couleur de remplissage
+FRA=LOWLIMIT:Limite basse
+FRA=LOWCOLOR:Couleur basse
+FRA=HIGHLIMIT:Limite haute
+FRA=HIGHCOLOR:Couleur haute
+
+[ObjTemplate]
+Name=SWITCH
+ByteCode=22
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=BORDER_COLOR:0
+Prop=BORDER_SIZE:0
+Prop=BACK_COLOR:0
+Prop=VISIBLE:
+Prop=BITMAP_TRUE:
+Prop=BITMAP_FALSE:
+USA=(this):Switch
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=BORDER_COLOR:Border color
+USA=BORDER_SIZE:Border size
+USA=BACK_COLOR:Background color
+USA=VISIBLE:Boolean Value
+USA=BITMAP_TRUE:Bitmap TRUE
+USA=BITMAP_FALSE:Bitmap FALSE
+FRA=(this):Bi-stable
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=BORDER_COLOR:Couleur du cadre
+FRA=BORDER_SIZE:Epaisseur du cadre
+FRA=BACK_COLOR:Couleur de fond
+FRA=VISIBLE:Variable booléenne
+FRA=BITMAP_TRUE:Bitmap VRAI
+FRA=BITMAP_FALSE:Bitmap FAUX
+
+[ObjTemplate]
+Name=CUSTOM
+ByteCode=23
+Prop=POS:
+Prop=SIZE:
+Prop=INPUT_ID:
+Prop=TYPE:
+Prop=ID:
+Prop=FLAGS:
+Prop=NUM1:
+Prop=NUM2:
+Prop=NUM3:
+Prop=NUM4:
+Prop=NUM5:
+Prop=NUM6:
+Prop=NUM7:
+Prop=NUM8:
+Prop=TEXT1:
+Prop=TEXT2:
+Prop=TEXT3:
+Prop=TEXT4:
+Prop=COL1:
+Prop=COL2:
+Prop=COL3:
+Prop=COL4:
+USA=(this):Custom
+USA=POS:Position
+USA=SIZE:Size
+USA=INPUT_ID:Click Identifier
+USA=TYPE:Control Type
+USA=ID:Control Identifier
+USA=FLAGS:Style
+USA=NUM1:Numerical Parameter 1
+USA=NUM2:Numerical Parameter 2
+USA=NUM3:Numerical Parameter 3
+USA=NUM4:Numerical Parameter 4
+USA=NUM5:Numerical Parameter 5
+USA=NUM6:Numerical Parameter 6
+USA=NUM7:Numerical Parameter 7
+USA=NUM8:Numerical Parameter 8
+USA=TEXT1:Text Parameter 1
+USA=TEXT2:Text Parameter 2
+USA=TEXT3:Text Parameter 3
+USA=TEXT4:Text Parameter 4
+USA=COL1:Color Parameter 1
+USA=COL2:Color Parameter 2
+USA=COL3:Color Parameter 3
+USA=COL4:Color Parameter 4
+FRA=(this):Objet Générique
+FRA=POS:Position
+FRA=SIZE:Taille
+FRA=INPUT_ID:Identifieur de click
+FRA=TYPE:Type de contrôle
+FRA=ID:Identifieur de contrôle
+FRA=FLAGS:Style
+FRA=NUM1:Paramètre numérique 1
+FRA=NUM2:Paramètre numérique 2
+FRA=NUM3:Paramètre numérique 3
+FRA=NUM4:Paramètre numérique 4
+FRA=NUM5:Paramètre numérique 5
+FRA=NUM6:Paramètre numérique 6
+FRA=NUM7:Paramètre numérique 7
+FRA=NUM8:Paramètre numérique 8
+FRA=TEXT1:Paramètre texte 1
+FRA=TEXT2:Paramètre texte 2
+FRA=TEXT3:Paramètre texte 3
+FRA=TEXT4:Paramètre texte 4
+FRA=COL1:Paramètre couleur 1
+FRA=COL2:Paramètre couleur 2
+FRA=COL3:Paramètre couleur 3
+FRA=COL4:Paramètre couleur 4

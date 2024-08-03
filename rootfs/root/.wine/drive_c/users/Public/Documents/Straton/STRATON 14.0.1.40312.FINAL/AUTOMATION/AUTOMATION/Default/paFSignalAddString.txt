@@ -1,0 +1,10 @@
+[LONG]
+V-COL=Column index (0 based)
+V-TM=Time coordinate
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=~
+V-VALUE=Point value
+[SHORT]
+V-TM=
+V-NAME=~

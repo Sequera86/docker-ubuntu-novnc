@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    der (RUN, XIN, CYCLE);
+    XOUT := der.XOUT;
+end_if;
+

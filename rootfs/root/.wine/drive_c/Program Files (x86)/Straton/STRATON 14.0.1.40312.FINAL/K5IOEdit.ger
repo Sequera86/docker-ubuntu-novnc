@@ -1,0 +1,34 @@
+﻿; K5 IOEDIT control - error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - don't change that line!
+
+[Messages]
+ErasePrompt=Das I/O-Gerät und die Beschreibung seines Kanals werden gelöscht. Möchten Sie fortfahren?
+OverwritePrompt=Das I/O-Gerät und die Beschreibung seines Kanals werden überschrieben. Möchten Sie fortfahren?
+ErrWord=Ungültiger Wert. Erwarteter Wert: SHORT INTEGER  (16-Bit).
+ErrLong=Ungültiger Wert.  Erwarteter Wert: INTEGER.
+ErrString=Ungültiger Wert. Der String darf nicht mehr als 15 Zeichen enthalten.
+ErrChar=Ungültiger Wert. Erwarteter Wert: Einzelnes Zeichen.
+ErrBool=Ungültiger Wert.  Erwarteter Wert: "TRUE" oder "FALSE".
+ErrFloat=Ungültiger Wert.  Erwarteter Wert: REAL-Zahl.
+ErrHotEnabled=Diese Aktion ist nicht möglich, wenn bei den Projekteinstellungen Online Change aktiviert ist.
+
+Library=&Bibliothek:
+Device=Bau&gruppe:
+all=(Alle)
+Properties=Eigenschaften
+
+IOs=I/O Karten
+Close=Schließen
+Select=Auswählen
+Delete=Löschen
+Properties=Eigenschaften
+Virtual=Virtuell/reell
+Help=Hilfe
+Rename=Umbenennen
+
+Up=Nach &oben
+Down=Nach &unten
+
+; eof

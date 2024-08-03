@@ -1,0 +1,1 @@
+OK := _PRP ('DeleteFolder', NAME, '', '', RET);

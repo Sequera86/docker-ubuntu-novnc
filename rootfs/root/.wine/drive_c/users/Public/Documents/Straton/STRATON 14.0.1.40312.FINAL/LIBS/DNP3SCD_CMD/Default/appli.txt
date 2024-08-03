@@ -1,0 +1,5 @@
+[LONG]
+P-DNP3S_BINCMD_CTO=Manage Select/Operate/Directoperate binary command. Compementary two output
+A-<PROJECT>=
+P-DNP3S_BINCMD_CL=Manage Select/Operate/Directoperate binary command. Compementary Latch Model
+P-DNP3S_ANACMD=Manage Select/Operate/Directoperate analog command

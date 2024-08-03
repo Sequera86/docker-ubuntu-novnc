@@ -1,0 +1,2 @@
+Q := any_to_dword (IN);
+

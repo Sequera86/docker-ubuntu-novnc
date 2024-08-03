@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-VALUE=Option value
+V-OPTION=Option name

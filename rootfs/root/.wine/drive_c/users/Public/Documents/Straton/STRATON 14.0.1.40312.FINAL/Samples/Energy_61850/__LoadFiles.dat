@@ -1,0 +1,9 @@
+[K5BusIec850s]
+Local=.\Custom\K5BusIec850s.SCL
+Remote=.\Custom\K5BusIec850s.SCL
+Mode=BEFORE
+
+[K5BusIec850s_GO]
+Local=.\Custom\K5BusIec850s_GO.SCL
+Remote=.\Custom\K5BusIec850s_GO.SCL
+Mode=BEFORE

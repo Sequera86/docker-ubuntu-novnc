@@ -1,0 +1,13 @@
+ENO := EN;
+if EN then
+    pid1 (AUTO, PV, SP, XOUT_MANU, KP, TI, TD, TS, XMIN, XMAX,
+          I_SEL, INT_HOLD, I_ITL_ON, I_ITLVAL, DEADB_ERR, FFD);
+    XOUT := pid1.Xout;
+    ER := pid1.ER;
+    XOUT_P := pid1.Xout_P;
+    XOUT_I := pid1.Xout_I;
+    XOUT_D := pid1.Xout_D;
+    XOUT_HLM := pid1.Xout_HLM;
+    XOUT_LLM := pid1.Xout_LLM;
+end_if;
+

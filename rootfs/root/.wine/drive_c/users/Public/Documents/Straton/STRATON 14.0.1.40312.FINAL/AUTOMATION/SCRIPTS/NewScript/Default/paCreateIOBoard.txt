@@ -1,0 +1,4 @@
+[LONG]
+V-DEVTYPE=Type of IO device
+V-OK=TRUE if successful
+V-SLOT=Slot number

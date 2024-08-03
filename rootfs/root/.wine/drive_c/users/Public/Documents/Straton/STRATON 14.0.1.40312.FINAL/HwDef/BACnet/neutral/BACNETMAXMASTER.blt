@@ -1,0 +1,14 @@
+Read or Write the 'MaxMaster' BACnet parameter
+
+Inputs:
+
+- SET : if TRUE, the parameter is set to 'Value'
+- VALUE : value to set if SET is TRUE
+
+Outputs:
+
+- Q : Current parameter value
+
+The Q output is:
+- equal to the VALUE input if SET is TRUE
+- the internal stack parameter if SET is FALSE

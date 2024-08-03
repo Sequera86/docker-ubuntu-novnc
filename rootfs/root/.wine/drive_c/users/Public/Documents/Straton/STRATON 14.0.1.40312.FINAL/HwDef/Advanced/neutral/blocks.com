@@ -1,0 +1,44 @@
+[desc]
+
+stackint=Stack of integers
+derivate=Derivate signal
+hyster=Hysteresys
+hysteracc=Accumulated hysteresys
+average=Running average
+averageL=Running average (LREAL)
+lim_alrm=Alarm on limits
+integral=Integral signal
+rand=Random value
+SERIO=Serial communication
+SERIO_B=Serial communication with arrays
+SerializeOut=Copy data to binary frame
+SerializeIn=Get data from binary frame
+ApplyRecipeColumn=Apply values of a column from a recipe file
+SerPutString=Copy string to binary frame
+SerGetString=Get string from binary frame
+Ramp=Analog ramp
+FIFO="First in / First out" queue
+LIFO="Last in / First out" stack
+Alarm_M=Alarm with manual reset
+Alarm_A=Alarm with automatic reset
+VLID=ID of a list of variable
+MBSlaveUDP=MODBUS Slave on UDP
+MBSlaveRTU=MODBUS Slave RTU (serial)
+SigID=ID of a signal resource
+SigPlay=Play a signal
+SigScale=Find a point from a signal
+CurveLin=Curve linearization
+SurfLin=Surface linearization
+MBSlaveUDPex=MODBUS Slave on UDP
+MBSlaveRTUex=MODBUS Slave RTU (serial)
+MBMasterTCP=MODBUS Master TCP
+MBMasterRTU=MODBUS Master RTU
+MBSlaveTCP=MODBUS TCP Server
+MBSlaveTCPEx=MODBUS TCP Server
+MBSLAVEIDENT=Set MODBUS Slave Device Identification
+MBSlaveRTUexD=MODBUS Slave RTU (serial)
+FatalStop=stop with fatal error
+CycleStop=stop in cycle stepping mode
+FilterOrder1=First order filter
+PWM=PWM signal generator
+

@@ -1,0 +1,3 @@
+OK := _PRP ('FWRITE', any_to_string (FID), 'IST',
+            any_to_string (REF), RET);
+

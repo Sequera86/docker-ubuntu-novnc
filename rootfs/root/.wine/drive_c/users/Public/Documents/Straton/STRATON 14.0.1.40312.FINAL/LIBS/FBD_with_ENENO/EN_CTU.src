@@ -1,0 +1,7 @@
+ENO := EN;
+if EN then
+    ctu1 (CU, RESET, PV);
+    Q := ctu1.Q;
+    CV := ctu1.CV;
+end_if;
+

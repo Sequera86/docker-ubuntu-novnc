@@ -1,0 +1,2 @@
+tm (IN, T, RST);
+Q := tm.Q;

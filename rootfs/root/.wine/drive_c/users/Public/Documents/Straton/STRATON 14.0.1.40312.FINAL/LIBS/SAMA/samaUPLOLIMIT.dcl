@@ -1,0 +1,5 @@
+/V,L,REAL(0)[0],8,IN
+/V,L,REAL(0)[0],8,PMIN
+/V,L,REAL(0)[0],8,PMAX
+/V,L,BOOL(0)[0],16,Q
+

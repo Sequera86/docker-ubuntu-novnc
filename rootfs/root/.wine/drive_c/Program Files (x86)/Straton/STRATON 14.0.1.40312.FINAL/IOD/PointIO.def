@@ -1,0 +1,193 @@
+; POINTIO Modules definition
+; V1.02 - 2011.12.08
+
+[1734-ARM]
+Desc=Address reserve
+O2Tinst=0
+O2Tsize=0
+T2Oinst=0
+T2Osize=0
+CFGinst=0
+CFGdata=
+PrePath=
+
+[1734-IB2]
+Desc=2 digital inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=2
+T2Osize=5
+CFGinst=103
+CFGdata=0100 0000 e803 e803 e803 e803
+PrePath=
+DataOffset=4
+DataNb=2
+Data=BOOL
+Dir=IN
+
+[1734-OB2E]
+Desc=2 digital outputs
+O2Tinst=32
+O2Tsize=1
+T2Oinst=42
+T2Osize=5
+CFGinst=123
+CFGdata=0100 0000 0000 0000 0300 0000
+PrePath=
+DataOffset=0
+DataNb=2
+Data=BOOL
+Dir=OUT
+
+[1734-OB8E]
+Desc=8 digital outputs
+O2Tinst=34
+O2Tsize=1
+T2Oinst=44
+T2Osize=5
+CFGinst=123
+CFGdata=0000 0000 0000 0000 0000 0000
+PrePath=
+DataOffset=0
+DataNb=8
+Data=BOOL
+Dir=OUT
+
+[1734-IV8]
+Desc=8 digital inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=4
+T2Osize=5
+CFGinst=103
+CFGdata=0100 0000 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803
+PrePath=
+DataOffset=4
+DataNb=8
+Data=BOOL
+Dir=IN
+
+[1734-IB8]
+Desc=8 digital inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=4
+T2Osize=5
+CFGinst=103
+CFGdata=0100 0000 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803 e803
+PrePath=
+DataOffset=4
+DataNb=8
+Data=BOOL
+Dir=IN
+
+[1734-OW4]
+Desc=4 relay outputs
+O2Tinst=33
+O2Tsize=1
+T2Oinst=192
+T2Osize=4
+CFGinst=103
+CFGdata=0100 0000 0000 0000
+PrePath=
+DataOffset=0
+DataNb=4
+Data=BOOL
+Dir=OUT
+
+
+[1734-IE2C]
+Desc=2 analog inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=101
+T2Osize=10
+CFGinst=123
+CFGdata=0100 0000 cd0c ff3f 0000 290c a340 330b 9941 0300 0000 cd0c ff3f 0000 290c a340 330b 9941 0300 0002 6400
+PrePath=
+DataOffset=4
+DataNb=2
+Data=INT
+Dir=IN
+
+[1734-OE2C]
+Desc=2 analog outputs
+O2Tinst=102
+O2Tsize=4
+T2Oinst=101
+T2Osize=6
+CFGinst=123
+CFGdata=0100 0000 0000 0000 6606 ff1f 0080 ff7f 0001 0100 0000 0000 0000 6606 ff1f 0080 ff7f 0001 0100 0000
+PrePath=
+DataOffset=0
+DataNb=2
+Data=INT
+Dir=OUT
+
+[1734-VHSC24]
+Desc=High speed counter module
+O2Tinst=107
+O2Tsize=4
+T2Oinst=103
+T2Osize=14
+CFGinst=123
+CFGdata=0100 0000 0071 0100 e803 0101 0000 0000 ffff ff00 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000
+PrePath=
+DataOffset=4
+DataNb=1
+Data=DWORD
+Dir=IN
+
+[1734-OB4]
+Desc=4 digital outputs
+O2Tinst=33
+O2Tsize=1
+T2Oinst=43
+T2Osize=5
+CFGinst=123
+PrePath=
+DataOffset=0
+DataNb=4
+Data=BOOL
+Dir=OUT
+
+[1734-IB4]
+Desc=4 digital inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=3
+T2Osize=5
+CFGinst=103
+PrePath=
+DataOffset=4
+DataNb=4
+Data=BOOL
+Dir=IN
+
+[1734-OE2V]
+Desc=2 analog outputs
+O2Tinst=102
+O2Tsize=4
+T2Oinst=101
+T2Osize=6
+CFGinst=123
+PrePath=
+DataOffset=0
+DataNb=2
+Data=INT
+Dir=OUT
+
+[1734-IE2V]
+Desc=2 analog inputs
+O2Tinst=190
+O2Tsize=0
+T2Oinst=101
+T2Osize=10
+CFGinst=123
+PrePath=
+DataOffset=4
+DataNb=2
+Data=INT
+Dir=IN
+
+

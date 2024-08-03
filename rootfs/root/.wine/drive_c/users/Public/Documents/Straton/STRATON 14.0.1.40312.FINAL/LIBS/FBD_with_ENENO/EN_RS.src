@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    Latch (SET, RESET1);
+    Q1 := Latch.Q1;
+end_if;
+

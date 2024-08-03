@@ -1,0 +1,8 @@
+ENO := EN;
+if EN then
+    cmp1 (I1, I2);
+    LT := cmp1.LT;
+    EQ := cmp1.EQ;
+    GT := cmp1.GT;
+end_if;
+

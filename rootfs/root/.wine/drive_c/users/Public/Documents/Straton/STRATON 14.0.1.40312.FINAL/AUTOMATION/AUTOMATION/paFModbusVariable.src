@@ -1,0 +1,12 @@
+sTyp := 'VAR ' + MODE + ' '
+        + any_to_string (OFFSET)
+        + ' ' + any_to_string (MASK);
+if TWOWORDS then
+    sTyp := sTyp + ' 2';
+else
+    sTyp := sTyp + ' 1';
+end_if;
+
+OK := _PRP ('FWRITE', any_to_string (FID),
+            sTyp, SYMBOL, RET);
+

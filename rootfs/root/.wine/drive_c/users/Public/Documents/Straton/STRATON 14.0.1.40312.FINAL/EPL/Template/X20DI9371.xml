@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Root desc="12 Digital Inputs 24 VDC, Sink, IEC 61131-2, Type 1">
+	<dataTypeList>
+		<struct name="Index2100_Sub1E" uniqueID="UID_DT_Index2100_Sub1E">
+			<varDeclaration name="NetworkStatus" uniqueID="Index2100_Sub1E_OK">
+				<label lang="en">Network status from module</label>
+				<label lang="de">Netzwerkstatus vom Modul</label>
+				<USINT />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput01" uniqueID="UID_Index2100_Sub1E_DigitalInput01" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput02" uniqueID="UID_Index2100_Sub1E_DigitalInput02" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput03" uniqueID="UID_Index2100_Sub1E_DigitalInput03" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput04" uniqueID="UID_Index2100_Sub1E_DigitalInput04" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput05" uniqueID="UID_Index2100_Sub1E_DigitalInput05" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput06" uniqueID="UID_Index2100_Sub1E_DigitalInput06" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput07" uniqueID="UID_Index2100_Sub1E_DigitalInput07" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput08" uniqueID="UID_Index2100_Sub1E_DigitalInput08" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput09" uniqueID="UID_Index2100_Sub1E_DigitalInput09" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput10" uniqueID="UID_Index2100_Sub1E_DigitalInput10" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput11" uniqueID="UID_Index2100_Sub1E_DigitalInput11" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="DigitalInput12" uniqueID="UID_Index2100_Sub1E_DigitalInput12" size="1">
+				<label lang="de">24 VDC, 0,1 bis 25 ms Schaltverzoegerung, Sink</label>
+				<label lang="en">24 VDC, 0.1 to 25 ms switching delay, sink</label>
+				<label lang="fr">24 VDC, retard de commutation 0ms - 25ms</label>
+				<BITSTRING />
+			</varDeclaration>
+			<varDeclaration name="Bit_Unused_01" uniqueID="UID_Index2100_Sub1E_Bit_Unused_01" size="4">
+				<label lang="en">Unused</label>
+				<label lang="de">Keine Funktion</label>
+				<BITSTRING />
+			</varDeclaration>
+		</struct>
+	</dataTypeList>
+	<parameterList>
+		<parameter uniqueID="UID_DOM_Index2100_Sub1E" access="read">
+			<label lang="en">MOD_InputImage_DOM</label>
+			<label lang="de">MOD_InputImage_DOM</label>
+			<dataTypeIDRef uniqueIDRef="UID_DT_Index2100_Sub1E" />
+		</parameter>
+	</parameterList>
+	<Object index="2100" name="X20DI9371" objectType="9">
+		<SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="const" defaultValue="32" />
+		<SubObject subIndex="01" name="MOD_ChildCfgIndex_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="0" lowLimit="0" highLimit="0x21FE" />
+		<SubObject subIndex="02" name="MOD_ChildCfgCount_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" />
+		<SubObject subIndex="03" name="MOD_ChildActCount_U8" objectType="7" dataType="0005" accessType="ro" defaultValue="0" />
+		<SubObject subIndex="04" name="MOD_CfgMode_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="1" lowLimit="0" highLimit="3" />
+		<SubObject subIndex="05" name="MOD_RequestedHardwareId_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="0" actualValue="7061" />
+		<SubObject subIndex="06" name="MOD_RequestedVendorId_U16" objectType="7" dataType="0006" accessType="rw" />
+		<SubObject subIndex="07" name="MOD_HardwareId_U16" objectType="7" dataType="0006" accessType="ro" />
+		<SubObject subIndex="08" name="MOD_VendorId_U16" objectType="7" dataType="0006" accessType="ro" />
+		<SubObject subIndex="0A" name="MOD_Status_U16" objectType="7" dataType="0006" accessType="ro" />
+		<SubObject subIndex="0B" name="MOD_NetworkStatus_U8" objectType="7" dataType="0005" accessType="ro" />
+		<SubObject subIndex="0C" name="MOD_BlockMask_U8" objectType="7" dataType="0005" accessType="ro" />
+		<SubObject subIndex="0D" name="MOD_BootCount_U8" objectType="7" dataType="0005" accessType="ro" />
+		<SubObject subIndex="0E" name="MOD_LastError_U8" objectType="7" dataType="0005" accessType="rw" />
+		<SubObject subIndex="11" name="MOD_FirmwareVersion_U16" objectType="7" dataType="0006" accessType="ro" />
+		<SubObject subIndex="12" name="MOD_HardwareVariant_U16" objectType="7" dataType="0006" accessType="ro" />
+		<SubObject subIndex="13" name="MOD_SerialNo_U32" objectType="7" dataType="0007" accessType="ro" />
+		<SubObject subIndex="14" name="MOD_PhysicalSlotNumber_U8" objectType="7" dataType="0005" accessType="ro" />
+		<SubObject subIndex="15" name="MOD_NodeSwitch_U8" objectType="7" dataType="0005" accessType="ro" />
+		<SubObject subIndex="16" name="MOD_RequestedSerialNo_U32" objectType="7" dataType="0007" accessType="rw" defaultValue="0" />
+		<SubObject subIndex="17" name="MOD_ModuleErrorReaction_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" />
+		<SubObject subIndex="1F" name="MOD_InputImage2_DOM" objectType="7" dataType="000F" accessType="ro" defaultValue="0" PDOmapping="TPDO" />
+		<SubObject subIndex="23" name="MOD_Firmware_DOM" objectType="7" dataType="000F" accessType="wo" />
+		<SubObject subIndex="32" name="MOD_FirmwareChannel_U16" objectType="7" dataType="0006" accessType="rw" defaultValue="2" />
+		<SubObject subIndex="1E" name="MOD_InputImage_DOM" objectType="7" PDOmapping="TPDO" uniqueIDRef="UID_DOM_Index2100_Sub1E" />
+		<SubObject subIndex="20" name="MOD_OutputImage_DOM" objectType="7" dataType="000F" accessType="rw" PDOmapping="RPDO" />
+		<SubObject subIndex="21" name="MOD_AsyncRead_U64" objectType="7" dataType="001B" accessType="rw" />
+		<SubObject subIndex="22" name="MOD_AsyncWrite_U64" objectType="7" dataType="001B" accessType="wo" />
+		<SubObject subIndex="5A" name="MOD_CfgFunctionMode_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="0" />
+		<SubObject subIndex="5B" name="MOD_CfgEntryCount_U8" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="3" />
+		<SubObject subIndex="64" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000002010001" />
+		<SubObject subIndex="65" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000002010002" />
+		<SubObject subIndex="66" name="MOD_CfgEntry_U64" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x0000000A05010012" />
+	</Object>
+	<Object index="1600" name="PDO_RxMappParam_00h_AU64" objectType="8">
+		<SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="0" PDOmapping="no" />
+	</Object>
+	<Object index="1A00" name="PDO_TxMappParam_00h_AU64" objectType="8">
+		<SubObject subIndex="00" name="NumberOfEntries" objectType="7" dataType="0005" accessType="rw" defaultValue="0" actualValue="1" PDOmapping="no" />
+		<SubObject subIndex="01" name="ObjectMapping" objectType="7" dataType="001B" accessType="rw" defaultValue="0" actualValue="0x00180000001E2100" PDOmapping="no" />
+	</Object>
+ </Root>

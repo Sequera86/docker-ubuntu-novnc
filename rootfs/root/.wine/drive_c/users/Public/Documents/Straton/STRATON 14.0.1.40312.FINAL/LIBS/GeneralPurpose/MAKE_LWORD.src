@@ -1,0 +1,2 @@
+Q := rol (any_to_lword (HiPart), 32) + any_to_lword (LoPart);
+

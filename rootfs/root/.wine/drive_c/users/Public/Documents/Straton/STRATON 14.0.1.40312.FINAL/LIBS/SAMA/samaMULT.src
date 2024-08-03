@@ -1,0 +1,18 @@
+OUT := IN1 * IN2;
+if nbIn > 2 then OUT *= IN3; end_if;
+if nbIn > 3 then OUT *= IN4; end_if;
+if nbIn > 4 then OUT *= IN5; end_if;
+if nbIn > 5 then OUT *= IN6; end_if;
+if nbIn > 6 then OUT *= IN7; end_if;
+if nbIn > 7 then OUT *= IN8; end_if;
+if nbIn > 8 then OUT *= IN9; end_if;
+if nbIn > 9 then OUT *= IN10; end_if;
+if nbIn > 10 then OUT *= IN11; end_if;
+if nbIn > 11 then OUT *= IN12; end_if;
+if nbIn > 12 then OUT *= IN13; end_if;
+if nbIn > 13 then OUT *= IN14; end_if;
+if nbIn > 14 then OUT *= IN15; end_if;
+if nbIn > 15 then OUT *= IN16; end_if;
+
+
+

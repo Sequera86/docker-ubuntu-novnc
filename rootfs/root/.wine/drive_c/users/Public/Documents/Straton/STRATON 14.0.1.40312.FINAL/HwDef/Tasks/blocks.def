@@ -1,0 +1,17 @@
+<CF
+N:sysStopTask
+I:DINT:Task
+O:BOOL:OK
+>
+<CF
+N:sysStartTask
+I:DINT:Task
+I:BOOL:Warm
+O:BOOL:OK
+>
+<CF
+N:sysCfgTask
+I:DINT:Prio
+I:STRING:Opts
+O:BOOL:OK
+>

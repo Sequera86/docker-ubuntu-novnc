@@ -1,0 +1,2 @@
+OK := _PRP ('CreateIO', any_to_string (SLOT), DevType, '', RET);
+

@@ -1,0 +1,102 @@
+; K5DBReg.def
+; K5 registry for available operations
+
+; operators
+
+<SO
+N:1
+I:ANY:IN
+O:ANY:Q
+>
+
+<SO
+N:NEG
+I:ANY:IN
+O:ANY:Q
+>
+
+<SO
+N:Not
+I:BOOL:IN
+O:BOOL:Q
+>
+
+<SO
+N:>> [I]
+I:ANY:IN
+I:ANY:Arr[]
+I:DINT:I
+>
+
+<SO
+N:>> [I,J]
+I:ANY:IN
+I:ANY:Arr[]
+I:DINT:I
+I:DINT:J
+>
+
+<SO
+N:>> [I,J,K]
+I:ANY:IN
+I:ANY:Arr[]
+I:DINT:I
+I:DINT:J
+I:DINT:K
+>
+
+<SO
+N:[I] >>
+I:ANY:Arr[]
+I:DINT:I
+O:ANY:OUT
+>
+
+<SO
+N:[I,J] >>
+I:ANY:Arr[]
+I:DINT:I
+I:DINT:J
+O:ANY:OUT
+>
+
+<SO
+N:[I,J,K] >>
+I:ANY:Arr[]
+I:DINT:I
+I:DINT:J
+I:DINT:K
+O:ANY:OUT
+>
+
+<SF
+L:95
+N:MoveBlock
+I:ANY:Src[]
+I:ANY:Dst[]
+I:DINT:PosSrc
+I:DINT:PosDst
+I:DINT:NB
+O:BOOL:OK
+>
+
+<SF
+L:161
+N:CountOf
+I:ANY:Arr[]
+O:DINT:Q
+>
+
+<SF
+L:0
+N:INC
+I:ANY:@IN
+O:ANY:Q
+>
+<SF
+L:0
+N:DEC
+I:ANY:@IN
+O:ANY:Q
+>
+

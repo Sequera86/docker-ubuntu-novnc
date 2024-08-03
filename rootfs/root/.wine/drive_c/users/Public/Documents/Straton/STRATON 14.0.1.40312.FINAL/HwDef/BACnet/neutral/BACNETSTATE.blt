@@ -1,0 +1,11 @@
+Current BACnet token ring state
+
+Inputs:
+
+- MAXMASTER : maximum master address (<=127)
+
+Outputs:
+
+- OK : TRUE if successful
+- NS : next master station
+- Sole : sole master flag

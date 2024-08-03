@@ -1,0 +1,15 @@
+(*
+OnDivZero
+This subprogram will be called in case of a division by zero
+*)
+
+(* call the following function to stop in FATAL ERROR mode *)
+
+// FatalStop (TRUE);
+
+(* or call this function to finish the current cycle
+   and then turns in "cycle setting" mode. *)
+
+// CycleStop (TRUE);
+
+

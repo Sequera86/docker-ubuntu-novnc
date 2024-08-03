@@ -1,0 +1,12 @@
+<CF
+N:IEC61850S_ReadControlBlock
+I:STRING:name
+I:ANY:@value
+O:BOOL:Q
+>
+<CF
+N:IEC61850S_WriteControlBlock
+I:STRING:name
+I:ANY:value
+O:BOOL:Q
+>

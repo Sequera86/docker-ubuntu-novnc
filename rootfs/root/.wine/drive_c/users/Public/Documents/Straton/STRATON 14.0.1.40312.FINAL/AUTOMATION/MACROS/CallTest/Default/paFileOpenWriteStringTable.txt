@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-NAME=Name of the string table
+[SHORT]
+V-RET=~
+V-FID=~
+V-NAME=~

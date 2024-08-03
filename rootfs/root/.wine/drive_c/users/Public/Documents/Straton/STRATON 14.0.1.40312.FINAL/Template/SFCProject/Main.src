@@ -1,0 +1,5 @@
+#info=WSGE1EDT
+@I:0,0=1;
+:end
+#endinfo
+_step _init GS1;

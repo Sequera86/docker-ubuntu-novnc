@@ -1,0 +1,14 @@
+PLS1 (true, TD);
+
+if not bInitDone or TD <= t#0s then
+    OUT := 0.0;
+    bInitDone := true;
+    INprev := IN;
+elsif PLS1.Q then
+    OUT := ((IN - INprev) * 1000.0) / any_to_real (TD);
+    INprev := IN;
+end_if;
+
+OUT := limit (PMIN, OUT, PMAX);
+
+

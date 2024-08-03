@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Structure name
+V-COMMENT=Description

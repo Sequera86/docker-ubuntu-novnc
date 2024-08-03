@@ -1,0 +1,1 @@
+VAR CTRLVAR : STRING(128); (* Name of the control variable. *)

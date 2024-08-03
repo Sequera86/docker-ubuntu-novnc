@@ -1,0 +1,13 @@
+JsonNewArray - function - Create a new array node
+
+Inputs:
+
+(none)
+
+Outputs:
+
+hNode : DINT; handle of the new node or 0 if failed
+
+This function creates a new JSON node which represents an array of value.
+The function allocates the node in memory. The application is responsible for releasing the memory.
+The array is created empty. Use JsonAddArrayElt function to set its elements.

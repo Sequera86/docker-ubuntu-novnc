@@ -1,0 +1,1 @@
+OK := _PRP ('SendToFolder', PROG, FOLDER, '', RET);

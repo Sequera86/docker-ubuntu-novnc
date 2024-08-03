@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Program name
+V-COMM=Comment text

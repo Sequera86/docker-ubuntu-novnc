@@ -1,0 +1,15 @@
+[LONG]
+V-NEWVAR=~
+V-STYP=~
+V-FID=File identifier
+V-INSTANCE=Name of the instance (if function block)
+V-OK=TRUE if successful
+V-NAME=Block type name
+V-LABEL=~
+V-SARG=
+[SHORT]
+V-NEWVAR=~
+V-STYP=~
+V-NAME=
+V-LABEL=~
+V-SARG=

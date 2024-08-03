@@ -1,0 +1,8 @@
+[LONG]
+V-EXT=~
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-RO="READ ONLY" attribute flag
+[SHORT]
+V-EXT=~
+V-RO=

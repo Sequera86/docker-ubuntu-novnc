@@ -1,0 +1,23 @@
+[desc]
+XMLGETSYBVALUE=Get value of a variable using its symbol
+XMLFIRSTCHILD=Start enumerating child tags
+XMLCHECKTAGNAME=Test the name of a tag
+XMLSETSYBVALUE=Set value of a variable using its symbol
+XMLLASTERROR=Get report of last XML error
+XMLGETTAGCONTT=Get tag contents as text buffer
+XMLSETTAGCONTT=Set tag contents with text buffer
+XMLSETTAGCONT=Set tag contents with string
+XMLMANAGER=XML main memory manager
+XMLWRITEDOCFILE=Output an XML document to file
+XMLGETTAGNAME=Get tag name
+XMLGETTAGATTRIB=Get value of an attribute
+XMLADDCHILD=Add a child tag to a tag
+XMLFREEDOC=Release an XML document
+XMLNEXTCHILD=Enumerate child tags
+XMLNEWDOC=Create a new XML document with empty root tag
+XMLGETTAGCONT=Get tag contents as string
+XMLPARSEDOCFILE=Create a new XML document from file
+XMLWRITEDOCTXB=Format an XML document to text
+XMLSETTAGATTRIB=Set value of an attribute
+XMLPARSEDOCTXB=Create a new XML document from text
+XMLGETPARENT=Get parent tag

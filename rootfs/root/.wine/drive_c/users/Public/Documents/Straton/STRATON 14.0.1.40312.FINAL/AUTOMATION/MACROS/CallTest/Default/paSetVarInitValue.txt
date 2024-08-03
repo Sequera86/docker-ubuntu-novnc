@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-VALUE=Initial value
+[SHORT]
+V-RET=~
+V-OK=~
+V-NAME=~
+V-VALUE=~

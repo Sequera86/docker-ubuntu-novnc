@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    Sem (CLAIM, RELEASE);
+    BUSY := Sem.BUSY;
+end_if;
+

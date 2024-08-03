@@ -1,0 +1,6 @@
+if Create then
+    OK := _PRP ('CreateProjectIf', '', '', '', RET);
+else
+    OK := _PRP ('OpenProject', '', '', '', RET);
+end_if;
+

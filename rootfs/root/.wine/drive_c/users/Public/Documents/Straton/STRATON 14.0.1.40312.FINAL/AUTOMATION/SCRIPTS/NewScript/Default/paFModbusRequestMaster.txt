@@ -1,0 +1,12 @@
+[LONG]
+V-ADDRESS=MODBUS address
+V-FID=File identifier
+V-OK=TRUE if successful
+V-PERIOD=Activation period
+V-NAME=Optional request name (description)
+V-SLAVENO=Slave number
+V-TRIALS=Number of trials
+V-NBITEM=Number of items (words or bits)
+V-TIMEOUT=Timeout
+V-REQUEST=Request type: RIW / RHW / RIB / RCB / WHW / WCB
+V-MODE=Activation mode: PERIODIC / ONCALL / ONCHANGE

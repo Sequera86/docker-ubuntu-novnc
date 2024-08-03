@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := bcd_to_bin (IN);
+end_if;
+

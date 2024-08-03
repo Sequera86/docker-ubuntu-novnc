@@ -1,0 +1,10 @@
+[LONG]
+V-TITLE=Title of the window
+V-RET=~
+V-OK=TRUE if successful
+V-TEXT=Text to display
+[SHORT]
+V-TITLE=~
+V-RET=~
+V-OK=~
+V-TEXT=~

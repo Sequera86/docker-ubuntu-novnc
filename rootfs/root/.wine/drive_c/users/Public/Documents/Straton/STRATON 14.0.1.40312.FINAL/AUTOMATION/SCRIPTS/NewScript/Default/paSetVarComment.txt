@@ -1,0 +1,5 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-TAG=Short comment (tag) text
+V-COMM=Long comment text

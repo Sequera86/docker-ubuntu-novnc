@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := limit (xMIN, IN, xMAX);
+end_if;
+

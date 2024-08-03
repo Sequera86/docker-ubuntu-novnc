@@ -1,0 +1,6 @@
+[LONG]
+V-LANGUAGE=~
+V-OK=TRUE if successful
+V-NAME=Structure name
+[SHORT]
+V-LANGUAGE=~

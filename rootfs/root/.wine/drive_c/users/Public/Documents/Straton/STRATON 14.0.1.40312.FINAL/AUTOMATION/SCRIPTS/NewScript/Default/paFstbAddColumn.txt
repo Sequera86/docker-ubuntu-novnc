@@ -1,0 +1,5 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Column name
+V-COL=Column index (0 based)

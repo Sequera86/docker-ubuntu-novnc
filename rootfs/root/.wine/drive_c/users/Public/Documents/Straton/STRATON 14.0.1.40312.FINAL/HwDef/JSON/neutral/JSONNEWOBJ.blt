@@ -1,0 +1,13 @@
+JsonNewObj - function - Create a new object node
+
+Inputs:
+
+(none)
+
+Outputs:
+
+hNode : DINT; handle of the new node or 0 if failed
+
+This function creates a new JSON node which represents a structured value (object).
+The function allocates the node in the memory. The application is responsible for releasing the memory.
+The object is created empty. Use JsonAddMember function to set its data members.

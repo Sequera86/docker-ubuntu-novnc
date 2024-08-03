@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-COMM=Comment text
+V-OK=TRUE if successful
+[SHORT]
+V-RET=~
+V-COMM=~
+V-OK=~

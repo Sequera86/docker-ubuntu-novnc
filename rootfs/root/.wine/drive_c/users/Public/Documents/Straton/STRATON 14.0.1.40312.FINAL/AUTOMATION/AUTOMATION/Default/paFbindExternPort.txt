@@ -1,0 +1,6 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Optional name for configuration
+V-ADDR=IP address
+V-PORT=IP port number

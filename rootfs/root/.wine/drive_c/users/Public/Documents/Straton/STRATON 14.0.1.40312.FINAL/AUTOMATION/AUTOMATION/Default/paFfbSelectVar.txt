@@ -1,0 +1,10 @@
+[LONG]
+V-SLAVE=Index of the slave (1 based)
+V-SLAVE1=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-VARIABLE=Index of the variable (1 based)
+V-MASTER=Index of the master (1 based)
+[SHORT]
+V-SLAVE1=~
+V-VARIABLE=

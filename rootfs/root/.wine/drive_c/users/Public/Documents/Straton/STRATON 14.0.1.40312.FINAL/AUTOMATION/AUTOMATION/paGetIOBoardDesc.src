@@ -1,0 +1,21 @@
+ENU (TRUE, 1, 'GetIO', NAME, '', '');
+if ENU.ITEM = '' then
+    NbChannel := 0;
+    DevName := '';
+    DevGroup := '';
+    Comment := '';
+    OK := FALSE;
+else
+    ENU (FALSE, 2, 'GetIO', NAME, '', '');
+    NbChannel := any_to_dint (ENU.ITEM);
+    ENU (FALSE, 3, 'GetProgram', NAME, '', '');
+    DevName := ENU.ITEM;
+    ENU (FALSE, 4, 'GetProgram', NAME, '', '');
+    DevGroup := ENU.ITEM;
+
+    ENU (TRUE, 1, 'GetComm', 'B', NAME, '');
+    Comment := ENU.ITEM;
+
+    OK := TRUE;
+end_if;
+

@@ -1,0 +1,11 @@
+Acknowledge first alarm in the FIFO.
+
+Inputs:
+- EN : Enable FB to acknowledge alarm. If TRUE, the alarm will be removed from FIFO.
+- SEND_ACK : TRUE if you want the controller to send an alarm acknowledgement to the device.
+FALSE otherwise
+- PNIOSTATUS : PNIO Status to be sent in the alarm acknowledgement
+
+Outputs:
+- Q : TRUE if OK. FALSE if KO
+

@@ -1,0 +1,3 @@
+sTyp := any_to_string (DIAG) + ' ' + NAME;
+OK := _PRP ('FWRITE', any_to_string (FID), 'MVAR STATUS', sTyp, RET);
+

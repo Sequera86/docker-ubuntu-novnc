@@ -1,0 +1,30 @@
+[SHORT]
+V-_TCC=~
+V-_COUNT=~
+V-STATE_OP=~
+V-CC1=~
+V-_OPERATION=~
+V-_CLEAR=~
+V-_CODERSP=~
+V-SESSIONID=~
+V-CC=~
+V-S_SELECT=~
+V-_CODECMD=~
+V-CA=~
+V-OP=~
+V-S_OPERATE=~
+[LONG]
+V-_TCC=~
+V-_COUNT=~
+V-STATE_OP=~
+V-CC1=~
+V-_OPERATION=~
+V-SESSIONID=Session ID
+V-_CLEAR=~
+V-_CODERSP=~
+V-CC=~
+V-S_SELECT=State of select command (Not used for directop)
+V-CA=Control Action variable (defined in fieldbus)
+V-_CODECMD=~
+V-S_OPERATE=State of Operate/DirectOperate command
+V-OP=~

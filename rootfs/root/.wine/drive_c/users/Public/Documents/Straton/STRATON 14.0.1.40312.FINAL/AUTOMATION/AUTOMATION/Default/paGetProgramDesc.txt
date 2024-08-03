@@ -1,0 +1,7 @@
+[LONG]
+V-COMMENT=Description
+V-LANGUAGE=Programming language
+V-PARENT=Parent SFC program
+V-NAME=Program name
+V-OK=TRUE if successful
+V-KIND=Kind of program

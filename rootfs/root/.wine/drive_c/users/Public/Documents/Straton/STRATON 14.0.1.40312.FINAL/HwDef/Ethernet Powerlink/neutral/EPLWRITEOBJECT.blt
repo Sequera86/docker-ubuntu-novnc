@@ -1,0 +1,18 @@
+Writing a simple parameter (SDO)
+The EplWriteObject user defined function block is used for sending a simple SDO message to write a parameter to a slave.
+
+Input arguments:
+
+- EN : the message is sent on a rising edge of this input
+- PORT : name of the port (not used)
+- SLV : powerlink slave number
+- Object : SDO parameter index
+- Sub : SDO parameter sub-index
+- VAL : parameter value
+- LEN : number of bytes to send - from 1 to 4
+- TO : timeout for exchange
+
+Output arguments:
+
+- Ready : TRUE when the block is ready - FALSE during an exchange
+- RC : powerlink return check

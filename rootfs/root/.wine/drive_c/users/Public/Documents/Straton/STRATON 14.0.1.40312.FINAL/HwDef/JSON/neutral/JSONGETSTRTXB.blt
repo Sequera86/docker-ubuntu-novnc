@@ -1,0 +1,12 @@
+JsonGetStrTxb - function - Get the value of a string node in a text buffer
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+hTxb : DINT; handle of a valid text buffer that will receive the value
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+The text buffer is filled on output with the string value of the node.

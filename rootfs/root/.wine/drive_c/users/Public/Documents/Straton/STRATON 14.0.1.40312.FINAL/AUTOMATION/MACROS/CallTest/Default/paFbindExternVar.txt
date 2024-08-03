@@ -1,0 +1,14 @@
+[LONG]
+V-STYP=~
+V-RET=~
+V-FID=File identifier
+V-ID=Identifier of the bound variable
+V-OK=TRUE if successul
+V-NAME=Variable name
+[SHORT]
+V-STYP=~
+V-RET=~
+V-FID=~
+V-ID=~
+V-OK=~
+V-NAME=~

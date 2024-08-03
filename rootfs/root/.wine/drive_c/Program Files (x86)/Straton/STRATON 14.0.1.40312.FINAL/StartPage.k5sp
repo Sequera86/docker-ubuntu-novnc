@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    K5STARTPAGE
+-->
+
+<K5STARTPAGE>
+	<head backColor="RGB(0,23,56)" height="100" logo_file="straton_logo_white-medium75.png" logo_pos="-10" logo_url="https://straton-plc.com/en/">
+		<block type="Title" x="50" y="10" sx="-1" sy="90" borderColor="RGB(0,0,0)" borderSize="none" font_name="segoe UI" font_size="40" textColor="RGB(255,255,255)">Welcome to straton Editor</block>
+	</head>
+
+	<body backColor="RGB(0,23,56)">
+		<block type="Tutorial" x="50" y="10" sx="300" sy="70" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(0,23,56)" backColor="RGB(255,255,255)" url="Getting started with straton.pdf">Tutorial</block>
+		<block type="CreateProject" x="50" y="110" sx="300" sy="70" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(255,255,255)" backColor="RGB(185,194,31)">Create a new project</block>
+		<block type="CreateMTList" x="50" y="210" sx="300" sy="70" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(255,255,255)" backColor="RGB(185,194,31)">Create a Multitask project list</block>
+		<block type="DemoProjects" x="50" y="310" sx="300" sy="140" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(0,23,56)" backColor="RGB(255,255,255)">Demo projects</block>
+		<block type="RecentProjects" x="380" y="10" sx="300" sy="440" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(0,23,56)" backColor="RGB(255,255,255)">Recent</block>
+		<block type="TricksAndTips" x="710" y="10" sx="700" sy="440" borderColor="RGB(127,127,127)" borderSize="none" font_name="Arial" font_size="23" textColor="RGB(0,23,56)" backColor="RGB(255,255,255)" backColorGrad="RGB(167,169,172)" backMethod="leftColor190" url="https://www.youtube.com/channel/UCEbOkLKIVMZKaYPWStXcJug?view_as=subscriber">Tips and tricks
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="1. How to lock your program with straton PLC lk.mp4" preview="1-How to lock your program with straton PLC.PNG">Lock a program
+				<description>How to lock a program with a password
+In this short video, you will learn how to lock a program
+with a password in straton.
+				</description>
+			</tip>	
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="2. How to lock your project with a password before compiling lk.mp4" preview="2-How to lock your project with a password before compiling it.PNG">Protect a project
+				<description>How to protect your project with a password
+In this short video, you will learn how to protect a complete
+project with a password in straton.
+				</description>
+			</tip>	
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="3-How to project your project program lk.mp4" preview="3-How to protect your project program.PNG">Protect a program
+				<description>How to protect your programs
+In this short video, you will learn how to protect your
+programs in straton.
+				</description>
+			</tip>	
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="4-How to choose the language of your program lk.mp4" preview="4-How to choose the language of your program.png">Programming language
+				<description>How to select the language of your program
+In this short video, you will learn how to select the
+programming language of a program in straton.
+				</description>
+			</tip>
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="5-How to convert your program LK.mp4" preview="5-How to convert your program.PNG">Convert a program
+				<description>How to convert your program
+In this short video, you will learn how to change the
+programming language of a program in straton.
+				</description>
+			</tip>
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="6-How to insert a lot of variable in one structure LK.mp4" preview="6-How to insert a lot of variables in one structure.PNG">Big structures
+				<description>How to insert multiple variables in a structure
+In this short video, you will learn how to add several variables
+in a structure in straton.
+				</description>
+			</tip>
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="7-How to snapshot your program LK.mp4" preview="How to snapshot your program.PNG">Snapshot a program
+				<description>How to snapshot a program
+In this short video, you will learn how to use the "Snap Shot"
+functionality to create an image of a program in straton.
+				</description>
+			</tip>
+			
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="8-How to find your tutorials on straton PLC_1.mp4" preview="8-How to find tutorials.PNG">Find tutorials
+				<description>How to find tutorials
+In this short video, you will learn how to find a tutorial in straton.
+				</description>
+			</tip>
+
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="9-How to know the execution order_1.mp4" preview="9-How to know execution order.PNG">Execution order
+				<description>How to know the execution order
+In this short video, you will learn the correct
+execution order in straton.
+				</description>
+			</tip>
+			
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="10-dragdrop variables_2.mp4" preview="10-dragdrop variables.PNG">Drag'n drop variables
+				<description>How to drag'n drop variables
+In this short video, you will learn how to drag'n drop
+variables in straton.
+				</description>
+			</tip>
+
+			<tip x ="20" sx="180" font_name="Arial" font_size="20" textColor="RGB(0,23,56)" borderSize="none" url="https://www.youtube.com/channel/UCEbOkLKIVMZKaYPWStXcJug?view_as=subscriber" preview="MORE">MORE...
+				<description>Watch more videos on our YouTube channel.</description>
+			</tip>
+
+			<block type="Preview" x="200" y="50" sx="450" sy="280" borderColor="RGB(0,23,56)" borderSize="none" backMethod="none"/>
+			<block type="Description" x="200" y="350" sx="400" sy="80" borderColor="RGB(0,23,56)" font_name="Arial" font_size="18" borderSize="none" backMethod="none"/>
+		</block>
+	</body>
+
+	<foot backColor="RGB(0,23,56)" height="30" text_pos="10">
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="Website.png" url="https://straton-plc.com/en/">Website</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="FAQ.png" url="https://straton-plc.com/en/services-and-support/straton-automation-software-q-and-a/">FAQ</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="Download.png" url="https://straton-plc.com/en/downloads/">Download</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="News.png" url="https://straton-plc.com/en/news-straton/">News</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="contact.png" url="https://straton-plc.com/en/contact/">Contact us</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="linkedin.png" url="https://www.linkedin.com/company/straton-automation/">LinkedIn</text>
+		<text font_name="Arial" font_size="16" textColor="RGB(255,255,255)" logo_file="youtube.png" url="https://www.youtube.com/channel/UCEbOkLKIVMZKaYPWStXcJug?view_as=subscriber">YouTube</text>
+	</foot>
+</K5STARTPAGE>

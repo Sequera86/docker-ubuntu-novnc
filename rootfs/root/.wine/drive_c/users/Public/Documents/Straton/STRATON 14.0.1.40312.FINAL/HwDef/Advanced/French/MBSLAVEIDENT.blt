@@ -1,0 +1,18 @@
+MBSlaveIdent - set MODBUS Slave Device Information
+
+Inputs:
+
+Vendor : item 0x00 (basic) vendor name
+Product : item 0x01 (basic) product code
+Revision : item 0x02 (basic) major / minor revision
+Specific : items 0x80 to 0x87 (extended) specific objects
+
+Outputs:
+
+OK : TRUE if successful
+
+The MODBUS Slave stack supports function 43 for device identification.
+You can use this function to set/change device identification information.
+
+Basic items are strings. Maximum length is 51 characters for each of them.
+You can define up to eight 16 bit specific items, passed in the "Specific" input as an array of INT.

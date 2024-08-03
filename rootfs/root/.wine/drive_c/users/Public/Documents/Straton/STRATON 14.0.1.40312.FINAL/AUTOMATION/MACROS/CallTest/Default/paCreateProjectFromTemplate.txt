@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-TEMPLATE=Template name or pathname
+[SHORT]
+V-RET=~
+V-OK=~
+V-TEMPLATE=~

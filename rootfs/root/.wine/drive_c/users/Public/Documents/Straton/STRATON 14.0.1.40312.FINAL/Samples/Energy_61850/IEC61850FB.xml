@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<K5project version="1.1" path="C:\JEROME\STRATON Applications\_IEC61850\IEC61850_V4\">
+   <types>
+      <type name="IEC61850_Beh" kind="ENUM">
+      <enumval value="INVALID"/>
+      <enumval value="ON"/>
+      <enumval value="BLOCKED"/>
+      <enumval value="TEST"/>
+      <enumval value="TEST_BLOCKED"/>
+      <enumval value="OFF"/>
+      </type>
+   </types>
+   <variables>
+      <vargroup name="(Global)" kind="GLOBAL">
+      </vargroup>
+      <vargroup name="(Retain)" kind="RETAIN">
+      </vargroup>
+   </variables>
+   <networks>
+      <binding>
+      </binding>
+   </networks>
+   <fieldbus>
+      <K5BusIec850s K5ID="1" FILEDIR="C:\Temp\IEC61850Server" NICID="F0-4D-A2-9F-6E-B6" LOCALGOOSESCL="" MAXBRCB="100" MAXCONN="0" __F="-8">
+      </K5BusIec850s>
+   </fieldbus>
+   <programs>
+      <pou name="IEC61850_BSC" kind="UDFB" lge="ST">
+         <vargroup name="IEC61850_BSC" kind="LOCAL">
+            <var name="Control" type="INT" attr="INOUT"/>
+            <var name="ControlModel" type="SINT" attr="IN"/>
+            <var name="Oper_ctlVal" type="SINT" attr="IN"/>
+            <var name="stVal" type="SINT" attr="IN"/>
+            <var name="ctlVal" type="SINT" attr="OUT"/>
+            <var name="bOperate" type="BOOL" attr="OUT"/>
+            <var name="bSelected" type="BOOL"/>
+            <var name="SelectAddCause" type="INT"/>
+            <var name="bSelectAck" type="BOOL"/>
+            <var name="bSelect" type="BOOL"/>
+            <var name="OperateAddCause" type="INT"/>
+            <var name="OperateAck" type="BOOL"/>
+            <var name="DoneAddCause" type="INT"/>
+            <var name="DoneAck" type="BOOL"/>
+            <var name="CancelAddCause" type="INT"/>
+            <var name="CancelAck" type="BOOL"/>
+            <var name="Cancel" type="BOOL"/>
+            <var name="Busy" type="BOOL"/>
+            <var name="bPrint" type="BOOL"/>
+            <var name="PreviousValue" type="INT"/>
+            <var name="bDebug" type="BOOL"/>
+         </vargroup>
+         <defines name="IEC61850_BSC"/>
+         <srcdic>[CONTEXT]
+HEXADISPLAY=OFF
+EXPANDED=IEC61850_BSC,(Global)
+SORT_COL=-1
+SORT_ASCENDING=OFF
+NBCOL=11
+
+[COL0]
+POSITION=0
+NAME=Name
+TYPE=1
+TYPEEX=0
+WIDTH=325
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL1]
+POSITION=2
+NAME=Type
+TYPE=2
+TYPEEX=0
+WIDTH=173
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL2]
+POSITION=3
+NAME=Dim.
+TYPE=3
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL3]
+POSITION=4
+NAME=Attrib.
+TYPE=4
+TYPEEX=0
+WIDTH=75
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL4]
+POSITION=5
+NAME=Syb.
+TYPE=9
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL5]
+POSITION=6
+NAME=Init value
+TYPE=5
+TYPEEX=0
+WIDTH=60
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL6]
+POSITION=7
+NAME=User Group
+TYPE=14
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL7]
+POSITION=8
+NAME=Tag
+TYPE=6
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL8]
+POSITION=9
+NAME=Description
+TYPE=7
+TYPEEX=0
+WIDTH=500
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL9]
+POSITION=-1
+NAME=Properties
+TYPE=10
+TYPEEX=1
+WIDTH=100
+SHOW=OFF
+FILTER=
+NBFILTER=0
+
+[COL10]
+POSITION=1
+NAME=Value
+TYPE=8
+TYPEEX=0
+WIDTH=70
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[FIND]
+WHAT=
+FLAGS=65537
+
+[REPLACE]
+WHAT=
+REPLACE=
+FLAGS=65537
+UPDATE=ON
+
+         </srcdic>
+         <sourceSTIL>bPrint := false;
+if Control &lt;&gt; PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  // Select
+     99 : //99 - wants Select
+        if bPrint then printf(&apos;IEC61850:%ld Wants Select&apos;,any_to_dint(Control)); end_if;
+        bSelect := true;  
+        
+        if bSelectAck = true then
+            bSelect := false;  
+        
+            //100 select_ok; 103 select_failed
+            Control := 100 + SelectAddCause;
+            printf(&apos;IEC61850:%ld bSelect&apos;,any_to_dint(Control));
+        end_if;
+            
+  //Operate
+    199 : //199 - wants operate
+        printf(&apos;IEC61850:%ld Wants operate: %ld&apos;,any_to_dint(Control), any_to_dint(Oper_ctlVal));
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause = 0 then
+                Control := 200; //200 operate_ok
+            else
+                Control := 200 + OperateAddCause;
+            end_if;
+            printf(&apos;IEC61850:%ld Operate&apos;,any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        bSelected := false;  
+  
+  //Operated with enhanced security
+    200 : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                Control := 400 + DoneAddCause;
+                printf(&apos;IEC61850:%ld Done&apos;,any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            bSelected := false;
+            Control := 300 + CancelAddCause;
+            printf(&apos;IEC61850:%ld Cancel&apos;,any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+
+// Select 
+bSelectAck := bSelect;
+
+// Operate
+OperateAck :=  bOperate;
+if bOperate then
+    ctlVal := Oper_ctlVal;
+end_if;
+
+// Cancel
+CancelAck :=  Cancel;
+ 
+         </sourceSTIL>
+      </pou>
+      <pou name="IEC61850_DPC" kind="UDFB" lge="ST">
+         <vargroup name="IEC61850_DPC" kind="LOCAL">
+            <var name="Control" type="INT" attr="INOUT"/>
+            <var name="ControlModel" type="SINT" attr="IN"/>
+            <var name="Oper_ctlVal" type="BOOL" attr="IN"/>
+            <var name="Select_ctlVal" type="BOOL" attr="IN"/>
+            <var name="stVal" type="UDINT" attr="IN"/>
+            <var name="ctlVal" type="BOOL" attr="OUT"/>
+            <var name="bOperate" type="BOOL" attr="OUT"/>
+            <var name="Busy" type="BOOL"/>
+            <var name="Cancel" type="BOOL"/>
+            <var name="CancelAck" type="BOOL"/>
+            <var name="CancelAddCause" type="INT"/>
+            <var name="DoneAck" type="BOOL"/>
+            <var name="DoneAddCause" type="INT"/>
+            <var name="OperateAck" type="BOOL"/>
+            <var name="OperateAddCause" type="INT"/>
+            <var name="Select" type="BOOL"/>
+            <var name="SelectAck" type="BOOL"/>
+            <var name="SelectAddCause" type="INT"/>
+            <var name="Selected" type="BOOL"/>
+            <var name="_id_FBD_Q82" type="UDINT">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="bPrint" type="BOOL"/>
+            <var name="PreviousValue" type="INT"/>
+            <var name="bDebug" type="BOOL" init="true"/>
+         </vargroup>
+         <defines name="IEC61850_DPC">         </defines>
+         <srcdic>[CONTEXT]
+HEXADISPLAY=OFF
+EXPANDED=(Global)
+SORT_COL=-1
+SORT_ASCENDING=OFF
+NBCOL=11
+
+[COL0]
+POSITION=0
+NAME=Name
+TYPE=1
+TYPEEX=0
+WIDTH=453
+SHOW=ON
+FILTER=*xcbr*
+NBFILTER=1
+FILTER0=*xcbr*
+
+[COL1]
+POSITION=2
+NAME=Type
+TYPE=2
+TYPEEX=0
+WIDTH=80
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL2]
+POSITION=3
+NAME=Dim.
+TYPE=3
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL3]
+POSITION=4
+NAME=Attrib.
+TYPE=4
+TYPEEX=0
+WIDTH=75
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL4]
+POSITION=5
+NAME=Syb.
+TYPE=9
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL5]
+POSITION=6
+NAME=Init value
+TYPE=5
+TYPEEX=0
+WIDTH=60
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL6]
+POSITION=7
+NAME=User Group
+TYPE=14
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL7]
+POSITION=8
+NAME=Tag
+TYPE=6
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL8]
+POSITION=9
+NAME=Description
+TYPE=7
+TYPEEX=0
+WIDTH=500
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL9]
+POSITION=-1
+NAME=Properties
+TYPE=10
+TYPEEX=1
+WIDTH=100
+SHOW=OFF
+FILTER=
+NBFILTER=0
+
+[COL10]
+POSITION=1
+NAME=Value
+TYPE=8
+TYPEEX=0
+WIDTH=70
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[FIND]
+WHAT=
+FLAGS=65537
+
+[REPLACE]
+WHAT=
+REPLACE=
+FLAGS=65537
+UPDATE=ON
+
+         </srcdic>
+         <sourceSTIL>bPrint := false;
+if Control &lt;&gt; PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     STATE_WANTS_SELECT: //99 - wants select
+        if bPrint then printf(&apos;IEC61850:%ld Wants select&apos;,any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true then
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            if (SelectAddCause &lt; 100) then
+                Control := 100 + SelectAddCause;
+            else
+                Control := SelectAddCause;
+            end_if;
+            
+            printf(&apos;IEC61850:%ld Select&apos;,any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    STATE_WANTS_OPERATE : //199 - wants Operate
+        if bPrint then printf(&apos;IEC61850:%ld Wants bOperate&apos;,any_to_dint(Control)); end_if;
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause &lt; 200 then
+                Control := 200 + OperateAddCause; //200 operate_ok
+            else
+                Control := OperateAddCause;
+            end_if;
+            printf(&apos;IEC61850:%ld Operate&apos;,any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        Selected := false;  
+  
+  //Operated with enhanced security
+    STATE_OPERATE_OK : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                if DoneAddCause &lt; 400 then
+                    Control := 400 + DoneAddCause;
+                else
+                    Control := DoneAddCause;
+                end_if;
+                
+                printf(&apos;IEC61850:%ld Done&apos;,any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            if CancelAddCause &lt; 300 then
+                Control := 300 + CancelAddCause;
+            else
+                Control := CancelAddCause;
+            end_if;
+            
+            printf(&apos;IEC61850:%ld Cancel&apos;,any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+// Received select command
+if Select then
+    SelectAddCause := STATE_SELECT_OK;
+    (*
+    if Select_ctlVal then
+        // Close
+        if stVal = UDINT#2 then
+            SelectAddCause := STATE_SELECT_POSITION_REACHED;
+        elsif stVal = UDINT#1 then
+            SelectAddCause := STATE_SELECT_OK;
+        elsif stVal = UDINT#0 then
+            SelectAddCause := STATE_SELECT_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            SelectAddCause := STATE_SELECT_INVALID_POSITION;
+        end_if;
+    else
+        // Open
+        if stVal = UDINT#1 then
+            SelectAddCause := STATE_SELECT_POSITION_REACHED;
+        elsif stVal = UDINT#2 then
+            SelectAddCause := STATE_SELECT_OK;
+        elsif stVal = UDINT#0 then
+            SelectAddCause := STATE_SELECT_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            SelectAddCause := STATE_SELECT_INVALID_POSITION;
+        end_if;
+    end_if;*)
+    SelectAck := True;
+else
+    SelectAck := False;
+end_if;
+
+
+DoneAddCause := 0;
+DoneAck := ( SEL ( NOT ctlVal, UDINT#2, UDINT#1 ) = stVal );
+
+CancelAck := Cancel;
+CancelAddCause := 0;
+
+// Received operate command
+if bOperate then
+    if ctlVal then
+        // Close
+        if stVal = UDINT#2 then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = UDINT#1 then
+            OperateAddCause := STATE_OPERATE_OK;
+        elsif stVal = UDINT#0 then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    else
+        // Open
+        if stVal = UDINT#1 then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = UDINT#2 then
+            OperateAddCause := STATE_OPERATE_OK;
+        elsif stVal = UDINT#0 then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    end_if;
+    OperateAck := True;
+else
+    OperateAck := False;
+end_if;
+
+
+         </sourceSTIL>
+      </pou>
+      <pou name="IEC61850_SPC" kind="UDFB" lge="ST">
+         <vargroup name="IEC61850_SPC" kind="LOCAL">
+            <var name="Control" type="INT" attr="INOUT"/>
+            <var name="ControlModel" type="SINT" attr="IN"/>
+            <var name="Oper_ctlVal" type="BOOL" attr="IN"/>
+            <var name="stVal" type="BOOL" attr="IN"/>
+            <var name="ctlVal" type="BOOL" attr="OUT"/>
+            <var name="bOperate" type="BOOL" attr="OUT"/>
+            <var name="Selected" type="BOOL"/>
+            <var name="SelectAddCause" type="INT"/>
+            <var name="SelectAck" type="BOOL"/>
+            <var name="Select" type="BOOL"/>
+            <var name="OperateAddCause" type="INT"/>
+            <var name="OperateAck" type="BOOL"/>
+            <var name="DoneAddCause" type="INT"/>
+            <var name="DoneAck" type="BOOL"/>
+            <var name="CancelAddCause" type="INT"/>
+            <var name="CancelAck" type="BOOL"/>
+            <var name="Cancel" type="BOOL"/>
+            <var name="Busy" type="BOOL"/>
+            <var name="_id_FBD_Q51" type="BOOL">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="_id_FBD_Q50" type="BOOL">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="bPrint" type="BOOL"/>
+            <var name="bDebug" type="BOOL"/>
+            <var name="PreviousValue" type="INT"/>
+         </vargroup>
+         <defines name="IEC61850_SPC"/>
+         <srcdic>[CONTEXT]
+HEXADISPLAY=OFF
+EXPANDED=IEC61850_SPC
+SORT_COL=-1
+SORT_ASCENDING=OFF
+NBCOL=11
+
+[COL0]
+POSITION=0
+NAME=Name
+TYPE=1
+TYPEEX=0
+WIDTH=286
+SHOW=ON
+FILTER=
+NBFILTER=3
+FILTER0=*ggio*
+FILTER1=*sps*
+FILTER2=
+
+[COL1]
+POSITION=2
+NAME=Type
+TYPE=2
+TYPEEX=0
+WIDTH=80
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL2]
+POSITION=3
+NAME=Dim.
+TYPE=3
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL3]
+POSITION=4
+NAME=Attrib.
+TYPE=4
+TYPEEX=0
+WIDTH=75
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL4]
+POSITION=5
+NAME=Syb.
+TYPE=9
+TYPEEX=0
+WIDTH=40
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL5]
+POSITION=6
+NAME=Init value
+TYPE=5
+TYPEEX=0
+WIDTH=60
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL6]
+POSITION=7
+NAME=User Group
+TYPE=14
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL7]
+POSITION=8
+NAME=Tag
+TYPE=6
+TYPEEX=0
+WIDTH=50
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL8]
+POSITION=9
+NAME=Description
+TYPE=7
+TYPEEX=0
+WIDTH=500
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[COL9]
+POSITION=-1
+NAME=Properties
+TYPE=10
+TYPEEX=1
+WIDTH=100
+SHOW=OFF
+FILTER=
+NBFILTER=0
+
+[COL10]
+POSITION=1
+NAME=Value
+TYPE=8
+TYPEEX=0
+WIDTH=70
+SHOW=ON
+FILTER=
+NBFILTER=0
+
+[FIND]
+WHAT=
+FLAGS=65537
+
+[REPLACE]
+WHAT=
+REPLACE=
+FLAGS=65537
+UPDATE=ON
+
+         </srcdic>
+         <sourceSTIL>bPrint := false;
+if Control &lt;&gt; PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     99 : //99 - wants select
+        if bPrint then printf(&apos;IEC61850:%ld Wants select&apos;,any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true then
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            Control := 100 + SelectAddCause;
+            printf(&apos;IEC61850:%ld Select&apos;,any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    199 : //199 - wants Operate
+        if bPrint then printf(&apos;IEC61850:%ld Wants bOperate&apos;,any_to_dint(Control)); end_if;
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause = 0 then
+                Control := 200; //200 operate_ok
+            else
+                Control := 200 + OperateAddCause;
+            end_if;
+            printf(&apos;IEC61850:%ld Operate&apos;,any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        Selected := false;  
+  
+  //Operated with enhanced security
+    200 : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                Control := 400 + DoneAddCause;
+                printf(&apos;IEC61850:%ld Done&apos;,any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            Control := 300 + CancelAddCause;
+            printf(&apos;IEC61850:%ld Cancel&apos;,any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+SelectAck := Select;
+SelectAddCause := 0;
+
+OperateAck := bOperate;
+OperateAddCause := 0;
+
+DoneAck := Busy;
+DoneAddCause := 0;
+
+CancelAck := Cancel;
+CancelAddCause := 0;
+         </sourceSTIL>
+      </pou>
+   </programs>
+</K5project>

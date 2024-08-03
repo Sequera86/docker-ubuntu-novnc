@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-NAME=Name of the spy list
+[SHORT]
+V-RET=~
+V-FID=~
+V-NAME=~

@@ -1,0 +1,5 @@
+str := any_to_string (DimHigh) + ','
+     + any_to_string (DimMedium) + ','
+     + any_to_string (DimLow);
+OK := _PRP ('DimVar', Name, str, '', RET);
+

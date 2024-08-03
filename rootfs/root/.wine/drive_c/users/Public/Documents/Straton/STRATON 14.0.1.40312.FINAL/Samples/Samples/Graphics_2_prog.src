@@ -1,0 +1,27 @@
+// reset command
+if bReset then
+    // turn everything off
+    for i := 0 to 4 do
+        Light[i].bON := FALSE;
+    end_for;
+    // and turn WIN flag off
+    bWin := FALSE;
+    // ignore the rest...
+    return;
+end_if;
+
+// operate commands - for each position
+for i := 0 to 4 do
+    // if command and not yet lightened
+    if Light[i].bCmd & not Light[i].bON then
+        // light
+        Light[i].bON := TRUE;
+        // toggle two positions in front
+        Light[mod (i+2, 5)].bON := not Light[mod (i+2, 5)].bON;
+        Light[mod (i+3, 5)].bON := not Light[mod (i+3, 5)].bON;
+    end_if;
+end_for;
+
+// win if everything is ON
+bWin := Light[0].bON & Light[1].bON & Light[2].bON
+        & Light[3].bON & Light[4].bON;

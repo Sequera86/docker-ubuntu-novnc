@@ -1,0 +1,6 @@
+Instanciate a MODBUS TCP Server on a TCP port
+Inputs:
+   IN: open the port if TRUE
+   PORT: TCP port number
+Ouputs:
+   OK : TRUE if port currently open

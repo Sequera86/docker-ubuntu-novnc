@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-VALUE=Value for the key
+V-NAME=Name of the key

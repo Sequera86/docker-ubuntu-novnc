@@ -1,0 +1,11 @@
+[LONG]
+V-COMMENT=Description
+V-LANGUAGE=~
+V-PARENT=~
+V-OK=TRUE if successful
+V-NAME=Structure name
+V-KIND=~
+[SHORT]
+V-LANGUAGE=~
+V-PARENT=~
+V-KIND=~

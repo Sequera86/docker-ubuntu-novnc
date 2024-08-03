@@ -1,0 +1,34 @@
+Compiler V14.0.100.119
+>> Complex variables stored in a separate segment
+Loading application symbols...
+iecDT2UNIX
+iecDT2UNIX: (9): [W10034] Warning: loop instructions may block the target cycle
+iecDT2UNIX: (20): [W10034] Warning: loop instructions may block the target cycle
+iecDT2UNIX: (24): [W10034] Warning: loop instructions may block the target cycle
+iecDT2UNIX: (30): [W10034] Warning: loop instructions may block the target cycle
+iecUNIX2DT
+iecUNIX2DT: (22): [W10034] Warning: loop instructions may block the target cycle
+iecUNIX2DT: (41): [W10034] Warning: loop instructions may block the target cycle
+iecUNIX2DT: (45): [W10034] Warning: loop instructions may block the target cycle
+iecUNIX2DT: (52): [W10034] Warning: loop instructions may block the target cycle
+XCBR1
+LLN0
+MMXU1
+TimeQuality
+XCBR1_Simu
+IEC61850_SPC
+IEC61850_DPC
+DBPOS_Simulation
+Building application data...
+Complex data types definition = 1589 bytes
+< Call stack depth = 1 >
+< 121 BOOL/SINT; 38 INT; 204 DINT/REAL; 30 LINT/LREAL; 6 TIME; 6 STRING; 0 WSTRING  - CRC = 9ef7529d >
+< CT Segment = 904 byte(s) >
+< 20 I/Os >
+ Profiled variables:
+   IEC61850S2: 20
+Relocating code...
+< Code CRC=315f2f7c - File CRC=b9b4ba10 - Retain CRC=2e08dfd7 - Size=34664 >
+< 13 POUs - 5 programs, 2 sub-programs, 6 UDFBs >
+No error detected - 8 warning(s)
+Online Change is disabled

@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := shl (IN, NBS);
+end_if;
+

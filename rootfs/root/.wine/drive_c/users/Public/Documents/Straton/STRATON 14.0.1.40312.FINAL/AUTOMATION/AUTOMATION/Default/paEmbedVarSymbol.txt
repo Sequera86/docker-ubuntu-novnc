@@ -1,0 +1,9 @@
+[LONG]
+V-NEWVAR=~
+V-STR=
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-SYB=TRUE to embed symbol
+[SHORT]
+V-NEWVAR=~
+V-STR=

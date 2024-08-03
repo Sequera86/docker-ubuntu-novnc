@@ -1,0 +1,14 @@
+/V,L,BOOL(0)[0],8,EN
+/V,=TRUE
+/V,L,DINT(0)[0],8,K
+/V,L,REAL(0)[0],8,IN0
+/V,L,REAL(0)[0],8,IN1
+/V,L,REAL(0)[0],8,IN2
+/V,L,REAL(0)[0],8,IN3
+/V,L,REAL(0)[0],8,IN4
+/V,L,REAL(0)[0],8,IN5
+/V,L,REAL(0)[0],8,IN6
+/V,L,REAL(0)[0],8,IN7
+/V,L,BOOL(0)[0],16,ENO
+/V,L,REAL(0)[0],16,Q
+

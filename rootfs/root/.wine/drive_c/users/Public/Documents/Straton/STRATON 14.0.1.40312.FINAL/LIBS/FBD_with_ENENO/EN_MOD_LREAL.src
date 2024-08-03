@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := modlr (IN, BASE);;
+end_if;
+

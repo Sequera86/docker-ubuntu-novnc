@@ -1,0 +1,15 @@
+sTyp := 'CLI ';
+if OPENMODBUS then
+    sTyp := sTyp + 'TCP ';
+else
+    sTyp := sTyp + 'RTU ';
+end_if;
+sTyp := sTyp + any_to_string (PORT);
+if RECONNECT then
+    sTyp := sTyp + ' R';
+else
+    sTyp := sTyp + ' x';
+end_if;
+OK := _PRP ('FWRITE', any_to_string (FID),
+            sTyp, ADDRESS, RET);
+

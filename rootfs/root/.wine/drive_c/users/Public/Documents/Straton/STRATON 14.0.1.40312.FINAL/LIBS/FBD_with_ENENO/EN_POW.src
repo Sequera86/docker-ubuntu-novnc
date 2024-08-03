@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := pow (IN, EX);
+end_if;
+

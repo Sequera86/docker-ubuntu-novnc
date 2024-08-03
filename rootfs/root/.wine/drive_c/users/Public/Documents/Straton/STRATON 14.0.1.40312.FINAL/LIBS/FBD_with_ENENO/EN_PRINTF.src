@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := printf (FMT, ARG1, ARG2, ARG3, ARG4);
+end_if;
+

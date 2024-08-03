@@ -1,0 +1,2 @@
+sArg := NAME + ' ' + INSTANCE;
+OK := _PRP ('FWRITE', any_to_string (FID), 'FBDS BLOCK', sArg, RET);

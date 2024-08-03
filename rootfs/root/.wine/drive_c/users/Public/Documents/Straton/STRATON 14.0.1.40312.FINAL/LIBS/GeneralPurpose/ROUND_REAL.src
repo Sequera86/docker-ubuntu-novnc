@@ -1,0 +1,14 @@
+rMod := abs (IN - trunc (IN));
+Q := Trunc (IN);
+
+if IN >= 0 then
+    if rMod > 0.5 then
+        Q :=  Q + 1.0;
+    end_if;
+else
+    if rMod > 0.5 then
+        Q :=  Q - 1.0;
+    end_if;
+end_if;
+
+

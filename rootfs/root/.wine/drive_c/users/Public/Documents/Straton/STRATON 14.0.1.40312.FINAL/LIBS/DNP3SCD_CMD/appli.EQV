@@ -1,0 +1,48 @@
+
+// Command status (used with binary output and analog output)
+#define _DNP3S_STATUS_SUCCESS             0
+#define _DNP3S_STATUS_TIMEOUT             1
+#define _DNP3S_STATUS_NOSELECT            2
+#define _DNP3S_STATUS_FORMATERROR         3
+#define _DNP3S_STATUS_NOTSUPPORTED        4
+#define _DNP3S_STATUS_ALREADYACTIVE       5
+#define _DNP3S_STATUS_HARDWAREERROR       6
+#define _DNP3S_STATUS_LOCAL               7
+#define _DNP3S_STATUS_TOOMANYOBJECTS      8
+#define _DNP3S_STATUS_NOTAUTHORIZED       9
+#define _DNP3S_STATUS_AUTOMATIONINHIBIT   10
+#define _DNP3S_STATUS_PROCESSINGLIMITED   11
+#define _DNP3S_STATUS_OUTOFRANGE          12
+#define _DNP3S_STATUS_DOWNSTREAMLOCAL     13
+#define _DNP3S_STATUS_ALREADYCOMPLETE     14
+
+#define _DNP3S_STATUS_BLOCKED             15
+#define _DNP3S_STATUS_CANCELLED           16
+#define _DNP3S_STATUS_BLOCKEDOTHERMASTER  17
+#define _DNP3S_STATUS_DOWNSTREAMFAIL      18
+#define _DNP3S_STATUS_UNDEFINED           127
+#define _DNP3S_STATUS_PENDING             255
+
+// Command (used with binary output and analog output)
+#define _DNP3S_CODE_SELECT        16#01
+#define _DNP3S_CODE_OPERATE       16#02
+#define _DNP3S_CODE_DIRECTOPERATE 16#04
+
+// Operation type (used with binary output command)
+#define _DNP3S_OP_NUL      0
+#define _DNP3S_OP_PULSEON  1
+#define _DNP3S_OP_PULSEOFF 2
+#define _DNP3S_OP_LATCHON  3
+#define _DNP3S_OP_LATCHOFF 4
+
+// Trip-Close Code field (used with binary output command)
+#define _DNP3S_TCC_NUL    0
+#define _DNP3S_TCC_CLOSE  1
+#define _DNP3S_TCC_TRIP   2
+
+// State machine (used with binary output command)
+#define _DNP3S_SM_NUL          0
+#define _DNP3S_SM_INPROGRESS   1
+#define _DNP3S_SM_FINISHED     2
+
+

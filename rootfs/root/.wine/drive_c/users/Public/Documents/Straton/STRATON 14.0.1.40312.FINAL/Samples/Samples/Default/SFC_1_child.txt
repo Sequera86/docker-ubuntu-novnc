@@ -1,0 +1,10 @@
+[SHORT]
+V-X2=~
+V-X3=~
+V-X1=~
+V-X4=~
+[LONG]
+V-X2=sequence output
+V-X3=sequence output
+V-X1=sequence output
+V-X4=sequence output

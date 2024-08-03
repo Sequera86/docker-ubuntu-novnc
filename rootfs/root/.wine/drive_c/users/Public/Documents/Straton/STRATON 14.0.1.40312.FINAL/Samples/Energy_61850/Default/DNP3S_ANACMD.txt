@@ -1,0 +1,24 @@
+[SHORT]
+V-STATE_OP=~
+V-CMD=~
+V-_CODERSP=~
+V-SESSIONID=~
+V-CC=~
+V-S_SELECT=~
+V-_CODECMD=~
+V-CA=~
+V-RSP=~
+V-OP=~
+V-S_OPERATE=~
+[LONG]
+V-STATE_OP=Current state
+V-CMD=~
+V-SESSIONID=Session ID
+V-_CODERSP=~
+V-CC=~
+V-S_SELECT=State for Select command (Not used for directop)
+V-CA=Control Action variable (defined in Fieldbus)
+V-_CODECMD=~
+V-RSP=~
+V-OP=Current command
+V-S_OPERATE=State for Operate/DirectOperate command

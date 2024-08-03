@@ -1,0 +1,24 @@
+Set default formatting for BACnet object names
+(overrides the static configuration of formatting)
+
+Inputs:
+
+- Prefix : STRING;
+
+Prefix string for all BACnet names
+
+- Length : DINT;
+
+Minimum length for configurated names
+(completed with blank characters)
+Left aligned if this length is less than 0
+
+- Suffix : STRING;
+
+Suffix string for all BACnet names
+
+Outputs:
+
+- OK : BOOL;
+
+True if successful

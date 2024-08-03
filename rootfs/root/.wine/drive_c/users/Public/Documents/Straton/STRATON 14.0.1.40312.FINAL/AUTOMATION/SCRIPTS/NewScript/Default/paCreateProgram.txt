@@ -1,0 +1,4 @@
+[LONG]
+V-LANGUAGE=Programming language
+V-OK=TRUE if successful
+V-NAME=Program name

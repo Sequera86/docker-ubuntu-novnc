@@ -1,0 +1,10 @@
+Send NMT command.
+
+Inputs:
+
+- EN : Enable the block for executing command
+- Cmd : Command to execute (powerlink defines 0x10 - 0x17)
+
+Outputs:
+- Ready : TRUE when the block is ready - FALSE during an exchange
+- RC : powerlink return check

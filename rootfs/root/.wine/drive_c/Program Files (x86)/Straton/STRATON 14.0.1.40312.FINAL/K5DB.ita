@@ -1,0 +1,719 @@
+﻿; K5 data base error messages
+; The text before "=" is an identifier and should never be changed
+
+; import export assistant
+
+[XML]
+ExpXmlRecreVar=Re-create variables that cannot be changed
+ExpXmlDontMergeMemebers=Do not merge private members of UDFBs
+Import=Importa
+Close=Chiudi
+Binding=Binding
+CantOverwrite=L'oggetto non può essere sovrascritto.
+Overwrite=Overwrite
+AskOverwrite=Questo elemento esiste già nella libreria. Si desidera sovrascriverlo?
+Yes=Si
+No=No
+YesAll=Si tutti
+NoAll=No tutti
+Cancel=Annulla
+CantImportReg=The item is defined in another library and cannot be deleted
+OemClose=Si deve chiudere la lista progetti prima di poter importaer le librerie OEM. Continuare?
+ImpAssist=Assistente di importazione
+ImpOemLib=Import OEM Library
+OemCatSel=In quale categoria si vuole importare gli oggetti?
+OK=OK
+SelImp=Seleziona file sorgente
+SelExp=Seleziona file destinatario;
+Finish=Fine
+ImpGoing=Import in corso. Prego attendere. . .
+ImpDone=Import compleatato.
+ImpBadFile=File da importare non valido o corrotto!
+Next=Successivo
+ImpWelcome=Benvenuto nell'assistente di importazione. Cosa si vuole importare?
+ImpXml=Importa oggetti progetto (XML)
+ImpOld=Importa progetti da una vecchia versione
+ImpComDef=Importa definizioni comuni
+ImpLibDef=Importa definizione di libreria
+ExpGoing=Esportazione in corso. Prego attendere. . .
+ExpDone=Esportazione completata.
+ExpAssist=Assistente di esportazione
+POUs=Programmi e UDFBs
+Structs=Strutture
+Types=Tipi di dato
+Configs=Configurazioni
+NoSel=Nessun oggetto selezionato!
+CantExp=Impossibile creare il file di destinazione!
+SelItems=Oggetti selezionati da esportare:
+ExpGlob=Esporta variabili globali
+SelKind=Seleziona un tipo di progetto:
+SelObj=Seleziona un oggetto:
+Export=Esporta
+SelPrj=Seleziona un progetto:
+ExpWelcome=Benvenuti nell'assistente di Export. Cosa si vuole esportare?
+ExpXml=Esporta un progetto completo (XML)
+ExpItems=Esporta alcuni oggetti di progetto (XML)
+ExpOld=Esporta un progetto a una versione piu vecchia
+ExpComDef=Esporta definizioni comuni
+ImpSTFile=Importa file ST
+ImportTC6=Import PLCopen TC6 file (XML)
+ImpDefLen=(Lunghezza STRING di default se non specificata)
+ImpOverPOU=Cancella/Ricrea POU se sono gia esistenti
+BadStrLen=Lunghezza stringa Invalida
+HmiDev=Import Embedded HMI hardware definition
+RestartWB=Si deve rilanciare il Workbench per utilizzare l'oggetto(i) importati
+ImpIntCnt=Dichiarazione contatori per tipo INT
+ExpGVars=Variables (Global and RETAIN)
+ExpXmlT5=Format: default
+ExpXmlTC6=Format: PLCopen TC6
+AskMergeOver=This item already exists in the project. Do you want to overwrite it?
+Merge=Merge
+DontMerge=Do not merge
+MergeType=Tipo
+MergePou=POU
+MergeCfg=Impostazioni
+MergeEqv=Definitions
+MergeLst=List
+MergeRcp=Ricetta
+MergeGra=Grafica
+MergeFile=File
+MegeVars=Group of variables
+MergeTestSeq=Test sequence
+MergeScope=Soft scope
+
+; properties dialog box
+
+[EditProps]
+
+EmbedSymbol=&Simbolo dichiarato
+EmbedAddress=&Indirizzo Variabile:
+Props=Embedded &properties:
+OK=OK
+Cancel=Annulla
+
+; monitoring builder
+
+[MonBuilder]
+
+Programs=Programmi
+Variables=Variabili
+LocalVariables=Variabili locali
+Name=Nome:
+Value=Valore
+Alias=Alias
+Tag=TAG
+Description=Descrizione
+RuntimeMessages=Emissione Runtime
+StepsAndTransitions='Step' e 'Transition'
+Actions=Azioni
+P1=P1
+N=N
+P0=P0
+Configurations=Configurazioni
+Binding=Binding
+Lists=Spy
+
+; configurations
+
+[RTC]
+Configurations=Configurazioni
+Default=<Default>
+Select=Seleziona
+Import=Importa
+Upload=&Upload
+Remove=&Rimuovi
+RemovePrompt=Eliminare definitivamente la configurazione ?
+Std=Standard
+StdBlocks=blocchi e funzioni standard
+Types=Tipi di dato
+Uploading=Upload della configurazione runtime...
+Wait=Attendere prego..
+CnxError=Impossibile connettersi al Runtime. Controllare le impostazioni di comunicazione.
+Timeout=Impossibile caricare la configurazione. Probabilmente non è supportata dal runtime.
+CommError=Impossibile caricare la configurazione. Probabilmente non è supportata dal runtime.
+OverwriteConf=This configuration already exists. Do-you want to overwrite it?
+TooOld=Il runtime connesso è una versione più vecchia e non è possibile descriverne le funzionalità.
+OEM=OEM
+OEMBlocks=Blocchi o funzioni specifici OEM
+None=(nessuno)
+Desc=Descrizione
+VisibilityEngineeringTool=Visibility in the Engineering Tool:
+ShowSupportedOnly=Show supported functions and datatypes only
+
+; main key - do not change that line!
+
+[Messages]
+
+; misc.
+
+Desc=Descrizione
+GLOBAL=GLOBAL
+RETAIN=RETAIN
+PrpDisPrgHot=A POU cannot be deleted with On Line Change active. Do-you want to disable it?
+
+DlgAskCreateVar=Simbolo non esistente. Si desidera crearlo?
+DlgType=Tipo:
+DlgRange=Dove:
+DlgYes=Si
+DlgNo=No
+DlgCancel=Annulla
+DlgCreateVarKO=La variabile non può essere creata
+DlgAskVar=Questo oggetto non esite. Si vuole:
+DlgAskCreate=Dichiara una nuova variabile
+DlgAskRename=Rinomina la variabile
+DlgVariables=Variabili
+DlgKeywords=Parole chiave e funzioni
+DlgNoUserGroup=(nessun gruppo utente)
+DlgAll=(tutti)
+DlgLocalOnly=Local variables only
+DlgNoInstance=Hide FB instances
+DlgOtherProject=Other project...
+DlgSCLocked=This variable group is locked by Version Control. Cannot create variable.
+HasLocks=Operation denied. Some items are locked by version control.
+
+Ok=OK
+ErrInternal=Internal error
+ErrRenameSameName=Il nuovo nome specificato è il nome corrente dell'oggetto
+
+; project handling
+
+ErrCreateProject=Impossibile creare il progetto - Errore disco o percorso non valido
+ErrUnknownClient=Client ID sconosciuto o non valido - Richiesta negata
+ErrUnknownProject=Progetto sconosciuto o non disponibile
+ErrProjectShared=Il progetto è in uso da un altra applicazione
+ErrDeleteProject=Impossibile eliminare il progetto - Errore disco
+ErrRenameProject=Impossibile rinominare/spostare il progetto - Errore disco o percorso non valido
+ErrCopyProject=Impossibile copiare il progetto - Errore disco
+
+; program handling
+
+ErrUnknownProgram=Programma sconosciuto
+ErrProgramNameUsed=Questo nome è gia in uso da un altro programma
+ErrInvProgramName=Nome programma non valido. Only letters (A..Z,a..z) digits and underscore marks are allowed. The first character cannot be a digit.
+ErrDelParentProgram=Il programma specificato ha dei sottoprogetti (Children) e non può essere eliminato
+ErrProgramLocked=Il programma corrente è attualmente bloccato da un altra applicazione
+ErrBadProgramMove=Il programma non può essere spostato nella posizione specificata
+ErrTooManyProgs=Troppi programmi nel progetto
+ErrProgSection=Selezione non valida - Sezioni sequenziali possono contenere sono programmi SFC
+ErrProgLanguage=Linguaggio non valido - Sezioni sequenziali possono contenere sono programmi SFC
+
+; data types
+ErrBadEnum=Vaore(i) enumerati non validi
+ErrDupTypeName=Nome gia usato da un altro tipo di dato
+
+; groups
+
+ErrUnknownGroup=Gruppo di variabili sconosciuto
+ErrCantDelGroup=Il gruppo di variabili specificato non può essere eliminato
+ErrGroupLocked=Il gruppo di variabili specificato è attualmente bloccato da un'altra applicazione
+
+; variables
+
+ErrCantDelIOVar=Variabili IO non possono essere eliminate
+ErrUnknownVar=Variabile sconosciuta
+ErrVarLocked=La variabile è attualmente bloccata
+ErrCantRenIOVar=Variabili IO non possono essere rinominate - E' possibile modificare l'Alias
+ErrVarNameUsed=Il nome specificato è gia in uso
+ErrInvVarName=Nome non valido
+ErrUnknownType=Tipo specificato sconosciuto
+ErrBadIOType=Questo tipo non può essere usato per variabili IO
+ErrCantDimIO=Variabili IO non possono essere definite come array
+ErrCantDimType=Istanze di Function block non possono essere definite come array
+ErrInvDim=Dimensione array non valida. E'possibile definire 3 dimensioni separata dalla virgola.La dimensione totale non può eccedere 65535.
+ErrCantLengthType=La 'lunghezza' è riservata per i tipi di dato STRING
+ErrInvLength=Lunghezza stringa errata
+ErrCantChangeAttr=Gli attributi per questa variabile non possono essere modificati
+ErrCantChangeReadonly=L'attributo 'Sola lettura' non può essere modificato per questa variabile
+ErrCantAliasInternalVar=L' 'Alias' può essere usato solo per variabili IO
+ErrCantInitValFBInstance=Istanze di Function block non possono avere un valore iniziale
+ErrCantInitValArray=Array non possono avere valore iniziale
+ErrBadInitValue=Valore non valido
+ErrCantInitFBParam=I parametri di IN/OUT non possono avere un valore iniziale
+ErrCantDimFBParam=I paramentri IN/OUT non possono essere definiti come array
+ErrCantRetainInstance=Le variabili RETAIN non possono essere istanze di 'Function Block'
+
+; objects
+
+ErrUnknownObject=Oggetto sconosciuto
+
+; comments
+
+ErrBadCommentLanguage=Il linguaggio selezionato non è valido per la descrizione dell'oggetto
+ErrCantGiveMultilineCommToVar=La descrizione multilinea non può essere assegnata alle variabili
+
+; import/export
+
+ErrCantCreateExportFile=Non è possibile creare il file di esportazione
+ErrCantOpenImportFile=Non è possibile aprire il file di import
+ErrInvalidImportFile=Formato file di import non valido
+ErrCantCreateImportProgram=Non è possibile creare il programma di import
+ErrExptHideUDFB=La sorgente non può essere nascosta nel file esportato se il programma non è un UDFB
+ExpHideNoCode=UDFB non può essere esportato se non è mai stato compilato
+
+; Online Change
+
+ErrHotEnabled=Questa operazione non è consentita se l'On Line Change è abilitato
+
+; external variables
+
+ErrXV=Le variabili esterne non possono essere di tipo I/O o RETAIN e non possono avere valore iniziale
+
+; events
+
+EvPrjRenamed=Progetto rinominato
+EvPrjReloaded=Progetto aggiornato causa modifiche esterne
+EvPrgNew=Creato nuovo programma
+EvPrgDuplicated=Programma duplicato
+EvPrgRenamed=Programma rinominato
+EvPrgDeleted=Programma eliminato
+EvPrgMoved=Programma spostato
+EvPrgCopied=Programma copiato
+EvPrgLocked=Programma bloccato
+EvPrgChanged=Programma modificato / salvato
+EvPrgUnlocked=Programma sbloccato
+EvPrgVarChanged=Variabili locali modificate
+EvTypeNew=Nuovo tipo di dato creato
+EvTypeRenamed=Tipo di dato rinominato
+EvTypeDeleted=Tipo di dato cancellato
+EvTypeChanged=Modificata definizione tipo di dato
+EvGroupNew=Creato nuovo gruppo di variabili
+EvGroupRenamed=Gruppo di variabili rinominato
+EvGroupDeleted=Gruppo di variabili eliminato
+EvGroupLocked=Gruppo di variabili bloccato
+EvGroupChanged=Moficata definizione gruppo di variabili
+EvGroupUnlocked=Gruppo di variabili sbloccato
+EvGroupMoved=Gruppo di variabili spostato
+EvVarNew=Creata nuova variabile
+EvVarRenamed=Variabile rinominata
+EvVarDeleted=Variabile eliminata
+EvVarLocked=Variabile bloccata
+EvVarChanged=Modificata definizione della variabile
+EvVarUnlocked=Variabile sbloccata
+EvVarMoved=Variabile spostata
+EvK5PropChanged=Modificata proprietà
+EvExtPropChanged=Mofificata proprietà 'Esterna'
+EvCommLangChanged=Linguaggio per i commenti modificato
+EvCommChanged=Testo di commento modificato
+EvHotChanged=Parametri per l' 'On Line change' modificati
+EvxBuild=Compilato codice dell'applicazione
+EvxBuildOpt=Opzioni di compilazione modificate
+EvxDownload=Download applicazione effettuato
+EvxLoadChange=Effettuato download di modifiche per l'On Line Change
+EvxHotChange=Effettuato 'On Line Change'
+EvxEqvCom=Modificate definizioni comuni
+EvxEqvGlo=Modificate definizioni Globali
+EvxHistoryON=Storico delle modifiche attivato
+EvxHistoryOFF=Storico delle modifiche Disattivato
+
+EvXObjNew=Creato nuovo oggetto personalizzato
+EvXObjDeleted=Oggetto personalizzato eliminato
+EvXObjLocked=Oggetto personalizzato bloccato
+EvXObjUnlocked=Oggetto personalizzato sbloccato
+
+EvCfBindLocked=Configurazione Binding bloccata
+EvCfBindUnlocked=Configurazione Binding sbloccata
+EvCfBindSaved=Salvata Configurazione Binding
+EvCfModbusLocked=Configurazione MODBUS bloccata
+EvCfModbusUnlocked=Configurazione MODBUS sbloccata
+EvCfModbusSaved=Modificata Configurazione MODBUS
+EvCfAsiLocked=Configurazione AS-i bloccata
+EvCfAsiUnlocked=Configurazione AS-i sbloccata
+EvCfAsiSaved=Modificata configurazione AS-i
+
+EvWatchFiles=Watch file(s) modificati
+
+EvFolderNew=Creata nuova cartella
+EvFolderRenamed=Cartella rinominata
+EvFolderDeleted=Cartella eliminata
+EvFolderMoved=Cartella spostata
+EvFolderPrgMoved=Programma spostato nella cartella
+
+EvFileNew=Creato nuovo file
+EvFileRenamed=File rinominato
+EvFileDeleted=File eliminato
+EvFileLocked=File bloccato
+EvFileUnlocked=File sbloccato
+EvFileChanged=File modificato
+EvFileReloaded=Fie ricaricato
+EvConfigChanged=Modificata configurazione attiva
+EvVarBeginMove=La variabile sarà spostata
+EvVarEndMove=La variabile è stata spostata
+
+EvCfBusLocked=Fieldbus configuration locked
+EvCfBusUnlocked=Fieldbus configuration unlocked
+EvCfBusSaved=Fieldbus configuration changed
+EvEqvLocked=Global definitions locked
+EvEqvUnlocked=Global definitions unlocked
+EvEqvSaved=Modificate definizioni Globali
+EvSCChanged=Object status changed in Source Control
+EvSCReloaded=Object reloaded from Source Control
+
+; folders
+
+ErrCantDelFolder=Non è possibile eliminare cartelle che contengono programmi
+ErrCantRenFolder=Non è possibile rinominare la cartella - Nome non valido o già in uso
+ErrCantMoveChildToFolder=Non è possibile spostare un sottoprogramma in un altra cartella
+ErrCantMoveTopFolder=Non è possibile spostare la cartella principale
+ErrCantMoveFolderSame=Non è possibile spostare nella stessa posizione
+ErrCantMoveFolderRecurse=Non è possibile spostare la cartella sotto una delle sue sottocartelle
+
+; files
+
+ErrFileLocked=Il file è correntemente bloccato
+ErrBadFileExt=Estensione del file errata
+ErrDupFileName=Nome del file già in uso
+ErrBadFileName=Nome del file non valido
+
+; protection
+
+ErrPrgProtect=Il programma è protetto e non può essere aperto
+
+; multitasking
+
+ErrMtNameClash=Cannot set as public. The variable name is already used for variables of other tasks.
+ErrMtUnlink=Do-you want to remove the variable in other tasks?
+ErrMtCFB=Instances of C function blocks cannot be shared
+
+; project/POU settings
+
+[Dbopt]
+Hlp-OLCdis=This option cannot be modified when On Line Change is enabled.
+Hlp-CodeGeneration=DEBUG mode enables breakpoints and step by step debugging. This option is time consuming.
+Hlp-CTSeg=Enables complex data such as arrays of structures. This option is time consuming.
+Hlp-CycleTime=Duration of the PLC scan. Value 0 means as fast as possible (never wait).
+Hlp-Target=Endianness of the target system processor
+Hlp-Libraries=Double click on "Edit..." to configure extern POUs to used in the project.
+Hlp-External=Double click on "Edit..." to configure libraries linked to the project
+Hlp-Version=Project compilation version number. Double click to reset it.
+Hlp-IOStep=If checked, IOs are exchanged when the program is stopped on a breakpoint or step.
+Hlp-VLock=Locked variables can be forced to a fixed value from the debugger. This option is time consuming.
+Hlp-CapHot=Double click to disable or enable and configure On Line Change capabilities.
+Hlp-FBDFlow=FBD lines values can be monitored during debug if this option is checked.
+Hlp-WarnIsErr=Produca un errore se vengono segnalati degli avvisi.
+Hlp-Warning=Riporta operazioni pericolose o poco chiare al momento della compilazione del tempo.
+Hlp-SFCSafe=Controllare le strutture eventualmente non sicure o bloccanti nei grafici SFC che compilano il tempo.
+Hlp-SafeArray=Al runtime, controllare gli indici utilizzati per operazioni di lettura / scrittura di array.
+Hlp-VSI=If this option is checked status flags and time stamps are allocated at runtime for all variables having either a profile or their symbol embedded.
+Hlp-EmbedAllSyb= Individual are ignored if this option is checked. Warning: downloaded code can be much bigger.
+Hlp-SybCase=Embedded symbols are turned uppercase if this option is not checked.
+Hlp-CmpFBCheck=Segnala avvertimenti se la stessa istanza FB viene chiamata più volte nei programmi.
+Hlp-CheckProfile=Report warnings if several variables have the same profile and settings.
+Hlp-CheckSybConflicts=Report warnings if the same symbol is used for many purposes.
+Hlp-IECCheck=Report warnings if non IEC compliant features or blocks are used.
+Hlp-FBDOptim=FBD optimization may produce smaller and faster code.
+Hlp-LDOptim=LD optimization may produce smaller and faster code.
+Hlp-OnLineCst=If this option is checked, initial values of variables can be changed during debugging.
+Hlp-OutputPouSize=If this option is checked, POU code sizes are displayed after compiling. The code of a POU is limited to 64KB.
+Hlp-StStrict=If this option is not checked, equality comparison of TIME variables is forbidden.
+Hlp-CmpMaxErrCount=After this amount, error messages are no more output.
+Hlp-Password=If defined and not "0", this password will be asked at any connection to the runtime.
+Hlp-CmpOther=Riservato per il supporto tecnico. Fare doppio clic per modificare...
+Hlp-HeapEnable=Dynamic memory is required for some libraries such as XML, Text Buffers and HMI menus. Double click to configure...
+Hlp-CapComm=Communication parameters for On Line connection to the runtime. Double click to edit...
+Hlp-SimulCold=If this option is checked, you can select the starting mode when running the simulator.
+Hlp-MWus=If this option is not checked, cycle time is displayed and edit in microseconds during debug. For all projects!
+Hlp-MWPRECREAL=Numero di cifre decimali visualizzate durante il debug per le variabili REAL. Utilizza "0" per il formato predefinito. Per tutti i progetti!
+Hlp-MWPRECLREAL=Numero di cifre decimali visualizzate durante il debug per le variabili LREAL. Utilizza "0" per il formato predefinito. Per tutti i progetti!
+Hlp-PrpStop=If checked, a confirmation window will be displayed before a stop operation. For all projects!
+Hlp-PrpLoad=If checked, a confirmation window will be displayed before a stop operation. For all projects!
+Hlp-PrpChange=If checked, a confirmation window will be displayed before a stop operation. For all projects!
+Hlp-StartRetain=If checked, the default choice for starting the runtime is with RETAIN variables reloaded. For all projects!
+Hlp-MWLog=If checked, user operations are logged during simulation or On Line test.
+Hlp-ShowMWLog=Double click to open the log file.
+Hlp-Download=Double click to configures the items to be sent to the runtime during download.
+Hlp-CapCC=Double click to configures a "C" compiler to be used as a backend.
+Hlp-NonIecSyb=Not recommended! Some limitations may occur in the ediitors.
+Hlp-RTRIGNO0=If checked, R_TRIG output is always FALSE on the first call to an instance.
+hlp-OptUpdExt=If checked, all extern POUs from other projects are updated before build.
+hlp-OptExtDef=If checked, global definitions of the original projects of extern POUs are loaded.
+hlp-CHECKFBDINP=If checked, errors are generated when some block inputs are not wired in FBD diagrams.
+hlp-POSTBUILD=Commands to be run after a build. Double click to edit...
+hlp-NOREALEQ=Gli errori verranno emessi se i test di uguaglianza vengono eseguiti tra REAL o LREAL.
+hlp-STAN=If this option is checked, the Code Checker is run after any successful build of the project.
+hlp-STANRULES=Double click to configure the rules of the Code Checker...
+hlp-USHR=If dhecked, the most significant bit of a word shifted to the right is set to FALSE.
+hlp-OPTBOOL=If checked, the evalutation of AND/OR expressions from left to right is stopped as soon as the result is known.
+hlp-SC=Double click to configure version control...
+hlp-STRICTRETAINCRC=If this option is activated, variable names are taken into account when checking the set of RETAIN variable at startup.
+
+CfgEdit=Setting modes
+PromptCfgSave=Do you want to save the current setting mode?
+
+Select=Seleziona
+Save=Salva
+SaveAs=Copia
+Rename=Rinomina
+BadCfgName=Name is invalid or already used. Name must begin with a letter or '_' and continue with letters, numbers or '_'.
+DelCfgPrompt=Setting mode will be deleted. Do you want to continue?
+
+ErrMinCycle=Il tempo di ciclo non può essere minore di %u microsecondi.
+CapSettings=Opzioni progetto
+HotD8=Variabili BOOL/SINT
+HotD16=Variabili INT
+HotD32=Variabili DINT/REAL
+HotD64=Variabili LINT/LREAL
+HotTIME=Variabili TIME
+HotActime=Variabili TIME attive
+HotSTRING=Variabili STRING
+HotStrBuf=Buffer STRING (caratteri)
+HotFBI=Istanze FB
+HotFBBuf=Dati istanza (bytes - appross.)
+HotPub=Variabili pubblicate
+HotCT=Segmento variabili strutturate (bytes)
+HotWString=WSTRING variables
+HotEnabled=ABILITATO
+HotDisabled=DISABILITATO
+HotNoUsed=Progetto non compilato. Dimensione utilizzata sconosciuta.
+HotHelp1=Visualizzazione§: Utilizzat / Allocato
+HotHelp2=Numeri secondo l'ultima compilazione
+OK=OK
+Cancel=Annulla
+ErrCCTool=Errore: Non è stato trovato il compilatore C in questa cartella.
+UplAll=Include all files
+
+CapOptions=Opzioni
+Target=Target
+T5RTI=T5RTI: T5 Runtime - INTEL (little endian)
+T5RTM=T5RTM: T5 Runtime - MOTOROLA (big endian)
+Custom=Specifico
+CustomH=Specifico (premere il pulsante Avanzate)
+CodeGeneration=Generazione codice
+Release=Release
+Debug=Debug
+ExMode=Modalità di esecuzione
+AsFast=Più veloce possibile
+Triggered=Triggererd
+CycleTime=Tempo ciclo:
+MoreOpt=Opzioni aggiuntive...
+Advanced=Avanzate
+
+Ident=Identificazione
+Name=Nome:
+Suffix=Suffisso (codice):
+Proc=Processor
+LittleEndian=INTEL (little endian)
+BigEndian=MOTOROLA (big endian)
+PCOde=P-codice
+T5=Set di istruzioni T5 Standard
+
+Runtime=Target
+VLock=Blocco Variabili
+LockIO=Solo schede di I/O
+LockAll=Tutte le variabili
+LockNone=Nessuno
+CT=Arrays, strutture e istanze
+CTSeg=Salva le variabili complesse in un segmento separato
+
+Compiler=Compilatore
+CmpOpt=Opzioni
+FBDFlow=Colori per le linee FBD durante il debug
+WarnIsErr=Trattare gli avvisi come errore
+Warning=Visualizza messaggi di warning
+LJump=Permetti istruzioni con JUMP lunghi (versione 2.20 o successiva)
+EmbedAllSyb=Simboli Embededd per tutte le variabili
+SybCase=Mantieni il Case dei simboli Embedded
+SFCSafe=Verifica sicurezza SFC chart
+SafeArray=Controlla i limiti degli array a Runtime
+RTPassword=Runtime Password
+Password=Password
+PswHelp1=Questa password verrà richiesta ad ogni connessione
+PswHelp2=(numerica)
+CmpOther=Altre opzioni
+
+CapDebug=Test
+CapSimul=Simulazione (per tutti i progetti)
+SimulCold=Lancia la simulazione sempre in modalità "cold start"
+CapOnLine=On line debug (per tutti i progetto)
+PrpStop=Chiedi prima di fermare l'applicazione
+PrpLoad=Chiedi prima di effettuare il download
+PrpChange=Chiedi prima di effetturare l'onLine change
+CapStart=Allo startup (per tutti i progetti)
+StartCold=Proponi "cold" start
+StartRetain=Proponi il caricamento con variabili RETAIN
+CapComm=Parametri di comunicazione
+CommCur=Utilizza i parametri seguenti
+CommFixed=Utilizza:
+
+CapHot=On Line change
+CapHotStatus=Stato
+CapON=Abilita
+CapOFF=Disabilita
+CapNbAlloc=Numero variabili allocate
+CapAlloc=Allocate:
+CapValue=Valore
+CapMargin=Margine (%)
+CapSet=Applica
+
+CapCC=Compilatore "C"
+CapCCUse=Utilizza un compilatore "C"
+CCTool=Tool:
+CapCCOpt=Opzioni
+CCBlend=Genera e carica il p-code assieme al codice compilato
+CCBlendHelp=(Abilita il debug step by step)
+CCLoad=Carica il codice compilato con il codice T5
+CCShow=Visualizza la finestra di compilazione "C"
+CapCCFolder=Cartella di installazione del compilatore "C"
+CCPath=Percorso:
+CCDefault=Predefinito
+CCCheck=Controllato
+CapCCTarget=Genera nome file
+CCTarget=Percorso:
+CCNone=(Nessuno)
+
+ErrBadPrgName=Si deve specificare un nome di programma valido.
+CapPrgProps=Proprietà programma
+ErrBadPrgParent=Si deve specificare un programma SFC parent valido.
+CapNewPrg=Nuovo programma
+ErrPrgSchedule=Period / fase non valido.
+Props=Embedded &properties:
+Desc=Descrizione
+Program=Programma
+ProgLge=Linguaggio di programmazione
+ExecStyle=Modalità di esecuzione
+MainProgram=Programma Main
+SubProgram=Sub-Programma
+UDFB=UDFB (function block)
+SFCChild=Programma Child SFC
+ChildOf=Child di:
+PrpDesc=Descrizione:
+PrgEnabled=Attivata: Esecuzione ad ogni ciclo
+PrgDisabled=Disattivata: Non integrato nel ciclo
+PrgCalled=Richiamato da un altro programma
+PrgEver=Eseguito ad ogni ciclo
+PrgPerio=Eseguito periodicamente
+PrpPeriod=Periodo:
+PrpPhase=Fase:
+UnitCycles=(cicli)
+PrpTask=Task:
+HelpTask=(Riferito alle istruzioni OEM)
+
+External=Oggetti esterni
+ExternalHelp=Utilizza programmi e blocchi da un altro progetto...
+Edit=Modifica
+ExtAdd=Aggiungi...
+ExtCompare=Confronta...
+ExtHelp=Guida
+ExtNotFound=Non trovato!
+ExtAddTitle=Aggiungi un progetto esterno
+ExtErrAdd=Non è possibile aggiungere il progetto esterno. Probabilmente è gia stato integrato.
+ExtErrNameClash=Simbolo gia utilizzato nel progetto locale!
+ExtErrObjLost=Oggetto del progetto esterno non trovato!
+ExtErrLocked=Impossibile aggiornare - L'oggetto è aperto in modalità modifica!
+ExtErrCreate=Impossibile creare l'oggetto nel progetto locale!
+ExtAdded=Aggiunto:
+ExtRemoved=Cancellato:
+ExtUpdated=Aggiornato:
+ExtErrors=Errori:
+
+SPOptim=Rimuovi codice dei sub-programmi non utilizzati
+
+Security=Sicurezza
+Password=Password
+PrgProtectOn=Questo programma è attualmente protetto
+PrgProtectOff=Questo programma non risulta protetto
+PrgProtectSet=Proteggi...
+PrgProtectReset=Rimuovi protezione...
+BadPassword=Password invalida!
+ConfirmPassword=Confirm:
+
+Parameters=Parametri
+Inputs=Input:
+Outputs=Output:
+Delete=Remove
+MoveUp=Sposta su
+MoveDown=Sposta giu
+PrmName=Nome:
+PrmDim=Dimensione:
+PrmType=Tipo:
+PrmDesc=Descrizione:
+
+Memory=Memoria
+HeapEnable=Abilita allocazione dinamica della memoria
+HeapExplain=Allocazione dinamica della memoria è richiesta da alcune librerie come l’XML, Buffer di testo e menu HMI
+HeapBuffer=Alloca la memoria in un buffer di dimensioni fisse
+HeapMalloc=Usa la memoria dinamica del sistema operativo
+HeapExplainBuffer=Selezionando questa opzione si è sicuri che la memoria allocate dinamicamente è ristretta ad un buffer fisso e che non risulta legata al sistema operative.
+HeapExplainMalloc=Questa opzione può non essere supportata da alcuni runtime. L’ammontare di memoria disponibile non è definibile se viene selezionata questa opzione.
+HeapSize=Dimensione
+HeapBytes=(bytes)
+ErrHeapSize=Dimensione buffer errata
+HotSfcOpen=Si deve chiudere l’SFC function block prima di abilitare On Line Change
+
+OldPsw=Vecchia password:
+NewPsw=Nuova password:
+
+All=(All)
+NonIecSyb=Consenti nome variabili non IEC
+StStrict=Restringi la conformità IEC per il linguaggio ST
+OnLineCst=Enable forcing of initial values during debug
+CheckSybConflicts=Controlla I possibili conflitti di nomi
+OutputPouSize=Report code size of POUs
+Reset=Reset
+FBDOptim=Abilita ottimizzazioni FBD
+LDOptim=Abilita ottimizzazioni LD
+
+Download=Download
+LoadItems=Oggetti scaricati:
+Add=Aggiungi
+Remove=&Rimuovi
+MoveUp=Sposta su
+MoveDown=Sposta giu
+LoadAppCode=<Codice applicazione>
+Local=Locale:
+Remote=Remoto:
+PageDef=Apri sempre questa pagina
+LoadUpl=Send source code for later project upload
+
+MWLog=Log azione utente durante il test
+ShowMWLog=Visualizza file di log
+
+IOEdit=Configura la Scheda I/O:
+
+VSI=Alloca I bit di stato per le variabili con proprietà embedded
+CheckProfile=Report profili duplicati.
+CmpMaxErrCount=Numero Massimo errori visualizzati:
+
+IOStep=Scambia gli I/O durante lo Stepping
+RTRIGNO0=R_TRIG: always FALSE on first call
+OptUpdExt=Update extern POUs before build
+OptExtDef=Use global definition of extern POUs
+CHECKFBDINP=Deny unwired inputs in FBD
+POSTBUILD=Post build actions
+NOREALEQ=Forbid equality tests between reals
+STAN=Run Code Checker after build
+STANRULES=Code Checker rules
+USHR=SHR: do not duplicate most significant bit
+OPTBOOL=ST: optimize AND/OR left to right evaluation
+STRICTRETAINCRC=Strict signature for RETAIN variables
+SC=Version control
+
+Libraries=Librerie
+Close=Chiudi
+Help=Guida
+LibNotFound=Libreria non trovata
+LibUpdate=Aggiornamento referenze libreria...
+LibWait=Attendere prego.
+LibOnLineChange=Le definizioni di libreria non possono essere aggiornate quando l' Online change è abilitato.
+ExtErrBad=Progetto non valido. Non può essere selezionata la libreria dei progetti.
+ExtErrLib=Libreria non valida.
+HowToRel=(You can specify a path relative to the parent directory of the project folder)
+
+ErrBadCycle=Invalid cycle timing
+IECCheck=Controlla conformità IEC
+CycleTimeUnit=Cycle time units
+MWus=Cycle time in micro seconds during debug
+MWPRECREAL=Precisione des variabili REAL
+MWPRECLREAL=Precisione des variabilis LREAL
+CmpFBCheck=Controlla richiami a istanze multiple dei FB
+
+Import=Importa
+Export=Esporta
+CheckOnlyInGroups=Check only in groups
+DontInGroups=Don't check in groups
+BadMinMax=Invalid min/max value(s)
+
+Tasks=Tasks
+Task=Task
+Period=Periodo
+
+; eof

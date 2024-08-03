@@ -1,0 +1,5 @@
+if not _PRP ('LGE', '', '', '', RET) then
+    RET := 0;
+end_if;
+Language := RET;
+

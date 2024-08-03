@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Print>
+   <Item Type="HEADER" ID="1" ExtendCoord="YES" X="0" Y="0" Cx="200" Cy="200" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="12" FontColor="0" BackColor="16777215" Style="0" Align="4" DateFormat="%b %d, %Y (%H:%M:%S)" NbHeaders="8" XThickness="4" YThickness="6"/>
+   <Item Type="AREA" ID="2" ExtendCoord="YES" X="4" Y="6" Cx="192" Cy="188" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="10" FontColor="0" BackColor="16777215" Style="0" Align="-3" DateFormat="%b %d, %Y (%H:%M:%S)" NbHeaders="8"/>
+</Print>

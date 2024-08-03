@@ -1,0 +1,20 @@
+[LONG]
+V-OUTPUTS=List of outputs separated by comas
+V-INPUTS=List of inputs separated by comas
+V-RET=~
+V-FID=File identifier
+V-SBLOCK=~
+V-INSTANCE=Name of the instance (if function block)
+V-SOUT=~
+V-OK=TRUE if successful
+V-NAME=Block type name
+[SHORT]
+V-OUTPUTS=~
+V-RET=~
+V-INPUTS=~
+V-SBLOCK=~
+V-FID=~
+V-SOUT=~
+V-INSTANCE=~
+V-OK=~
+V-NAME=~

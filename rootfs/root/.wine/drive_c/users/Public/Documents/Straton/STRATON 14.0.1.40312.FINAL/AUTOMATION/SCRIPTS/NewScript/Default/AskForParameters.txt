@@ -1,0 +1,6 @@
+[LONG]
+V-FST=~
+V-FSPY=~
+[SHORT]
+V-FST=~
+V-FSPY=~

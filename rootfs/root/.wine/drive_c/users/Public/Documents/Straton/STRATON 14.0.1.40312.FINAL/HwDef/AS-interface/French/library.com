@@ -1,0 +1,3 @@
+[desc]
+
+lib=AS-interface

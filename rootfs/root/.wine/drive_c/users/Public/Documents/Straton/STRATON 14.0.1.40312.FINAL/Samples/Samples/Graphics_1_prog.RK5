@@ -1,0 +1,52 @@
+[:__MODULE_GRAPHICS_1_PROG] 
+
+{@BEGIN:Graphics_1_prog}
+[:__LABEL1] 
+
+<IF:CCBLEND>
+534 526 
+{Graphics_1_prog: (1): }
+508 0 19 29 9 3 
+42 30 2 29 
+[:__LABEL5] 
+[:__LABEL6] 
+530 30 [JA:__LABEL7] 
+
+{Graphics_1_prog: (2): }
+508 0 8 3 3 10 
+
+{Graphics_1_prog: (3): }
+508 0 526 528 [JA:__LABEL4] 
+[:__LABEL7] 
+[:__LABEL4] 
+
+{Graphics_1_prog: (5): }
+508 0 19 29 3 11 
+42 30 1 29 
+[:__LABEL9] 
+[:__LABEL10] 
+530 30 [JA:__LABEL11] 
+
+{Graphics_1_prog: (6): }
+508 0 12 3 3 12 
+
+{Graphics_1_prog: (7): }
+508 0 526 528 [JA:__LABEL8] 
+[:__LABEL11] 
+[:__LABEL8] 
+
+{Graphics_1_prog: (9): }
+508 0 8 14 3 13 
+45?152 4 14 
+
+{Graphics_1_prog: (11): }
+508 0 526 [:__LABEL3] 
+
+{Graphics_1_prog: (1): }
+508 0 526 
+<ENDIF>
+234 
+[:__LABEL2] 
+
+{@END:Graphics_1_prog}
+[:__MODULE_END_GRAPHICS_1_PROG] 

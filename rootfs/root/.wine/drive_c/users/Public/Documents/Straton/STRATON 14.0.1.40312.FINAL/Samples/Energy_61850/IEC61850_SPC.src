@@ -1,0 +1,98 @@
+(*
+INPUTS :
+    ControModel : 0 for no control, 1 direct, 2 select before operate, 3 direct with enhanced security, 4 select before operate with enhanced security
+    Oper_ctlVal : The control value set by the client when client request operate
+    stVal : Current status value
+
+OUTPUTS :
+    ctlVal : The control value set by the client, updated when operate done and validated
+    bOperate : Rising edge when an operate has been received 
+
+INOUT : 
+    Control : The variable shared between the Straton Logic and the 61850 stack to indicate current state in the operation
+
+Notes: this state machine is only a sample; more can be done, like managing the Select and 
+ Operate timeouts etc.
+*)
+
+
+
+bPrint := false;
+if Control <> PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     99 : //99 - wants select
+        if bPrint then printf('IEC61850:%ld Wants select',any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true then
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            Control := 100 + SelectAddCause;
+            printf('IEC61850:%ld Select',any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    199 : //199 - wants Operate
+        if bPrint then printf('IEC61850:%ld Wants bOperate',any_to_dint(Control)); end_if;
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause = 0 then
+                Control := 200; //200 operate_ok
+            else
+                Control := 200 + OperateAddCause;
+            end_if;
+            printf('IEC61850:%ld Operate',any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        Selected := false;  
+  
+  //Operated with enhanced security
+    200 : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                Control := 400 + DoneAddCause;
+                printf('IEC61850:%ld Done',any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            Control := 300 + CancelAddCause;
+            printf('IEC61850:%ld Cancel',any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+SelectAck := Select;
+SelectAddCause := 0;
+
+OperateAck := bOperate;
+OperateAddCause := 0;
+
+DoneAck := Busy;
+DoneAddCause := 0;
+
+CancelAck := Cancel;
+CancelAddCause := 0;

@@ -1,0 +1,19 @@
+JsonLastError - function - Get the last error from JSON functions
+
+Inputs:
+
+(none)
+
+Outputs:
+
+ErrNo : DINT; code of the last JSON error detected during a call to a JSON function
+
+Possible error codes:
+0: no error
+1: out of memory
+2: invalid handle
+3: operation denied because node has a parent
+4: invalid argument
+5: cannot open file
+6: JSON syntax error
+7: error writing file

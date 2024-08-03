@@ -1,0 +1,128 @@
+body {
+	height: 100vh;
+	padding: 0;
+  }
+  
+  body {
+	min-height: 100vh;
+	padding: 0;
+  }
+  
+
+/* main title ****************************************************************/
+#title {
+	display: flex;
+	justify-content: flex-start;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	right: 5px;
+}
+
+	#title h1 {
+		border: 2px black solid;
+		padding: 5px;
+		height: 25px;
+		font-size: 20px;
+		margin-left: 10px;
+		overflow: auto;
+		flex: 1; /* use full width */
+	}
+
+	#title img /* straton logo */ {
+		margin-top: 5px;
+		height: 50px;
+	}
+
+/* view **********************************************************************/
+#view {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	position: absolute;
+	top: 60px;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+}
+
+/* NavBar CSS ***********************************************************/
+.navbar-center {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	vertical-align: middle;
+	text-align: center;
+	overflow: visible;
+	height: 0;
+}
+
+.nav.navbar-text.navbar-center {
+	color: rgb(202, 218, 226);
+}
+
+.x5i_rtCnxStateImg {
+    cursor: pointer;
+}
+
+.x5i_rtCnxStateText {
+    cursor: pointer;
+}
+
+/* Breadcrumb CSS ******************************************************/
+.breadcrumb {
+	background-color: #f8f9fa !important;
+	padding-top: 0.3rem;
+}
+
+.breadcrumb > .active,
+.breadcrumb > .active a {
+  color: black;
+  font-weight: bold;
+}
+
+
+.breadcrumb > li + li:before {
+    color: black;
+    content: " >";
+    padding: 0 5px;
+}
+  
+.noborder-header-button{
+	float: right;
+	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+.noborder-header-button:hover{
+	border: 1px solid #8f8f8f;
+}
+
+/* Color CSS variables ******************************************************/
+:root {
+	--straton-true-color: red;
+	--straton-false-color: blue;
+	--straton-var-bkg-false-color: rgb(147,201,255);
+	--straton-var-bkg-true-color: rgb(255,98,98);
+	--straton-var-bkg-unknown-color:grey;
+	--straton-var-txt-unknown-color:black;
+	--straton-var-bkg-readonly-color: rgb(245, 162, 8);
+	--straton-var-bkg-forbidden-color: rgb(165, 164, 159);
+  }
+  
+/* ST styles *****************************************************************/
+.x5i_STBody{
+	font-family: "Courier New", Courier, "Liberation Mono", monospace;
+}
+
+/* Bootstrap modal dialog title */
+h5{
+	font-size: small;
+	font-weight: bold;
+}
+

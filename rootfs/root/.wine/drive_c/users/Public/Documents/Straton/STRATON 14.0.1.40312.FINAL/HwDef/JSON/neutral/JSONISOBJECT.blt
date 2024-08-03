@@ -1,0 +1,9 @@
+JsonIsObject - function - Test if a JSON node is an object
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+
+Outputs:
+
+bObj : TRUE if hNode is a valid JSON node representing a structured value (object).

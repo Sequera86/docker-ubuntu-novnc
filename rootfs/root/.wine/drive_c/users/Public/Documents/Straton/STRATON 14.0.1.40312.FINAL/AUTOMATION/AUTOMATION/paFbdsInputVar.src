@@ -1,0 +1,7 @@
+if NEGATE then
+    sTyp := 'FBDS NOTIN';
+else
+    sTyp := 'FBDS IN';
+end_if;
+sTyp := sTyp + ' ' + any_to_string (PIN - 1);
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, NAME, RET);

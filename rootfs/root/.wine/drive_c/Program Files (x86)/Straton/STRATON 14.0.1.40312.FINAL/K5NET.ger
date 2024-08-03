@@ -1,0 +1,516 @@
+﻿; K5 middleware communication error messages
+; The text before "=" is an identifier and should never be changed
+
+; middleware API error messages -------------------------------------
+
+[Loader]
+Scripts=Skripte herunterladen
+Edit=Bearbeiten
+New=Neu
+Remove=Entfernen
+Rename=Umbenennen
+Copy=Kopieren
+Close=Schließen
+Name=Name
+OK=OK
+Cancel=Abbrechen
+NewScript=Neues Skript
+Add=Hinzufügen
+Change=Ändern
+Up=Nach oben
+Down=Nach unten
+Item=Element laden
+Project=Projekt
+Target=Ziel
+SavePrompt=Möchten Sie die Änderungen speichern?
+ErrScriptUsed=Der Skriptname wird bereits verwendet
+ErrScriptCreate=Die Skriptdatei kann nicht erstellt werden.
+ErrScriptRemove=Die Skriptdatei kann nicht gelöscht werden.
+ErrScriptRename=die Skriptdatei kann nicht umbenannt werden.
+ErrScriptCopy=Die Skriptdatei kann nicht kopiert werden.
+File=Datei
+To=Ziel
+
+
+[Dialup]
+Caption=Ausführen
+Dialup=Einwählen
+Cancel=Abbrechen
+Number=Nummer:
+Init=Initial:
+Timeout=Timeout:
+Closing=Die Verbindung wird getrennt. Bitte warten...
+Connecting=Die Verbindung wird aufgebaut. Bitte warten...
+ModemError=Modem Fehler oder Timeout bei Modem-Rückmeldung.
+DialupError=Fehler beim Wählen oder Timeout beim Verbindungsaufbau.
+DcdError=Fehler beim Wählen: Kein DCD Signal erhalten.
+
+[AS]
+ASCantLoad=Fehler: Skript kann nicht geladen werden
+CantStart=Fehler: Das Skript kann nicht gestartet werden
+CantRun=Fehler: Skript nicht gefunden
+Complete=Skript ausgeführt.
+Script=Skript
+Target=Ziel
+Param=Parameter
+Value=Wert
+Desc=Beschreibung
+BadValue=Ungültiger Wert
+ASCaption=Automatisches Skript ausführen
+ASTargetPath=Zielsystem Projekt-Pfadname
+Go=Start
+Close=Schließen
+OK=OK
+Cancel=Abbrechen
+
+[Panel]
+
+App=Anw.
+BadVers=Ungültige Version
+Local=Lokale Anwendung
+Target=Ziel
+
+Stop=Anwendung beenden
+Start=Start
+Load=Herunterladen
+LoadChange=Ändern
+PanelChange=Online Change ausführen
+Pause=Zyklus zu Zyklus
+Resume=Zyklusmodus fortsetzen
+CycleStep=Einen einzelnen Zyklus ausführen
+StepIn=Einzelschritt
+StepOver=Überspringen
+StepOut=Rücksprung
+RunCC=Kompilierten Code ausführen (Debugging nicht möglich)
+RunPC=Virtual Machine verwenden (Debugging möglich)
+NoApp=Keine Applikation
+Idle=Leerlauf
+StopAndLoad=Stoppen und neue Version herunterladen
+Nothing=Keine Aktion ausführen
+LoadNow=Möchten Sie die Applikation herunterladen?
+Prompt=Möchten Sie fortfahren?
+UncompleteList=Liste unvollständig
+
+CantLoad=Herunterladen nicht möglich
+CantLoadWhy=Das verbundene Zielsystem stimmt nicht mit dem Typ überein, der in den Build-Optionen konfiguriert ist.
+CT=Zykluszeit
+CTCur=Aktuellste
+CTAllowed=Erlaubt
+CTMax=Maximum
+CTOver=Überlauf
+CTChange=Zykluszeit ändern
+Redundancy=Redundanz
+
+[Time]
+
+Allowed=Erlaubt
+Maximum=Maximum
+Overflow=Überlauf
+TimeChange=Zykluszeit ändern
+
+[Middleware]
+
+; check remaining breakpoints
+
+BkpPrompt=Es sind aktuell noch Haltepunkte gesetzt. Möchten Sie diese entfernen?
+BkpCantDel=Haltepunkte können nicht entfernt werden
+LkvPrompt=Es sind noch Variablen blockiert? Möchten Sie diese entsperren?
+LkvCantDel=Variablen können nicht entsperrt werden.
+DlgLockList=Blockierte Variablen
+DlgUnlockAll=Alle entsperren
+
+; prompt
+
+PrpBadSyntax=Ungültiger Befehl
+PrpBusy=Die Verbindung ist besetzt.
+
+; status: connection
+
+StaCnxOK=OK
+StaCnxInvalid=Keine Verbindung
+StaCnxLogon=Verbindung wird hergestellt ...
+StaCnxLogoff=Verbindung wird getrennt ...
+StaCnxNoApp=Keine Anwendung
+StaCnxIdle=Leerlauf
+StaCnxOtherApp=Andere Anwendung
+StaCnxCommError=Kommunikationsfehler
+StaMissingRsc=Eingebettete Software fehlt
+StaApp=Anw.
+StaBadVers=Ungültige Version
+
+; status: application
+
+StaAplRun=RUN
+StaAplStop=STOP
+StaAplSfcBreak=SFC-Pause
+StaAplError=Fehler
+StaAplInvalid=Unbekannt
+StaAplStepping=STEPPING
+
+; status: program
+
+StaPrgInactive=Inaktiv
+StaPrgActive=Aktiv
+StaPrgFrozen=Angehalten
+
+; dialog buttons
+
+ButForce=Erz&wingen
+ButTrue=&TRUE
+ButFalse=&FALSE
+ButLock=&Blockieren
+ButUnlock=&Entsperren
+ButStartTimer=&Start Timer
+ButStopTimer=St&op Timer
+ButBreakStep=Haltepunkt setzen
+ButRemBreakStep=Haltepunkt entfernen
+ButForceTrans=Transition erzwingen
+ButBreakTrans=Haltepunkt setzen
+ButRemBreakTrans=Haltepunkt entfernen
+ButStartProg=&Start
+ButStopProg=Sto&pp
+ButSuspendProg=Anhalten
+ButRestartProg=Neu start&en
+
+; passwords dialog
+
+PswPassword=Passwort
+PswRemember=Passwort speichern
+PswOk=OK
+PswCancel=Abbrechen
+PswOld=Altes Passwort:
+PswNew=Neues Passwort:
+
+; watch window
+
+WWName=Name
+WWValue=Wert
+WWDesc=Beschreibung
+
+; upload
+
+MWUPCantStore=Symboldatei kann nicht auf Festplatte gespeichert werden
+MWUPCaption=Symbole laden
+MWUPNoCnx=Die Verbindung kann nicht aufgebaut werden
+MWUPCantUpload=Das Hochladen wird vom Zielsystem nicht unterstützt.
+MWUPProgress=Hochladen wird durchgeführt...
+MWUPErrors=Während des Ladens sind Fehler aufgetreten
+MWUPCancel=Abbrechen
+MWUPClose=Schließen
+MWUPComplete=Hochladen abgeschlossen
+
+; misc.
+
+Ok=OK
+ErrInternal=Interner Fehler
+ErrUnknownClient=Unbekannter oder ungültiger Client-Handle
+ErrUnknownProject=Unbekannter oder ungültiger Projekt-Handle
+ErrUnknownSymbol=Unbekannte Variable: Variable kann nicht ermittelt werden.
+ErrLoopIdUsed=Die Schleifen-ID wird bereits verwendet
+ErrUnknownLoop=Unbekannte Schleifen-ID
+ErrNoCommOK=Kann Zielsystem-Variablen nicht steuern: Kommunikationsfehler oder Versionsfehler.
+
+; value check
+
+ErrBadDintValue=Ungültiger INTEGER-Wert
+ErrBadRealValue=Ungültiger REAL-Wert
+ErrBadTimeValue=Ungültiger TIME-Wert
+ErrBadStringValue=Ungültiger STRING-Wert oder Stringlänge zu lang
+
+; file transfer
+
+FTBusy=Interner Fehler: Das FT-Interface ist ausgelastet.
+FTOpenReadLocal=Lokale Datei kann nicht zum Lesen geöffnet werden.
+FTRetCode=Interner Fehler: Ungültiger Code im Rückgabeframe
+FTFrame=Interner Fehler: Frame Fehler
+FTOpenWriteLocal=Lokale Datei kann nicht zum Schreiben geöffnet werden.
+FTWriteLocal=Lokale Datei kann nicht geschrieben werden.
+FTCrc=Ungültige CRC-Datei
+FTConnection=Kommunikationsfehler während der Übertragung
+FTRegisterClass=Interner Fehler: Rückruf-Fenster konnte nicht registriert werden.
+FTCreateCallback=Interner Fehler: Rückruf-Fenster (Callback) konnte nicht erstellt werden.
+FTMWConnect=Interner Fehler: Keine Verbindung zum MW-Server
+FTMWOpen=Es kann keine Verbindung zum Zielsystem aufgebaut werden.
+FTMWObj=Interner Fehler: Kommunikationsobjekt konnte nicht erstellt werden.
+FTTimeout=Kommunikations-Timeout während der Übertragung
+FTT5_Unknown=Anfrage wird vom Zielsystem nicht unterstützt.
+FTT5_OpenWrite=Das Zielsystem kann die Datei nicht zum Schreiben öffnen.
+FTT5_Write=Das Zielsystem kann nicht in die Datei schreiben.
+FTT5_Close=Das Zielsystem kann die Datei nicht schließen.
+FTT5_OpenRead=Das Zielsystem kann die Datei nicht zum Lesen öffnen.
+FTT5_Read=Das Zielsystem kann die Datei nicht lesen.
+FTT5_Delete=Das Zielsystem kann die Datei nicht entfernen.
+FTT5_OpenDir=Das Zielsystem kann das Verzeichnis nicht durchsuchen.
+FTT5_CloseDir=Das Zielsystem kann das Verzeichnis nicht auslesen.
+FTT5_GetDir=Das Zielsystem kann das Verzeichnis nicht schließen.
+FTAbort=Übertragung wurde abgebrochen
+FTLoad=Laden
+FTFrom=Von:
+FTTo=Zu:
+
+; starting mode selection box ---------------------------------------
+
+[StartDlg]
+
+Startmode=Startmodus
+Start=Start
+ColdNoRetain=&Kaltstart: Keine RETAIN-Variablen laden
+ColdWithRetain=Kaltstart - &RETAIN-Variablen laden
+Hot=&Warmstart
+Pause=Zyklus zu Zyklus
+
+; redundancy box ---------------------------------------
+
+[RedDlg]
+
+Redundancy=Redundanz
+Disabled=Redundanz ist auf dem Zielsystem nicht aktiviert.
+Active=Läuft als aktives Zielsystem
+PassiveAlive=Passives Zielsystem ist verfügbar
+Passive=Läuft als passives Zielsystem
+BePassive=Als "passiv" festlegen
+Refresh=Aktualisieren
+Close=Schließen
+
+; comm API error messages -------------------------------------------
+
+[CommApi]
+
+; misc.
+
+Ok=OK
+ErrInternal=Interner Fehler
+ErrBusy=Die Verbindung ist besetzt.
+ErrNotSupported=Die Anfrage wird vom ausgewählten Protokoll nicht unterstützt.
+NoData=Keine Daten verfügbar
+
+; standard settings dialog box
+
+DlgSettings=Kommunikationseinstellungen
+DlgETHERNET=&Ethernet TCP/IP
+DlgSERIAL=&Serielle Verbindung
+DlgSettings=Kommunikationseinstellungen
+DlgAddr=&IP-Adresse:
+DlgEthp=&Portnummer:
+DlgPort=P&C Port:
+DlgRate=&Baudrate:
+DlgParity=Parität:
+DlgStops=St&oppbits:
+DlgHelp=&Hilfe
+DlgOK=OK
+DlgCancel=Abbrechen
+DlgParityNone=Keine
+DlgParrityEven=Gerade
+DlgParityOdd=Ungerade
+DlgPassword=Passwort
+DlgOverProj=Die Projekt-Eigenschaften werden aktualisiert. Möchten Sie fortfahren?
+DlgUnit=Nummer Maßeinheit:
+DlgTimeout=Timeout (Sekunden):
+DlgTrials=Anzahl der Versuche:
+DlgPackets=Paketgröße:
+DlgDialup=Einwahlnummer:
+DlgDialupTimeout=Wähl-Timeout (Sekunden):
+DlgInit=Initialisierungszeichenfolge:
+DlgDefault=Default
+BadUnit=Ungültige Nummer. Erwarteter Wert: 1 bis 32767.
+BadTimeout=Ungültiges Timeout. Erwarteter Wert: 1 bis 3600.
+BadTrials=Ungültige Anzahl von Versuchen (erwarteter Wert: 1 bis 255)
+BadNum=Sie müssen eine Wählnummer angeben.
+DlgBrowseNet=Netzwerk durchsuchen
+DlgRefresh=Aktualisieren
+DlgWait=Bitte warten...
+DlgNoNode=Kein Knoten gefunden.
+DlgBrowse=Durchsuchen
+
+; communication
+
+ErrDriverNotFound=Dynamische Treiber-Bibliothek nicht gefunden.
+ErrDriverInvalid=Ungültige dynamische Treiber-Bibliothek.
+ErrCantInstallComm=Die Kommunikation kann nicht installiert werden
+ErrBadPortAddr=Die Verbindung kann nicht hergestellt werden. Hinweis: Überprüfen Sie die Kommunikationsparameter.
+ErrNoCommAvailable=Kommunikation nicht hergestellt
+ErrBadTargetIDReceived=Ungültige Zielsystem-ID erhalten
+ErrOpenLocalFile=Für die Übertragung kann nicht auf die lokale Datei zugegriffen werden.
+ErrDownload=Das Herunterladen wurde vom Zielsystem verweigert
+ErrAnswerAny=Die Anfrage wurde vom Zielsystem verweigert.
+ErrAnswerAppControl=Der Anwendungsstatus kann nicht vom Zielsystem abgerufen werden.
+ErrAnswerAppStart=Die Anwendung kann nicht gestartet werden. Mögliche Ursache: Die Anwendung ist bereits gestartet.
+ErrAnswerAppStop=Die Anwendung kann nicht gestoppt werden. Mögliche Ursache: Die Anwendung ist bereits gestoppt.
+ErrAnswerRead=Ungültiger Lese-Anfrage: wurde vom Zielsystem abgelehnt.
+ErrAnswerPause=Kann nicht in den Zyklusmodus wechseln
+ErrAnswerResume=Wechsel in normalen Ausführungsmodus nicht möglich
+ErrAnswerCycleStep=Ein Einzelschritt kann nicht ausgeführt werden.
+ErrAnswerChange=Online Änderung nicht möglich: es ist keine gültige Änderung geladen.
+ErrAnswerWrite=Variable kann nicht erzwungen oder blockiert werden
+ErrAnswerSetCycleTime=Die erlaubte Zykluszeit kann nicht geändert werden.
+ErrAnswerControlPrg=Der Programmstatus kann nicht gesetzt werden.
+ErrAnswerControlTimer=Timer kann nicht gestartet oder gestoppt werden
+
+; target error messages ---------------------------------------------
+
+[log]
+
+Err1=Nicht genügend Arbeitsspeicher
+Err2=falsche Anwendungs-Datenbank oder schlechte CRC
+Err3=Nicht genügend Arbeitsspeicher
+Err4=Nicht genügend Arbeitsspeicher
+Err5=Timeout
+Err6=Timeout
+Err7=Kommunikation kann nicht initialisiert werden
+Err8=Nicht genügend Arbeitsspeicher
+Err9=Anwendung gestoppt
+Err10=SFC-Überlauf
+Err11=SFC-Überlauf
+Err12=SFC-Überlauf
+Err13=unbekannte TIC-Anweisung
+Err16=Kommunikations-Fehler
+Err17=Kommunikations-Fehler
+Err18=Kommunikations-Fehler
+Err19=Kommunikations-Fehler
+Err20=Kommunikations-Fehler
+Err21=Kommunikations-Fehler
+Err22=Stapelüberlauf
+Err23=Kommunikations-Fehler
+Err24=Ethernet-Fehler
+Err25=Kommunikations-Fehler
+Err28=Nicht genügend Arbeitsspeicher
+Err29=Nicht genügend Arbeitsspeicher
+Err30=Unbekannter OEM-Code
+Err31=I/O Fehler
+Err32=I/O Fehler
+Err33=I/O Fehler
+Err34=I/O Fehler
+Err35=I/O Fehler
+Err36=I/O Fehler
+Err37=I/O Fehler
+Err38=I/O Fehler
+Err39=I/O Fehler
+Err40=I/O Fehler
+Err41=I/O Fehler
+Err42=I/O Fehler
+Err43=I/O Fehler
+Err44=I/O Fehler
+Err45=I/O Fehler
+Err46=I/O Fehler
+Err47=I/O Fehler
+Err50=Variablen Zugriffskonflikt
+Err51=Variablen Zugriffskonflikt
+Err52=Variablen Zugriffskonflikt
+Err53=Das SFC-Programm kann nicht gesteuert werden
+Err54=Das SFC-Programm kann nicht gesteuert werden
+Err55=Das SFC-Programm kann nicht gesteuert werden
+Err56=Das SFC-Programm kann nicht gesteuert werden
+Err61=unbekannter Systemanforderungscode
+Err62=Überschreitung Abtastzeit
+Err63=Benutzer-Funktion nicht implementiert
+Err64=Division durch Null für Integer.
+Err65=Die Umrechnungs-Funktion ist nicht implementiert.
+Err66=Der Funktionsblock ist nicht implementiert
+Err67=Die Standard-Funktion ist nicht implementiert.
+Err68=Division durch Null für Real.
+Err69=ungültige Operate-Parameter
+Err70=Die Applikations-Parameter können nicht geändert werden.
+Err71=Applikations-IOs und Bibliotheken können nicht verändert werden.
+Err72=Applikations-Symbole können nicht verändert werden.
+Err73=Online Change nicht möglich
+Err74=Online Change nicht möglich
+Err75=Online Change nicht möglich
+Err76=Online Change nicht möglich
+Err77=Online Change nicht möglich
+Err97=Interner Fehler
+Err98=Interner Fehler
+Err99=Nicht optimierter nativer Code für Zielsystem.
+
+; all RT errors are offsetted with 1000
+
+Err1001=Fehler am Zielsystem (keine weiteren Informationen verfügbar)
+Err1002=Ungültiger Anwendungscode. Mögliche Ursache: Fehlanpassung für Big Endian/Little Endian (Intel/Motorola)
+Err1003=Ungültiger Anwendungscode: fehlerhafte Zieldefinition.
+Err1004=Ungültiger Anwendungscode: fehlerhafte Zielversion.
+Err1005=Die Anfrage kann nicht ausgeführt werden (Anfrage zu groß)
+Err1006=Ungültige Anfrage: die Anfrage kann nicht ausgeführt werden.
+Err1007=Die Lese-Anfrage kann nicht ausgeführt werden.
+Err1008=Ungültige TIC-Anweisung
+Err1009=Zu viele BOOL oder SINT-Variablen
+Err1010=Zu viele INT-Variablen
+Err1011=Zu viele DINT oder REAL-Variablen.
+Err1012=Division durch Null für DINT oder REAL Variable.
+Err1013=Zu viele TIME-Variablen
+Err1014=Aktive Timer werden vom Zielsystem nicht unterstützt
+Err1015=Zyklus ist durch eine Endlosschleife blockiert.
+Err1016=TIC Code-Pointer außerhalb der Grenzen.
+Err1017=Standard Funktion wird vom Zielsystem nicht unterstützt
+Err1018=Division durch Null für LINT oder LREAL Variable.
+Err1019=Zu viele LINT oder LREAL-Variablen
+Err1020=Zu viele STRING-Variablen
+Err1021=Division durch Null für SINT Variable.
+Err1022=Division durch Null für INT Variable.
+Err1023=Die Applikation kann nicht gestartet werden: Systemressourcen ausgelastet.
+Err1024=Die Applikation kann nicht gestartet werden: Ungültige Änderungen in Variablendefinition.
+Err1025=Die Applikation kann nicht gestartet werden: Ungültige Änderungen in Variablendefinition.
+Err1026=Die Applikation kann nicht gestartet werden: Die Applikation wurde geändert.
+Err1027=Die Applikation kann nicht gestartet werden: Die SFC-Tabelle wurde geändert.
+Err1028=Die Applikation kann nicht gestartet werden: Die Definition von RETAIN-Variablen wurde geändert.
+Err1029=Die Applikation kann nicht gestartet werden: ungültige Datenbank.
+Err1030=Zykluszeit-Überlauf
+Err1031=RETAIN-Variablen können nicht gespeichert werden.
+Err1032=Array Index außerhalb der Grenzen
+Err1033=Rekursiver Aufruf eines Unterprogramms
+Err1034=Es werden zu viele externe Variablen verwendet
+Err1035=Sampling-Aufzeichnung wird nicht unterstützt
+Err1036=Es sind zu viele Aufgaben definiert.
+Err1037=Die Applikation kann nicht gestartet werden: Aufruf-Stapelüberlauf.
+Err1038=Stapelüberlauf
+Err1039=Die AS-i Konfiguration konnte nicht angewendet werden.
+Err1040=Der Demo Modus für das Zielsystem ist auf 15 Minuten Zeit limitiert und wird nun gestoppt.
+Err1041=Demo Modus Zielsystem - 15 Minuten Zeitlimit
+Err1042=Online Change wird vom Zielsystem nicht unterstützt
+Err1043=Online Change: ungültig neuer Code
+Err1044=Online Change: es handelt sich nicht um dieselbe Applikation
+Err1045=Online Change: verweigert durch I/O Treiber
+Err1046=Online Change: Größe des Bereichs für komplexe Variablen hat sich geändert
+Err1047=Online Change: verweigert durch Feldbustreiber.
+Err1048=Online Change: Nicht genug Speicher für Variableneigenschaften.
+Err1049=Online Change: Tasks haben sich verändert.
+Err1050=Online Change: verweigert durch MODBUS Treiber
+Err1051=Online Change: verweigert durch CANbus Treiber
+Err1052=Online Change: nicht genug Arbeitsspeicher für erstellte Events (Binding)
+Err1053=Online Change: Speicher für BOOL oder SINT Variablen ist nicht ausreichend.
+Err1054=Online Change: Speicher für INT-Variablen ist nicht ausreichend.
+Err1055=Online Change: Speicher für DINT oder REAL-Variablen ist nicht ausreichend.
+Err1056=Online Change: Speicher für LINT oder REAL-Variablen ist nicht ausreichend.
+Err1057=Online Change: Speicher für TIME-Variablen ist nicht ausreichend.
+Err1058=Online Change: Speicher für STRING-Variablen ist nicht ausreichend.
+Err1059=Online Change: Speicher für FB-Instanzen ist nicht ausreichend.
+Err1060=Online Change: Speicher für "C"-Funktionen ist nicht ausreichend.
+Err1061=Online Change: Speicher für externe Variablen ist nicht ausreichend.
+Err1153=Online Change: Anzahl der BOOL/SINT Variablen wurde verringert.
+Err1154=Online Change: Anzahl der INT Variablen wurde verringert.
+Err1155=Online Change: Anzahl der DINT/REAL Variablen wurde verringert.
+Err1156=Online Change: Anzahl der LINT/LREAL Variablen wurde verringert.
+Err1157=Online Change: Anzahl der TIME Variablen wurde verringert.
+Err1158=Online Change: Anzahl der STRING Variablen wurde verringert.
+Err1159=Online Change: Anzahl der FB Instanzen wurde verringert.
+Err1160=Online Change: Anzahl der "C" Funktionen wurde verringert.
+Err1161=Online Change: Anzahl der externen Variablen wurde verringert.
+Err1062=Online Change: Speicher für STRING-Puffer ist nicht ausreichend.
+Err1063=Online Change: die Länge von STRING-Variablen hat sich geändert.
+Err1064=Online Change: nicht genug Speicher für FB-Instanzen Daten.
+Err1065=Online Change: eine FB-Instanz hat sich geändert.
+Err1066=Online Change: die Eigenschaften einer POU haben sich geändert.
+Err1067=Online Change: ungleiche Anzahl an POUs
+Err1068=Ablaufverfolgungspunkt
+Err1069=Es läuft keine Anwendung
+Err1070=Falscher CRC-Code
+Err1071=Freier Arbeitsspeicher kann nicht neu zugeordnet werden: Hot Restart ist nicht möglich.
+Err1072=Online Change ist nicht möglich, wenn Haltepunkte gesetzt sind oder wenn Programme für Step-by-Step Debugging gestoppt sind.
+Err1073=Online Change ist nicht möglich wenn ein Programm mit einer WAIT-Anweisung gestoppt wurde.
+Err1074=Der Arbeitsspeicher für Anwendungsdaten ist nicht ausreichend. Die Anwendung kann nicht gestartet werden.
+Err1075=Der Anwendungs-Code kann nicht geladen werden. Die Anwendung kann nicht gestartet werden.
+Err1076=Online Change: Unterschiedliche Compilerversion
+Err1077=Online Change nicht möglich: aktuell sind noch temporäre Variablen geblockt.
+Err1078=Zu viele WSTRING verwendet
+Err1079=Online Change: Nicht genügend Arbeitsspeicher für WSTRING-Variablen
+Err1080=Online Change: Die Anzahl an WSTRING-Variablen wurde verringert
+
+; eof

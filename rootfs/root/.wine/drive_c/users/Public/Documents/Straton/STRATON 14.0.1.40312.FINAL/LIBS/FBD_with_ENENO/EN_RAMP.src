@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    rmp (IN, ASC, DSC, TM, RST);
+    OUT := rmp.OUT;
+end_if;
+

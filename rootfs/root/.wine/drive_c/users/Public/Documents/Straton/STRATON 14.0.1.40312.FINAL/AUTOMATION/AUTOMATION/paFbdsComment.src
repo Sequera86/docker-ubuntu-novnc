@@ -1,0 +1,2 @@
+sTyp := 'FBDS COMM ' + any_to_string (HEIGHT);
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, TEXT, RET);

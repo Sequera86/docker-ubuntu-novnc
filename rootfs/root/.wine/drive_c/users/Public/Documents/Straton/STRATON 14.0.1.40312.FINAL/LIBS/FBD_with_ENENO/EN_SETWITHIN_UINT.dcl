@@ -1,0 +1,9 @@
+/V,L,BOOL(0)[0],8,EN
+/V,=TRUE
+/V,L,UINT(0)[0],8,IN
+/V,L,UINT(0)[0],8,xMIN
+/V,L,UINT(0)[0],8,xMAX
+/V,L,UINT(0)[0],8,VAL
+/V,L,BOOL(0)[0],16,ENO
+/V,L,UINT(0)[0],16,Q
+

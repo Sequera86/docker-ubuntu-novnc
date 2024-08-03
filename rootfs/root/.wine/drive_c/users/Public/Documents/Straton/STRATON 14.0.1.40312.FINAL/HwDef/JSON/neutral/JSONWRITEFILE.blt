@@ -1,0 +1,13 @@
+JsonWriteFile - function - Write a JSON object to a file
+
+Inputs:
+
+hRoot : DINT; handle of a valid JSON node
+Path : STRING; path name of the file where to generate JSON text
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+The file is overwritten if it already exists.
+The JSON text generated is compacted on a single line with no blank characters.

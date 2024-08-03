@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := pack8 (IN0, IN1, IN2, IN3, IN4, IN5, IN6, IN7);
+end_if;
+

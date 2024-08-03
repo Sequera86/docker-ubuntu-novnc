@@ -1,0 +1,9 @@
+[LONG]
+V-NEWVAR=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-SFLAG=
+V-APPLY=TRUE: Apply AS-i configuration at startup
+[SHORT]
+V-NEWVAR=~
+V-SFLAG=

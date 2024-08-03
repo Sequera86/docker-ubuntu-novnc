@@ -1,0 +1,7 @@
+[LONG]
+V-FID=File identifier
+V-SUFFIX=~
+V-PREFIX=~
+[SHORT]
+V-SUFFIX=~
+V-PREFIX=~

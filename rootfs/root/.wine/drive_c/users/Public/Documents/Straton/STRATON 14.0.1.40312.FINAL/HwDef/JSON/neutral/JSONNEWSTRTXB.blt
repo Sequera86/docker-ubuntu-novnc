@@ -1,0 +1,12 @@
+JsonNewStrTxb - function - Create a new string node from a text buffer
+
+Inputs:
+
+hTxb : DINT; text buffer containing the value represented by the node
+
+Outputs:
+
+hNode : DINT; handle of the new node or 0 if failed
+
+This function creates a new JSON node which represents a string value.
+The function allocates the node in the memory. The application is responsible for releasing the memory.

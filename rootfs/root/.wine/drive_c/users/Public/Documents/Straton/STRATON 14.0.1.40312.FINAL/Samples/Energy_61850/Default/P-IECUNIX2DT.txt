@@ -1,0 +1,13 @@
+Extract date from UNIX timestamp
+DST: when set to TRUE, add one hour for Day Saving Time
+UTC is the time zone (For example 1 for Paris, 0 for UTC)
+
+Caution with DST behaviour :
+DST = TRUE means it will offset one hour
+DST = FALSE means it will not offset one hour
+The information of if a we are in summer is NOT extracted from the timestamp input. 
+This information should have been stored with the timestamp in a separate boolean.
+
+IMPORTANT!
+Due to the computing of LREAL, precision for milliseconds is +/- 0.001
+ Ex. 0.748 in LREAL may be displayed '747' on the MILLISECONDS output

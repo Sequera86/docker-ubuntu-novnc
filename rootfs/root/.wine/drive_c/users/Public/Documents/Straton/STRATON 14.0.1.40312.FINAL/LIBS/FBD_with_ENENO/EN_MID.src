@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := mid (IN, NBC, POS);
+end_if;
+

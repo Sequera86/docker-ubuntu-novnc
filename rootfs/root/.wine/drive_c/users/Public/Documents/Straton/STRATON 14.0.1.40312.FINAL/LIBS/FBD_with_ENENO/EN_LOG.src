@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := log (IN);
+end_if;
+

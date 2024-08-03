@@ -1,0 +1,12 @@
+Read a SNMP integer value.
+
+Inputs:
+
+- EN : the reading is done on a rising edge of this input
+- OID : the OID name to read (format is a.b.c.d ...)
+
+Outputs:
+
+- Ready : TRUE when the block is ready - FALSE during a reading
+- RC : SNMP error (see SNMP documentation)
+- VAL : read DINT value

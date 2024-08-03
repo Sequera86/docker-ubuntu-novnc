@@ -1,0 +1,9 @@
+$K5LMEXPORT
+$DIR
+IO=SIMUL16BO
+$END
+$DEF(IO=SIMUL16BO)
+Simul16BO[16] AT %QX0; (* 16 channels - bool or 8 bit outputs  *)
+   CONSTANT key : INT := 0;
+
+$END

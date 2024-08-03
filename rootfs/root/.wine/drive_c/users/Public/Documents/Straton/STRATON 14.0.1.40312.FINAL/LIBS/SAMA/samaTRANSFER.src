@@ -1,0 +1,4 @@
+Limiter (sel (S, IN1, IN2), PRATE);
+OUT := Limiter.OUT;
+
+

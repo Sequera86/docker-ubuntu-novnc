@@ -1,0 +1,6 @@
+/V,L,BOOL(0)[0],8,EN
+/V,=TRUE
+/V,L,DINT(0)[0],8,CODE
+/V,L,BOOL(0)[0],16,ENO
+/V,L,STRING(255)[0],16,Q
+

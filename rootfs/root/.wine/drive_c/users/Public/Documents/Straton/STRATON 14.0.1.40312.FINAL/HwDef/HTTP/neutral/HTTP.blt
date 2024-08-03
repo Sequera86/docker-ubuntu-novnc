@@ -1,0 +1,22 @@
+Send HTTP or HTTPS requests. 
+Body and Results will be in STRING format
+(limited to 255 characters)
+
+Inputs:
+
+EN : BOOL : The FB will send the HTTP request at the rising edge of EN
+URL : STRING : The URL of the request
+VERB : USINT : HTTP verb
+BODY : STRING : Body of the request
+CONTENTTYPE : STRING : The content-type of the request
+
+
+Outputs
+
+DONE : BOOL : At TRUE if the request is done, FALSE otherwise
+ERR : DINT : Error code
+ERRSTR : STRING	: Error Text
+CURLERR	: DINT : Error code returned by libCurl
+CURLERRSTR : STRING : Error text returned by libCurl
+RES : STRING : Result text of the query
+

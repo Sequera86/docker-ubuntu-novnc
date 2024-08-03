@@ -1,0 +1,2 @@
+OUT := pow (IN, 1.0 / any_to_real (N));
+

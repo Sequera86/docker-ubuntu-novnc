@@ -1,0 +1,21 @@
+/* Treegrid CSS */
+
+		
+.x5i_treegrid {
+    cursor: pointer;				/* cursor type pointer */
+}
+
+.x5i_treegrid td {
+    border: 1px solid #eee;
+}
+
+.x5i_treegrid th {
+    border: 1px solid rgb(163, 159, 159);
+    background-color: rgb(163, 159, 159);
+}
+
+
+.x5i_treegrid_true {color:var(--straton-true-color)}
+.x5i_treegrid_false {color:var(--straton-false-color)}
+.x5i_treegrid_forbidden {color:var(--straton-var-bkg-forbidden-color)}
+.x5i_treegrid_readonly {color:var(--straton-var-bkg-readonly-color)}

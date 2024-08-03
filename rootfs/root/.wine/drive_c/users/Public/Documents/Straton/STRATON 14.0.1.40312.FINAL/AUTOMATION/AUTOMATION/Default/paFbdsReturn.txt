@@ -1,0 +1,10 @@
+[LONG]
+V-STYP=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-PIN=~
+V-NEGATE=~
+[SHORT]
+V-STYP=~
+V-PIN=~
+V-NEGATE=~

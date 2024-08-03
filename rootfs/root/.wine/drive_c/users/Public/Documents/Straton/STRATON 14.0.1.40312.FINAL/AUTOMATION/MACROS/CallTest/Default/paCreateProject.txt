@@ -1,0 +1,6 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+[SHORT]
+V-RET=~
+V-OK=~

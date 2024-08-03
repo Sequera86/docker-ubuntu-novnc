@@ -1,0 +1,13 @@
+[LONG]
+V-NEWVAR=~
+V-STYP=
+V-TYPE=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-TYP=Contact type: N - I - P - F
+[SHORT]
+V-NEWVAR=~
+V-STYP=
+V-TYPE=~
+V-TYP=

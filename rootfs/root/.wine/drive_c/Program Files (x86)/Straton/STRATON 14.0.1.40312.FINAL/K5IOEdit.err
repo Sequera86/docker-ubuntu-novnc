@@ -1,0 +1,34 @@
+; K5 IOEDIT control - error messages
+; The text before "=" is an identifier and should never be changed
+
+; main key - don't change that line!
+
+[Messages]
+ErasePrompt=The I/O device and the description of its channel will be deleted. Do you want to continue?
+OverwritePrompt=The I/O device and the description of its channel will be overwritten. Do you want to continue?
+ErrWord=Invalid value. Short integer (16 bit) expected.
+ErrLong=Invalid value. Integer expected.
+ErrString=Invalid value. The string cannot exceed 15 characters
+ErrChar=Invalid value. Single character expected
+ErrBool=Invalid Value. "TRUE" or "FALSE" expected
+ErrFloat=Invalid value. Real number expected.
+ErrHotEnabled=This operation is forbidden when Online Change is enabled
+
+Library=&Library:
+Device=&Device:
+all=(all)
+Properties=Properties
+
+IOs=I/O Boards
+Close=Close
+Select=Select
+Delete=Delete
+Properties=Properties
+Virtual=Virtual/Real
+Help=Help
+Rename=Rename
+
+Up=Move &Up
+Down=Move Do&wn
+
+; eof

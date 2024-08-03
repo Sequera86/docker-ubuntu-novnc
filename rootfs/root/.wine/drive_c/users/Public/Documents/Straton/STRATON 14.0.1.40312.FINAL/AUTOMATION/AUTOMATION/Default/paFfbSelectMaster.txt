@@ -1,0 +1,7 @@
+[LONG]
+V-NEWVAR=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-MASTER=Index of the master (1 based)
+[SHORT]
+V-NEWVAR=~

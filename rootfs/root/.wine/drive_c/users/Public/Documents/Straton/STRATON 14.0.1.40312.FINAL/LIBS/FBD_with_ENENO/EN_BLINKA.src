@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    bl (RUN, TM0, TM1);
+    Q := bl.Q;
+end_if;
+

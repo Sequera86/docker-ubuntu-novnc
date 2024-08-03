@@ -1,0 +1,211 @@
+<I>Reads the status information (LED, error, etc.) of C Controller module.</I>
+
+<B>FIRSTID : UINT</B>
+First status to read
+
+<B>LASTID : UINT</B>
+Last status to read (could be the same as FIRSTID)
+
+
+<B>VALUE[] : DINT</B>
+<PRE>
+plInfo[0]   	bit 31 to 6	Reserved	-	-
+            	bit 5 to 3	RESET/SELECT switch status	000: RESET status
+								010: NEUTRAL status
+								100: SELECT statusOthers: Not used	
+            	bit 2 to 0	RUN/STOP/MODE switch status	000: MODE status
+								010: STOP status
+								100: RUN statusOthers: Not used	
+plInfo[1]   	bit 31 to 24
+		bit 23 to 16	7-segment LED status
+            	bit 15 and 14	MODE LED status	
+					00: Not lighting
+					01: Lighting in green
+					10: Lighting in orange
+					11: Flickering in green	“Orange (flickering)”
+             	bit 13 to 12	USER LED color	
+					00: Red
+					01: Green10: Orange
+					11: Not used
+            	bit 11 to 8	Reserved	-	-
+            	bit 7 and 6	CF CARD LED status
+				 	00: Not lighting
+					01: Lighting
+					10: Flickering at low-speed
+					11: Flickering at high-speed	
+            	bit 5 and 4	USER LED status	
+					00: Not lighting
+					01: Lighting
+					10: Flickering at low-speed
+					11: Flickering at high-speed	
+            	bit 3 and 2	ERR. LED status	
+					00: Not lighting
+					01: Lighting
+					10: Flickering at low-speed
+					11: Flickering at high-speed	
+            	bit 1 and 0	RUN LED status	
+					00: Not lighting
+					01: Lighting
+					10: Flickering at low-speed
+					11: Flickering at high-speed	
+plInfo[2]	bit 31 to 17	Reserved	-	-
+		bit 16		Built-in battery error status	
+					0: Not occurred
+					1: Occurred	
+		bit 15 to 8	Reserved	-	-
+		bit 7		User WDT error status	
+					0: Not occurred
+					1: Occurred	
+		bit 6		System WDT error status	
+					0: Not occurred
+					1: Occurred	
+		bit 5 to 1	Reserved	-	-
+		bit 0		Other continuous error / Stop error	
+					0: Not occurred
+					1: Occurred
+plInfo[3]	bit 31 to 19	Reserved	-	
+		bit 18		Multiple CPU bus error	
+					0: Not occurred
+					1: Occurred	
+		bit 17		Link device refresh time over error	
+					0: Not occurred
+					1: Occurred	
+		bit 16		Main CPU error
+					0: Not occurred
+					1: Occurred	
+		bit 15		Ethernet clock stop error
+					0: Not occurred
+					1: Occurred	
+		bit 14		Multiple CPU error
+					0: Not occurred
+					1: Occurred	
+		bit 13		Link parameter error
+					0: Not occurred
+					1: Occurred	
+		bit 12		Intelligent function module parameter error
+					0: Not occurred
+					1: Occurred	
+		bit 11		Reserved	-	
+		bit 10		Parameter error	0
+					0: Not occurred
+					1: Occurred	
+		bit 9		Intelligent function module assignment error
+					0: Not occurred
+					1: Occurred	
+		bit 8		Control bus error (by slot)
+					0: Not occurred
+					1: Occurred	
+		bit 7		Intelligent function module error
+					0: Not occurred
+					1: Occurred	
+		bit 6		Fuse blown error
+					0: Not occurred
+					1: Occurred	
+		bit 5		Reserved	-	
+		bit 4		Module verification error
+					0: Not occurred
+					1: Occurred	
+		bit 3		QBF driver error
+					0: Not occurred
+					1: Occurred	
+		bit 2		Control bus error (overall)
+					0: Not occurred
+					1: Occurred	
+		bit 1		Momentary stop
+					0: Not occurred
+					1: Occurred	
+		bit 0		Reserved	-	
+plInfo[4]	Final error code		
+				The last error code which occurred in the driver(effective if an error bit is turned on in plInfo[2] or plInfo[3])
+plInfo[5]	bit 31 to 8	Reserved	-	-
+		bit 7 to 4	Cause of STOP/PAUSE	
+					0: RUN/STOP/MODE switch
+					1: Reserved 
+					2: Remote operation from the C Controller setting utility
+					3: Execution of QBF_Controlfunction from user program
+					4: Error
+					5: Remote operation from other CPU
+					Others: Reserved
+		bit 3 to 0	CPU operating status
+					0: RUN status
+					1: Reserved
+					2: STOP status
+					3: PAUSE status
+					4: Reset status
+					Others: Reserved
+plInfo[6]	bit 31 to 3	Reserved	-	-
+		bit 2,1		CF CARD status
+					0: Inserted (mounted)
+					1: Inserted (unmounted)
+					2: Not inserted	Access (read/write) to the CF card
+		bit 0		Standard ROM shutdown status	
+					0: Shutdown not executed
+					1: Shutdown completed
+plInfo[7]	Maximum number of ROM drive erasures
+plInfo[8]	Number of detected momentary power failures
+					0: Not occurred
+					Others: Number of detected power failures
+plInfo[9]	Information on redundant power supply module (power supply 1)
+		bit 31	Power OFF detected status (Extension base 7)
+		bit 30	Power OFF detected status (Extension base 6)		
+		bit 29	Power OFF detected status (Extension base 5)		
+		bit 28	Power OFF detected status (Extension base 4)		
+		bit 27	Power OFF detected status (Extension base 3)		
+		bit 26	Power OFF detected status (Extension base 2)		
+		bit 25	Power OFF detected status (Extension base 1)		
+		bit 24	Power OFF detected status (Main base)		
+		bit 23	Power failure detected status (Extension base 7)
+		bit 22	Power failure detected status (Extension base 6)		
+		bit 21	Power failure detected status (Extension base 5)		
+		bit 20	Power failure detected status (Extension base 4)		
+		bit 19	Power failure detected status (Extension base 3)		
+		bit 18	Power failure detected status (Extension base 2)		
+		bit 17	Power failure detected status (Extension base 1)		
+		bit 16	Power failure detected status (Main base)		
+		bit 15 to 0	Number of detected momentary power failures
+plInfo[10]	Information on redundant power supply module (power supply 2)
+		bit 31	Power OFF detected status (Extension base 7)
+		bit 30	Power OFF detected status (Extension base 6)		
+		bit 29	Power OFF detected status (Extension base 5)		
+		bit 28	Power OFF detected status (Extension base 4)		
+		bit 27	Power OFF detected status (Extension base 3)		
+		bit 26	Power OFF detected status (Extension base 2)		
+		bit 25	Power OFF detected status (Extension base 1)		
+		bit 24	Power OFF detected status (Main base)		
+		bit 23	Power failure detected status (Extension base 7)
+		bit 22	Power failure detected status (Extension base 6)		
+		bit 21	Power failure detected status (Extension base 5)		
+		bit 20	Power failure detected status (Extension base 4)		
+		bit 19	Power failure detected status (Extension base 3)		
+		bit 18	Power failure detected status (Extension base 2)		
+		bit 17	Power failure detected status (Extension base 1)		
+		bit 16	Power failure detected status (Main base)		
+		bit 15 to 0	Number of detected momentary power failures
+plInfo[11]	bit 31 to 16	Link device refresh time[Set value: ms]
+				0: No setting
+				Others: Set value
+		bit 15 to 0	Maximum link device refresh time [Measured value: ms]
+				0: Not refreshed
+				Others: Refreshed
+plInfo[12]	bit 31 to 16	Current link device refresh time [Measured value: ms]
+				0: Not refreshed
+				Others: Refreshed
+		bit 15 to 0	Minimum link device refresh time[Measured value: ms]
+				0: Not refreshed
+				Others: Refreshed
+plInfo[13]	bit 31 to 0 	CH1 IP address	
+				0: No setting
+				Others: IP address
+plInfo[14]	bit 31 to 0	CH2 IP address	0: No setting
+				Others: IP address
+</PRE>
+
+
+<B>Q : INT</B>
+<PRE>
+0		Normal
+-202 (0xFF36)	Path error	
+-210 (0xFF2E)	Read area size error	
+-227 (0xFF1D)	Control code send error	
+-28628 (0x902C)	Pointer address error
+</PRE>

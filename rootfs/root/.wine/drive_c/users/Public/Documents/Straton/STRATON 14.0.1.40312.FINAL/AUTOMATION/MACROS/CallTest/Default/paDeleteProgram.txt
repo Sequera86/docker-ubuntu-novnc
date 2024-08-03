@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-NAME=Program name
+[SHORT]
+V-RET=~
+V-OK=~
+V-NAME=~

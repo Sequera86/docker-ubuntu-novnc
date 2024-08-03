@@ -1,0 +1,81 @@
+[:__MODULE_TIMEQUALITY] 
+
+{@BEGIN:TimeQuality}
+[:__LABEL69] 
+
+<IF:CCBLEND>
+534 526 
+{TimeQuality: (3): }
+508 0 530 24 [JA:__LABEL73] 
+
+{TimeQuality: (4): }
+508 0 399 46 14 
+513 46 44 45 
+398 14 46 
+
+{TimeQuality: (5): }
+508 0 399 46 14 
+513 46 47 45 
+398 14 46 
+
+{TimeQuality: (6): }
+508 0 151 24 45 
+
+{TimeQuality: (7): }
+508 0 526 528 [JA:__LABEL72] 
+[:__LABEL73] 
+[:__LABEL72] 
+
+{TimeQuality: (9): }
+508 0 530 25 [JA:__LABEL75] 
+
+{TimeQuality: (10): }
+508 0 399 46 14 
+513 46 44 42 
+398 14 46 
+
+{TimeQuality: (11): }
+508 0 399 46 14 
+513 46 47 45 
+398 14 46 
+
+{TimeQuality: (12): }
+508 0 151 25 45 
+
+{TimeQuality: (13): }
+508 0 526 528 [JA:__LABEL74] 
+[:__LABEL75] 
+[:__LABEL74] 
+
+{TimeQuality: (15): }
+508 0 530 26 [JA:__LABEL77] 
+
+{TimeQuality: (16): }
+508 0 399 46 14 
+513 46 44 45 
+398 14 46 
+
+{TimeQuality: (17): }
+508 0 399 46 14 
+513 46 47 42 
+398 14 46 
+
+{TimeQuality: (18): }
+508 0 151 26 45 
+
+{TimeQuality: (19): }
+508 0 526 528 [JA:__LABEL76] 
+[:__LABEL77] 
+[:__LABEL76] 
+
+{TimeQuality: (80): }
+508 0 526 [:__LABEL71] 
+
+{TimeQuality: (1): }
+508 0 526 
+<ENDIF>
+234 
+[:__LABEL70] 
+
+{@END:TimeQuality}
+[:__MODULE_END_TIMEQUALITY] 

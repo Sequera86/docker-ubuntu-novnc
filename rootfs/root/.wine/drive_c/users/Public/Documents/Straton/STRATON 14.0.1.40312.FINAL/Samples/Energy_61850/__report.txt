@@ -1,0 +1,65 @@
+521 (app version) <VERS>
+1710255178 (compiling date stamp) <DATE>
+0 D8 I/Os <IO08>
+0 D16 I/Os <IO16>
+0 D32 I/Os <IO32>
+0 D64 I/Os <IO64>
+0 String I/Os <IO0S>
+904 CTSeg Alloc <CTSA>
+904 CTSeg Used <CTSU>
+C FB Classes:
+22 referenced <FBCA>
+C FB Instances:
+4 allocated <FBIA>
+4 used <FBIU>
+4 declared <FBIF>
+Custom C Functions:
+0 referenced <FNCA>
+<CYCLE>: XCBR1 LLN0 MMXU1 TimeQuality XCBR1_Simu
+BOOL/SINT variables:
+122 allocated <D08A>
+121 used <D08U>
+27 declared <D08F>
+INT variables:
+39 allocated <D16A>
+38 used <D16U>
+3 declared <D16F>
+DINT/REAL variables:
+205 allocated <D32A>
+204 used <D32U>
+28 declared <D32F>
+LINT/LREAL variables:
+31 allocated <D64A>
+30 used <D64U>
+4 declared <D64F>
+TIME variables:
+7 allocated <TMRA>
+6 used <TMRU>
+0 declared <TMRF>
+0 active (allocated) <ATMA>
+0 active (used) <ATMU>
+STRING variables:
+7 allocated <STRA>
+6 used <STRU>
+0 declared <STRF>
+Steps:
+0 allocated <STPA>
+0 used <STPU>
+XV:
+0 allocated <XVVA>
+0 used <XVVU>
+Transitions:
+0 allocated <TRSA>
+0 used <TRSU>
+STRING raw buffers:
+0 bytes allocated <SBFA>
+STRING raw buffers:
+145 bytes used <SBFU>
+WSTRING variables:
+1 allocated <WSTA>
+0 used <WSTU>
+0 declared <WSTF>
+13 POUs <POU>
+Published variables
+66 Alloc <PUBA>
+66 Used <PUBU>

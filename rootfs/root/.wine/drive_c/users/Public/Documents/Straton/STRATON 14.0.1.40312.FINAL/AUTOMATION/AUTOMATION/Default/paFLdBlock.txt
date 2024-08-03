@@ -1,0 +1,18 @@
+[LONG]
+V-NEWVAR=~
+V-OUTPUTS=List of outputs separated by comas
+V-STYP=~
+V-INPUTS=List of inputs separated by comas
+V-SBLOCK=
+V-FID=File identifier
+V-SOUT=
+V-INSTANCE=Name of the instance (if function block)
+V-OK=TRUE if successful
+V-NAME=Block type name
+V-TYP=~
+[SHORT]
+V-NEWVAR=~
+V-STYP=~
+V-SBLOCK=
+V-SOUT=
+V-TYP=~

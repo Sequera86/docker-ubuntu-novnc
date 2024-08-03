@@ -1,0 +1,17 @@
+Writing an array parameter (SDO)
+The EplWriteArray user defined function block is used for sending a simple SDO message to write an array parameter to a slave.
+
+Inputs:
+
+- EN : the message is sent on a rising edge of this input
+- PORT : name of the port (not used)
+- SLV : powerlink slave number
+- Object : parameter index
+- Sub : parameter sub-index
+- VAL : write array parameter value
+- TO : timeout for exchange
+
+Outputs:
+
+- Ready : TRUE when the block is ready - FALSE during an exchange
+- RC : powerlink return check

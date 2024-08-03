@@ -1,0 +1,11 @@
+JsonFirstMember - function - Get the first member of an object
+
+Inputs:
+
+hObj : DINT; handle of a valid JSON node representing a structured value (object)
+
+Outputs:
+
+hMember : DINT; handle of the first member of the object
+
+The function returns 0 if the object is empty. Use JsonNextMember to enumerate the following members.

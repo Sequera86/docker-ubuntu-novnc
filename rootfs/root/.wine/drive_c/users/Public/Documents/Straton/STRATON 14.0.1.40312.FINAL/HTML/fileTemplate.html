@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>straton WEB Monitoring</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.treegrid.css">
+    <link rel="stylesheet" href="css/treegrid.css">
+
+    <script src="js/jquery-3.5.1.min.js">/*Empty*/</script>
+    <script src="js/stratonds-1.6.1.js">/*Empty*/</script>
+    <script src="js/stratondsws-3.1.1.js">/*Empty*/</script>
+    <script src="js/stratongraph-1.4.js">/*Empty*/</script>
+    <script src="js/bootstrap.bundle.min.js">/*Empty*/</script>
+    <script src="js/jquery.treegrid.min.js">/*Empty*/</script>
+    <script src="js/d3plusfull.min.js">/*Empty*/</script>
+    <script src="js/context.js">/*Empty*/</script>
+    <script src="js/stratoncontext.js">/*Empty*/</script>
+    <script src="js/stratongraph-drawcustom.js">/*Empty*/</script>
+	
+    <script>
+        //<![CDATA[
+        __JS__
+
+        /* id of the intervall for spying */
+        var idInterval___NAME__ = 0;
+
+        /* webSockect */
+        var ws___NAME__ = null;
+        
+        /* Abort controller for fetch requests */
+        var abortController___NAME__ = null;
+        
+        /**** Handler for Window unload ****/
+        $(window).on('unload', function(event) {
+            onPageUnload___NAME__();
+        });
+
+        /**** Handler for Websocket open ****/
+        function onWSOpen___NAME__(event) {
+            console.log("___NAME__ Connected to WebSocket server at 8000");
+            displayCnxState(3,"Connected");
+
+            idInterval___NAME__ = setInterval(spyAllVar, __REFRESHINTERVAL__,__REQUESTTYPE__, ws___NAME__, __REFRESHINTERVAL__);
+        };
+
+
+        /**** Handler for Websocket message ****/
+        function onWSMessage___NAME__(event) {
+            spyManageWSEvent(event,ws___NAME__);
+        };
+
+
+
+        /**** Handler for Websocket error ****/
+        function onWSError___NAME__(event) {
+            console.log("WebSocket ___NAME__ error");
+            displayCnxState(2, "WebSocket index error");	//Display error
+        };
+
+
+        /**** Handler for Websocket closed ****/
+        function onWSClose___NAME__(event) {
+            console.log("WebSocket ___NAME__ connexion closed");
+            displayCnxState(0, "WebSocket connexion closed");	//Display error
+            spyResetAllVars();
+        };
+
+
+        /**** Handler for page load ****/
+        /**** Puts a delay between each refreshing ****/
+        function onPageLoad___NAME__()
+        {
+            if (typeof(g_cbClosePaneHandler) != "undefined")
+            {
+                g_cbClosePaneHandler = onPageUnload___NAME__;
+            }
+
+            // Create the Abort Controller used to cancel fetch requests 
+            abortController___NAME__ = new AbortController();
+            
+			var dsType = __REQUESTTYPE__;
+			
+			//listen mouse move event for getting mouse coordinates continously
+			document.onmousemove = onUpdateMouseCoord;
+
+			//set the visibility state
+			initPageVisibilityState();
+
+			//wrap text according to rect coordinates
+			initTextWrap();
+			
+			//create custom objects (if used)
+			IncludeCustomScripts();
+			CreateCustoms();
+
+			if (dsType===2)
+			{
+				//Init Websocket
+                ws___NAME__ = initWS3(onWSOpen___NAME__, onWSMessage___NAME__, onWSError___NAME__, onWSClose___NAME__, window.location.host, false);
+			}
+			else
+			{
+				//Executes spyAllVar() every __REFRESHINTERVAL__ ms
+				//pass parameters of spyAllVar after the Refresh time (3rd param here)
+				idInterval___NAME__ = setInterval(spyAllVar, __REFRESHINTERVAL__,__REQUESTTYPE__, null, 0,abortController___NAME__.signal);
+			}
+
+            //apply zoom level from toolbar
+            ApplyZoom();
+
+            // For Dlg Force, Focus on Input when shown
+            $('#modalForce').on('shown.bs.modal', function() {
+                $('#dlg-input-force-value').trigger('focus');
+			});
+
+        }
+		
+		/**** called when unloading page ****/
+        function onPageUnload___NAME__()
+        {
+			// Abort all the requests that are not currently finished
+            if( abortController___NAME__!=null )
+            {
+                console.log("___NAME__ ABORT controller");                
+                abortController___NAME__.abort();
+            }
+
+            // Close Websocket
+            if(ws___NAME__!=null )
+            {
+                //Unsubscribe RT status
+				unsubscribeRTStatusWS(ws___NAME__);
+
+                console.log("___NAME__ Disconnect websocket");
+                DisconnectWS2(ws___NAME__);
+                ws___NAME__ = null;
+            }
+
+            // Clear interval if set before
+            if(idInterval___NAME__!=0)
+            {
+                clearInterval(idInterval___NAME__);
+                idInterval___NAME__ = 0;
+            }
+
+			//free custom objects (if used)
+			FreeCustoms();
+		}
+
+
+        //]]&gt;
+    </script>
+</head>
+
+    <body id="__NAME__" x5_appname="__APPNAME__" onLoad="onPageLoad___NAME__()" onunload="onPageUnload___NAME__()">
+
+        <!--******************** Bootstrap modal dialog to force value of any type except bool ********************-->
+        <div class="modal fade" id="modalForce" tabindex="-1" role="dialog" aria-labelledby="modalForceLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalForceLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="dlg-input-force-value" class="col-form-label">Value:</label>
+                                <input type="text" class="form-control" id="dlg-input-force-value">
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block forcevalue" id="btn-dlg-force" data-dismiss="modal">Force</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--******************** Bootstrap modal dialog to force bool value ********************-->
+        <div class="modal fade" id="modalForceBool" tabindex="-1" role="dialog" aria-labelledby="modalForceLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalForceLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- btn-block makes the button take all the width -->
+                        <button type="button" class="btn btn-primary btn-block" id="btn-dlg-force-true" data-dismiss="modal">TRUE</button>
+                        <button type="button" class="btn btn-primary btn-block" id="btn-dlg-force-false" data-dismiss="modal">FALSE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        __BODY__
+
+        <script>
+//<![CDATA[
+
+//]]&gt;
+        </script>
+    </body>
+</html>

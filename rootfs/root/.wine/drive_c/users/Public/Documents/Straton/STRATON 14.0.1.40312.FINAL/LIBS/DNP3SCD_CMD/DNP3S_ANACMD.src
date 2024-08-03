@@ -1,0 +1,66 @@
+(* CA[0] (IN/OUT) *)
+    (* CAIx xxxx cccc cccc | Rxxx xxxx rrrr rrrr *)
+    (* (IN) C : Flag command *)
+    (* (IN) A : abort *)
+    (* (IN) I : Init bloc *)
+    (* (IN) cccc : command (_CODE_SELECT/_CODE_OPERATE/_CODE_DIRECTOPERATE) *)
+    (* (OUT) R : Flag response *)
+    (* (OUT) rrrr : num response (_STATUSCODE_SUCCESS, ..., _STATUSCODE_UNDEFINED) *)
+
+(* Temporary store first item of array : used for handshaking *)    
+CC := CA[0] ;
+
+(* Init/Enable *)
+if (CC.29 = 1) then 
+    OP       := 0 ;
+    STATE_OP := _DNP3S_STATUS_UNDEFINED;
+    CC.29    := 0 ;
+    CA[0]    := CC ;
+    return ; 
+end_if;
+
+(* Get current command and response value *)
+_CODECMD := LOBYTE(HIWORD(CC)) ;    (* Command value : _CODE_SELECT, ... *)
+_CODERSP := LOBYTE(LOWORD(CC)) ;    (* Response value : _STATUSCODE_NOTSUPPORTED, ...*)
+
+(* Abort flag armed *)
+if (CC.30 = 1) then 
+    CC := MAKEDWORD(MAKEWORD(16#00, _CODECMD), MAKEWORD(16#80, _DNP3S_STATUS_CANCELLED)) ;
+    OP       := LOBYTE(HIWORD(CC)) ;
+    STATE_OP := LOBYTE(LOWORD(CC));
+    CA[0] := CC ;
+    return ; 
+end_if ;
+
+(* No command : just copy OP and STATE values *)    
+if (CC.31 = 0) then 
+    OP       := LOBYTE(HIWORD(CC)) ;
+    STATE_OP := LOBYTE(LOWORD(CC));
+    CA[0]    := CC ;
+    return ; 
+end_if ;
+
+
+(* State machine *)
+ case _CODECMD of 
+     _DNP3S_CODE_SELECT:
+        _CODERSP := S_SELECT ;
+    _DNP3S_CODE_OPERATE,_DNP3S_CODE_DIRECTOPERATE:
+        _CODERSP := S_OPERATE ;
+    else
+        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED;
+ end_case;
+
+ 
+ (* Reset command and Set Response (except for PENDING response) *)
+ if (_CODERSP <> _DNP3S_STATUS_PENDING) then
+    CC := MAKEDWORD(MAKEWORD(16#00, _CODECMD), MAKEWORD(16#80, _CODERSP)) ;
+else
+    CC := MAKEDWORD(MAKEWORD(16#80, _CODECMD), MAKEWORD(16#80, _CODERSP)) ;
+end_if;
+
+OP       := LOBYTE(HIWORD(CC)) ;
+STATE_OP := LOBYTE(LOWORD(CC));
+CA[0]    := CC ;
+
+

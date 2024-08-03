@@ -1,0 +1,6 @@
+Sends characters of a text buffer to a valid TCP socket
+Inputs:
+   sock : open socket
+   hTxb : handle of the text buffer
+Outputs:
+   nbsent : number of characters sent

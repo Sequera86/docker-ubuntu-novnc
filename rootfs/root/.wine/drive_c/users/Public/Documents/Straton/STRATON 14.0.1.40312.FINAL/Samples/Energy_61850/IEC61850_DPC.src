@@ -1,0 +1,150 @@
+(*
+INPUTS :
+    ControModel : 0 for no control, 1 direct, 2 select before operate, 3 direct with enhanced security, 4 select before operate with enhanced security
+    Oper_ctlVal : The control value set by the client when client request operate
+    Select_ctlVal : The control value set by the client when client request selection
+    stVal : Current status value
+
+OUTPUTS :
+    ctlVal : The control value set by the client, updated only when operate done and validated (200)
+    bOperate : Rising edge when an operate has been received 
+
+INOUT : 
+    Control : The variable shared between the Straton Logic and the 61850 stack to indicate current state in the operation
+
+Notes: this state machine is only a sample; more can be done, like managing the Select and 
+ Operate timeouts etc.
+*)
+
+
+bPrint := false;
+if Control <> PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     STATE_WANTS_SELECT: //99 - wants select
+        if bPrint then printf('IEC61850:%ld Wants select',any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true then
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            if (SelectAddCause < 100) then
+                Control := 100 + SelectAddCause;
+            else
+                Control := SelectAddCause;
+            end_if;
+            
+            printf('IEC61850:%ld Select',any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    STATE_WANTS_OPERATE : //199 - wants Operate
+        if bPrint then printf('IEC61850:%ld Wants bOperate',any_to_dint(Control)); end_if;
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause < 200 then
+                Control := 200 + OperateAddCause; //200 operate_ok
+            else
+                Control := OperateAddCause;
+            end_if;
+            printf('IEC61850:%ld Operate',any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        Selected := false;  
+  
+  //Operated with enhanced security
+    STATE_OPERATE_OK : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                if DoneAddCause < 400 then
+                    Control := 400 + DoneAddCause;
+                else
+                    Control := DoneAddCause;
+                end_if;
+                
+                printf('IEC61850:%ld Done',any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            if CancelAddCause < 300 then
+                Control := 300 + CancelAddCause;
+            else
+                Control := CancelAddCause;
+            end_if;
+            
+            printf('IEC61850:%ld Cancel',any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+// Received select command
+if Select then
+    SelectAck := True;
+else
+    SelectAck := False;
+end_if;
+
+
+DoneAddCause := 0;
+DoneAck := ( SEL (ctlVal, DBPOS_OFF, DBPOS_ON ) = stVal );
+
+CancelAck := Cancel;
+CancelAddCause := 0;
+
+// Received operate command
+if bOperate then
+    bOperate := false;
+    if ctlVal then
+        // Close
+        if stVal = DBPOS_ON then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = DBPOS_OFF then
+            OperateAddCause := STATE_OPERATE_OK;
+            bOperate := true;
+        elsif stVal = DBPOS_INTERMEDIATE then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    else
+        // Open
+        if stVal = DBPOS_OFF then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = DBPOS_ON then
+            OperateAddCause := STATE_OPERATE_OK;
+            bOperate := true;
+        elsif stVal = DBPOS_INTERMEDIATE then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    end_if;
+    OperateAck := True;
+else
+    OperateAck := False;
+end_if;
+
+

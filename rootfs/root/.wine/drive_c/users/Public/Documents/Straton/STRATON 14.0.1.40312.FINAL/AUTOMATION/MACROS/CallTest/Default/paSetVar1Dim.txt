@@ -1,0 +1,12 @@
+[LONG]
+V-RET=~
+V-STR=~
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-DIM=Dimension
+[SHORT]
+V-RET=~
+V-STR=~
+V-OK=~
+V-NAME=~
+V-DIM=~

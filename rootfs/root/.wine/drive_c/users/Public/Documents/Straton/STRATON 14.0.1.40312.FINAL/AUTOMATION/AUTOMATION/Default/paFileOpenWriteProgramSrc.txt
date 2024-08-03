@@ -1,0 +1,9 @@
+[LONG]
+V-FID=File identifier
+V-NAME=Program name
+V-OK=~
+V-RET1=~
+[SHORT]
+V-FID=
+V-OK=~
+V-RET1=~

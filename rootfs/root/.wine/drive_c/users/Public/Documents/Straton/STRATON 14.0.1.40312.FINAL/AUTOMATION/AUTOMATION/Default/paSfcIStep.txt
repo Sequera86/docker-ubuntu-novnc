@@ -1,0 +1,4 @@
+[LONG]
+V-FID=File identifier
+V-REF=Reference number of the SFC item
+V-OK=TRUE if successful

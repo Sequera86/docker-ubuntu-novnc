@@ -1,0 +1,15 @@
+[LONG]
+V-TITLE=Title of the window
+V-STR=~
+V-OK=TRUE if successful
+V-TEXT=Text to display
+V-BANSWERS=~
+V-BCOMMANDS=~
+V-TEXT1=~
+[SHORT]
+V-TITLE=
+V-STR=~
+V-TEXT=
+V-BANSWERS=~
+V-BCOMMANDS=~
+V-TEXT1=~

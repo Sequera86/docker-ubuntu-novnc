@@ -1,0 +1,9 @@
+JsonNbArrayElt - function - Get the number of elements of an array
+
+Inputs:
+
+hArray : DINT; handle of a valid JSON node representing an array
+
+Outputs:
+
+nb : DINT; number of elements in the array.

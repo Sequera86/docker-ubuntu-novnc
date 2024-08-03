@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>__TITLE__</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/navbar-top-fixed.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/tree.css" rel="stylesheet">
+    <link href="css/fontawesome-free-5.15.1-web.all.min.css" rel="stylesheet">
+	<link href="css/context.standalone.css" rel="stylesheet">
+	<link href="css/fab.css" rel="stylesheet">
+	<link href="css/layout-default.css" rel="stylesheet">
+
+    <script src="js/jquery-3.5.1.min.js">/*Empty*/</script>
+    <script src="js/bootstrap.bundle.min.js">/*Empty*/</script>
+    <script src="js/stratonds-1.6.1.js">/*Empty*/</script>
+	<script src="js/stratondsws-3.1.1.js">/*Empty*/</script>
+    <script src="js/stratongraph-1.4.js">/*Empty*/</script>
+    <script src="js/breadcrumb.js">/*Empty*/</script>
+    <script src="js/fontawesome-free-5.15.1-web.all.min.js">/*Empty*/</script>
+    <script src="js/d3plusfull.min.js">/*Empty*/</script>
+    <script src="js/context.js">/*Empty*/</script>
+	<script src="js/stratoncontext.js">/*Empty*/</script>
+	<script src="js/fab.js">/*Empty*/</script>
+	<script src="js/tree.js">/*Empty*/</script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/jquery.layout.min.js"></script>
+
+	
+
+	<script>
+
+		var	theLayout;
+
+        var g_cbClosePaneHandler = null;
+
+		/* Handle history when user clicks on Back or Forth browser buttons */ 
+		$(window).on('popstate', function (e) {
+			var state = e.originalEvent.state;
+			if (state !== null) 
+			{
+				var funcName = state.funcName;
+				var html = state.html;
+				console.log("CALL: " + funcName + " " + html);
+
+				// call the function onOpen_xxxxx
+				// don't add to history
+				eval(funcName)(html,false);
+			} 
+		});
+
+        //<![CDATA[
+        
+		/* id of the intervall for spying */
+		var idInterval_index = 0;   
+
+        /* webSockect */
+      	var ws_index = null;
+             
+        /* Abort controller for fetch requests */
+		var abortController_index = null;
+
+        /**** Handler for Window unload ****/
+        $(window).on('unload', function(event) {
+        	onPageUnload_index();
+        });
+
+        /**** Handler for Websocket open ****/
+        function onWSOpen_index(event) {
+			console.log("index Connected to WebSocket server at 8000");
+			displayCnxState(3,"Connected");
+			subscribeRTStatusWS(ws_index,1000);
+        };
+
+
+        /**** Handler for Websocket message ****/
+        function onWSMessage_index(event) {
+        	spyManageWSEvent(event,ws_index);
+        };
+
+
+        /**** Handler for Websocket error ****/
+        function onWSError_index(event) {
+			console.log("WebSocket index error");
+			displayCnxState(2, "WebSocket index error");	//Display error
+        };
+
+
+        /**** Handler for Websocket closed ****/
+        function onWSClose_index(event) {
+			console.log("WebSocket index connexion closed");
+			displayCnxState(0, "WebSocket connexion closed");	//Display error
+			spyResetAllVars();
+        };
+
+
+        /**** Handler for page unload ****/
+        function onPageUnload_index()
+        {
+			// Abort all the requests that are not currently finished
+			if( abortController_index!=null )
+            {
+                console.log("index ABORT controller");                
+                abortController_index.abort();
+            }
+
+	        //Close Websocket
+	        if(ws_index!=null )
+	        {
+	        	//Unsubscribe RT status
+				unsubscribeRTStatusWS(ws_index);
+
+		        console.log("index Disconnect websocket");
+		        DisconnectWS2(ws_index);
+		        ws_index = null;
+	        }
+
+			//Clear interval if set before
+            if(idInterval_index!=0)
+            {
+                clearInterval(idInterval_index);
+                idInterval_index = 0;
+            }
+        };
+
+
+        /**** Handler for page load ****/
+        /**** Puts a delay between each refreshing ****/
+        function onPageLoad_index()
+        {
+            // Create the Abort Controller used to cancel fetch requests 
+            abortController_index = new AbortController();
+
+			var dsType = __REQUESTTYPE__;
+			
+			if (dsType===2)
+			{
+				//Init Websocket
+                ws_index = initWS3(onWSOpen_index, onWSMessage_index, onWSError_index, onWSClose_index, window.location.host, false);
+			}
+			else
+			{
+				//Executes spyRTStatus() every 1000 ms
+				//pass parameters of spyAllVar after the Refresh time (3rd param here)				
+				idInterval_index = setInterval(spyRTStatus, 1000,__REQUESTTYPE__, null, 0,abortController_index.signal);
+			}
+
+			displayCnxMethod(dsType);
+			
+			//open home page (if any)
+			__OPENHOMEPAGE__
+        }
+
+
+
+        	
+        __FUNCTIONS_ONOPEN__
+        //]]&gt;
+    </script>
+
+    <script>
+
+		$(document).ready(function () {
+
+			displayCnxState(0, "Not connected");
+		
+			//Set minimum sizes for panes
+			theLayout = $('body').layout({
+			west__minSize:	50,
+			east__minSize:	100,
+			north__minSize:	65,
+			north__maxSize:	65,
+			north__resizable: false,
+			east__size: "15%"
+			});
+
+			//By default, Hide the search pane
+			theLayout.hide('east');
+
+			//Click on search close button
+			$('#right-pane-search-close-button').click(function(){
+				theLayout.hide('east');
+			});
+
+			context.init({preventDoubleContext: false});	//Init contextual menu component
+			context.attach('[x5_variable]', ctxmenu_var);	//Attach ctx menu to elements with attr variable
+
+			ApplyZoom();
+
+		});
+
+
+		function searchVar(varToFind)
+		{				
+			//Show the search pane	
+			theLayout.show('east');	
+
+			$.ajax({
+				url: "util/xref.php",					// CGI query
+				type: "POST",								
+				data: "var=" + varToFind, 	    // eg: t5wcmd=read&name=app.TestRead
+				dataType: "html",							
+				success: function (data) {
+					//alert(data); 
+					$('#search-pane-header-title').html('Search for ' + varToFind);
+					$('#search_treelist').html(data);
+				},					                        
+				error: function (xhr,status,error) { 
+				}							                
+		});
+		}
+
+    </script>
+</head>
+
+<body x5_appname="__APPNAME__" onLoad="onPageLoad_index()">
+	<!--******************** Bootstrap modal dialog to force value of any type except bool ********************-->
+	<div class="modal fade" id="modalForceIndex" tabindex="-1" role="dialog" aria-labelledby="modalForceLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalForceLabel">New message</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="dlg-input-force-value" class="col-form-label">Value:</label>
+							<input type="text" class="form-control" id="dlg-input-force-value">
+						</div>
+						<button type="button" class="btn btn-primary btn-block forcevalue" id="btn-dlg-force" data-dismiss="modal">Force</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--******************** Bootstrap modal dialog to force bool value ********************-->
+	<div class="modal fade" id="modalForceBoolIndex" tabindex="-1" role="dialog" aria-labelledby="modalForceLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalForceLabel">New message</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- btn-block makes the button take all the width -->
+					<button type="button" class="btn btn-primary btn-block" id="btn-dlg-force-true" data-dismiss="modal">TRUE</button>
+					<button type="button" class="btn btn-primary btn-block" id="btn-dlg-force-false" data-dismiss="modal">FALSE</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui-layout-north" id="top-pane">	
+		<nav class="navbar navbar-expand navbar-dark fixed-top bg-dark">
+	        <a class="navbar-brand" href="https://straton-plc.com/" target="_blank">
+	            <img src="./res/cube.png" width="30" height="30" class="d-inline-block align-top" alt="">
+	        </a>
+			<span class="navbar-nav navbar-brand mr-auto">__PROJECTDESCRIPTION__</span>
+	
+			
+			<div class="form-inline my-2 my-lg-0">
+
+				<span class="navbar-text mr-2 x5i_rtCnxStateText" id="status-cnx-txt" onclick="toggleFab()"></span>
+				<img class="my-2 my-sm-0 x5i_rtCnxStateImg mr-3" id="status-cnx-img" src="res/check-circle-fill.svg" onclick="toggleFab()" >
+
+				<label class='m-1 h-25 mr-2 navbar-text' for='idTextZoom'>Zoom (%)</label>
+
+				<div class="my-2 my-sm-0 shadow-sm mb-4 mr-4">
+					<div class="input-group input-group-sm ">
+						<div class="input-group-prepend">
+							<button id="btnZoomOut" type="submit" class="btn btn-link text-info form-control-sm"  data-toggle="tooltip" data-placement="top" title="Zoom Out"><i class="fa fa-minus" onClick="onZoomOut()"></i></button>
+						</div>
+						<input type="text" id=idTextZoom placeholder="125" style='width:3em' aria-describedby="btnZoomIn" class="form-control-sm border-0 bg-light col-xs-2" onkeydown="if (event.keyCode == 13) { ApplyZoom(); event.preventDefault();}">
+						<div class="input-group-append">
+							<button id="btnZoomIn" type="submit" class="btn btn-link text-info form-control-sm  data-toggle="tooltip" data-placement="top" title="Zoom In"><i class="fa fa-plus" onClick="onZoomIn()"></i></button>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="my-2 my-sm-0 shadow-sm mb-4 mr-3">
+					<div class="input-group input-group-sm col-xs-2">
+						<input class="form-control py-2 border-right-0 border" placeholder="Search variable" type="search" value="" id="itCust" onkeydown="if (event.keyCode == 13) { searchVar(document.getElementById('itCust').value); event.preventDefault();}">
+						<span class="input-group-append">
+							<button class="btn btn-link text-info border-left-0 border" type="button" onClick="javascript: searchVar(document.getElementById('itCust').value);">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</div>			
+			</div>
+		</nav>
+	</div> 
+
+    <div class="ui-layout-west" id="left-pane">		
+		__WORKSPACE__                
+    </div>     
+	<div class="ui-layout-center" id="right-pane">
+		<div id="right-pane-container">
+			<div id="right-pane-header" class="right-pane-header">
+				<ol class="breadcrumb" id="right-pane-header-title"></ol>
+			</div>
+			<div id="right-pane-content"></div>
+		</div>							
+	</div>
+
+	<div class="ui-layout-east" id="search-pane">					
+		<div id="search-pane-header" class="search-pane-header">
+			<button id="right-pane-search-close-button" class="noborder-header-button" title="Close Search window">X</button>
+			<div class="search-pane-header-title" id="search-pane-header-title">Search results</div>
+		</div>
+		<div id="right-pane-search-content">
+			<div  id="right-pane-tree"  class="x5i_tree">
+				<ul class="x5i_treeList" id="search_treelist">
+				</ul>
+			</div>
+		</div>
+	</div>
+
+    <div class="x5ti_treeContextMenu">
+        <ul>
+            <li class="x5ti_treeContextMenuItem"><a id="x5ti_treeContextMenuItem_1" onclick="">Open in a new tab</a></li>
+            <li class="x5ti_treeContextMenuItem"><a id="x5ti_treeContextMenuItem_2" onclick="">Open in a new Window</a></li>
+        </ul>
+    </div>
+
+	<div class="stratonfabs">
+		<div id="stratonFab" class="stratonFab" style="display: none;">
+			  <div class="stratonfab_header">
+				<span class="stratonfab_header_title">CONNEXION STATUS</span> <br> 
+				<span class="stratonfab_header_info x5i_rtFabCnxMethod" id="rtstatus-connectmethod"></span>
+				<br> 
+				<span class="stratonfab_header_info x5i_rtFabCnxStateText"  id="rtstatus-connectstate"></span> 
+				<img class="stratonFabBtnRight" src="res/x.svg" fill="white" onclick="toggleFab()" >
+			  </div>
+			  <div class="stratonfab_body">
+				<span class="stratonfab_header_title">RUNTIME STATUS</span> <br> 
+				<span class="stratonfab_rt_info">Application Name: </span> <span x5_variable="sys.appname" id="rtstatus-appname"></span> <br> 
+				<span class="stratonfab_rt_info">Application version: </span><span x5_variable="sys.appversion" id="rtstatus-appversion"></span>  <br>
+				<span class="stratonfab_rt_info">Cycle time: </span> <span x5_variable="sys.cycletime" id="rtstatus-cycletime"></span> <br> 
+				<span class="stratonfab_rt_info">Max Cycle time: </span><span x5_variable="sys.cyclemax" id="rtstatus-maxcycle"></span>  <br>
+				<span class="stratonfab_rt_info">Cycle overflows: </span> <span x5_variable="sys.cycleoverflows" id="rtstatus-cycleoverflow"></span> <br> 
+				<span class="stratonfab_rt_info">Cycle count: </span><span x5_variable="sys.cyclecount" id="rtstatus-cyclecount"></span>  <br>
+				<span class="stratonfab_rt_info">Flags: </span><span x5_variable="sys.flags" id="rtstatus-flags"></span>
+				
+			  </div>
+		</div>
+  </div>
+
+    <script>
+//<![CDATA[
+
+//]]&gt;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+[desc]
+DNP3M_FTINFO=Get file informations
+DNP3M_COLDREST=Issue a cold restart
+DNP3M_CMDANLG=Issue an analog command
+DNP3M_EVPOLL=Issue an event data poll
+DNP3M_ENDAB=Enable/Disable unsolicited message
+DNP3M_WRITEBIN=Issue a binary output write command
+DNP3M_WRITESTR=Write a string object to the specified point
+DNP3M_READGROUP=Issue a read group request
+DNP3M_WRITEATTR=Write a device attribute to the specified point
+DNP3M_ASSIGNCL=Issue an assign class request
+DNP3M_TIMESYNC=Issue an write time request
+DNP3M_FREEZCNEX=Issue an freeze counters request (NOACK considered)
+DNP3M_FTDIR=Get directory listing
+DNP3M_FREEZCNTR=Issue an freeze counters request
+DNP3M_READCLASS=Issue an read class request
+DNP3M_CMDANLGEX=Issue multiple analog commands
+DNP3M_CMDBIN=Issue a binary command
+DNP3M_FTPUT=Download file
+DNP3M_ASSIGNPTS=Issue an assign points request
+DNP3M_FTGET=Upload file
+DNP3M_FTDEL=Delete file
+DNP3M_INTPOLL=Issue an integrity data poll
+DNP3M_READPTS=Issue an read one or more specific data points request

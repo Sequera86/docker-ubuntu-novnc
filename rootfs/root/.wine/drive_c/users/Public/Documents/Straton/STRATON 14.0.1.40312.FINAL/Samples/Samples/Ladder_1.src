@@ -1,0 +1,14 @@
+#info=LDEDIT
+BOF
+SOR [0,0] (**) (**)
+XIC [1,0] (*b1*) (**)
+BST
+XIC [2,0] (*b2*) (**)
+XIC [3,0] (*b3*) (**)
+NXB
+XIC [2,1] (*b4*) (**)
+BND
+OTE [4,0] (*bOut*) (**)
+EOR [0,0] 
+EOF
+#endinfo

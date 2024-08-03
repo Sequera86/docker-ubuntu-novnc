@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := any_to_usint (IN);
+end_if;
+

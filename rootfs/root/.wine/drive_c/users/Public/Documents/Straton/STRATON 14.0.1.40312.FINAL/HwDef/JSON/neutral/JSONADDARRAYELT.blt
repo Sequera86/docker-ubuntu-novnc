@@ -1,0 +1,12 @@
+JsonAddArrayElt - function - Add an element to an array node
+
+Inputs:
+
+hArray : DINT; handle of a valid JSON node representing an array
+hNode : DINT; handle of a valid JSON node to be added to the array
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+The new node is always added at the end of the array.

@@ -1,0 +1,634 @@
+;K5 project
+
+/A,<10>,LIB
+/A,<5>65537,65538,131073,131074,131075,131076,131077,131078,131080,327681,327683,327684,327687,262145,262146,262147,262149,262151,458753,458754,458755,458757,458759,524289,524290,589827,655361,2147483649,2147483650,2147483651,2147483652,2147483653,2147483654,2147483655,2147483656,2147483657,
+/A,<11>1164805806
+/A,<1>0
+/A,<15>9000
+</A,end>
+</T,end>
+/P,paCreateProject,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\1-Project level
+/P,paCreateProjectFromTemplate,T,E
+/P,<6>\1-Project level
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paOpenProject,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\1-Project level
+/P,paCreateProgram,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paCreateStruct,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\5-Data structures
+/P,paDeleteStruct,T,E
+/P,<6>\5-Data structures
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paCreateSubProgram,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\3-Programs
+/P,paCreateUDFB,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paCreateSfcChildProgram,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paCopyProgram,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paDeleteProgram,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paSetOption,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\1-Project level
+/P,paTRACE4,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\Miscellaneous
+/P,paTRACE0,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,paTRACE1,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,paTRACE2,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,paTRACE3,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,paCreateVar,T,E
+/P,<7>#VISIBLE
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,paCreateInputParam,T,E
+/P,<7>#VISIBLE
+/P,<6>\4-Variables
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paCreateOutputParam,T,E
+/P,<7>#VISIBLE
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,paSetVar3Dims,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\4-Variables
+/P,paSetVar2Dims,T,E
+/P,<7>#VISIBLE
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,paSetVar1Dim,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\4-Variables
+/P,paSetVarInitValue,T,E
+/P,<7>#VISIBLE
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,paDeleteVar,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\4-Variables
+/P,paEmbedVarSymbol,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\4-Variables
+/P,paSetVarExtern,T,E
+/P,<6>\4-Variables
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paSetVarReadOnly,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\4-Variables
+/P,paProfileVar,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,<2>OnCall
+/P,paSetProjectComment,T,E
+/P,<5>#TRUE#
+/P,<6>\1-Project level
+/P,<2>OnCall
+/P,paSetProgramComment,T,E
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,<2>OnCall
+/P,paSetStructComment,T,E
+/P,<6>\5-Data structures
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paSetVarComment,T,E
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,<2>OnCall
+/P,paTplCopyVars,T,E
+/P,<6>\8-Templates
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paTplSetKey,T,E
+/P,<6>\8-Templates
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paTplRemoveKeys,T,E
+/P,<6>\8-Templates
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paTplCopySource,T,E
+/P,<6>\8-Templates
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paTplCopyDefinitions,T,E
+/P,<6>\8-Templates
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paTplCopyAll,T,E
+/P,<6>\8-Templates
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paSetTraceMode,T,E
+/P,<5>#TRUE#
+/P,<6>\Miscellaneous
+/P,<2>OnCall
+/P,paMessageBox,T,E
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,<5>#TRUE#
+/P,paAskPassword,T,E
+/P,<5>#TRUE#
+/P,<6>\Miscellaneous
+/P,<2>OnCall
+/P,paEditParameterList,T,E
+/P,<5>#TRUE#
+/P,<6>\Miscellaneous
+/P,<2>OnCall
+/P,paFileOpenWriteProgramSrc,T,E
+/P,<6>\7-Files\Common
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paFileOpenWriteProgramDef,T,E
+/P,<6>\7-Files\Common
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paFTextString,T,E
+/P,<6>\7-Files\Text files
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paFTextLine,T,E
+/P,<6>\7-Files\Text files
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paFTextEol,T,E
+/P,<6>\7-Files\Text files
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paFLdStartRung,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdJump,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdEndRung,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdDivergence,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdConvergence,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdNextBranch,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdHorzSegment,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdReturn,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdContact,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdCoil,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdBlock,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\LD files
+/P,paFLdCommentLine,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\LD files
+/P,paFileClose,T,E
+/P,<6>\7-Files\Common
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paFbdsBreak,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsLabel,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsBlock,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsInputVar,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsOutputVar,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsOutputJump,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsJump,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsOutputReturn,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsReturn,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\FBD files
+/P,paFbdsComment,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\FBD files
+/P,paSetParameterDesc,T,E
+/P,<2>OnCall
+/P,<6>\Miscellaneous
+/P,<5>#TRUE#
+/P,paFileOpenWrite,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\Common
+/P,<2>OnCall
+/P,paFileOpenWriteModbus,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paFileOpenWriteFieldbus,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,paFileOpenWriteASi,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFileOpenWriteBinding,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paAddLibrary,T,E
+/P,<2>OnCall
+/P,<6>\1-Project level
+/P,<5>#TRUE#
+/P,paFModbusSlave,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paFModbusMaster,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paFModbusRequestMaster,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paFModbusRequestSlave,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paFModbusVariable,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\MODBUS
+/P,paCreateProgramFolder,T,E
+/P,<5>#TRUE#
+/P,<6>\3-Programs\Folders (for the workspace)
+/P,<2>OnCall
+/P,paSendProgramToFolder,T,E
+/P,<5>#TRUE#
+/P,<6>\3-Programs\Folders (for the workspace)
+/P,<2>OnCall
+/P,paDeleteProgramFolder,T,E
+/P,<2>OnCall
+/P,<6>\3-Programs\Folders (for the workspace)
+/P,<5>#TRUE#
+/P,paGetLanguage,T,E
+/P,<5>#TRUE#
+/P,<6>\Miscellaneous
+/P,<2>OnCall
+/P,paCreateIOBoard,T,E
+/P,<6>\6-IO Boards
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paSetIOBoardParam,T,E
+/P,<6>\6-IO Boards
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paSetIOAlias,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\6-IO Boards
+/P,paDeleteIOBoard,T,E
+/P,<6>\6-IO Boards
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paDeleteAllIOBoards,T,E
+/P,<6>\6-IO Boards
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paSetIOBoardComment,T,E
+/P,<6>\6-IO Boards
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paFileOpenWriteSpyList,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Watch window files\Spy lists
+/P,paFileOpenWriteStringTable,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Resources\String tables
+/P,paFileOpenWriteSignal,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Resources\Analog signals
+/P,paFspyAddVariable,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Watch window files\Spy lists
+/P,paFileOpenWriteRecipe,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Watch window files\Recipes
+/P,paFrcpAddColumn,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Watch window files\Recipes
+/P,paFstbAddColumn,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Resources\String tables
+/P,paFSignalAddColumn,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Resources\Analog signals
+/P,paFrcpAddVariable,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Watch window files\Recipes
+/P,paFrcpAddValue,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Watch window files\Recipes
+/P,paFstbAddString,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Resources\String tables
+/P,paFSignalAddPoint,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Resources\Analog signals
+/P,paFbindPublicVar,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindExternVar,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindVarTimeStamp,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindVarDateStamp,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindVarStatus,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindCnxStatus,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFbindExternPort,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Binding
+/P,paFAsiApplyConfig,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiMaster,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiSlave,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiMasterDiag,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiSlaveDiag,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiInput,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFAsiOutput,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\ASi
+/P,paFfbCreateMaster,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<2>OnCall
+/P,paFfbCreateSlave,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<5>#TRUE#
+/P,paFfbCreateVar,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<2>OnCall
+/P,paFfbSelectRoot,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<5>#TRUE#
+/P,paFfbSelectMaster,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<2>OnCall
+/P,paFfbSelectSlave,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<5>#TRUE#
+/P,paFfbSelectVar,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<2>OnCall
+/P,paFfbSetProperty,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\Network and Fieldbuses\Other fieldbus
+/P,<5>#TRUE#
+/P,paSfcIStep,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\SFC files
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paSfcStep,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\SFC files
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paSfcTrans,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\SFC files
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paSfcJump,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\SFC files
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paSfcDiv,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\SFC files
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paSfcCnv,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\SFC files
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paSfcBranch,T,E
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\SFC files
+/P,<5>#TRUE#
+/P,<7>#VISIBLE
+/P,paSfcAddLv2String,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\SFC files
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paSfcAddLv2Line,T,E
+/P,<7>#VISIBLE
+/P,<2>OnCall
+/P,<6>\7-Files\IEC files\SFC files
+/P,<5>#TRUE#
+/P,paSfcAddLv2Eol,T,E
+/P,<5>#TRUE#
+/P,<6>\7-Files\IEC files\SFC files
+/P,<2>OnCall
+/P,<7>#VISIBLE
+/P,paCreateEnum,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paSetEnum,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paDeleteEnum,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paCreateBitfield,T,E
+/P,<5>#TRUE#
+/P,<2>OnCall
+/P,paDeleteBitfield,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paSetBitfield,T,E
+/P,<2>OnCall
+/P,<5>#TRUE#
+/P,paEnumProgram,T,U
+/P,<5>#TRUE#
+/P,<6>\2-Enumeration
+/P,paEnumIOBoards,T,U
+/P,<6>\2-Enumeration
+/P,<5>#TRUE#
+/P,paEnumProgramFolder,T,U
+/P,<6>\2-Enumeration
+/P,<5>#TRUE#
+/P,paEnumStruct,T,U
+/P,<6>\2-Enumeration
+/P,<5>#TRUE#
+/P,paEnumVar,T,U
+/P,<5>#TRUE#
+/P,<6>\2-Enumeration
+/P,paGetProgramDesc,T,U
+/P,<5>#TRUE#
+/P,<6>\3-Programs
+/P,paGetIOBoardDesc,T,U
+/P,<6>\6-IO Boards
+/P,<5>#TRUE#
+/P,paGetVarDesc,T,U
+/P,<7>#VISIBLE
+/P,<5>#TRUE#
+/P,<6>\4-Variables
+/P,paGetStructDesc,T,U
+/P,<6>\5-Data structures
+/P,<5>#TRUE#
+</P,end>
+/G,GLOBAL
+/G,RETAIN
+</G,end>
+

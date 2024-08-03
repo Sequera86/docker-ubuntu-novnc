@@ -1,0 +1,12 @@
+JsonSetString - function - Set string value of a node
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+value : STRING; value to be assigned to the node.
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+Although the value is set when the node is created, this function enables to change it.

@@ -1,0 +1,13 @@
+JsonParseTxb - function - Parse JSON text from a text buffer
+
+Inputs:
+
+hTxb : DINT; handle of a valid text buffer containing a JSON text
+
+Outputs:
+
+hRoot : DINT; handle of the parsed JSON object or 0 in case of errors
+
+This function creates a new JSON node which represents the JSON expression read in the text buffer.
+The returned node may be complex and have child nodes.
+The function allocates the node in the memory. The application is responsible for releasing the memory.

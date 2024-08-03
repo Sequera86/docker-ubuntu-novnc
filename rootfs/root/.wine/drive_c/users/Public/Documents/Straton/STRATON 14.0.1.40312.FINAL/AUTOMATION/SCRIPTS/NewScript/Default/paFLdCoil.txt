@@ -1,0 +1,5 @@
+[LONG]
+V-FID=File identifier
+V-TYP=Coil Type: N - I - S - R - P - F
+V-OK=TRUE if successful
+V-NAME=Variable name

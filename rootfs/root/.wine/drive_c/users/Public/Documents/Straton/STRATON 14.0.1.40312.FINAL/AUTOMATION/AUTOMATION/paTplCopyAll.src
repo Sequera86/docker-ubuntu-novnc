@@ -1,0 +1,4 @@
+OK := _PRP ('TplCode', DstProg, Template, '@LOCAL', RET)
+    & _PRP ('TplVars', DstProg, Template, '@LOCAL', RET)
+    & _PRP ('TplDefs', DstProg, Template, '@LOCAL', RET);
+

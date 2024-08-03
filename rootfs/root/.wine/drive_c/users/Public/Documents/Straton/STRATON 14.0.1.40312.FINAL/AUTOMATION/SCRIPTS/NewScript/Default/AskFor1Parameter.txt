@@ -1,0 +1,10 @@
+[LONG]
+V-NEWVAR=~
+V-OK=
+V-FST=~
+V-FSPY=~
+[SHORT]
+V-NEWVAR=~
+V-OK=
+V-FST=~
+V-FSPY=~

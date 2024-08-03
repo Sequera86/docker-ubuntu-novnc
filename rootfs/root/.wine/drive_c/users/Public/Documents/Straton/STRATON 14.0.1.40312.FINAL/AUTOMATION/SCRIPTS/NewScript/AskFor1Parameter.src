@@ -1,0 +1,9 @@
+// reset init values
+Name := '';
+DataType := 'BOOL|DINT|REAL|LREAL|STRING(255)';
+Init := '';
+Desc := '';
+// edit
+OK := paEditParameterList (VLID ('NewParam'), LoadString (IDS_CAPPARAM));
+OK := OK & (Name <> '');
+

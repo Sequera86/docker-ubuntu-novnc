@@ -1,0 +1,6 @@
+[LONG]
+V-OK=OK if successful
+V-SRC=Source program name
+V-DST=Destination program name
+[SHORT]
+V-OK=

@@ -1,0 +1,10 @@
+[LONG]
+V-FID=File identifier
+V-ID=Identifier of the bound variable
+V-OK=TRUE if successul
+V-NAME=Variable name
+V-HYSTN=~
+V-HYSTP=~
+[SHORT]
+V-HYSTN=~
+V-HYSTP=~

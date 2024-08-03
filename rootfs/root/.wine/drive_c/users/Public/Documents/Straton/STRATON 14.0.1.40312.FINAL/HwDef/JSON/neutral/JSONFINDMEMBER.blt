@@ -1,0 +1,13 @@
+JsonFindMember - function - Find a member in an object
+
+Inputs:
+
+hObj : DINT; handle of a valid JSON node representing a structured value (object)
+name : STRING; name of the searched data member in the object
+
+Outputs:
+
+hMember : DINT; handle of the first member of the object
+
+The function returns 0 if the member is not found.
+The research is case insensitive.

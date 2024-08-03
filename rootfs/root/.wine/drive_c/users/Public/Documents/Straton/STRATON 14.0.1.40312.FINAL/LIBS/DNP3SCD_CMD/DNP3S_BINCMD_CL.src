@@ -1,0 +1,155 @@
+(* CA[0] (IN/OUT) *)
+    (* CAIx xxxx cccc cccc | Rxxx xxxx rrrr rrrr *)
+    (* (IN) C : Flag command *)
+    (* (IN) A : abort *)
+    (* (IN) I : Init bloc *)
+    (* (IN) cccc : command (_CODE_SELECT/_CODE_OPERATE/_CODE_DIRECTOPERATE) *)
+    (* (OUT) R : Flag response *)
+    (* (OUT) rrrr : num response (_STATUSCODE_SUCCESS, ..., _STATUSCODE_UNDEFINED) *)
+(* CA[1] (IN) *)
+    (* oooooooo cccccccc tttttttt uuuuuuuu*)
+    (* oooooooo operation : _OPERATION_NUL,_DNP3S_OP_PULSEON,_OPERATION_PULSEOFF,_OPERATION_LATCHON,_OPERATION_LATCHOFF *)
+    (* cccccccc clear : 0 or 1 *)
+    (* tttttttt TCC : _DNP3S_TCC_NUL,_DNP3S_TCC_CLOSE,_DNP3S_TCC_TRIP *)
+    (* uuuuuuuu Count : count value *)
+(* CA[2] (IN) *) 
+    (* OnTime *)
+(* CA[3] (IN) *) 
+    (* OffTime *)
+(* CA[4] (OUT) *) 
+    (* Value to write to binary output 0 or 1 *)
+
+(* Temporary store first item of array : used for handshaking *)    
+CC := CA[0] ;
+
+
+(* Init/Enable *)
+if (CC.29 = 1) then 
+    OP        := 0 ;
+    STATE_OP := _DNP3S_STATUS_UNDEFINED;
+    CC.29     := 0 ;
+    CA[0]     := CC ;
+    return ; 
+end_if;
+
+(* Get current command and response value *)
+_CODECMD    := LOBYTE(HIWORD(CC)) ;    (* Command value : _DNP3S_CODE_SELECT, ... *)
+_CODERSP    := LOBYTE(LOWORD(CC)) ;    (* Response value : _DNP3S_STATUS_NOTSUPPORTED, ...*)
+_OPERATION  := HIBYTE(HIWORD(CA[1])) ; (* Operation type : _DNP3S_OP_PULSEON, ... *)
+_CLEAR      := LOBYTE(HIWORD(CA[1])) ; (* Clear field not used *)
+_TCC        := HIBYTE(LOWORD(CA[1])) ; (* Trip-Close Code field : _DNP3S_TCC_CLOSE, ... *)
+_COUNT      := LOBYTE(LOWORD(CA[1])) ; (* Count not used *)
+
+
+(* Abort flag armed *)
+if (CC.30 = 1) then 
+    CC := MAKEDWORD(MAKEWORD(16#00, _CODECMD), MAKEWORD(16#80, _DNP3S_STATUS_CANCELLED)) ;
+    OP       := LOBYTE(HIWORD(CC)) ;
+    STATE_OP := LOBYTE(LOWORD(CC));
+    CA[0] := CC ;
+    return ; 
+end_if ;
+
+(* No command : just copy OP and STATE values *)    
+if (CC.31 = 0) then 
+    OP       := LOBYTE(HIWORD(CC)) ;
+    STATE_OP := LOBYTE(LOWORD(CC));
+    CA[0]    := CC ;
+    return ; 
+end_if ;
+
+
+(* State machine complementary latch model *)
+ case _CODECMD of 
+     
+     _DNP3S_CODE_SELECT:
+     
+         case _OPERATION of 
+             
+            _DNP3S_OP_NUL :
+                _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                
+            _DNP3S_OP_PULSEON:
+                case _TCC of
+                    _DNP3S_TCC_NUL:
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                    _DNP3S_TCC_CLOSE:
+                        _CODERSP := S_SELECT;
+                    _DNP3S_TCC_TRIP:
+                        _CODERSP := S_SELECT;
+                    else
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                end_case;                 
+                
+            _DNP3S_OP_LATCHON,_DNP3S_OP_LATCHOFF :
+                case _TCC of
+                    _DNP3S_TCC_NUL:
+                        _CODERSP := S_SELECT;
+                    else
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                end_case;                  
+            
+            else
+                _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+         end_case;
+         
+    _DNP3S_CODE_OPERATE,_DNP3S_CODE_DIRECTOPERATE:
+
+         case _OPERATION of 
+             
+            _DNP3S_OP_NUL :
+                _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                
+            _DNP3S_OP_PULSEON:
+                case _TCC of
+                    _DNP3S_TCC_NUL:
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                    _DNP3S_TCC_CLOSE:
+                        _CODERSP := S_OPERATE;
+                        CA[4] := 1 ;
+                    _DNP3S_TCC_TRIP:
+                        _CODERSP := S_OPERATE;
+                        CA[4] := 0 ;
+                    else
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                end_case;                 
+                
+            _DNP3S_OP_LATCHON :
+                case _TCC of
+                    _DNP3S_TCC_NUL:
+                        _CODERSP := S_OPERATE;
+                        CA[4] := 1 ;
+                    else
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                end_case;                  
+            
+            _DNP3S_OP_LATCHOFF :
+                case _TCC of
+                    _DNP3S_TCC_NUL:
+                        _CODERSP := S_OPERATE;
+                        CA[4] := 0 ;
+                    else
+                        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+                end_case;
+            
+            else
+                _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+         end_case;
+     
+    else
+        _CODERSP := _DNP3S_STATUS_NOTSUPPORTED ;
+
+ end_case;         
+ 
+ 
+ (* Reset command (except for PENDING response) and Set Response *)
+ if (_CODERSP <> _DNP3S_STATUS_PENDING) then
+    CC := MAKEDWORD(MAKEWORD(16#00, _CODECMD), MAKEWORD(16#80, _CODERSP)) ;
+else
+    CC := MAKEDWORD(MAKEWORD(16#80, _CODECMD), MAKEWORD(16#80, _CODERSP)) ;
+end_if;
+
+OP       := LOBYTE(HIWORD(CC)) ;
+STATE_OP := LOBYTE(LOWORD(CC));
+CA[0]    := CC ;
+     

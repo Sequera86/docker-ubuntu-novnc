@@ -1,0 +1,7 @@
+[LONG]
+V-FILTER=Filter (may contain wildchars)
+V-CHECK=TRUE: Prompt the user for checking items
+V-Q=Name of the item selected by the 'Item' input
+V-ITEM=Index of the item to output on 'Q' (1 based)
+V-NB=Number of loaded items
+V-LOAD=TRUE: load the selected programs

@@ -1,0 +1,18 @@
+[LONG]
+V-NBITEM=Number of items (words or bits)
+V-STYP=~
+V-RET=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Optional request name (description)
+V-ADDRESS=MODBUS address
+V-REQUEST=Request type: RIW / RHW / RIB / RCB
+[SHORT]
+V-NBITEM=~
+V-STYP=~
+V-RET=~
+V-FID=~
+V-OK=~
+V-NAME=~
+V-ADDRESS=~
+V-REQUEST=~

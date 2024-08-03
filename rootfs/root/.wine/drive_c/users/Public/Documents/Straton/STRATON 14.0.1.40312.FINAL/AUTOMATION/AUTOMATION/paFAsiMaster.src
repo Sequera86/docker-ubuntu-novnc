@@ -1,0 +1,5 @@
+OK := _PRP ('FWRITE', any_to_string (FID), 'MASTER', SETTINGS, RET);
+if OK then
+    OK := _PRP ('FWRITE', any_to_string (FID), 'MNAME', NAME, RET);
+end_if;
+

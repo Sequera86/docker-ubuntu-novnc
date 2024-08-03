@@ -1,0 +1,9 @@
+JsonIsNumber - function - Test if a JSON node is a number
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+
+Outputs:
+
+bNum : TRUE if hNode is a valid JSON node representing a numerical value.

@@ -1,0 +1,1 @@
+OK := _PRP ('CreateParamOUT', sName, sType, '', RET);

@@ -1,0 +1,5 @@
+#info=WSED1EDT
+@TXT:1,Y=C32768,P=(1,1),S=(15,2),C=(0,0),X={
+Enter your diagram here...
+}
+#endinfo

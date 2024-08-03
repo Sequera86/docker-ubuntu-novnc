@@ -1,0 +1,12 @@
+// Simulates the open/close action of an XCBR
+// Delay = 2s to be visible in the application
+
+Inst_TON( InProgress, T#2s ); // dbPos simulation takes T#2s to be open/close
+XCBR1_Pos_InProgress := ANY_TO_DINT(Inst_TON.ET);
+
+InProgress := STRATONLDevice1_XCBR1_Pos_Control = 200 AND // 200 = 'Operate' in straton
+  ANY_TO_UDINT(STRATONLDevice1_XCBR1_Pos_Oper_ctlVal) <> STRATONLDevice1_XCBR1_Pos_stVal;
+
+// IMPORTANT! This code is only here for the visualization in the Graphics.
+// The management of the open/close action is done in the "DBPOS_Simulation" UDFB
+

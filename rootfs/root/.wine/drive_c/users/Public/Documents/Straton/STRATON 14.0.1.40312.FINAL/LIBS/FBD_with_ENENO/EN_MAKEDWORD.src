@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := makedword (HI, LO);
+end_if;
+

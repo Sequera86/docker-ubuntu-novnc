@@ -1,0 +1,211 @@
+#info=SFCCHART
+@I1:0,0=1;Wait for coin\n
+@T5:1,0=1;coin\n
+@S8:2,0=2;select\nproduct\n
+@O277:3,0=0;
+@d293:3,1=0;
+@d199:3,2=709;
+@T278:4,0=2;
+@T279:4,1=101;
+@T288:4,2=201;
+@S280:5,0=3;
+@S281:5,1=101;
+@S289:5,2=201;
+@T282:6,0=3;
+@T283:6,1=102;
+@T290:6,2=202;
+@S284:7,0=4;
+@S285:7,1=102;
+@S291:7,2=202;
+@T286:8,0=4;
+@T287:8,1=103;
+@T292:8,2=203;
+@O300:9,0=0;
+@c301:9,1=0;
+@c313:9,2=0;
+@S321:10,0=5;ask for\nremove glass\n
+@T322:11,0=5;done\n\n
+@J37:12,0=1;
+#endinfo
+_step _init GS1;
+#sfc=GS1(0,0)
+ResetGlass (S);
+__BEGIN_P1
+screen := 'Insert coin';
+IsActiveGS1 := TRUE;
+// This variable is not mandatory, for example in the graphics you can put 'Control/GS1' in the variabls symbol. But if it is used in the Dataserver, for example, 'Control/GS1' does not exist in the dictionnary so cannot be embedded
+__END_ACTION
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Long := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+__BEGIN_P0
+IsActiveGS1 := FALSE;
+__END_ACTION
+#sfc=end
+_next GT1;
+_trans GT1;
+#sfc=GT1(0,1)
+PushBut_Coin
+#sfc=end
+_next GS2;
+_step GS2;
+#sfc=GS2(0,2)
+
+__BEGIN_P1
+screen := 'Select';
+IsActiveGS2 := TRUE;
+// This variable is not mandatory, for example in the graphics you can put 'Control/GS2' in the variabls symbol. But if it is used in the Dataserver, for example, 'Control/GS2' does not exist in the dictionnary so cannot be embedded
+__END_ACTION
+__BEGIN_P0
+IsActiveGS2 := FALSE;
+__END_ACTION
+#sfc=end
+_next GT2, GT101, GT201;
+_trans GT2;
+#sfc=GT2(0,4)
+PushBut_Tea
+#sfc=end
+_next GS3;
+_trans GT101;
+#sfc=GT101(1,4)
+PushBut_Expresso
+#sfc=end
+_next GS101;
+_trans GT201;
+#sfc=GT201(2,4)
+PushBut_Long
+#sfc=end
+_next GS201;
+_step GS3;
+#sfc=GS3(0,5)
+AskForGlass;
+__BEGIN_P1
+screen := 'Tea';
+__END_ACTION
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Long := FALSE ;
+
+__END_ACTION
+#sfc=end
+_next GT3;
+_step GS101;
+#sfc=GS101(1,5)
+AskForGlass;
+__BEGIN_P1
+screen := 'Expresso';
+__END_ACTION
+__BEGIN_N
+PushBut_Long := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+#sfc=end
+_next GT102;
+_step GS201;
+#sfc=GS201(2,5)
+AskForGlass;
+__BEGIN_P1
+screen := 'Long';
+__END_ACTION
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+#sfc=end
+_next GT202;
+_trans GT3;
+#sfc=GT3(0,6)
+GlassHere
+#sfc=end
+_next GS4;
+_trans GT102;
+#sfc=GT102(1,6)
+GlassHere
+#sfc=end
+_next GS102;
+_trans GT202;
+#sfc=GT202(2,6)
+GlassHere
+#sfc=end
+_next GS202;
+_step GS4;
+#sfc=GS4(0,7)
+GiveTea;
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Long := FALSE ;
+
+__END_ACTION
+__BEGIN_P0
+LastCoffee := 'Tea';
+PushBut_Tea := False;
+__END_ACTION
+#sfc=end
+_next GT4;
+_step GS102;
+#sfc=GS102(1,7)
+GiveExpresso;
+__BEGIN_N
+PushBut_Long := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+__BEGIN_P0
+LastCoffee := 'Expresso';
+PushBut_Expresso := False;
+__END_ACTION
+#sfc=end
+_next GT103;
+_step GS202;
+#sfc=GS202(2,7)
+GiveLong;
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+__BEGIN_P0
+LastCoffee := 'Long';
+PushBut_Long := False;
+__END_ACTION
+#sfc=end
+_next GT203;
+_trans GT4;
+#sfc=GT4(0,8)
+GlassLevelTea >= 100;
+#sfc=end
+_next GS5;
+_trans GT103;
+#sfc=GT103(1,8)
+GlassLevelCoffee >= 20;
+#sfc=end
+_next GS5;
+_trans GT203;
+#sfc=GT203(2,8)
+GlassLevelCoffee >= 80;
+#sfc=end
+_next GS5;
+_step GS5;
+#sfc=GS5(0,10)
+
+__BEGIN_P1
+screen := 'Take your glass';
+CoffeeCount := CoffeeCount + 1;
+IsActiveGS5 := TRUE;
+__END_ACTION
+__BEGIN_N
+PushBut_Expresso := FALSE ;
+PushBut_Long := FALSE ;
+PushBut_Tea := False;
+__END_ACTION
+__BEGIN_P0
+IsActiveGS5 := FALSE;
+
+__END_ACTION
+#sfc=end
+_next GT5;
+_trans GT5;
+#sfc=GT5(0,11)
+PushBut_TakeCoffee
+#sfc=end
+_next GS1;

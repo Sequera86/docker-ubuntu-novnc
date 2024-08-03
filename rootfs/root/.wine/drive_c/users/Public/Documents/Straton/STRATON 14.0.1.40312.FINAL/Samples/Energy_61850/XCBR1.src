@@ -1,0 +1,73 @@
+#info=WSED1EDT
+@BRK:127,Y=C32768,O=0,P=(0,11),S=(1,1),C=(0,0),X=Manage Control Model
+@BRK:188,Y=C32768,O=0,P=(0,44),S=(1,1),C=(0,0),X=Only used for the Graphics (HTML5 dataserver)
+@VAR:1,Y=N,O=0,P=(18,7),S=(22,1),C=(1,1),X=STRATONLDevice1_XCBR1_Beh_stVal
+@VAR:18,Y=N,O=0,P=(3,7),S=(8,1),C=(1,1),X=Beh
+@BOX:19,Y=N,O=0,P=(17,16),S=(16,7),C=(5,2),X=XCBR1_Pos:IEC61850_DPC
+@VAR:20,Y=N,O=0,P=(2,18),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_Control
+@VAR:21,Y=N,O=0,P=(2,20),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_Oper_ctlVal
+@VAR:88,Y=N,O=0,P=(2,22),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_stVal
+@VAR:99,Y=N,O=0,P=(18,9),S=(22,1),C=(1,1),X=STRATONLDevice1_XCBR1_Loc_stVal
+@VAR:102,Y=N,O=0,P=(3,9),S=(8,1),C=(1,1),X=True
+@VAR:124,Y=N,O=0,P=(2,30),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkOpn_Oper_ctlVal
+@VAR:125,Y=N,O=0,P=(2,28),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkOpn_Control
+@BOX:126,Y=N,O=0,P=(17,26),S=(16,6),C=(4,2),X=XCBR1_BlkOpn:IEC61850_SPC
+@VAR:128,Y=N,O=0,P=(2,31),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkOpn_stVal
+@VAR:129,Y=N,O=0,P=(2,19),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_ctlModel
+@VAR:130,Y=N,O=0,P=(2,29),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkOpn_ctlModel
+@BOX:131,Y=N,O=0,P=(17,33),S=(16,6),C=(4,2),X=XCBR1_BlkCls:IEC61850_SPC
+@VAR:132,Y=N,O=0,P=(2,35),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkCls_Control
+@VAR:133,Y=N,O=0,P=(2,37),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkCls_Oper_ctlVal
+@VAR:134,Y=N,O=0,P=(2,36),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkCls_ctlModel
+@VAR:159,Y=N,O=0,P=(34,18),S=(8,1),C=(1,1),X=CtlVal
+@VAR:160,Y=N,O=0,P=(34,19),S=(8,1),C=(1,1),X=Operate
+@VAR:169,Y=N,O=0,P=(2,38),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_BlkCls_stVal
+@VAR:170,Y=N,O=0,P=(2,21),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_SBOw_ctlVal
+@TXT:178,Y=C32768,O=0,P=(3,1),S=(15,5),C=(1,1),X={
+Beh values\r\n1 - ON\r\n2 - Blocked\r\n3 - Test\r\n4 - Test/B
+locked\r\n5 - Off
+}
+@TXT:179,Y=C32768,O=0,P=(36,13),S=(22,3),C=(1,1),X={
+This code simulates that after receiving a command that invol
+ve a change of state, there is an intermediate state during f
+ew seconds, then the new state is applied\r\n
+}
+@BOX:180,Y=N,O=0,P=(43,16),S=(4,4),C=(2,1),X=Inst_DBPOS_Simulation:DBPOS_Simulation
+@VAR:181,Y=N,O=0,P=(48,18),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_stVal
+@TXT:182,Y=C32768,O=0,P=(37,28),S=(10,10),C=(1,1),X={
+xxx_ctlVal is the target state;\r\nDepending on what happens 
+in the state machine (current value, ctlModel etc.) the final
+ value xxx_stVal is assigned to the target state
+}
+@VAR:185,Y=N,O=0,P=(21,46),S=(10,1),C=(1,1),X=XCBR1_Pos_OFF
+@VAR:186,Y=N,O=0,P=(21,47),S=(10,1),C=(1,1),X=XCBR1_Pos_ON
+@VAR:187,Y=N,O=0,P=(21,48),S=(10,1),C=(1,1),X=XCBR1_Pos_INTERMEDIATE
+@VAR:189,Y=N,O=0,P=(6,46),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_stVal = 0
+@VAR:190,Y=N,O=0,P=(6,47),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_stVal = 1
+@VAR:191,Y=N,O=0,P=(6,48),S=(14,1),C=(1,1),X=STRATONLDevice1_XCBR1_Pos_stVal = 2
+@ARC:79,Y=N,D=7,Z=(50,50),F=(102,0),T=(99,0)
+@ARC:99,Y=N,D=0,Z=(50,50),F=(125,0),T=(126,0)
+@ARC:112,Y=N,D=0,Z=(50,50),F=(132,0),T=(131,0)
+@ARC:116,Y=N,D=4,Z=(50,50),F=(124,0),T=(126,2)
+@ARC:117,Y=N,D=5,Z=(50,50),F=(130,0),T=(126,1)
+@ARC:118,Y=N,D=6,Z=(50,50),F=(134,0),T=(131,1)
+@ARC:119,Y=N,D=7,Z=(50,50),F=(133,0),T=(131,2)
+@ARC:120,Y=N,D=0,Z=(50,50),F=(20,0),T=(19,0)
+@ARC:121,Y=N,D=1,Z=(50,50),F=(129,0),T=(19,1)
+@ARC:122,Y=N,D=2,Z=(50,50),F=(21,0),T=(19,2)
+@ARC:155,Y=N,D=3,Z=(50,50),F=(19,0),T=(159,0)
+@ARC:156,Y=N,D=4,Z=(50,50),F=(19,1),T=(160,0)
+@ARC:171,Y=N,D=3,Z=(50,50),F=(128,0),T=(126,3)
+@ARC:173,Y=N,D=5,Z=(50,50),F=(169,0),T=(131,3)
+@ARC:174,Y=N,D=6,Z=(50,50),F=(88,0),T=(19,4)
+@ARC:175,Y=N,D=7,Z=(50,50),F=(170,0),T=(19,3)
+@ARC:183,Y=N,D=7,Z=(50,50),F=(18,0),T=(1,0)
+@ARC:184,Y=N,D=0,Z=(50,50),F=(159,0),T=(180,0)
+@ARC:185,Y=N,D=1,Z=(50,50),F=(160,0),T=(180,1)
+@ARC:186,Y=N,D=2,Z=(50,50),F=(180,0),T=(181,0)
+@ARC:187,Y=N,D=3,Z=(50,50),F=(126,0),T=(128,0)
+@ARC:188,Y=N,D=4,Z=(50,50),F=(131,0),T=(169,0)
+@ARC:190,Y=N,D=6,Z=(50,50),F=(189,0),T=(185,0)
+@ARC:191,Y=N,D=7,Z=(50,50),F=(190,0),T=(186,0)
+@ARC:192,Y=N,D=0,Z=(50,50),F=(191,0),T=(187,0)
+#endinfo

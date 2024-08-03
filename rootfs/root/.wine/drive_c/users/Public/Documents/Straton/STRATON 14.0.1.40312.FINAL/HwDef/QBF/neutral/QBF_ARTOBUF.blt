@@ -1,0 +1,40 @@
+<I>Writes data to the CPU shared memory of the specified module and the buffer memory of the intelligent function module.</I>
+
+
+<B>IONO : DINT</B>
+Start I/O No. divided by 10H
+
+<B>OFFSET : DINT</B>
+<PRE>
+bit 31	         Link refresh method of CC-Link	    0: Automatic
+                                                    1: Manual	   
+bit 30 to 16     Reserved
+bit 15 to 0	 Offset
+</PRE>
+
+<B>DATAOUT[] : INT</B>
+Write data
+
+<B>Q : INT</B>
+<PRE>
+0	-	Normal
+-202 (0xFF36)	Path error	
+-205 (0xFF33)	I/O No. error	
+-208 (0xFF30)	Offset error	
+-209 (0xFF2F)	Buffer memory size error	
+-214 (0xFF2A)	Intelligent function module error	
+-223 (0xFF21)	Memory allocation error	
+-227 (0xFF1D) 	Control code send error	
+-28158 (0x9202)	WDT error	
+-28413 (0x9103)	Target CPU down error	
+-28416 (0x9100)	Target CPU not mounted error	
+-28628 (0x902C)	Pointer address error	
+-28634 (0x9026)	Intelligent function module down	
+-28636 (0x9024)	Control bus error	
+-28640 (0x9020)	STOP/PAUSE error	
+-28654 (0x9012)	Non-controlled module write error	
+-28660 (0x900C)	Access size error	
+-28661 (0x900B)	Access area error	
+-28662 (0x900A)	CPU No. error	
+77 (0x004D)	Memory error
+</PRE>

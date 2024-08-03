@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Appli Expand="YES">
+   <Folder Expand="YES" Name="OEM Function Blocks">
+      <Program Name="DBPOS_Simulation"/>
+      <Program Name="IEC61850_DPC"/>
+      <Program Name="IEC61850_SPC"/>
+      <Program Name="iecDT2UNIX"/>
+      <Program Name="iecUNIX2DT"/>
+   </Folder>
+   <Folder Name="Programs">
+      <Program Name="LLN0"/>
+      <Program Name="MMXU1"/>
+      <Program Name="TimeQuality"/>
+      <Program Name="XCBR1"/>
+      <Program Name="XCBR1_Simu"/>
+   </Folder>
+   <Folder Name="Watch">
+      <File Name="Soft Scope.ss5"/>
+      <File Name="XCBR1Graphics.gra"/>
+   </Folder>
+   <File Name="STRATON.icd"/>
+   <FieldBus/>
+   <Profiles/>
+   <GlobalDef/>
+   <Vars/>
+   <Types/>
+</Appli>

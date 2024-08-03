@@ -1,0 +1,4 @@
+FF (TOG <> 0, false);
+Q := FF.Q;
+STATUS := Q;
+

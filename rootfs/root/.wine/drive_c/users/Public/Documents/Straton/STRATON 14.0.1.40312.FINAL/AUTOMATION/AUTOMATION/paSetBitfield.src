@@ -1,0 +1,2 @@
+OK := _PRP ('SetBitField', Name, BaseType, BITS, RET);
+

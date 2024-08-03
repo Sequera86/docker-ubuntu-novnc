@@ -1,0 +1,8 @@
+[LONG]
+V-RET=~
+V-FID=File identifier
+V-NAME=Recipe name
+[SHORT]
+V-RET=~
+V-FID=~
+V-NAME=~

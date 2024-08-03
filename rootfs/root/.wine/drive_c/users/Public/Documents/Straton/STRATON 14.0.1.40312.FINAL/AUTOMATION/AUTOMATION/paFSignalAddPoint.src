@@ -1,0 +1,5 @@
+sTyp := 'VALUE '
+        + any_to_string (any_to_dint (TM))
+        + ' ' + any_to_string (COL);
+OK := _PRP ('FWRITE', any_to_string (FID), sTyp, any_to_string (VALUE), RET);
+

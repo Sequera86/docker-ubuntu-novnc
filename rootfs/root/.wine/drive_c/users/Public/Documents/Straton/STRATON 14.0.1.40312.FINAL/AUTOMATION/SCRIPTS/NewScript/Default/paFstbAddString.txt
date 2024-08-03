@@ -1,0 +1,6 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful
+V-VALUE=String contents
+V-NAME=String identifier
+V-COL=Column index (0 based)

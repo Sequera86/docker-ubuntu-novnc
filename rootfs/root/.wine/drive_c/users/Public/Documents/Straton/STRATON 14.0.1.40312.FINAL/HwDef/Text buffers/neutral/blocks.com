@@ -1,0 +1,25 @@
+[desc]
+TXBSETDATA=Copy array of SINT to text buffer
+TXBMANAGER=TXB main memory manager
+TXBLASTERROR=Get report of last TXB error
+TXBNEWSTRING=Allocate a new buffer initialized with string
+TXBWRITEFILE=Write a text buffer to a file
+TXBNEW=Allocate a new buffer
+TXBGETLINE=Sequential read of a text buffer
+TXBFREE=Release a text buffer
+TXBGETSTRING=Copy text buffer to string
+TXBAPPENDTXB=Concanetates text buffers
+TXBGETDATA=Copy text buffer to array of sint
+TXBAPPEND=Append variable to text buffer
+TXBANSITOUTF8=ANSI to UTF8 conversion
+TXBREADFILE=Allocate a new bufer and fills it with contents of a file
+TXBREWIND=Reset sequential reading of a text buffer
+TXBAPPENDEOL=Append end of line characters to text buffer
+TXBGETLENGTH=Get number of characters in a text buffer
+TXBAPPENDLINE=Append a string line to a text buffer
+TXBCOPY=Copy a text buffer
+TXBUTF8TOANSI=UTF8 to ANSI conversion
+TXBSETSTRING=Copy string to text buffer
+TXBCLEAR=Clear a text buffer
+TXBRCVTCP=Receive from TCP in a text buffer
+TXBSENDTCP=Send a text buffer to TCP

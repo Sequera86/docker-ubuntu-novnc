@@ -1,0 +1,6 @@
+
+ENO := EN;
+if EN then
+    Q := IN and MSK;
+end_if;
+

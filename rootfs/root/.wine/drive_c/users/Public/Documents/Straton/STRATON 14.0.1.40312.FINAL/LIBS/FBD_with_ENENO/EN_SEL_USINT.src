@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := sel (G, IN0, IN1);
+end_if;
+

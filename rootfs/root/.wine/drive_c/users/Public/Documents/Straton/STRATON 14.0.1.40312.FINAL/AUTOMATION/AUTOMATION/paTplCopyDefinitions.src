@@ -1,0 +1,2 @@
+OK := _PRP ('TplDefs', DstProg, Template, '@LOCAL', RET);
+

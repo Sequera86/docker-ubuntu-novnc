@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    NBC := mlen (IN);
+end_if;
+

@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-PARENT=Parent program name
+V-OK=TRUE if successful
+V-NAME=Child program name
+[SHORT]
+V-RET=~
+V-PARENT=~
+V-OK=~
+V-NAME=~

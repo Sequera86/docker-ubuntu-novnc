@@ -1,0 +1,31 @@
+#info=WSED1EDT
+@VAR:1,Y=N,P=(3,13),S=(8,1),C=(1,1),X=TRUE
+@VAR:2,Y=N,P=(3,14),S=(8,1),C=(1,1),X=T#1s
+@BOX:3,Y=N,P=(13,11),S=(4,4),C=(2,1),X=PLS1:PLS
+@VAR:11,Y=N,P=(3,17),S=(8,1),C=(1,1),X=190.0
+@VAR:12,Y=N,P=(3,19),S=(8,1),C=(1,1),X=20
+@BOX:13,Y=N,P=(12,18),S=(4,2),C=(1,1),X=rand
+@BOX:15,Y=N,P=(17,18),S=(4,2),C=(1,1),X=any_to_real
+@BOX:17,Y=N,P=(23,17),S=(3,3),C=(2,1),X=+
+@VAR:20,Y=N,P=(38,13),S=(12,1),C=(1,1),X=STRATONLDevice1_MMXU1_TotW_mag_f
+@BOX:23,Y=N,P=(31,12),S=(4,4),C=(3,1),X=SEL
+@TXT:24,Y=C32768,P=(4,1),S=(20,2),C=(1,1),X={
+MMXU1_TotW_magf is updated to a new value each second\r\n\r\n
+}
+@TXT:25,Y=C32768,P=(4,4),S=(20,4),C=(1,1),X={
+/!\\ ATTENTION /!\\\r\nIn the SCL file MMXU1_TotW is in a DS 
+mapped to an URCB.\r\nIn the real life, Hysteresis or DeadBan
+ds must be managed by the application so there is no risk to 
+send a real value every cycle
+}
+@ARC:1,Y=N,D=0,Z=(75,50),F=(1,0),T=(3,0)
+@ARC:2,Y=N,D=0,Z=(25,50),F=(2,0),T=(3,1)
+@ARC:5,Y=N,D=0,Z=(50,50),F=(12,0),T=(13,0)
+@ARC:6,Y=N,D=0,Z=(50,50),F=(13,0),T=(15,0)
+@ARC:7,Y=N,D=0,Z=(96,50),F=(11,0),T=(17,0)
+@ARC:8,Y=N,D=0,Z=(25,50),F=(15,0),T=(17,1)
+@ARC:10,Y=N,D=2,Z=(50,50),F=(23,0),T=(20,0)
+@ARC:11,Y=N,D=3,Z=(50,50),F=(20,0),T=(23,1)
+@ARC:12,Y=N,D=4,Z=(50,50),F=(17,0),T=(23,2)
+@ARC:13,Y=N,D=5,Z=(50,50),F=(3,0),T=(23,0)
+#endinfo

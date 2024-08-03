@@ -1,0 +1,6 @@
+ENO := EN;
+if EN then
+    ave (RUN, XIN, N);
+    XOUT := ave.XOUT;
+end_if;
+

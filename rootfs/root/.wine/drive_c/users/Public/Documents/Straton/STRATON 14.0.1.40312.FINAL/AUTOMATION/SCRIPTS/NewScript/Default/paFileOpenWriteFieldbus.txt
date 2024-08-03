@@ -1,0 +1,3 @@
+[LONG]
+V-CONFIG=Configuration
+V-FID=File identifier

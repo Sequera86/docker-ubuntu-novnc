@@ -1,0 +1,5 @@
+[LONG]
+V-DI4=~
+V-TEXT=Output text - use %d for arguments
+[SHORT]
+V-DI4=~

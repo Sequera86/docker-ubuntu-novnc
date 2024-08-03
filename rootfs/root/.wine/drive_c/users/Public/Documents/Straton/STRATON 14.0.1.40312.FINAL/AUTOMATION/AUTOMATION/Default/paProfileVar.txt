@@ -1,0 +1,5 @@
+[LONG]
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-PROFILE=Profile name
+V-PROPERTIES=Profile parameters

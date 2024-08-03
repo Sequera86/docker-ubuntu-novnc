@@ -1,0 +1,11 @@
+sTyp := 'REQ ' + MODE + ' ' + REQUEST + ' '
+        + any_to_string (SLAVENO)
+        + ' ' + any_to_string (ADDRESS)
+        + ' ' + any_to_string (NBITEM)
+        + ' ' + any_to_string (any_to_dint (PERIOD))
+        + ' ' + any_to_string (any_to_dint (TIMEOUT))
+        + ' ' + any_to_string (TRIALS);
+
+OK := _PRP ('FWRITE', any_to_string (FID),
+            sTyp, NAME, RET);
+

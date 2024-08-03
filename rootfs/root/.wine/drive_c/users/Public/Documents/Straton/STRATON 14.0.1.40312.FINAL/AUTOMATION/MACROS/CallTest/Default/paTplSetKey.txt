@@ -1,0 +1,10 @@
+[LONG]
+V-RET=~
+V-OK=TRUE if successful
+V-NAME=Name of the key
+V-VALUE=Value for the key
+[SHORT]
+V-RET=~
+V-OK=~
+V-NAME=~
+V-VALUE=~

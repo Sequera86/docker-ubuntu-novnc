@@ -1,0 +1,15 @@
+[LONG]
+V-BOARD=~
+V-PARAM=~
+V-OK=TRUE if successful
+V-CHANNEL=Channel name (%)
+V-ALIAS=Readable name
+V-CHENNEL=~
+V-VALUE=~
+[SHORT]
+V-BOARD=~
+V-PARAM=~
+V-CHANNEL=
+V-ALIAS=
+V-CHENNEL=~
+V-VALUE=~

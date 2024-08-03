@@ -1,0 +1,14 @@
+Controls the BACnet MSTP Slave port
+
+Inputs:
+
+- IN : TRUE=open the port / FALSE=close the port
+- PORT : COM port settings
+- Inst : Device instance number
+- Addr : Device address
+- Name : Device name (limited to 31 characters)
+- Location : Device location (limited to 31 characters)
+
+Outputs:
+
+- Q : TRUE if the port is successfully open

@@ -1,0 +1,516 @@
+﻿; K5 middleware communication error messages
+; The text before "=" is an identifier and should never be changed
+
+; middleware API error messages -------------------------------------
+
+[Loader]
+Scripts=Download scripts
+Edit=Editar
+New=Nuevo
+Remove=Eliminar
+Rename=Renombrar
+Copy=Copiar
+Close=Cerrar
+Name=Nombre
+OK=Aceptar
+Cancel=Cancelar
+NewScript=New script
+Add=Añadir
+Change=Change
+Up=Subir
+Down=Bajar
+Item=Load item
+Project=Proyecto
+Target=Target
+SavePrompt=Do-you want to save changes?
+ErrScriptUsed=Script name already used
+ErrScriptCreate=Cannot create script file
+ErrScriptRemove=Cannot remove script file
+ErrScriptRename=Cannot rename script file
+ErrScriptCopy=Cannot copy script file
+File=Archivo
+To=Destino
+
+
+[Dialup]
+Caption=Ejecutar
+Dialup=Dialup
+Cancel=Cancelar
+Number=Number:
+Init=Init:
+Timeout=Timeout:
+Closing=Closing connection. Please wait...
+Connecting=Connecting. Please wait...
+ModemError=Modem error or timeout waiting for modem answer.
+DialupError=Dialup error or timeout waiting for connection.
+DcdError=Dialup error: don't receive DCD signal.
+
+[AS]
+ASCantLoad=Error: Cannot load script
+CantStart=Error: Cannot start script
+CantRun=Error: Script program not found
+Complete=Script complete.
+Script=Script
+Target=Target
+Param=Parameter
+Value=Valor
+Desc=Descripción
+BadValue=Bad value!
+ASCaption=Run automation script
+ASTargetPath=Target project pathname
+Go=Go!
+Close=Cerrar
+OK=Aceptar
+Cancel=Cancelar
+
+[Panel]
+
+App=Ap
+BadVers=¡Versión dañada!
+Local=Aplicación local
+Target=Target
+
+Stop=Detener aplicación
+Start=Reiniciar aplicación
+Load=Descargar
+LoadChange=Descargar
+PanelChange=Do On Line change
+Pause=Cycle to cycle
+Resume=Reanudar modo ciclo a ciclo
+CycleStep=Ejecutar un sólo ciclo
+StepIn=Entrar
+StepOver=Recorrer principal
+StepOut=Salir
+RunCC=Run compiled code (no debug allowed)
+RunPC=Use virtual machine (debug allowed)
+NoApp=No application
+Idle=Idle
+StopAndLoad=Stop and download the new version
+Nothing=Do nothing
+LoadNow=Do-you want to download the application now?
+Prompt=Continue ?
+UncompleteList=List not complete
+
+CantLoad=Error: Cannot load script
+CantLoadWhy=The connected runtime does not match the type selected in build options
+CT=Ciclo
+CTCur=Last
+CTAllowed=Allowed
+CTMax=Maximum
+CTOver=Overflow
+CTChange=Change cycle time
+Redundancy=Redundancy
+
+[Time]
+
+Allowed=Permitido
+Maximum=Máximo
+Overflow=Desbordamiento
+TimeChange=Change cycle time
+
+[Middleware]
+
+; check remaining breakpoints
+
+BkpPrompt=Some breakpoints are still installed. Remove them?
+BkpCantDel=Cannot remove breakpoints!
+LkvPrompt=Some variables are still locked. Unlock them?
+LkvCantDel=Cannot unlock variables!
+DlgLockList=Locked variables
+DlgUnlockAll=Unlock All
+
+; prompt
+
+PrpBadSyntax=Invalid command
+PrpBusy=Communication is busy
+
+; status: connection
+
+StaCnxOK=Aceptar
+StaCnxInvalid=No está conectado
+StaCnxLogon=Conectando...
+StaCnxLogoff=Desconectando...
+StaCnxNoApp=No hay una aplicación
+StaCnxIdle=Idle
+StaCnxOtherApp=Otra aplicación
+StaCnxCommError=Error de comunicación
+StaMissingRsc=Falta el software incrustado
+StaApp=Ap
+StaBadVers=¡Versión dañada!
+
+; status: application
+
+StaAplRun=RUN
+StaAplStop=STOP
+StaAplSfcBreak=Salto de SFC
+StaAplError=Error
+StaAplInvalid=Desconocido
+StaAplStepping=STEPPING
+
+; status: program
+
+StaPrgInactive=Inactivo
+StaPrgActive=Activo
+StaPrgFrozen=Suspendido
+
+; dialog buttons
+
+ButForce=&Imponer
+ButTrue=&TRUE
+ButFalse=&FALSE
+ButLock=&Bloquear
+ButUnlock=&Desbloquear
+ButStartTimer=&Iniciar temporizador
+ButStopTimer=De&tener temporizador
+ButBreakStep=&Ajustar punto de interrupción
+ButRemBreakStep=&Eliminar punto de interrupción
+ButForceTrans=&Imponer transición
+ButBreakTrans=&Ajustar punto de interrupción
+ButRemBreakTrans=&Eliminar punto de interrupción
+ButStartProg=&Start
+ButStopProg=De&tener
+ButSuspendProg=S&uspendido
+ButRestartProg=&Reiniciar
+
+; passwords dialog
+
+PswPassword=Contraseña
+PswRemember=Guardar contraseña
+PswOk=Aceptar
+PswCancel=Cancelar
+PswOld=Contraseña antigua:
+PswNew=Nueva contraseña:
+
+; watch window
+
+WWName=Nombre
+WWValue=Valor
+WWDesc=Descripción
+
+; upload
+
+MWUPCantStore=Imposible escribir el archivo de símbolo en un disco
+MWUPCaption=Cargar símbolos
+MWUPNoCnx=Imposible establecer la conexión
+MWUPCantUpload=Carga no admitida por el destino
+MWUPProgress=Carga en curso...
+MWUPErrors=Se produjeron errores durante la carga
+MWUPCancel=Cancelar
+MWUPClose=Cerrar
+MWUPComplete=Carga completa
+
+; misc.
+
+Ok=Aceptar
+ErrInternal=Error interno
+ErrUnknownClient=Controlador de cliente desconocido o inválido
+ErrUnknownProject=Controlador de proyecto desconocido o inválido
+ErrUnknownSymbol=Variable desconocida - no se puede espiar
+ErrLoopIdUsed=ID de bucle ya utilizada
+ErrUnknownLoop=ID de bucle desconocida
+ErrNoCommOK=Imposible controlar las variables de destino - error de comunicación o falta de coincidencia de la versión
+
+; value check
+
+ErrBadDintValue=Valor entero no válido
+ErrBadRealValue=Valor REAL no válido
+ErrBadTimeValue=Valor TIME no válido
+ErrBadStringValue=Valor STRING no válido o cadena demasiado larga
+
+; file transfer
+
+FTBusy=Internal error: FT interface busy
+FTOpenReadLocal=Cannot open local file for read
+FTRetCode=Internal error: Bad code in return frame
+FTFrame=Internal error: Frame error
+FTOpenWriteLocal=Cannot open local file for write
+FTWriteLocal=Cannot write local file
+FTCrc=Bad file CRC
+FTConnection=Communication error during transfer
+FTRegisterClass=Internal error: cannot register callback window
+FTCreateCallback=Internal error: cannot create callback window
+FTMWConnect=Internal error: cannot connect to MW server
+FTMWOpen=Cannot establish connection to the target
+FTMWObj=Internal error: cannot create communication object
+FTTimeout=Communication time out during transfer
+FTT5_Unknown=Request not supported by the runtime system
+FTT5_OpenWrite=Runtime system cannot open file for write
+FTT5_Write=Runtime system cannot write to file
+FTT5_Close=Runtime system cannot close file
+FTT5_OpenRead=Runtime system cannot open file for read
+FTT5_Read=Runtime system cannot read file
+FTT5_Delete=Runtime system cannot remove file
+FTT5_OpenDir=Runtime system cannot browse directory
+FTT5_CloseDir=Runtime system cannot read directory entry
+FTT5_GetDir=Runtime system cannot close directory
+FTAbort=Tranfer aborted
+FTLoad=Load
+FTFrom=From:
+FTTo=To:
+
+; starting mode selection box ---------------------------------------
+
+[StartDlg]
+
+Startmode=Modo de inicio
+Start=Reiniciar aplicación
+ColdNoRetain=&Inicio en frío - No cargar variables RETAIN
+ColdWithRetain=Inicio en frío - Cargar variables &RETAIN
+Hot=&Reinicio en caliente
+Pause=Cycle to cycle
+
+; redundancy box ---------------------------------------
+
+[RedDlg]
+
+Redundancy=Redundancy
+Disabled=Redundancy is not enabled in the runtime
+Active=Running as active runtime
+PassiveAlive=Passive runtime is alive
+Passive=Running as passive runtime
+BePassive=Set as passive
+Refresh=Actualizar
+Close=Cerrar
+
+; comm API error messages -------------------------------------------
+
+[CommApi]
+
+; misc.
+
+Ok=Aceptar
+ErrInternal=Error interno
+ErrBusy=La comunicación está ocupada
+ErrNotSupported=Petición no admitida por el protocolo seleccionado
+NoData=No hay datos disponibles
+
+; standard settings dialog box
+
+DlgSettings=Configuración de la comunicación
+DlgETHERNET=&Ethernet TCP/IP
+DlgSERIAL=&Vínculo serie
+DlgSettings=Configuración de la comunicación
+DlgAddr=Dirección &IP:
+DlgEthp=Número de &puerto:
+DlgPort=Puerto P&C:
+DlgRate=&Velocidad en baudios:
+DlgParity=&Paridad:
+DlgStops=Det&ener bits:
+DlgHelp=&Ayuda
+DlgOK=Aceptar
+DlgCancel=Cancelar
+DlgParityNone=Ninguna
+DlgParrityEven=Par
+DlgParityOdd=Impar
+DlgPassword=Contraseña
+DlgOverProj=The project settings will be updated. Continue?
+DlgUnit=Unit number:
+DlgTimeout=Timeout (seconds):
+DlgTrials=Number of trials:
+DlgPackets=Packet size:
+DlgDialup=Dialup number:
+DlgDialupTimeout=Dialup timeout (seconds):
+DlgInit=Initialization string:
+DlgDefault=Por defecto
+BadUnit=Invalid unit number (value from 1 to 32767 expected)
+BadTimeout=Invalid timeout (value from 1 to 3600 expected)
+BadTrials=Invalid number of trials (value from 1 to 255 expected)
+BadNum=You must specify a dialup number
+DlgBrowseNet=Browse network
+DlgRefresh=Actualizar
+DlgWait=Please wait...
+DlgNoNode=No node found.
+DlgBrowse=Browse
+
+; communication
+
+ErrDriverNotFound=Falta la biblioteca dinámica del controlador
+ErrDriverInvalid=Biblioteca dinámica del controlador no válida
+ErrCantInstallComm=Imposible instalar la comunicación
+ErrBadPortAddr=Imposible establecer la conexión - verificar los parámetros de comunicación
+ErrNoCommAvailable=No se estableció la comunicación
+ErrBadTargetIDReceived=Se recibió ID no válida de destino
+ErrOpenLocalFile=Imposible acceder al archivo local para la transferencia
+ErrDownload=Descarga rechazada por el destino
+ErrAnswerAny=Petición rechazada por el destino
+ErrAnswerAppControl=Imposible obtener el estado de la aplicación desde el destino
+ErrAnswerAppStart=Imposible iniciar la aplicación - quizás ya se inició
+ErrAnswerAppStop=Imposible detener la aplicación - quizás ya se detuvo
+ErrAnswerRead=Petición de lectura no válida - rechazada por el destino
+ErrAnswerPause=Imposible ir al modo ciclo a ciclo
+ErrAnswerResume=Imposible ir al modo de ejecución normal
+ErrAnswerCycleStep=Imposible ejecutar un sólo paso
+ErrAnswerChange=Imposible realizar Cambio en línea - no se cargó ningún cambio válido
+ErrAnswerWrite=Imposible imponer o bloquear la variable
+ErrAnswerSetCycleTime=Imposible cambiar el tiempo de ciclo permitido
+ErrAnswerControlPrg=Imposible configurar el estado del programa
+ErrAnswerControlTimer=Imposible iniciar o detener el temporizador
+
+; target error messages ---------------------------------------------
+
+[log]
+
+Err1=no hay memoria suficiente
+Err2=base de datos incorrecta para la aplicación o CRC dañado
+Err3=no hay memoria suficiente
+Err4=no hay memoria suficiente
+Err5=tiempo de espera
+Err6=tiempo de espera
+Err7=Imposible iniciar la comunicación
+Err8=no hay memoria suficiente
+Err9=aplicación detenida
+Err10=Desbordamiento de SFC
+Err11=Desbordamiento de SFC
+Err12=Desbordamiento de SFC
+Err13=instrucción TIC desconocida
+Err16=error de comunicación
+Err17=error de comunicación
+Err18=error de comunicación
+Err19=error de comunicación
+Err20=error de comunicación
+Err21=error de comunicación
+Err22=desbordamiento de la pila
+Err23=error de comunicación
+Err24=error de ethernet
+Err25=error de comunicación
+Err28=no hay memoria suficiente
+Err29=no hay memoria suficiente
+Err30=código OEM desconocido
+Err31=error de I/O
+Err32=error de I/O
+Err33=error de I/O
+Err34=error de I/O
+Err35=error de I/O
+Err36=error de I/O
+Err37=error de I/O
+Err38=error de I/O
+Err39=error de I/O
+Err40=error de I/O
+Err41=error de I/O
+Err42=error de I/O
+Err43=error de I/O
+Err44=error de I/O
+Err45=error de I/O
+Err46=error de I/O
+Err47=error de I/O
+Err50=conflicto de acceso a la variable
+Err51=conflicto de acceso a la variable
+Err52=conflicto de acceso a la variable
+Err53=imposible controlar el programa SFC
+Err54=imposible controlar el programa SFC
+Err55=imposible controlar el programa SFC
+Err56=imposible controlar el programa SFC
+Err61=código desconocido de petición de sistema
+Err62=desbordamiento del período de muestreo
+Err63=función del usuario no implementada
+Err64=entero dividido por cero
+Err65=función de conversión no implementada
+Err66=bloque de funciones no implementado
+Err67=función estándar no implementada
+Err68=real dividido por cero
+Err69=parámetros de operación no válidos
+Err70=imposible modificar los parámetros de la aplicación
+Err71=imposible modificar los IO y las bibliotecas de la aplicación
+Err72=imposible modificar los símbolos de la aplicación
+Err73=imposible realizar Cambio en línea
+Err74=imposible realizar Cambio en línea
+Err75=imposible realizar Cambio en línea
+Err76=imposible realizar Cambio en línea
+Err77=imposible realizar Cambio en línea
+Err97=error interno
+Err98=error interno
+Err99=código nativo no optimizado para el destino
+
+; all RT errors are offsetted with 1000
+
+Err1001=Error de destino (no hay detalles disponibles)
+Err1002=Código de aplicación no válido - quizás existe falta de coincidencia entre Intel/Motorola
+Err1003=Código de aplicación no válido - definición de destino dañada
+Err1004=Código de aplicación no válido - versión de destino dañada
+Err1005=Imposible ejecutar la petición (la petición es demasiado grande)
+Err1006=Petición no válida - es imposible ejecutarla
+Err1007=Imposible realizar la petición de lectura
+Err1008=Instrucción TIC desconocida
+Err1009=Demasiadas variables BOOL/SINT
+Err1010=Demasiadas variables INT
+Err1011=Demasiadas variables DINT/REAL
+Err1012=Variable DINT o REAL dividida por cero
+Err1013=Demasiadas variables TIME
+Err1014=Temporizadores activos no admitidos por el destino
+Err1015=El ciclo está bloqueado en un bucle infinito
+Err1016=Puntero de código TIC fuera de rango
+Err1017=Función estándar no admitida por el destino
+Err1018=Variable LINT o LREAL dividida por cero
+Err1019=Demasiadas variables LINT/LREAL
+Err1020=Demasiadas variables STRING
+Err1021=Variable SINT dividida por cero
+Err1022=Variable INT dividida por cero
+Err1023=Imposible ejecutar la aplicación: los recursos del sistema en uso
+Err1024=Imposible ejecutar la aplicación: cambios no válidos en la definición de las variables
+Err1025=Imposible ejecutar la aplicación: cambios no válidos en la definición de las variables
+Err1026=Imposible ejecutar la aplicación: la aplicación ha cambiado
+Err1027=Imposible ejecutar la aplicación: los gráficos de SFC han cambiado
+Err1028=Imposible ejecutar la aplicación: la definición de las variables REtAIN ha cambiado
+Err1029=Imposible ejecutar la aplicación: Base de datos no válida
+Err1030=Desbordamiento del tiempo del ciclo
+Err1031=Imposible almacenar las variables de retención
+Err1032=Índice de matriz fuera de los límites
+Err1033=Llamada recursiva de un sub-programa
+Err1034=Se usaron demasiadas variables externas
+Err1035=No se admite rastreo del muestreo
+Err1036=Se definieron demasiadas tareas
+Err1037=Imposible ejecutar la aplicación: desbordamiento de la pila de llamada
+Err1038=Desbordamiento de la pila
+Err1039=Cannot apply AS-i configuration
+Err1040=Demo runtime is time limited and now stops
+Err1041=Demo runtime - time limited
+Err1042=On Line Change not supported by the runtime
+Err1043=On Line Change: invalid new code
+Err1044=On Line Change: not addressing the same application
+Err1045=On Line Change: denied by I/O driver(s)
+Err1046=On Line Change: the size of complex variables segment has changed
+Err1047=On Line Change: denied by fieldbus driver(s)
+Err1048=On Line Change: not enough space for variable properties
+Err1049=On Line Change: change of tasks
+Err1050=On Line Change: denied by MODBUS driver
+Err1051=On Line Change: denied by CANbus driver
+Err1052=On Line Change: not enough space for produced events (binding)
+Err1053=On Line Change: not enough space for BOOL/SINT variables
+Err1054=On Line Change: not enough space for INT variables
+Err1055=On Line Change: not enough space for DINT/REAL variables
+Err1056=On Line Change: not enough space for LINT/LREAL variables
+Err1057=On Line Change: not enough space for TIME variables
+Err1058=On Line Change: not enough space for STRING variables
+Err1059=On Line Change: not enough space for FB instances
+Err1060=On Line Change: not enough space for "C" functions
+Err1061=On Line Change: not enough space for external variables
+Err1153=On Line Change: the number of BOOL/SINT variables has decreased
+Err1154=On Line Change: the number of INT variables has decreased
+Err1155=On Line Change: the number of DINT/REAL variables has decreased
+Err1156=On Line Change: the number of LINT/LREAL variables has decreased
+Err1157=On Line Change: the number of TIME variables has decreased
+Err1158=On Line Change: the number of STRING variables has decreased
+Err1159=On Line Change: the number of FB instances has decreased
+Err1160=On Line Change: the number of "C" functions has decreased
+Err1161=On Line Change: the number of external variables has decreased
+Err1062=On Line Change: not enough space for STRING buffers
+Err1063=On Line Change: the length of some STRING variables has changed
+Err1064=On Line Change: not enough space for FB instance data
+Err1065=On Line Change: a FB instance has changed
+Err1066=On Line Change: the attributes of a POU have changes
+Err1067=On Line Change: not the same number of POUs
+Err1068=Trace Point
+Err1069=No application running
+Err1070=Bad code CRC
+Err1071=Cannot relocate memory heap - hot restart not possible
+Err1072=On Line Change is not possible when breakpoints are installed or when some programs are stopped for stepping
+Err1073=On Line Change is not possible when a program is stopped on a WAIT instruction
+Err1074=Not enough memory for application data. Application cannot start
+Err1075=Cannot load application code. Application cannot start
+Err1076=On Line Change: compiler version mismatch
+Err1077=On Line Change not possible: some temporary variables are currently locked
+Err1078=Too many WSTRING used
+Err1079=Online Change: not enough space for WSTRING variables
+Err1080=Online Change: the number of WSTRING variables has decreased
+
+; eof

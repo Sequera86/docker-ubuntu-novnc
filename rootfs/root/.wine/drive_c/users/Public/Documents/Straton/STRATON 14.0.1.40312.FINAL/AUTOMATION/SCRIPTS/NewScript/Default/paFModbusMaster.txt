@@ -1,0 +1,7 @@
+[LONG]
+V-ADDRESS=Ethernet address or port configuration
+V-FID=File identifier
+V-OK=TRUE if successful
+V-OPENMODBUS=TRUE = Open MODBUS / FALSE = RTU
+V-RECONNECT=TRUE: try to reconnect after error
+V-PORT=Ethernet port number

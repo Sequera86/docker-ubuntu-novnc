@@ -1,0 +1,4 @@
+[LONG]
+V-OK=TRUE if successful
+V-ALIAS=Readable name
+V-CHANNEL=Channel name (%)

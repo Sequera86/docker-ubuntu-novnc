@@ -1,0 +1,203 @@
+; FLEXIO Modules definition
+; V1.04 - 2012.10.01
+
+[1794-OB32P]
+Desc=32 digital outputs
+O2Tinst=1
+O2Tsize=4
+T2Oinst=2
+T2Osize=4
+CFGinst=3
+CFGdata=0100 0200 2000 7d0c 0400 0000 7d0a 0000 7d0b 0800 ff1f 0000 0000 0000 0200 0000 0000 0000
+PrePath=
+DataOffset=0
+DataNb=32
+Data=BOOL
+Dir=OUT
+
+[1794-IB32]
+Desc=32 digital inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=8
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 2000 7d0a 0000 7d0b 0700 ff1f 0000 0200 0000 0000 0100 0000
+PrePath=
+DataOffset=4
+DataNb=32
+Data=BOOL
+Dir=IN
+
+[1794-IV16]
+Desc=16 digital inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=8
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 1000 7d0a 1000 7d0b 0700 0402 0000 0100 0100 0000 0100 0000
+PrePath=
+DataOffset=4
+DataNb=16
+Data=BOOL
+Dir=IN
+
+[1794-IB16]
+Desc=16 digital inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=8
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 1000 7d0a 1000 7d0b 0700 ff1f 0000 0100 0100 0000 0100 0000
+PrePath=
+DataOffset=4
+DataNb=16
+Data=BOOL
+Dir=IN
+
+[1794-OB16P]
+Desc=16 digital outputs
+O2Tinst=1
+O2Tsize=2
+T2Oinst=2
+T2Osize=6
+CFGinst=3
+CFGdata=0100 0200 1000 7d0c 0400 0000 7d0a 1000 7d0b 0800 ff1f 0000 0000 0100 0100 0100 0000 0000
+PrePath=
+DataOffset=0
+DataNb=16
+Data=BOOL
+Dir=OUT
+
+;-------------------------------------------------------------------------------------------------
+
+;[1794-IB8]
+;Desc=8 digital inputs
+;O2Tinst=6
+;O2Tsize=0
+;T2Oinst=2
+;T2Osize=8
+;CFGinst=3
+;CFGdata=0100 0200 0000 7d0c 0400 1000 7d0a 1000 7d0b 0700 ff1f 0000 0100 0100 0000 0100 0000
+;PrePath=
+;DataOffset=4
+;DataNb=8
+;Data=BOOL
+;Dir=IN
+
+;[1794-OB8]
+;Desc=8 digital outputs
+;O2Tinst=1
+;O2Tsize=2
+;T2Oinst=2
+;T2Osize=6
+;CFGinst=3
+;CFGdata=0100 0200 1000 7d0c 0400 0000 7d0a 1000 7d0b 0800 ff1f 0000 0000 0100 0100 0100 0000 0000
+;PrePath=
+;DataOffset=0
+;DataNb=8
+;Data=BOOL
+;Dir=OUT
+
+;-------------------------------------------------------------------------------------------------
+
+[1794-OW8]
+Desc=8 relay outputs
+O2Tinst=1
+O2Tsize=4
+T2Oinst=2
+T2Osize=6
+CFGinst=3
+CFGdata=0100 0200 1000 7d0c 0400 0000 7d0a 1000 7d0b 0800 9901 0000 0000 0100 0100 0100 0000 0000
+PrePath=
+DataOffset=0
+DataNb=8
+Data=BOOL
+Dir=OUT
+
+[1794-IP4]
+Desc=4 pulse inputs
+O2Tinst=1
+O2Tsize=6
+T2Oinst=2
+T2Osize=24
+CFGinst=3
+CFGdata=0100 0200 3000 7d0c 0400 8000 7d0a 2000 7d0b 0600 041a 0000 0800 0200 0300 0000 0000 0000 0000
+PrePath=
+DataOffset=6
+DataNb=4
+Data=WORD
+ChanOffset=4
+Dir=IN
+
+[1794-OE4]
+Desc=4 analog outputs
+O2Tinst=1
+O2Tsize=8
+T2Oinst=2
+T2Osize=6
+CFGinst=3
+CFGdata=0100 0200 4000 7d0c 0400 0000 7d0a 1000 7d0b 0c00 ff1f 0000 0000 0100 0400 0200 0f00 0f0f 0000 0000 0000 0000
+PrePath=
+DataOffset=0
+DataNb=4
+Data=INT
+Dir=OUT
+
+[1794-IE8]
+Desc=8 analog inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=22
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 8000 7d0a 1000 7d0b 0700 2419 0000 0800 0100 0000 0100 ffff
+PrePath=
+DataOffset=4
+DataNb=8
+Data=INT
+Dir=IN
+
+[1794-IF4I]
+Desc=4 analog inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=18
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 5000 7d0a 2000 7d0b 0b00 2017 0000 0500 0200 0000 0500 0000 0000 2222 0000 0060
+PrePath=
+DataOffset=4
+DataNb=4
+Data=INT
+Dir=IN
+
+[1794-IF4I-420MA]
+Desc=4 analog inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=18
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 5000 7d0a 2000 7d0b 0b00 2017 0000 0500 0200 0000 0500 0000 0000 1111 0000 0060
+PrePath=
+DataOffset=4
+DataNb=4
+Data=INT
+Dir=IN
+
+[1794-IF4I-020MA]
+Desc=4 analog inputs
+O2Tinst=6
+O2Tsize=0
+T2Oinst=2
+T2Osize=18
+CFGinst=3
+CFGdata=0100 0200 0000 7d0c 0400 5000 7d0a 2000 7d0b 0b00 2017 0000 0500 0200 0000 0500 0000 0000 4444 0000 0060
+PrePath=
+DataOffset=4
+DataNb=4
+Data=INT
+Dir=IN

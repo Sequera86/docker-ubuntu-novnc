@@ -1,0 +1,3 @@
+sTyp := any_to_string (ADDRESS) + ' ' + PROFILE + ' ' + NAME;
+OK := _PRP ('FWRITE', any_to_string (FID), 'SLAVE', sTyp, RET);
+

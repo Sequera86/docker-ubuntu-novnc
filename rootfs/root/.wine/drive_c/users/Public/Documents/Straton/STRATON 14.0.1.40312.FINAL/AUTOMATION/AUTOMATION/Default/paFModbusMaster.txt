@@ -1,0 +1,22 @@
+[LONG]
+V-NEWVAR=~
+V-STYP=
+V-FID=File identifier
+V-OK=TRUE if successful
+V-OPENMODBUS=TRUE = Open MODBUS / FALSE = RTU
+V-RECONNECT=TRUE: try to reconnect after error
+V-SLAVENO=~
+V-ADDRESS=Ethernet address or port configuration
+V-PORT=Ethernet port number
+V-PORT1=~
+V-OPENMODBUS1=~
+[SHORT]
+V-NEWVAR=~
+V-STYP=
+V-OPENMODBUS=
+V-RECONNECT=
+V-SLAVENO=~
+V-ADDRESS=
+V-PORT=~
+V-PORT1=~
+V-OPENMODBUS1=~

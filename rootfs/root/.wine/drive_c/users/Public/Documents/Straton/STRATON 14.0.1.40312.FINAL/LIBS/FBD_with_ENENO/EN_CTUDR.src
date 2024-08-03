@@ -1,0 +1,8 @@
+ENO := EN;
+if EN then
+    ctud1 (CU, CD, RESET, LOAD, PV);
+    QU := ctud1.QU;
+    QD := ctud1.QD;
+    CV := ctud1.CV;
+end_if;
+

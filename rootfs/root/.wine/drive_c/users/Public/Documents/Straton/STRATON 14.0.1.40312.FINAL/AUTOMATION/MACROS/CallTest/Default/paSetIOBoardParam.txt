@@ -1,0 +1,12 @@
+[LONG]
+V-BOARD=IO Board name (%...)
+V-RET=~
+V-PARAM=Parameter name
+V-OK=TRUE if successful
+V-VALUE=Parameter value
+[SHORT]
+V-RET=~
+V-BOARD=~
+V-PARAM=~
+V-OK=~
+V-VALUE=~

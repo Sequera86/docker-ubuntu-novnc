@@ -1,0 +1,61 @@
+13 (app version) <VERS>
+1593687211 (compiling date stamp) <DATE>
+0 D8 I/Os <IO08>
+0 D16 I/Os <IO16>
+0 D32 I/Os <IO32>
+0 D64 I/Os <IO64>
+0 String I/Os <IO0S>
+35 CTSeg Alloc <CTSA>
+35 CTSeg Used <CTSU>
+C FB Classes:
+21 referenced <FBCA>
+C FB Instances:
+5 allocated <FBIA>
+5 used <FBIU>
+5 declared <FBIF>
+Custom C Functions:
+0 referenced <FNCA>
+<CYCLE>: Graphics_1_prog Graphics_2_prog SFC_1 SFC_1_child Ladder_1 FBD_1 ST_1
+BOOL/SINT variables:
+35 allocated <D08A>
+34 used <D08U>
+27 declared <D08F>
+INT variables:
+1 allocated <D16A>
+0 used <D16U>
+0 declared <D16F>
+DINT/REAL variables:
+30 allocated <D32A>
+29 used <D32U>
+8 declared <D32F>
+LINT/LREAL variables:
+1 allocated <D64A>
+0 used <D64U>
+0 declared <D64F>
+TIME variables:
+3 allocated <TMRA>
+2 used <TMRU>
+0 declared <TMRF>
+0 active (allocated) <ATMA>
+0 active (used) <ATMU>
+STRING variables:
+1 allocated <STRA>
+0 used <STRU>
+0 declared <STRF>
+Steps:
+6 allocated <STPA>
+6 used <STPU>
+XV:
+0 allocated <XVVA>
+0 used <XVVU>
+Transitions:
+8 allocated <TRSA>
+8 used <TRSU>
+STRING raw buffers:
+0 bytes allocated <SBFA>
+STRING raw buffers:
+0 bytes used <SBFU>
+7 POUs <POU>
+Published variables
+0 Alloc <PUBA>
+0 Used <PUBU>

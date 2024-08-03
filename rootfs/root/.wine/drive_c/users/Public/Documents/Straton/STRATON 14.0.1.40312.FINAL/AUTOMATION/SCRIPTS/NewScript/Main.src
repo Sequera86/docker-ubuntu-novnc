@@ -1,0 +1,62 @@
+// Create a new automation script
+paSetTraceMode (FALSE, FALSE);
+if not paCreateProject () then
+    return;
+end_if;
+
+// selectlanguage
+case paGetLanguage () of
+    _WB_FRA : StringTable ('Main', 'FRA');
+    else      StringTable ('Main', 'USA');
+end_case;
+
+// Make DBX file
+MakeDBX ();
+
+// add automation library
+paAddLibrary ('@AUTOMATION\AUTOMATION');
+
+// set relevant options
+paSetOption ('EMBEDSYMBOLS', 'ON');
+paSetOption ('EMBEDSYBCASE', 'ON');
+paSetOption ('CTSEG', 'ON');
+paSetOption ('WARNING', 'OFF');
+
+// create program structure
+paCreateProgram ('Main', 'ST');
+
+// mark program as script (not documented)
+_PRP ('ProgramTask', 'Main', 'SCRIPT', '', RET);
+
+// ask for parameters
+paSetParameterDesc ('CreationMode', LoadString (IDS_MODE));
+paSetParameterDesc ('Parameters', LoadString (IDS_PARAMS));
+paEditParameterList (VLID('Params'), LoadString (IDS_CAPMAIN));
+
+// open files: ST code and main spy list
+fST := paFileOpenWriteProgramSrc ('Main');
+fSPY := paFileOpenWriteSpyList ('Parameters');
+
+// ST header
+paFTextLine (fST, '// Project automation script');
+paFTextEol (fST);
+
+paFTextLine (fST, '// Create or open the target project');
+case CreationMode of
+'Create' : paFTextLine (fST, 'if not paCreateProject () then');
+'Open'   : paFTextLine (fST, 'if not paOpenProject (FALSE) then');
+else       paFTextLine (fST, 'if not paOpenProject (TRUE) then');
+end_case;
+paFTextLine (fST, '    return;');
+paFTextLine (fST, 'end_if;');
+paFTextEol (fST);
+
+// prompt for script parameters
+if Parameters & fST <> 0 & fSPY <> 0 then
+    AskForParameters (fST, fSPY);
+end_if;
+
+// close files
+if fST <> 0 then paFileClose (fST); end_if;
+if fSPY <> 0 then paFileClose (fSPY); end_if;
+

@@ -1,0 +1,12 @@
+[LONG]
+V-NEWVAR=~
+V-HEIGHT=Height of the block (cells)
+V-STYP=
+V-STR=~
+V-FID=File identifier
+V-OK=TRUE if successful
+V-TEXT=Comment text (may contain '$N' characters)
+[SHORT]
+V-NEWVAR=~
+V-STYP=
+V-STR=~

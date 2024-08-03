@@ -1,0 +1,3 @@
+sr1 (S, R);
+Q := sr1.Q1;
+QN := not Q;

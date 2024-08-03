@@ -1,0 +1,14 @@
+From 2024/02/13-09:55:02
+To 2024/02/13-09:55:24
+
+PRG1                             : 0.13 %
+XCBR1                            : 0.26 %
+LLN0                             : 0.13 %
+MMXU1                            : 0.25 %
+TimeQuality                      : 0.01 %
+XCBR1_Simu                       : 0.08 %
+iecDT2UNIX                       : 51.58 %
+iecUNIX2DT                       : 46.81 %
+IEC61850_SPC                     : 0.18 %
+IEC61850_DPC                     : 0.25 %
+DBPOS_Simulation                 : 0.25 %

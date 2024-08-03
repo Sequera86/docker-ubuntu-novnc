@@ -1,0 +1,11 @@
+[SHORT]
+V-BFAST=Fast command
+V-TPERIO=Slow period
+V-BOUT=Output signal
+V-BCOMMAND=Main command
+[LONG]
+V-BFAST=make it faster
+V-TPERIO=default period (milliseconds) - that's the period used in 'slow' mode
+V-BOUT=main output blinking signal
+V-BLINK1=the "blink" function block
+V-BCOMMAND=main activation command

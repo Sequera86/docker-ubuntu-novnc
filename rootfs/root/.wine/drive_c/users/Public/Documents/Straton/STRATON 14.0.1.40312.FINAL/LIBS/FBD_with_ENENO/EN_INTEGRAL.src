@@ -1,0 +1,7 @@
+ENO := EN;
+if EN then
+    inte (RUN, R1, XIN, X0, CYCLE);
+    Q := inte.Q;
+    XOUT := inte.XOUT;
+end_if;
+

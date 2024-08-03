@@ -1,0 +1,3 @@
+[LONG]
+V-FID=File identifier
+V-OK=TRUE if successful

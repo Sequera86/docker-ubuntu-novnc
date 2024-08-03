@@ -1,0 +1,13 @@
+ENO := EN;
+if EN then
+    up (IN);
+    Q0 := up.Q0;
+    Q1 := up.Q1;
+    Q2 := up.Q2;
+    Q3 := up.Q3;
+    Q4 := up.Q4;
+    Q5 := up.Q5;
+    Q6 := up.Q6;
+    Q7 := up.Q7;
+end_if;
+

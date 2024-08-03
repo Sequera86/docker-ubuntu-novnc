@@ -1,0 +1,5 @@
+integral1 (true, false, IN / 1000.0, 0.0, TI);
+OUT := integral1.XOUT;
+OUT := limit (PMIN, OUT, PMAX);
+
+

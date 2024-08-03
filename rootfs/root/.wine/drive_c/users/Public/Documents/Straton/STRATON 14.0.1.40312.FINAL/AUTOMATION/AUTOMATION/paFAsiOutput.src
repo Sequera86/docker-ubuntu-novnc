@@ -1,0 +1,3 @@
+sTyp := any_to_string (OFFSET) + ' ' + NAME;
+OK := _PRP ('FWRITE', any_to_string (FID), 'SVAR OUT', sTyp, RET);
+

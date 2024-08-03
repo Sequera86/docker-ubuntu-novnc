@@ -1,0 +1,60 @@
+#info=WSED1EDT
+@VAR:1,Y=N,O=0,P=(20,2),S=(22,1),C=(1,1),X=STRATONLDevice1_LLN0_Beh_stVal
+@VAR:18,Y=N,O=0,P=(5,2),S=(8,1),C=(1,1),X=Beh
+@VAR:128,Y=N,O=0,P=(20,4),S=(22,1),C=(1,1),X=STRATONLDevice1_LLN0_Mod_stVal
+@VAR:129,Y=N,O=0,P=(5,4),S=(8,1),C=(1,1),X=siMod
+@TXT:131,Y=C32768,O=0,P=(5,6),S=(15,5),C=(1,1),X={
+Beh values\r\n1 - ON\r\n2 - Blocked\r\n3 - Test\r\n4 - Test/B
+locked\r\n5 - Off
+}
+@BOX:132,Y=N,O=0,P=(23,17),S=(9,8),C=(3,7),X=iecUNIX2DT
+@VAR:134,Y=N,O=0,P=(7,19),S=(8,1),C=(1,1),X=DST_Timestamp
+@VAR:135,Y=N,O=0,P=(7,20),S=(8,1),C=(1,1),X=UTC_Timestamp
+@VAR:136,Y=N,O=0,P=(33,18),S=(8,1),C=(1,1),X=Beh_t_Y
+@VAR:137,Y=N,O=0,P=(33,19),S=(8,1),C=(1,1),X=Beh_t_M
+@VAR:138,Y=N,O=0,P=(33,20),S=(8,1),C=(1,1),X=Beh_t_D
+@VAR:139,Y=N,O=0,P=(33,21),S=(8,1),C=(1,1),X=Beh_t_H
+@VAR:140,Y=N,O=0,P=(33,22),S=(8,1),C=(1,1),X=Beh_t_Mn
+@VAR:141,Y=N,O=0,P=(33,23),S=(8,1),C=(1,1),X=Beh_t_S
+@VAR:142,Y=N,O=0,P=(33,24),S=(8,1),C=(1,1),X=Beh_t_Ms
+@VAR:143,Y=N,O=0,P=(7,18),S=(15,1),C=(1,1),X=STRATONLDevice1_LLN0_Beh_t
+@TXT:144,Y=C32768,O=0,P=(6,28),S=(16,6),C=(1,1),X={
+UTC = 1 Means PARIS/BERLIN/ROMA timezone\r\n\r\nSee below lis
+t of timezone :\r\nhttp://en.wikipedia.org/wiki/List_of_UTC_t
+ime_offsets
+}
+@BOX:146,Y=N,O=0,P=(42,17),S=(11,10),C=(9,2),X=iecDT2UNIX
+@VAR:149,Y=N,O=0,P=(54,19),S=(15,1),C=(1,1),X=LREAL_T
+@BOX:152,Y=N,O=0,P=(17,19),S=(1,1),C=(1,1),X={\div}
+@BOX:153,Y=N,O=0,P=(19,20),S=(1,1),C=(1,1),X={\div}
+@TXT:154,Y=C32768,O=0,P=(5,13),S=(40,3),C=(1,1),X={
+-- Timestamp conversions --\r\nIMPORTANT: if the *.t attribut
+e is declared on the Server side, then it is up to the applic
+ation to keep it updated. refer to the HELP for more informat
+ion (F1)
+}
+@ARC:2,Y=N,D=2,Z=(50,50),F=(18,0),T=(1,0)
+@ARC:3,Y=N,D=3,Z=(50,50),F=(129,0),T=(128,0)
+@ARC:5,Y=N,D=0,Z=(50,50),F=(134,0),T=(152,0)
+@ARC:6,Y=N,D=0,Z=(50,50),F=(135,0),T=(153,0)
+@ARC:7,Y=N,D=0,Z=(50,50),F=(132,0),T=(136,0)
+@ARC:8,Y=N,D=0,Z=(50,50),F=(132,1),T=(137,0)
+@ARC:9,Y=N,D=0,Z=(50,50),F=(132,2),T=(138,0)
+@ARC:10,Y=N,D=0,Z=(50,50),F=(132,3),T=(139,0)
+@ARC:11,Y=N,D=0,Z=(50,50),F=(132,4),T=(140,0)
+@ARC:12,Y=N,D=0,Z=(50,50),F=(132,5),T=(141,0)
+@ARC:13,Y=N,D=0,Z=(50,50),F=(132,6),T=(142,0)
+@ARC:14,Y=N,D=6,Z=(50,50),F=(143,0),T=(132,0)
+@ARC:15,Y=N,D=7,Z=(50,50),F=(136,0),T=(146,0)
+@ARC:16,Y=N,D=0,Z=(50,50),F=(137,0),T=(146,1)
+@ARC:17,Y=N,D=1,Z=(50,50),F=(138,0),T=(146,2)
+@ARC:18,Y=N,D=2,Z=(50,50),F=(139,0),T=(146,3)
+@ARC:19,Y=N,D=3,Z=(50,50),F=(140,0),T=(146,4)
+@ARC:20,Y=N,D=4,Z=(50,50),F=(141,0),T=(146,5)
+@ARC:21,Y=N,D=5,Z=(50,50),F=(142,0),T=(146,6)
+@ARC:24,Y=N,D=0,Z=(50,50),F=(146,1),T=(149,0)
+@ARC:27,Y=N,D=3,Z=(50,50),F=(152,0),T=(146,7)
+@ARC:28,Y=N,D=4,Z=(50,50),F=(153,0),T=(146,8)
+@ARC:29,Y=N,D=0,Z=(50,50),F=(152,0),T=(132,1)
+@ARC:30,Y=N,D=0,Z=(50,50),F=(153,0),T=(132,2)
+#endinfo

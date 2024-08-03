@@ -1,0 +1,12 @@
+JsonSetStrTxb - function - Set string value of a node using a text buffer
+
+Inputs:
+
+hNode : DINT; handle of a valid JSON node
+hTxb : DINT; handle of a valid text buffer containing the new value
+
+Outputs:
+
+OK : BOOL; TRUE if successful
+
+Although the value is set when the node is created, this function enables to change it.

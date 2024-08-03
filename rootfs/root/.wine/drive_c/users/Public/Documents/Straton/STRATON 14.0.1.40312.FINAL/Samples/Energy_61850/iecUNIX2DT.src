@@ -1,0 +1,82 @@
+// STRATON AUTOMATION SAMPLE CODE
+
+// Converts a UNIX timestamp to Date and Time elements
+// Used mainly for IEC61850 timestamps.
+
+TIMESTAMP := ANY_TO_LINT(TIMESTAMP_LR);
+MILLISECONDS := ANY_TO_DINT((TIMESTAMP_LR - ANY_TO_LREAL(TIMESTAMP))*1000);
+// Done at the beginning before it gets altered by next lines of code
+// IMPORTANT! Due to the computing of LREAL, precision for milliseconds is +/- 0.001
+//  Ex. 0.748 in LREAL may be displayed '747' on the MILLISECONDS output
+
+// Adjusts the timestamp with the UTC
+TIMESTAMP += LINT#3600 * ANY_TO_LINT(UTC);
+
+//We adjust the timestamp with the DaySavingTime
+IF DST THEN 
+    TIMESTAMP += LINT#3600;
+END_IF;
+
+//Counting the number of complete years and decrease the timestamp by this
+Y := 1969;
+WHILE TIMESTAMP > 0 DO
+Y += 1;
+    IF (MOD(Y,4) = 0 AND MOD(Y,100)<>0) OR MOD(Y,400) = 0 THEN
+        TIMESTAMP -= LINT#366 * LINT#24 * LINT#3600;
+    ELSE
+        TIMESTAMP -= LINT#365 * LINT#24 * LINT#3600;
+    END_IF;    
+END_WHILE;
+
+//The WHILE previous loop went one year too far, we offset this error :
+YEAR := Y;
+IF (MOD(YEAR,4) = 0 AND MOD(YEAR,100)<>0) OR MOD(YEAR,400) = 0 THEN
+    TIMESTAMP += LINT#366 * LINT#24 *LINT#3600;
+ELSE
+    TIMESTAMP += LINT#365 * LINT#24 * LINT#3600;
+END_IF;   
+
+//Is the current year a leap year ? Load the right set of month length
+IF (MOD(YEAR,4) = 0 AND MOD(YEAR,100)<>0) OR MOD(YEAR,400) = 0  THEN
+    FOR i := 0 TO 12 DO
+    MONTHLENGTH[i] := MONTHL[i];
+    END_FOR;
+ELSE
+    FOR i := 0 TO 12 DO
+    MONTHLENGTH[i] := MONTHN[i];
+    END_FOR;
+END_IF;
+
+//We count the number of monthes
+M:=0;
+WHILE TIMESTAMP > 0 DO
+    M += 1;
+    TIMESTAMP -= MONTHLENGTH[M] * LINT#24 * LINT#3600;    
+END_WHILE;
+
+MONTH := M;
+//Previous WHILE loop went one month too far, we offset this error :
+    TIMESTAMP += MONTHLENGTH[MONTH] * LINT#24 * LINT#3600;    
+
+//We count the number of days
+DAY := 1 + ANY_TO_DINT(  TIMESTAMP) / (24*3600) ;
+
+//We decrease the timestamp by the number of complete days
+TIMESTAMP -= ANY_TO_LINT((DAY-1) * 24 * 3600);
+
+
+//We count the number of hours
+HOUR := ANY_TO_DINT( TIMESTAMP ) / 3600; 
+
+//We decrease the timestamp by the number of complete hours
+TIMESTAMP -= ANY_TO_LINT((HOUR) * 3600 );
+
+
+//We count the number of complete minutes
+MINUTES := ANY_TO_DINT( TIMESTAMP ) / 60; 
+
+//We decrease the timestamp by the number of complete minutes
+TIMESTAMP -= ANY_TO_LINT((MINUTES) * 60 );
+
+SECONDS := ANY_TO_DINT(TIMESTAMP);
+

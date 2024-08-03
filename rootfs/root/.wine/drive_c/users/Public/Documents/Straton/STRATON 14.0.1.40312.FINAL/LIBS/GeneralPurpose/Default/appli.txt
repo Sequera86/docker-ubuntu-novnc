@@ -1,0 +1,18 @@
+[SHORT]
+P-ROUND_REAL=
+P-TESTS=~
+P-LOADVARSINI=~
+P-ROUD_REAL=~
+[LONG]
+P-UNPACK16=Unpack bits from a WORD
+P-UNPACK32=Unpack bits from a DWORD
+P-ROUND_REAL=Round a REAL value to the nearest integer
+P-PACK32=Pack bits to a DWORD
+P-TESTS=~
+P-MAKE_LWORD=Build a LWORD withh 2 DWORDs
+P-LOADVARSINI=~
+P-PACK16=Pack bits to a WORD
+A-<PROJECT>=
+P-ROUD_REAL=~
+P-LO_DWORD=Get 32 lowest bits of a LWORD
+P-HI_DWORD=Get 32 highest bits of a LWORD

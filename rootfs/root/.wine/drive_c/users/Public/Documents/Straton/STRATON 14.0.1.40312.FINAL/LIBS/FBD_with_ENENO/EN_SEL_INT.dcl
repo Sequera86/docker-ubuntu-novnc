@@ -1,0 +1,8 @@
+/V,L,BOOL(0)[0],8,EN
+/V,=TRUE
+/V,L,BOOL(0)[0],8,G
+/V,L,INT(0)[0],8,IN0
+/V,L,INT(0)[0],8,IN1
+/V,L,BOOL(0)[0],16,ENO
+/V,L,INT(0)[0],16,Q
+

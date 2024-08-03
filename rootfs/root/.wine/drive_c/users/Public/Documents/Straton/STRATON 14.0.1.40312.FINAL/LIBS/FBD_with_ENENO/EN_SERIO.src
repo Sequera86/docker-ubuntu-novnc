@@ -1,0 +1,9 @@
+ENO := EN;
+if EN then
+    ser (RUN, SND, CONF, DATASND);
+    OPEN := ser.Open;
+    RCV := ser.Rcv;
+    ERR := ser.Err;
+    DATARCV := ser.DataRcv;
+end_if;
+

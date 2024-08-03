@@ -1,0 +1,1 @@
+OK := _PRP ('FWRITE', any_to_string (FID), 'FBDS LABEL', LABEL, RET);

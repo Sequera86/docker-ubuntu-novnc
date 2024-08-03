@@ -1,0 +1,10 @@
+[LONG]
+V-DSTPROG=Destination program name
+V-RET=~
+V-OK=TRUE if successful
+V-TEMPLATE=Name of the template program
+[SHORT]
+V-RET=~
+V-DSTPROG=~
+V-OK=~
+V-TEMPLATE=~

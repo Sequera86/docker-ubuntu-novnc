@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := fatalstop (IN);
+end_if;
+

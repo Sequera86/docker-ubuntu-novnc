@@ -1,0 +1,7 @@
+sTyp := 'REQS STANDBY ' + REQUEST
+        + ' 0 ' + any_to_string (ADDRESS)
+        + ' ' + any_to_string (NBITEM)
+        + ' 0 0 1';
+OK := _PRP ('FWRITE', any_to_string (FID),
+            sTyp, NAME, RET);
+

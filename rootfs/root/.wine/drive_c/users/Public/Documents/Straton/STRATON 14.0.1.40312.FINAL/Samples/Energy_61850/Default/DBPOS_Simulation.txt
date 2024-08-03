@@ -1,0 +1,15 @@
+[SHORT]
+V-_ID_FBD_Q2=~
+V-_ID_FBD_Q3=~
+V-_ID_FBD_Q4=~
+V-_ID_FBD_Q5=~
+V-_ID_FBD_Q6=~
+V-_ID_FBD_Q8=~
+[LONG]
+V-OPER=Operate command
+V-_ID_FBD_Q2=~
+V-_ID_FBD_Q3=~
+V-_ID_FBD_Q4=~
+V-_ID_FBD_Q5=~
+V-_ID_FBD_Q6=~
+V-_ID_FBD_Q8=~

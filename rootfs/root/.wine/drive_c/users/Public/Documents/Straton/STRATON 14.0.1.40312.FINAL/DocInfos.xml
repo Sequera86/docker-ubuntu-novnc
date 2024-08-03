@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Print>
+	<Item Type="HEADER" Cx="100" Cy="50" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="12" FontColor="0" BackColor="16777215" Style="0" Align="4" NbHeaders="8" XThickness="1" YThickness="1">
+		<NAME>Headers</NAME>
+		<FRA>Nb de headers</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="TEXT" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="9" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Text</NAME>
+		<FRA>Texte</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="DOCUMENT" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Document Name</NAME>
+		<FRA>Nom du document</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="DOCUMENTDESCRIPTION" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Document Description</NAME>
+		<FRA>Description du document</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="PROJECT" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Project Name</NAME>
+		<FRA>Nom du projet</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="PROJECTDESCRIPTION" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Project Description</NAME>
+		<FRA>Description du projet</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="PAGE" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Page</NAME>
+		<FRA>Page</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="BUILD" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Build</NAME>
+		<FRA>Build</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="DATE" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Date</NAME>
+		<FRA>Date</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="BITMAP" Cx="10" Cy="10" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Bitmap</NAME>
+		<FRA>Image</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="100" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Security Class</NAME>
+		<FRA>Niveau de sécurité</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="101" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Drawing No</NAME>
+		<FRA>N° de dessin</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="102" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Author</NAME>
+		<FRA>Auteur</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="103" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Project No</NAME>
+		<FRA>N° Projet</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="104" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>User Project Name</NAME>
+		<FRA>Nom de projet utilisateur</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="105" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Unit</NAME>
+		<FRA>Unité</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="106" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>System</NAME>
+		<FRA>Système</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="107" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev.</NAME>
+		<FRA>Rev.</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION></SECTION>
+	</Item>
+	<Item Type="USER" Custom="108" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 1 Date</NAME>
+		<FRA>Date Rev. 1</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 1</SECTION>
+	</Item>
+	<Item Type="USER" Custom="109" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 1 Description</NAME>
+		<FRA>Description Rev. 1</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 1</SECTION>
+	</Item>
+	<Item Type="USER" Custom="110" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 1 DGN</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 1</SECTION>
+	</Item>
+	<Item Type="USER" Custom="111" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 1 CHK</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 1</SECTION>
+	</Item>
+	<Item Type="USER" Custom="112" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 1 APP</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 1</SECTION>
+	</Item>
+	<Item Type="USER" Custom="113" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 2 Date</NAME>
+		<FRA>Date Rev. 2</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 2</SECTION>
+	</Item>
+	<Item Type="USER" Custom="114" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 2 Description</NAME>
+		<FRA>Description Rev. 2</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 2</SECTION>
+	</Item>
+	<Item Type="USER" Custom="115" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 2 DGN</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 2</SECTION>
+	</Item>
+	<Item Type="USER" Custom="116" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 2 CHK</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 2</SECTION>
+	</Item>
+	<Item Type="USER" Custom="117" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 2 APP</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 2</SECTION>
+	</Item>
+	<Item Type="USER" Custom="118" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 3 Date</NAME>
+		<FRA>Date Rev. 3</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 3</SECTION>
+	</Item>
+	<Item Type="USER" Custom="119" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 3 Description</NAME>
+		<FRA>Description Rev. 3</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 3</SECTION>
+	</Item>
+	<Item Type="USER" Custom="120" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 3 DGN</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 3</SECTION>
+	</Item>
+	<Item Type="USER" Custom="121" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 3 CHK</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 3</SECTION>
+	</Item>
+	<Item Type="USER" Custom="122" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 3 APP</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 3</SECTION>
+	</Item>
+	<Item Type="USER" Custom="123" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 4 Date</NAME>
+		<FRA>Date Rev. 4</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 4</SECTION>
+	</Item>
+	<Item Type="USER" Custom="124" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 4 Description</NAME>
+		<FRA>Description Rev. 4</FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 4</SECTION>
+	</Item>
+	<Item Type="USER" Custom="125" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 4 DGN</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 4</SECTION>
+	</Item>
+	<Item Type="USER" Custom="126" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 4 CHK</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 4</SECTION>
+	</Item>
+	<Item Type="USER" Custom="127" Cx="10" Cy="3" BorderSize="1" BorderColor="0" TextStyle="0" FontName="Courier New" FontSize="8" FontColor="0" BackColor="16777215" Style="0" Align="2">
+		<NAME>Rev. 4 APP</NAME>
+		<FRA></FRA>
+		<GER></GER>
+		<ITA></ITA>
+		<SPA></SPA>
+		<KOR></KOR>
+		<SECTION>Revision 4</SECTION>
+	</Item>
+</Print>

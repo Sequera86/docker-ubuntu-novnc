@@ -1,0 +1,11 @@
+[LONG]
+V-NEWVAR=~
+V-STYP=
+V-COL=Index of the column (0 based)
+V-FID=File identifier
+V-OK=TRUE if successful
+V-NAME=Variable name
+V-VALUE=Value
+[SHORT]
+V-NEWVAR=~
+V-STYP=

@@ -1,0 +1,4 @@
+[LONG]
+V-OK=OK if successful
+V-NAME=Parameter name (the name of your variable)
+V-DESC=Description

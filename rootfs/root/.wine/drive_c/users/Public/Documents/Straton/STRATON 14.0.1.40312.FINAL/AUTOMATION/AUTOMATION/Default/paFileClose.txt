@@ -1,0 +1,8 @@
+[LONG]
+V-SID=~
+V-NEWVAR=~
+V-FID=File identifier
+V-OK=TRUE if successful
+[SHORT]
+V-SID=~
+V-NEWVAR=~

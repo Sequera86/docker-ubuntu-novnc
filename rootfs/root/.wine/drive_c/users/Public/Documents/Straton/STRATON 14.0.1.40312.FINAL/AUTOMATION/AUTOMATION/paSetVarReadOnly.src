@@ -1,0 +1,7 @@
+if RO then
+    str := 'ON';
+else
+    str := 'OFF';
+end_if;
+OK := _PRP ('SetVarRO', Name, str, '', RET);
+

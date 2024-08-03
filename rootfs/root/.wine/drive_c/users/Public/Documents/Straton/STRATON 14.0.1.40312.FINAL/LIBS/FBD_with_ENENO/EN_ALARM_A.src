@@ -1,0 +1,7 @@
+ENO := EN;
+if EN then
+    alm (IN, ACK);
+    Q := alm.Q;
+    QACK := alm.QAck;
+end_if;
+

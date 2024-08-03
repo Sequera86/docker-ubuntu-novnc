@@ -1,0 +1,5 @@
+ENO := EN;
+if EN then
+    Q := any_to_time (IN);
+end_if;
+

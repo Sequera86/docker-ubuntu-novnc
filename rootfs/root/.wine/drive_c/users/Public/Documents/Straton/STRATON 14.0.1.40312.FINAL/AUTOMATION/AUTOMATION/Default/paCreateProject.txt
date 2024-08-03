@@ -1,0 +1,7 @@
+[LONG]
+V-NEWVAR=~
+V-RET=
+V-OK=TRUE if successful
+[SHORT]
+V-NEWVAR=~
+V-RET=

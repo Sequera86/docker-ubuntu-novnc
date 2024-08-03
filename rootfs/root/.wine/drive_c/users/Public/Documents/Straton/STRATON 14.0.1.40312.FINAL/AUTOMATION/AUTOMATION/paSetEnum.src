@@ -1,0 +1,2 @@
+OK := _PRP ('SetEnum', Name, VALUES, '', RET);
+

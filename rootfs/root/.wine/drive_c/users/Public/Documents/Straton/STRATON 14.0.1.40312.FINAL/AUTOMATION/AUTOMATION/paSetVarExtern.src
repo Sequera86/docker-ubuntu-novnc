@@ -1,0 +1,7 @@
+if Ext then
+    str := 'ON';
+else
+    str := 'OFF';
+end_if;
+OK := _PRP ('SetVarExtern', Name, str, '', RET);
+
